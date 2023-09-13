@@ -51,17 +51,17 @@ Si ces styles entrent en conflit avec l'apparence de votre composant, définisse
 ## Composants intégrés
 
 Starlight fournit quelques composants intégrés pour les cas d'utilisation courants de la documentation.
-Ces composants sont disponibles dans le paquet `@astrojs/starlight/components`.
+Ces composants sont disponibles dans le paquet `@awe-player/awe-docs/components`.
 
 ### Onglets
 
-import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@awe-player/awe-docs/components';
 
 Vous pouvez afficher une interface à onglets en utilisant les composants `<Tabs>` et `<TabItem>`.
 Chaque `<TabItem>` doit avoir un `label` à afficher aux utilisateurs.
 
 ```mdx
-import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@awe-player/awe-docs/components';
 
 <Tabs>
 	<TabItem label="Stars">Sirius, Vega, Betelgeuse</TabItem>
@@ -78,7 +78,7 @@ Le code ci-dessus génère les onglets suivants sur la page :
 
 ### Cartes
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid } from '@awe-player/awe-docs/components';
 
 Vous pouvez afficher du contenu dans une boîte correspondant aux styles de Starlight en utilisant le composant `<Card>`.
 Enveloppez plusieurs cartes dans le composant `<CardGrid>` pour afficher les cartes côte à côte lorsqu'il y a suffisamment d'espace.
@@ -86,7 +86,7 @@ Enveloppez plusieurs cartes dans le composant `<CardGrid>` pour afficher les car
 Une `<Card>` nécessite un `title` et peut optionellement inclure un attribut `icon` fixé au nom de [l'une des icônes intégrées de Starlight](#toutes-les-icônes).
 
 ```mdx
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid } from '@awe-player/awe-docs/components';
 
 <Card title="Check this out">
 	Contenu intéressant que vous souhaitez mettre en évidence.
@@ -138,7 +138,7 @@ Une `<LinkCard>` nécessite les attributs `title` et [`href`](https://developer.
 Regroupez plusieurs composants `<LinkCard>` dans `<CardGrid>` pour afficher les cartes côte à côte lorsqu'il y a suffisamment d'espace.
 
 ```mdx
-import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+import { LinkCard, CardGrid } from '@awe-player/awe-docs/components';
 
 <LinkCard
 	title="Personnalisation de Starlight"
@@ -157,7 +157,7 @@ import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 
 Le code ci-dessus génère ce qui suit sur la page :
 
-import { LinkCard } from '@astrojs/starlight/components';
+import { LinkCard } from '@awe-player/awe-docs/components';
 
 <LinkCard
 	title="Personnaliser Starlight"
@@ -175,7 +175,7 @@ import { LinkCard } from '@astrojs/starlight/components';
 
 ### Icônes
 
-import { Icon } from '@astrojs/starlight/components';
+import { Icon } from '@awe-player/awe-docs/components';
 import IconsList from '../../../../components/icons-list.astro';
 
 Starlight fournit un ensemble d'icônes courantes que vous pouvez afficher dans votre contenu à l'aide du composant `<Icon>`.
@@ -183,7 +183,7 @@ Starlight fournit un ensemble d'icônes courantes que vous pouvez afficher dans 
 Chaque `<Icon>` nécessite un [`name`](#toutes-les-icônes) et peut optionellement inclure un attribut `label`, `size` et `color`.
 
 ```mdx
-import { Icon } from '@astrojs/starlight/components';
+import { Icon } from '@awe-player/awe-docs/components';
 
 <Icon name="star" color="goldenrod" size="2rem" />
 ```

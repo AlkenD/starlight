@@ -51,17 +51,17 @@ Starlight는 요소 사이에 여백을 추가하는 등 Markdown 콘텐츠에 �
 ## 내장된 컴포넌트
 
 Starlight는 일반적인 문서 사용 사례를 위한 몇 가지 내장 컴포넌트를 제공합니다.
-이러한 컴포넌트는 `@astrojs/starlight/components` 패키지를 통해 사용할 수 있습니다.
+이러한 컴포넌트는 `@awe-player/awe-docs/components` 패키지를 통해 사용할 수 있습니다.
 
 ### 탭
 
-import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@awe-player/awe-docs/components';
 
 `<Tabs>` 및 `<TabItem>` 컴포넌트를 사용하여 탭 인터페이스를 표시할 수 있습니다.
 각 `<TabItem>`은 사용자에게 보여줄 `label`을 반드시 포함해야합니다.
 
 ```mdx
-import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@awe-player/awe-docs/components';
 
 <Tabs>
 	<TabItem label="별">시리우스, 베가, 베텔게우스</TabItem>
@@ -78,7 +78,7 @@ import { Tabs, TabItem } from '@astrojs/starlight/components';
 
 ### 카드
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid } from '@awe-player/awe-docs/components';
 
 `<Card>` 컴포넌트를 사용하면 Starlight 스타일의 상자에 콘텐츠를 표시할 수 있습니다.
 공간이 충분할 때 카드를 나란히 표시하려면 `<CardGrid>` 컴포넌트로 여러 카드를 감싸세요.
@@ -86,7 +86,7 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 `<Card>` 컴포넌트에는 `title` 속성이 반드시 필요하며 선택적으로 [Starlight 내장 아이콘 중 하나](#모든-아이콘)의 이름으로 설정된 `icon` 속성을 포함할 수 있습니다.
 
 ```mdx
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid } from '@awe-player/awe-docs/components';
 
 <Card title="확인">강조하고 싶은 흥미로운 콘텐츠.</Card>
 
@@ -135,7 +135,7 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 공간이 충분할 때, 카드를 나란히 표시하기 위해 여러 `<LinkCard>` 컴포넌트를 `<CardGrid>`에 그룹화하세요.
 
 ```mdx
-import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+import { LinkCard, CardGrid } from '@awe-player/awe-docs/components';
 
 <LinkCard
 	title="Starlight 사용자 정의"
@@ -154,7 +154,7 @@ import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 
 위 코드는 페이지에 아래와 같은 요소들을 생성합니다.
 
-import { LinkCard } from '@astrojs/starlight/components';
+import { LinkCard } from '@awe-player/awe-docs/components';
 
 <LinkCard
 	title="Starlight 사용자 정의"
@@ -172,7 +172,7 @@ import { LinkCard } from '@astrojs/starlight/components';
 
 ### 아이콘
 
-import { Icon } from '@astrojs/starlight/components';
+import { Icon } from '@awe-player/awe-docs/components';
 import IconsList from '../../../../components/icons-list.astro';
 
 Starlight는 `<Icon>` 컴포넌트를 사용하여 콘텐츠에 표시할 수 있는 공통 아이콘 세트를 제공합니다.
@@ -180,7 +180,7 @@ Starlight는 `<Icon>` 컴포넌트를 사용하여 콘텐츠에 표시할 수 �
 각 `<Icon>` 컴포넌트에는 [`name`](#모든-아이콘) 속성이 필요하며 선택적으로 `label`, `size` 및 `color` 속성을 포함할 수 있습니다.
 
 ```mdx
-import { Icon } from '@astrojs/starlight/components';
+import { Icon } from '@awe-player/awe-docs/components';
 
 <Icon name="star" color="goldenrod" size="2rem" />
 ```

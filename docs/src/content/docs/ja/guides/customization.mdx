@@ -3,7 +3,7 @@ title: Starlightのカスタマイズ
 description: Starlightサイトをカスタマイズして、ロゴ、カスタムフォント、ランディングページのデザインなどを追加する方法について学びます。
 ---
 
-import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@awe-player/awe-docs/components';
 import FileTree from '../../../../components/file-tree.astro';
 
 Starlightには標準的なスタイルと機能がデフォルトで用意されているため、設定不要ですぐに使い始めることができますが、Starlightサイトの見た目をカスタマイズしたくなった場合は、このガイドを参照してください。
@@ -29,7 +29,7 @@ Starlightには標準的なスタイルと機能がデフォルトで用意さ�
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@astrojs/starlight';
+   import starlight from '@awe-player/awe-docs';
 
    export default defineConfig({
    	integrations: [
@@ -191,7 +191,7 @@ Starlightは、Starlightインテグレーションの[`social`](/ja/reference/c
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+import starlight from '@awe-player/awe-docs';
 
 export default defineConfig({
 	integrations: [
@@ -224,7 +224,7 @@ Starlightプロジェクトがリポジトリのルートにない場合は、�
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+import starlight from '@awe-player/awe-docs';
 
 export default defineConfig({
 	integrations: [
@@ -311,7 +311,7 @@ Starlightサイトにカスタムフォントを追加する必要がある場�
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@astrojs/starlight';
+   import starlight from '@awe-player/awe-docs';
 
    export default defineConfig({
    	integrations: [
@@ -367,7 +367,7 @@ Starlightサイトにカスタムフォントを追加する必要がある場�
     ```js
     // astro.config.mjs
     import { defineConfig } from 'astro/config';
-    import starlight from '@astrojs/starlight';
+    import starlight from '@awe-player/awe-docs';
 
     export default defineConfig({
     	integrations: [

@@ -3,7 +3,7 @@ title: 手动配置
 description: 了解如何手动配置 Starlight 以将其添加到现有的 Astro 项目中。
 ---
 
-import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@awe-player/awe-docs/components';
 
 创建新的 Starlight 站点的最快方法是使用 `create astro`，如[入门指南](/zh/getting-started/#创建一个新项目)所示。
 如果你想将 Starlight 添加到现有的 Astro 项目中，本指南将解释如何操作。
@@ -47,7 +47,7 @@ Starlight 集成在 `astro.config.mjs` 文件中配置。
 ```js {7-9}
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+import starlight from '@awe-player/awe-docs';
 
 export default defineConfig({
 	integrations: [
@@ -69,7 +69,7 @@ Starlight 是建立在 Astro 的[内容集合](https://docs.astro.build/zh-cn/gu
 ```js ins={3,6}
 // src/content/config.ts
 import { defineCollection } from 'astro:content';
-import { docsSchema } from '@astrojs/starlight/schema';
+import { docsSchema } from '@awe-player/awe-docs/schema';
 
 export const collections = {
 	docs: defineCollection({ schema: docsSchema() }),

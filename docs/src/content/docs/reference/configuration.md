@@ -10,7 +10,7 @@ Starlight is an integration built on top the [Astro](https://astro.build) web fr
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+import starlight from '@awe-player/awe-docs';
 
 export default defineConfig({
   integrations: [
@@ -216,7 +216,7 @@ Each entry should use the directory where that language’s files are saved as t
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+import starlight from '@awe-player/awe-docs';
 
 export default defineConfig({
   integrations: [

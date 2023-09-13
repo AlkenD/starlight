@@ -10,7 +10,7 @@ Starlight est une intégration construite sur le framework web [Astro](https://a
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+import starlight from '@awe-player/awe-docs';
 
 export default defineConfig({
   integrations: [
@@ -213,7 +213,7 @@ Chaque entrée doit utiliser comme clé le répertoire dans lequel les fichiers 
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+import starlight from '@awe-player/awe-docs';
 
 export default defineConfig({
   integrations: [

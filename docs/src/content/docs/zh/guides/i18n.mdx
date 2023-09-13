@@ -14,7 +14,7 @@ Starlight 提供了内置的多语言支持，包括路由、回退内容和完�
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@astrojs/starlight';
+   import starlight from '@awe-player/awe-docs';
 
    export default defineConfig({
    	integrations: [
@@ -71,7 +71,7 @@ Starlight 提供了内置的多语言支持，包括路由、回退内容和完�
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+import starlight from '@awe-player/awe-docs';
 
 export default defineConfig({
 	integrations: [
@@ -113,7 +113,7 @@ export default defineConfig({
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+import starlight from '@awe-player/awe-docs';
 
 export default defineConfig({
 	integrations: [
@@ -151,7 +151,7 @@ Starlight 期望你在所有语言中创建等效的页面。例如，如果你�
    ```js
    // src/content/config.ts
    import { defineCollection } from 'astro:content';
-   import { docsSchema, i18nSchema } from '@astrojs/starlight/schema';
+   import { docsSchema, i18nSchema } from '@awe-player/awe-docs/schema';
 
    export const collections = {
    	docs: defineCollection({ schema: docsSchema() }),

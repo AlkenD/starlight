@@ -1,4 +1,4 @@
-# @astrojs/starlight
+# @awe-player/awe-docs
 
 ## 0.9.1
 

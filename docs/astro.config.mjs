@@ -1,20 +1,47 @@
 import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
-
+import starlight from '@awe-player/awe-docs';
+import tailwind from '@astrojs/tailwind';
 export const locales = {
-	root: { label: 'English', lang: 'en' },
-	de: { label: 'Deutsch', lang: 'de' },
-	es: { label: 'Español', lang: 'es' },
-	ja: { label: '日本語', lang: 'ja' },
-	fr: { label: 'Français', lang: 'fr' },
-	it: { label: 'Italiano', lang: 'it' },
-	zh: { label: '简体中文', lang: 'zh' },
-	'pt-br': { label: 'Português do Brasil', lang: 'pt-BR' },
-	ko: { label: '한국어', lang: 'ko' },
+	root: {
+		label: 'English',
+		lang: 'en',
+	},
+	de: {
+		label: 'Deutsch',
+		lang: 'de',
+	},
+	es: {
+		label: 'Español',
+		lang: 'es',
+	},
+	ja: {
+		label: '日本語',
+		lang: 'ja',
+	},
+	fr: {
+		label: 'Français',
+		lang: 'fr',
+	},
+	it: {
+		label: 'Italiano',
+		lang: 'it',
+	},
+	zh: {
+		label: '简体中文',
+		lang: 'zh',
+	},
+	'pt-br': {
+		label: 'Português do Brasil',
+		lang: 'pt-BR',
+	},
+	ko: {
+		label: '한국어',
+		lang: 'ko',
+	},
 };
-
 const site = 'https://starlight.astro.build/';
 
+// https://astro.build/config
 export default defineConfig({
 	site,
 	integrations: [
@@ -43,11 +70,17 @@ export default defineConfig({
 				},
 				{
 					tag: 'meta',
-					attrs: { property: 'og:image', content: site + 'og.jpg?v=1' },
+					attrs: {
+						property: 'og:image',
+						content: site + 'og.jpg?v=1',
+					},
 				},
 				{
 					tag: 'meta',
-					attrs: { property: 'twitter:image', content: site + 'og.jpg?v=1' },
+					attrs: {
+						property: 'twitter:image',
+						content: site + 'og.jpg?v=1',
+					},
 				},
 			],
 			customCss: process.env.NO_GRADIENTS ? [] : ['./src/assets/landing.css'],
@@ -134,7 +167,9 @@ export default defineConfig({
 						'pt-BR': 'Guias',
 						ko: '가이드',
 					},
-					autogenerate: { directory: 'guides' },
+					autogenerate: {
+						directory: 'guides',
+					},
 				},
 				{
 					label: 'Reference',
@@ -148,10 +183,13 @@ export default defineConfig({
 						'pt-BR': 'Referência',
 						ko: '참조',
 					},
-					autogenerate: { directory: 'reference' },
+					autogenerate: {
+						directory: 'reference',
+					},
 				},
 			],
 			lastUpdated: true,
 		}),
+		tailwind(),
 	],
 });

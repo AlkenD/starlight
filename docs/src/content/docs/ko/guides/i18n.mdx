@@ -14,7 +14,7 @@ Starlight는 라우팅, 대체 콘텐츠 및 전체 RTL(오른쪽에서 왼쪽�
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@astrojs/starlight';
+   import starlight from '@awe-player/awe-docs';
 
    export default defineConfig({
    	integrations: [
@@ -71,7 +71,7 @@ Starlight는 라우팅, 대체 콘텐츠 및 전체 RTL(오른쪽에서 왼쪽�
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+import starlight from '@awe-player/awe-docs';
 
 export default defineConfig({
 	integrations: [
@@ -114,7 +114,7 @@ export default defineConfig({
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+import starlight from '@awe-player/awe-docs';
 
 export default defineConfig({
 	integrations: [
@@ -152,7 +152,7 @@ Starlight를 사용하면 번역된 콘텐츠 파일을 호스팅하는 것 외�
    ```js
    // src/content/config.ts
    import { defineCollection } from 'astro:content';
-   import { docsSchema, i18nSchema } from '@astrojs/starlight/schema';
+   import { docsSchema, i18nSchema } from '@awe-player/awe-docs/schema';
 
    export const collections = {
    	docs: defineCollection({ schema: docsSchema() }),

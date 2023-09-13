@@ -24,7 +24,7 @@ Starlight의 기본 스타일을 수정하거나 확장하기 위한 CSS 파일�
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@astrojs/starlight';
+   import starlight from '@awe-player/awe-docs';
 
    export default defineConfig({
    	integrations: [
@@ -54,7 +54,7 @@ Starlight Tailwind 플러그인은 다음 구성을 적용합니다.
 
 ### Tailwind가 포함된 새 프로젝트 만들기
 
-import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@awe-player/awe-docs/components';
 
 `create astro`를 사용하여 Tailwind CSS가 사전 구성된 새 Starlight 프로젝트를 시작하세요.
 
@@ -123,7 +123,7 @@ yarn create astro --template starlight/tailwind
     <TabItem label="npm">
 
     ```sh
-    npm install @astrojs/starlight-tailwind
+    npm install @awe-player/awe-docs-tailwind
     ```
 
     </TabItem>
@@ -131,7 +131,7 @@ yarn create astro --template starlight/tailwind
     <TabItem label="pnpm">
 
     ```sh
-    pnpm install @astrojs/starlight-tailwind
+    pnpm install @awe-player/awe-docs-tailwind
     ```
 
     </TabItem>
@@ -139,7 +139,7 @@ yarn create astro --template starlight/tailwind
     <TabItem label="Yarn">
 
     ```sh
-    yarn add @astrojs/starlight-tailwind
+    yarn add @awe-player/awe-docs-tailwind
     ```
 
     </TabItem>
@@ -160,7 +160,7 @@ yarn create astro --template starlight/tailwind
     ```js {11-12,16-17}
     // astro.config.mjs
     import { defineConfig } from 'astro/config';
-    import starlight from '@astrojs/starlight';
+    import starlight from '@awe-player/awe-docs';
     import tailwind from '@astrojs/tailwind';
 
     export default defineConfig({
@@ -184,7 +184,7 @@ yarn create astro --template starlight/tailwind
 
     ```js ins={2,7}
     // tailwind.config.cjs
-    const starlightPlugin = require('@astrojs/starlight-tailwind');
+    const starlightPlugin = require('@awe-player/awe-docs-tailwind');
 
     /** @type {import('tailwindcss').Config} */
     module.exports = {
@@ -206,7 +206,7 @@ Starlight는 UI에서 [Tailwind 테마 구성](https://tailwindcss.com/docs/them
 
 ```js {12,14,18,20}
 // tailwind.config.cjs
-const starlightPlugin = require('@astrojs/starlight-tailwind');
+const starlightPlugin = require('@awe-player/awe-docs-tailwind');
 const colors = require('tailwindcss/colors');
 
 /** @type {import('tailwindcss').Config} */

@@ -36,17 +36,17 @@ Vedi di più su come [usare componenti in MDX](https://docs.astro.build/en/guide
 ## Componenti integrati
 
 Starlight fornisce dei componenti per casi comuni in una documentazione.
-Questi sono disponibili nel pacchetto `@astrojs/starlight/components`.
+Questi sono disponibili nel pacchetto `@awe-player/awe-docs/components`.
 
 ### Tabs
 
-import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@awe-player/awe-docs/components';
 
 Puoi rappresentare contenuti con un'interfaccia a schede con i componenti `<Tabs>` e `<TabItem>`.
 Ogni `<TabItem>` deve avere un `label` per indicare la scheda corrispondente.
 
 ```mdx
-import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@awe-player/awe-docs/components';
 
 <Tabs>
 	<TabItem label="Stelle">Sirius, Vega, Betelgeuse</TabItem>
@@ -61,7 +61,7 @@ import { Tabs, TabItem } from '@astrojs/starlight/components';
 
 ### Card
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid } from '@awe-player/awe-docs/components';
 
 Puoi rappresentare i contenuti in un riquadro che rispecchia il tema Starlight usando il componente `<Card>`.
 Racchiudi più card in `<CardGrid>` per visualizzarle fianco a fianco se c'è abbastanza spazio.
@@ -69,7 +69,7 @@ Racchiudi più card in `<CardGrid>` per visualizzarle fianco a fianco se c'è ab
 Una `<Card>` necessita di `title` e può avere eventualmente un attributo `icon` impostato ad [una delle icone Starlight](https://github.com/withastro/starlight/blob/main/packages/starlight/components/Icons.ts).
 
 ```mdx
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid } from '@awe-player/awe-docs/components';
 
 <Card title="Guarda qui">Contenuti interessanti da evidenziare.</Card>
 
@@ -115,7 +115,7 @@ Una `<LinkCard>` richiede un `title` e un attributo [`href`](https://developer.m
 Raggruppa più componenti `<LinkCard>` in `<CardGrid>` per visualizzare le schede una accanto all'altra quando c'è spazio sufficiente.
 
 ```mdx
-import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+import { LinkCard, CardGrid } from '@awe-player/awe-docs/components';
 
 <LinkCard
 	title="Customizing Starlight"
@@ -131,7 +131,7 @@ import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 
 Il codice precedente genera quanto segue nella pagina:
 
-import { LinkCard } from '@astrojs/starlight/components';
+import { LinkCard } from '@awe-player/awe-docs/components';
 
 <LinkCard
 	title="Customizing Starlight"
@@ -146,7 +146,7 @@ import { LinkCard } from '@astrojs/starlight/components';
 
 ### Icon
 
-import { Icon } from '@astrojs/starlight/components';
+import { Icon } from '@awe-player/awe-docs/components';
 import IconsList from '../../../../components/icons-list.astro';
 
 Starlight fornisce una serie di icone comuni che puoi visualizzare nei tuoi contenuti utilizzando il componente `<Icon>`.
@@ -154,7 +154,7 @@ Starlight fornisce una serie di icone comuni che puoi visualizzare nei tuoi cont
 Ogni `<Icon>` richiede un [`name`](#all-icons) e può facoltativamente includere un attributo `label`, `size` e `color`.
 
 ```mdx
-import { Icon } from '@astrojs/starlight/components';
+import { Icon } from '@awe-player/awe-docs/components';
 
 <Icon name="star" color="goldenrod" size="2rem" />
 ```

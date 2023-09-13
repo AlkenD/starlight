@@ -10,7 +10,7 @@ Starlightは[Astro](https://astro.build)ウェブフレームワークの上に�
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+import starlight from '@awe-player/awe-docs';
 export default defineConfig({
   integrations: [
     starlight({
@@ -213,7 +213,7 @@ interface BadgeConfig {
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+import starlight from '@awe-player/awe-docs';
 
 export default defineConfig({
   integrations: [

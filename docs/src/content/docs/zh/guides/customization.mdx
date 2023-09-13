@@ -3,7 +3,7 @@ title: 自定义 Starlight
 description: 学习如何通过自定义样式、字体等使你的 Starlight 网站变得与众不同。
 ---
 
-import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@awe-player/awe-docs/components';
 import FileTree from '../../../../components/file-tree.astro';
 
 Starlight 提供了合理的默认样式和功能，因此你可以快速开始，无需配置即可进行操作。
@@ -30,7 +30,7 @@ Starlight 提供了合理的默认样式和功能，因此你可以快速开始�
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@astrojs/starlight';
+   import starlight from '@awe-player/awe-docs';
 
    export default defineConfig({
    	integrations: [
@@ -194,7 +194,7 @@ Starlight 内置了对通过 Starlight 集成中的 [`social`](/zh/reference/con
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+import starlight from '@awe-player/awe-docs';
 
 export default defineConfig({
 	integrations: [
@@ -227,7 +227,7 @@ Starlight 可以在每个页面的页脚中显示“编辑此页”链接。这�
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+import starlight from '@awe-player/awe-docs';
 
 export default defineConfig({
 	integrations: [
@@ -314,7 +314,7 @@ hero:
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@astrojs/starlight';
+   import starlight from '@awe-player/awe-docs';
 
    export default defineConfig({
    	integrations: [
@@ -370,7 +370,7 @@ hero:
     ```js
     // astro.config.mjs
     import { defineConfig } from 'astro/config';
-    import starlight from '@astrojs/starlight';
+    import starlight from '@awe-player/awe-docs';
 
     export default defineConfig({
     	integrations: [

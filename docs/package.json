@@ -13,19 +13,21 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/starlight": "workspace:*",
+    "@awe-player/awe-docs": "workspace:*",
     "@types/culori": "^2.0.0",
     "astro": "^3.0.6",
     "culori": "^3.2.0",
     "sharp": "^0.32.5"
   },
   "devDependencies": {
+    "@astrojs/tailwind": "^5.0.0",
     "hast-util-from-html": "^1.0.2",
     "hast-util-to-string": "^2.0.0",
     "hastscript": "^7.2.0",
     "pa11y-ci": "^3.0.1",
     "rehype": "^12.0.1",
     "start-server-and-test": "^2.0.0",
+    "tailwindcss": "^3.3.3",
     "unist-util-visit": "^4.1.2"
   }
 }

@@ -23,16 +23,16 @@ export default function StarlightIntegration(opts: StarlightUserConfig): AstroIn
 	const userConfig = parsedConfig.data;
 
 	const Starlight: AstroIntegration = {
-		name: '@astrojs/starlight',
+		name: '@awe-player/awe-docs',
 		hooks: {
 			'astro:config:setup': ({ config, injectRoute, updateConfig }) => {
 				injectRoute({
 					pattern: '404',
-					entryPoint: '@astrojs/starlight/404.astro',
+					entryPoint: '@awe-player/awe-docs/404.astro',
 				});
 				injectRoute({
 					pattern: '[...slug]',
-					entryPoint: '@astrojs/starlight/index.astro',
+					entryPoint: '@awe-player/awe-docs/index.astro',
 				});
 				const newConfig: AstroUserConfig = {
 					vite: {

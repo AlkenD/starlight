@@ -3,7 +3,7 @@ title: Manuelle Einrichtung
 description: Lerne wie du Starlight manuell konfigurierst, um es zu einem bestehenden Astro-Projekt hinzuzufügen.
 ---
 
-import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@awe-player/awe-docs/components';
 
 Der schnellste Weg, eine neue Starlight-Site zu erstellen, ist die Verwendung von `create astro`, wie auf der Seite [Erste Schritte](/de/getting-started/#erstelle-ein-neues-projekt) beschrieben.
 Wie du Starlight zu einem bestehenden Astro-Projekt hinzufügst, wird in dieser Anleitung erklärt.
@@ -47,7 +47,7 @@ Füge zunächst einen Titel mit der Eigenschaft `title` hinzu:
 ```js {7-9}
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+import starlight from '@awe-player/awe-docs';
 
 export default defineConfig({
 	integrations: [
@@ -69,7 +69,7 @@ Erstelle oder aktualisiere die Inhaltskonfigurationsdatei und füge eine `docs`-
 ```js ins={3,6}
 // src/content/config.ts
 import { defineCollection } from 'astro:content';
-import { docsSchema } from '@astrojs/starlight/schema';
+import { docsSchema } from '@awe-player/awe-docs/schema';
 
 export const collections = {
 	docs: defineCollection({ schema: docsSchema() }),

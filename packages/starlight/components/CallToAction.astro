@@ -1,4 +1,5 @@
 ---
+import { cva } from 'class-variance-authority';
 import Icon from '../user-components/Icon.astro';
 import type { Icons } from './Icons';
 
@@ -9,40 +10,28 @@ interface Props {
 }
 
 const { link, variant, icon } = Astro.props;
+
+const actionButtonStyles = cva(['font-semibold', 'border', 'rounded', 'flex'], {
+	variants: {
+		variant: {
+			primary: ['bg-blue-500', 'text-white', 'border-transparent', 'hover:bg-blue-600'],
+			secondary: ['bg-white', 'text-gray-800', 'border-gray-400', 'hover:bg-gray-100'],
+			minimal: ['bg-white', 'text-gray-800', 'border-gray-400', 'hover:bg-gray-100'],
+		},
+		size: {
+			small: ['text-sm', 'py-1', 'px-2'],
+			medium: ['text-base', 'py-2', 'px-4'],
+		},
+	},
+	defaultVariants: {
+		variant: 'primary',
+		size: 'medium',
+	},
+});
 ---
 
-<a class:list={['sl-flex action', variant]} href={link}>
+<a class={actionButtonStyles({ variant })} href={link}>
 	<slot />
 	{icon?.type === 'icon' && <Icon name={icon.name} size="1.5rem" />}
 	{icon?.type === 'raw' && <Fragment set:html={icon.html} />}
 </a>
-
-<style>
-	.action {
-		gap: 0.5em;
-		align-items: center;
-		border-radius: 999rem;
-		padding: 0.5rem 1.125rem;
-		color: var(--sl-color-white);
-		line-height: 1.1875;
-		text-decoration: none;
-		font-size: var(--sl-text-sm);
-	}
-	.action.primary {
-		background: var(--sl-color-text-accent);
-		color: var(--sl-color-black);
-	}
-	.action.secondary {
-		border: 1px solid;
-	}
-	.action.minimal {
-		padding-inline: 0;
-	}
-
-	@media (min-width: 50rem) {
-		.action {
-			font-size: var(--sl-text-base);
-			padding: 1rem 1.25rem;
-		}
-	}
-</style>
