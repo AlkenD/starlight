@@ -1,7 +1,7 @@
 {
-  "name": "@awe-player/awe-docs",
-  "version": "0.9.1",
-  "description": "Build beautiful, high-performance documentation websites with Astro",
+  "name": "starstruck",
+  "version": "0.0.1",
+  "description": "A fork of Astro's Starlight documentation framework.",
   "scripts": {
     "test": "vitest",
     "test:coverage": "vitest run --coverage"
@@ -13,7 +13,7 @@
     "withastro",
     "astro-integration"
   ],
-  "author": "Chris Swithinbank <swithinbank@gmail.com>",
+  "author": "Alken Dester <desteralken@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
