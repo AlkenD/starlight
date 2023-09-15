@@ -2,20 +2,13 @@
 title: Starlight 🌟 Build documentation sites with Astro
 description: Starlight helps you build beautiful, high-performance documentation websites with Astro.
 template: splash
-banner:
-  content: |
-    <span class="ph-banner">
-      <span class="ph-houston"><img src="/ph-houston.svg" alt="" width="72" height="72"/></span>
-      <span class="ph-text">
-        <strong>Welcome Product Hunters&nbsp;👋</strong>
-        <a href="https://www.producthunt.com/posts/starlight-by-astro">We are live right now!</a>
-      </span>
-    </span>
+background:
+  file: ../../assets/background.png
 hero:
   title: Make your docs shine with Starlight
   tagline: Everything you need to build a stellar documentation website. Fast, accessible, and easy-to-use.
   image:
-    file: ../../assets/hero-star.webp
+    file: ../../assets/hero-planet.svg
   actions:
     - text: Get started
       icon: right-arrow
@@ -23,10 +16,11 @@ hero:
       link: /getting-started/
     - text: View on GitHub
       icon: external
+      variant: secondary
       link: https://github.com/withastro/starlight
 ---
 
-import { CardGrid, Card } from '@awe-player/awe-docs/components';
+import { CardGrid, Card } from '@awe-player/starstruck/components';
 import AboutAstro from '../../components/about-astro.astro';
 
 <CardGrid stagger>
@@ -49,8 +43,7 @@ import AboutAstro from '../../components/about-astro.astro';
 </CardGrid>
 
 <AboutAstro title="Brought to you by">
-Astro is the all-in-one web framework designed for speed.
-Pull your content from anywhere and deploy everywhere, all powered by your favorite UI components and libraries.
+  Astro is the all-in-one web framework designed for speed. Pull your content from anywhere and deploy everywhere, all powered by your favorite UI components and libraries.
 
 [Learn about Astro](https://astro.build/)
 

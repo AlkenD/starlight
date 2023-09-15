@@ -32,7 +32,7 @@ importers:
 
   docs:
     dependencies:
-      '@awe-player/awe-docs':
+      '@awe-player/starstruck':
         specifier: workspace:*
         version: link:../packages/starlight
       '@types/culori':

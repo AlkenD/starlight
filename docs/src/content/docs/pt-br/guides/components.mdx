@@ -52,17 +52,17 @@ Se esses estilos conflitam com a aparência do seu componente, defina a classe `
 ## Componentes integrados
 
 Starlight providencia alguns componentes integrados para casos de uso comuns em documentações.
-Esses componentes estão disponíveis através do pacote `@awe-player/awe-docs/components`.
+Esses componentes estão disponíveis através do pacote `@awe-player/starstruck/components`.
 
 ### Abas
 
-import { Tabs, TabItem } from '@awe-player/awe-docs/components';
+import { Tabs, TabItem } from '@awe-player/starstruck/components';
 
 Você pode mostrar uma interface com abas utilizando os componentes `<Tabs>` e `<TabItem>`.
 Cada `<TabItem>` tem que ter uma `label` para mostrar aos usuários.
 
 ```mdx
-import { Tabs, TabItem } from '@awe-player/awe-docs/components';
+import { Tabs, TabItem } from '@awe-player/starstruck/components';
 
 <Tabs>
 	<TabItem label="Estrelas">Sirius, Vega, Betelgeuse</TabItem>
@@ -79,7 +79,7 @@ O código acima gera as seguintes abas na página:
 
 ### Cartões
 
-import { Card, CardGrid } from '@awe-player/awe-docs/components';
+import { Card, CardGrid } from '@awe-player/starstruck/components';
 
 Você pode mostrar conteúdo em uma caixa seguindo os estilos do Starlight utilizando o componente `<Card>`.
 Coloque múltiplos cartões no componente `<CardGrid>` para mostrar cartões lado a lado quando houver espaço suficiente.
@@ -87,7 +87,7 @@ Coloque múltiplos cartões no componente `<CardGrid>` para mostrar cartões lad
 Um `<Card>` precisa de um `title` e pode opcionalmente incluir o atributo `icon` para definir o nome de um dos [ícones integrados do Starlight](#all-icons).
 
 ```mdx
-import { Card, CardGrid } from '@awe-player/awe-docs/components';
+import { Card, CardGrid } from '@awe-player/starstruck/components';
 
 <Card title="Veja isso">Conteúdo interessante que você quer destacar.</Card>
 
@@ -135,7 +135,7 @@ Um `<LinkCard>` precisa de um `title` e um atributo [`href`](https://developer.m
 Agrupe múltiplos componentes `<LinkCard>` em `<CardGrid>` para mostrar cartões lado a lado quando houver espaço suficiente.
 
 ```mdx
-import { LinkCard, CardGrid } from '@awe-player/awe-docs/components';
+import { LinkCard, CardGrid } from '@awe-player/starstruck/components';
 
 <LinkCard
 	title="Customizando Starlight"
@@ -154,7 +154,7 @@ import { LinkCard, CardGrid } from '@awe-player/awe-docs/components';
 
 O código acima gera o seguinte na página:
 
-import { LinkCard } from '@awe-player/awe-docs/components';
+import { LinkCard } from '@awe-player/starstruck/components';
 
 <LinkCard
 	title="Customizando Starlight"
@@ -172,7 +172,7 @@ import { LinkCard } from '@awe-player/awe-docs/components';
 
 ### Ícone
 
-import { Icon } from '@awe-player/awe-docs/components';
+import { Icon } from '@awe-player/starstruck/components';
 import IconsList from '../../../../components/icons-list.astro';
 
 Starlight providencia um conjunto comum de ícones que você pode mostrar em seu conteúdo utilizando o componente `<Icon>`.
@@ -180,7 +180,7 @@ Starlight providencia um conjunto comum de ícones que você pode mostrar em seu
 Cada `<Icon>` requer um [`name`](#todos-os-ícones) e pode opcionalmente incluir um atributo `label`, `size` e `color`.
 
 ```mdx
-import { Icon } from '@awe-player/awe-docs/components';
+import { Icon } from '@awe-player/starstruck/components';
 
 <Icon name="star" color="goldenrod" size="2rem" />
 ```

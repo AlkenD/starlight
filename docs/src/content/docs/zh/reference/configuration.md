@@ -10,7 +10,7 @@ Starlight 是在 [Astro](https://astro.build) web 框架之上构建的集成。
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/awe-docs';
+import starlight from '@awe-player/starstruck';
 
 export default defineConfig({
   integrations: [
@@ -214,7 +214,7 @@ interface BadgeConfig {
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/awe-docs';
+import starlight from '@awe-player/starstruck';
 
 export default defineConfig({
   integrations: [

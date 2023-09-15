@@ -45,16 +45,16 @@ Starlightは、Markdownコンテンツにデフォルトのスタイルを適用
 
 ## 組み込みのコンポーネント
 
-Starlightは、一般的なドキュメントのユースケースに対して組み込みのコンポーネントをいくつか提供しています。これらのコンポーネントは、`@awe-player/awe-docs/components`パッケージから利用できます。
+Starlightは、一般的なドキュメントのユースケースに対して組み込みのコンポーネントをいくつか提供しています。これらのコンポーネントは、`@awe-player/starstruck/components`パッケージから利用できます。
 
 ### タブ
 
-import { Tabs, TabItem } from '@awe-player/awe-docs/components';
+import { Tabs, TabItem } from '@awe-player/starstruck/components';
 
 `<Tabs>`と`<TabItem>`コンポーネントを使用して、タブインターフェースを表示できます。各`<TabItem>`は、ユーザーに表示する`label`を必要とします。
 
 ```mdx
-import { Tabs, TabItem } from '@awe-player/awe-docs/components';
+import { Tabs, TabItem } from '@awe-player/starstruck/components';
 
 <Tabs>
 	<TabItem label="恒星">シリウス、ベガ、ペテルギウス</TabItem>
@@ -71,14 +71,14 @@ import { Tabs, TabItem } from '@awe-player/awe-docs/components';
 
 ### カード
 
-import { Card, CardGrid } from '@awe-player/awe-docs/components';
+import { Card, CardGrid } from '@awe-player/starstruck/components';
 
 `<Card>`コンポーネントを使用すると、Starlightのスタイルに合わせたボックス内にコンテンツを表示できます。十分なスペースがある場合は、複数のカードを`<CardGrid>`コンポーネントで囲むことで、カードを並べて表示できます。
 
 `<Card>`は`title`を必須とし、また任意で[Starlightの組み込みアイコンの1つ](#すべてのアイコン)を名前に設定した`icon`属性を含められます。
 
 ```mdx
-import { Card, CardGrid } from '@awe-player/awe-docs/components';
+import { Card, CardGrid } from '@awe-player/starstruck/components';
 
 <Card title="確認しよう">強調したい興味深いコンテンツ。</Card>
 
@@ -125,7 +125,7 @@ import { Card, CardGrid } from '@awe-player/awe-docs/components';
 十分なスペースがある場合、`<CardGrid>`により複数の`<LinkCard>`をグループ化して、カードを並べて表示できます。
 
 ```mdx
-import { LinkCard, CardGrid } from '@awe-player/awe-docs/components';
+import { LinkCard, CardGrid } from '@awe-player/starstruck/components';
 
 <LinkCard
 	title="Starlightのカスタマイズ"
@@ -144,7 +144,7 @@ import { LinkCard, CardGrid } from '@awe-player/awe-docs/components';
 
 上のコードにより、ページに以下が生成されます。
 
-import { LinkCard } from '@awe-player/awe-docs/components';
+import { LinkCard } from '@awe-player/starstruck/components';
 
 <LinkCard
 	title="Starlightのカスタマイズ"
@@ -162,7 +162,7 @@ import { LinkCard } from '@awe-player/awe-docs/components';
 
 ### アイコン
 
-import { Icon } from '@awe-player/awe-docs/components';
+import { Icon } from '@awe-player/starstruck/components';
 import IconsList from '../../../../components/icons-list.astro';
 
 Starlightは、`<Icon>`コンポーネントを通じてコンテンツ内に表示可能な、一般的なアイコンのセットを提供しています。
@@ -170,7 +170,7 @@ Starlightは、`<Icon>`コンポーネントを通じてコンテンツ内に表
 `<Icon>`は[`name`](#すべてのアイコン)を必須とし、任意で`label`、`size`、`color`属性を含められます。
 
 ```mdx
-import { Icon } from '@awe-player/awe-docs/components';
+import { Icon } from '@awe-player/starstruck/components';
 
 <Icon name="star" color="goldenrod" size="2rem" />
 ```

@@ -10,7 +10,7 @@ Starlight는 [Astro](https://astro.build) 웹 프레임워크 위에 구축된 �
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/awe-docs';
+import starlight from '@awe-player/starstruck';
 
 export default defineConfig({
   integrations: [
@@ -211,7 +211,7 @@ interface BadgeConfig {
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/awe-docs';
+import starlight from '@awe-player/starstruck';
 
 export default defineConfig({
   integrations: [

@@ -50,17 +50,17 @@ Starlight 为你的 Markdown 内容应用了默认样式，例如在元素之间
 ## 内置组件
 
 Starlight 为常见的文档用例提供了一些内置组件。
-这些组件可以从 `@awe-player/awe-docs/components` 包中获取。
+这些组件可以从 `@awe-player/starstruck/components` 包中获取。
 
 ### 选项卡
 
-import { Tabs, TabItem } from '@awe-player/awe-docs/components';
+import { Tabs, TabItem } from '@awe-player/starstruck/components';
 
 你可以使用 `<Tabs>` 和 `<TabItem>` 组件显示一个选项卡界面。
 每个 `<TabItem>` 必须有一个 `label` 来显示给用户。
 
 ```mdx
-import { Tabs, TabItem } from '@awe-player/awe-docs/components';
+import { Tabs, TabItem } from '@awe-player/starstruck/components';
 
 <Tabs>
 	<TabItem label="恒星">天狼星、织女星、参宿四</TabItem>
@@ -77,7 +77,7 @@ import { Tabs, TabItem } from '@awe-player/awe-docs/components';
 
 ### 卡片
 
-import { Card, CardGrid } from '@awe-player/awe-docs/components';
+import { Card, CardGrid } from '@awe-player/starstruck/components';
 
 你可以使用 `<Card>` 组件在与 Starlight 样式匹配的盒子中显示内容。
 当有足够的空间时，可以使用 `<CardGrid>` 组件将多个卡片封装在一起，以便并排显示卡片。
@@ -85,7 +85,7 @@ import { Card, CardGrid } from '@awe-player/awe-docs/components';
 `<Card>` 需要一个 `title`，并且可以选择包含一个 `icon` 属性，该属性设置为 [Starlight 内置图标](#所有图标) 之一的名称。
 
 ```mdx
-import { Card, CardGrid } from '@awe-player/awe-docs/components';
+import { Card, CardGrid } from '@awe-player/starstruck/components';
 
 <Card title="看看这个">你想要突出显示的有趣内容。</Card>
 
@@ -133,7 +133,7 @@ import { Card, CardGrid } from '@awe-player/awe-docs/components';
 当有足够的空间时，将多个 `<LinkCard>` 组件组合在 `<CardGrid>` 中，以便并排显示卡片。
 
 ```mdx
-import { LinkCard, CardGrid } from '@awe-player/awe-docs/components';
+import { LinkCard, CardGrid } from '@awe-player/starstruck/components';
 
 <LinkCard
 	title="自定义 Starlight"
@@ -149,7 +149,7 @@ import { LinkCard, CardGrid } from '@awe-player/awe-docs/components';
 
 以上代码在页面上生成了以下内容：
 
-import { LinkCard } from '@awe-player/awe-docs/components';
+import { LinkCard } from '@awe-player/starstruck/components';
 
 <LinkCard
 	title="自定义 Starlight"
@@ -164,7 +164,7 @@ import { LinkCard } from '@awe-player/awe-docs/components';
 
 ### 图标
 
-import { Icon } from '@awe-player/awe-docs/components';
+import { Icon } from '@awe-player/starstruck/components';
 import IconsList from '../../../../components/icons-list.astro';
 
 Starlight 提供了一组常用的图标，你可以使用 `<Icon>` 组件在你的内容中显示。
@@ -172,7 +172,7 @@ Starlight 提供了一组常用的图标，你可以使用 `<Icon>` 组件在你
 每个 `<Icon>` 都需要一个 [`name`](#所有图标)，并且可以选择包含 `label`、`size` 和 `color` 属性。
 
 ```mdx
-import { Icon } from '@awe-player/awe-docs/components';
+import { Icon } from '@awe-player/starstruck/components';
 
 <Icon name="star" color="goldenrod" size="2rem" />
 ```

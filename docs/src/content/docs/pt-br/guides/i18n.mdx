@@ -14,7 +14,7 @@ Starlight providencia suporte integrado para sites multilíngue, incluindo rotea
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@awe-player/awe-docs';
+   import starlight from '@awe-player/starstruck';
 
    export default defineConfig({
    	integrations: [
@@ -72,7 +72,7 @@ Para definir um local raiz, use a chave `root` na sua configuração de `locales
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/awe-docs';
+import starlight from '@awe-player/starstruck';
 
 export default defineConfig({
 	integrations: [
@@ -114,7 +114,7 @@ Por padrão, Starlight é um site (Inglês) monolíngue. Para criar um site de l
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/awe-docs';
+import starlight from '@awe-player/starstruck';
 
 export default defineConfig({
 	integrations: [
@@ -152,7 +152,7 @@ Você pode fornecer traduções para línguas adicionais que você suporta — o
    ```js
    // src/content/config.ts
    import { defineCollection } from 'astro:content';
-   import { docsSchema, i18nSchema } from '@awe-player/awe-docs/schema';
+   import { docsSchema, i18nSchema } from '@awe-player/starstruck/schema';
 
    export const collections = {
    	docs: defineCollection({ schema: docsSchema() }),

@@ -29,29 +29,17 @@ const links = Object.entries(config.social || {}).filter(([, url]) => Boolean(ur
 ][];
 ---
 
-{
-	links.length > 0 && (
-		<>
-			{links.map(([platform, url]) => (
-				<a href={url} rel="me" class="sl-flex">
-					<span class="sr-only">{labels[platform]}</span>
-					<Icon name={platform} />
-				</a>
-			))}
-			<div class="divider" />
-		</>
-	)
-}
-
-<style>
-	a {
-		color: var(--sl-color-text-accent);
+<div class="flex space-x-4 items-center px-2">
+	{
+		links.length > 0 && (
+			<>
+				{links.map(([platform, url]) => (
+					<a href={url} rel="me" class="flex">
+						<span class="sr-only">{labels[platform]}</span>
+						<Icon name={platform} />
+					</a>
+				))}
+			</>
+		)
 	}
-	a:hover {
-		opacity: 0.66;
-	}
-	.divider {
-		height: 2rem;
-		border-inline-end: 1px solid var(--sl-color-gray-5);
-	}
-</style>
+</div>

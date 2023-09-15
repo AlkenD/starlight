@@ -11,27 +11,41 @@ interface Props {
 
 const { link, variant, icon } = Astro.props;
 
-const actionButtonStyles = cva(['font-semibold', 'border', 'rounded', 'flex'], {
-	variants: {
-		variant: {
-			primary: ['bg-blue-500', 'text-white', 'border-transparent', 'hover:bg-blue-600'],
-			secondary: ['bg-white', 'text-gray-800', 'border-gray-400', 'hover:bg-gray-100'],
-			minimal: ['bg-white', 'text-gray-800', 'border-gray-400', 'hover:bg-gray-100'],
+const actionButtonStyles = cva(
+	[
+		'font-semibold',
+		'border',
+		'rounded-xl',
+		'flex',
+		'space-x-2',
+		'px-6',
+		'py-4',
+		'text-lg',
+		'transition-colors',
+		'ease-out',
+		'items-center',
+	],
+	{
+		variants: {
+			variant: {
+				primary: ['bg-indigo-500', 'text-white', 'border-transparent', 'hover:bg-indigo-600'],
+				secondary: ['bg-white', 'text-gray-800', 'border-gray-400', 'hover:bg-gray-200'],
+				minimal: ['bg-white', 'text-gray-800', 'border-gray-400', 'hover:bg-gray-100'],
+			},
 		},
-		size: {
-			small: ['text-sm', 'py-1', 'px-2'],
-			medium: ['text-base', 'py-2', 'px-4'],
+		defaultVariants: {
+			variant: 'primary',
 		},
-	},
-	defaultVariants: {
-		variant: 'primary',
-		size: 'medium',
-	},
-});
+	}
+);
 ---
 
 <a class={actionButtonStyles({ variant })} href={link}>
-	<slot />
-	{icon?.type === 'icon' && <Icon name={icon.name} size="1.5rem" />}
-	{icon?.type === 'raw' && <Fragment set:html={icon.html} />}
+	<div>
+		<slot />
+	</div>
+	<div>
+		{icon?.type === 'icon' && <Icon name={icon.name} size="1.5rem" />}
+		{icon?.type === 'raw' && <Fragment set:html={icon.html} />}
+	</div>
 </a>

@@ -26,28 +26,21 @@ if (config.logo) {
 const href = pathWithBase(Astro.props.locale || '/');
 ---
 
-<a {href} class="site-title sl-flex">
+<a {href} class="flex px-4 py-2 w-fit h-fit object-contain shrink-0">
 	{
 		config.logo && logos.dark && (
-			<>
+			<div class="max-w-[200px]">
 				<img
 					class:list={{ 'dark-only': !('src' in config.logo) }}
+					class="w-full h-fit"
 					alt={config.logo.alt}
 					src={logos.dark.src}
-					width={logos.dark.width}
-					height={logos.dark.height}
 				/>
 				{/* Show light alternate if a user configure both light and dark logos. */}
 				{!('src' in config.logo) && (
-					<img
-						class="light-only"
-						alt={config.logo.alt}
-						src={logos.light?.src}
-						width={logos.light?.width}
-						height={logos.light?.height}
-					/>
+					<img class="light-only w-full h-full" alt={config.logo.alt} src={logos.light?.src} />
 				)}
-			</>
+			</div>
 		)
 	}
 	<span class:list={{ 'sr-only': config.logo?.replacesTitle }}>
@@ -67,13 +60,6 @@ const href = pathWithBase(Astro.props.locale || '/');
 		color: var(--sl-color-text-accent);
 		text-decoration: none;
 		white-space: nowrap;
-	}
-	img {
-		height: calc(var(--sl-nav-height) - 2 * var(--sl-nav-pad-y));
-		width: auto;
-		max-width: 100%;
-		object-fit: contain;
-		object-position: 0 50%;
 	}
 	:global([data-theme='light']) .dark-only {
 		display: none;

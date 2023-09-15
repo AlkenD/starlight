@@ -1,4 +1,4 @@
-# @awe-player/awe-docs
+# @awe-player/starstruck
 
 ## 0.9.1
 

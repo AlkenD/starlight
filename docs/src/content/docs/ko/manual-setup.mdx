@@ -3,7 +3,7 @@ title: 수동으로 설정하기
 description: Starlight를 기존 Astro 프로젝트에 추가하기 위해 수동으로 구성하는 방법을 알아보세요.
 ---
 
-import { Tabs, TabItem } from '@awe-player/awe-docs/components';
+import { Tabs, TabItem } from '@awe-player/starstruck/components';
 
 새로운 Starlight 사이트를 시작하는 가장 빠른 방법은 [시작하기](/ko/getting-started/#새-프로젝트-시작하기)에 나와있는 것처럼 `create astro`를 사용하는 것입니다. 이 가이드에서는 기존 Astro 프로젝트에 Starlight를 추가하는 방법을 설명합니다.
 
@@ -46,7 +46,7 @@ Starlight 통합은 `astro.config.mjs` 파일에서 구성됩니다.
 ```js {7-9}
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/awe-docs';
+import starlight from '@awe-player/starstruck';
 
 export default defineConfig({
 	integrations: [
@@ -68,7 +68,7 @@ Starlight의 `docsSchema`를 사용하는 `docs` 컬렉션을 추가하여 콘�
 ```js ins={3,6}
 // src/content/config.ts
 import { defineCollection } from 'astro:content';
-import { docsSchema } from '@awe-player/awe-docs/schema';
+import { docsSchema } from '@awe-player/starstruck/schema';
 
 export const collections = {
 	docs: defineCollection({ schema: docsSchema() }),

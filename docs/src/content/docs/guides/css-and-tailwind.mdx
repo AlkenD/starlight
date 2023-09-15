@@ -25,7 +25,7 @@ Customize the styles applied to your Starlight site by providing additional CSS 
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@awe-player/awe-docs';
+   import starlight from '@awe-player/starstruck';
 
    export default defineConfig({
    	integrations: [
@@ -55,7 +55,7 @@ The Starlight Tailwind plugin applies the following configuration:
 
 ### Create a new project with Tailwind
 
-import { Tabs, TabItem } from '@awe-player/awe-docs/components';
+import { Tabs, TabItem } from '@awe-player/starstruck/components';
 
 Start a new Starlight project with Tailwind CSS pre-configured using `create astro`:
 
@@ -124,7 +124,7 @@ If you already have a Starlight site and want to add Tailwind CSS, follow these 
     <TabItem label="npm">
 
     ```sh
-    npm install @awe-player/awe-docs-tailwind
+    npm install @awe-player/starstruck-tailwind
     ```
 
     </TabItem>
@@ -132,7 +132,7 @@ If you already have a Starlight site and want to add Tailwind CSS, follow these 
     <TabItem label="pnpm">
 
     ```sh
-    pnpm install @awe-player/awe-docs-tailwind
+    pnpm install @awe-player/starstruck-tailwind
     ```
 
     </TabItem>
@@ -140,7 +140,7 @@ If you already have a Starlight site and want to add Tailwind CSS, follow these 
     <TabItem label="Yarn">
 
     ```sh
-    yarn add @awe-player/awe-docs-tailwind
+    yarn add @awe-player/starstruck-tailwind
     ```
 
     </TabItem>
@@ -161,7 +161,7 @@ If you already have a Starlight site and want to add Tailwind CSS, follow these 
     ```js {11-12,16-17}
     // astro.config.mjs
     import { defineConfig } from 'astro/config';
-    import starlight from '@awe-player/awe-docs';
+    import starlight from '@awe-player/starstruck';
     import tailwind from '@astrojs/tailwind';
 
     export default defineConfig({
@@ -185,7 +185,7 @@ If you already have a Starlight site and want to add Tailwind CSS, follow these 
 
     ```js ins={2,7}
     // tailwind.config.cjs
-    const starlightPlugin = require('@awe-player/awe-docs-tailwind');
+    const starlightPlugin = require('@awe-player/starstruck-tailwind');
 
     /** @type {import('tailwindcss').Config} */
     module.exports = {
@@ -207,7 +207,7 @@ If set, the following options will override Starlight’s default styles:
 
 ```js {12,14,18,20}
 // tailwind.config.cjs
-const starlightPlugin = require('@awe-player/awe-docs-tailwind');
+const starlightPlugin = require('@awe-player/starstruck-tailwind');
 const colors = require('tailwindcss/colors');
 
 /** @type {import('tailwindcss').Config} */

@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/awe-docs';
+import starlight from '@awe-player/starstruck';
 import tailwind from '@astrojs/tailwind';
 export const locales = {
 	root: {
