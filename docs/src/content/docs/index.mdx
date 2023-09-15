@@ -5,8 +5,8 @@ template: splash
 background:
   file: ../../assets/background.png
 hero:
-  title: Make your docs shine with Starlight
-  tagline: Everything you need to build a stellar documentation website. Fast, accessible, and easy-to-use.
+  title: Starstruck a premium exprience built on top of Starlight
+  tagline: Just a space themed version of Starlight
   image:
     file: ../../assets/hero-planet.svg
   actions:
@@ -21,30 +21,33 @@ hero:
 ---
 
 import { CardGrid, Card } from '@awe-player/starstruck/components';
-import AboutAstro from '../../components/about-astro.astro';
+import About from '../../components/about-astro.astro';
 
 <CardGrid stagger>
 	<Card title="Documentation that delights" icon="open-book">
 		Includes: Site navigation, search, internationalization, SEO, easy-to-read
 		typography, code highlighting, dark mode and more.
 	</Card>
-	<Card title="Powered by Astro" icon="rocket">
-		Leverage the full power and performance of Astro. Extend Starlight with your
-		favorite Astro integrations and libraries.
+	<Card title="Built on top of Starlight & Astro" icon="rocket">
+		Offers all the functionalities found in Starlight, with the option to
+		incorporate your preferred Astro integrations.
 	</Card>
 	<Card title="Markdown, Markdoc, and MDX" icon="document">
 		Bring your favorite markup language. Starlight gives you built-in
 		frontmatter validation with TypeScript type-safety.
 	</Card>
 	<Card title="Bring your own UI components" icon="puzzle">
-		Starlight ships as a framework-agnostic, complete docs solution. Extend with
-		React, Vue, Svelte, Solid, and more.
+		As Starstruck is build on top of Astro which lets you use the framework of
+		your choice.
 	</Card>
 </CardGrid>
 
-<AboutAstro title="Brought to you by">
-  Astro is the all-in-one web framework designed for speed. Pull your content from anywhere and deploy everywhere, all powered by your favorite UI components and libraries.
+<About title="Built on top of">
+  Astro is the all-in-one web framework designed for speed.
 
-[Learn about Astro](https://astro.build/)
+Starlight is a full-featured documentation theme built on top of the Astro framework.
 
-</AboutAstro>
+[Learn about Astro](https://astro.build/) |
+[Learn about Starlight](https://astro.build/)
+
+</About>

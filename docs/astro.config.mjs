@@ -57,7 +57,6 @@ export default defineConfig({
 			},
 			social: {
 				github: 'https://github.com/withastro/starlight',
-				discord: 'https://astro.build/chat',
 			},
 			head: [
 				{
