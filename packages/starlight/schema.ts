@@ -22,6 +22,7 @@ type ImageFunction = () => z.ZodObject<{
 			z.ZodLiteral<'webp'>,
 			z.ZodLiteral<'gif'>,
 			z.ZodLiteral<'svg'>,
+			z.ZodLiteral<'avif'>,
 		]
 	>;
 }>;

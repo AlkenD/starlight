@@ -1,0 +1,21 @@
+---
+import type { getSidebar } from '../../utils/navigation';
+import LanguageSelect from '../LanguageSelect.astro';
+import ThemeSelect from '../ThemeSelect.astro';
+import SideBarList from './SideBarList.astro';
+
+interface Props {
+	sidebar: ReturnType<typeof getSidebar>;
+	locale: string | undefined;
+}
+
+const { sidebar, locale } = Astro.props;
+---
+
+<div class="sticky top-14 w-80 p-4">
+	<SideBarList sublist={sidebar} />
+	<div class="block md:hidden">
+		<ThemeSelect {locale} />
+		<LanguageSelect {locale} />
+	</div>
+</div>

@@ -41,7 +41,11 @@ const imageAttrs = {
 				image.file.format === 'svg' ? (
 					<img class="max-w-[300px] lg:max-w-fit" src={image.file.src} {...imageAttrs} />
 				) : (
-					<Image class="max-w-[300px] lg:max-w-fit" src={image.file} {...imageAttrs} />
+					<Image
+						class="max-w-[300px] lg:max-w-fit"
+						src={image.file as ImageMetadata}
+						{...imageAttrs}
+					/>
 				)
 			) : (
 				image?.html && <div set:html={image.html} />

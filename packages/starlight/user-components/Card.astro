@@ -17,5 +17,5 @@ const { icon, title } = Astro.props;
 		{icon && <Icon name={icon} class="icon" size="1.333em" />}
 		<span set:html={title} />
 	</p>
-	<div class="text-zinc-400"><slot /></div>
+	<div class="text-zinc-800 dark:text-zinc-400"><slot /></div>
 </article>

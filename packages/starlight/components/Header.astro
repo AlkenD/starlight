@@ -7,23 +7,23 @@ import ThemeSelect from './ThemeSelect.astro';
 
 interface Props {
 	locale: string | undefined;
+	hasSidebar: boolean;
 }
 
-const { locale } = Astro.props;
-
-const currentPath = Astro.url.pathname;
+const { locale, hasSidebar } = Astro.props;
 ---
 
 <div
-	class="flex justify-between bg-white/80 dark:bg-zinc-950/80 backdrop-blur-lg h-14 items-center dark:text-white w-[calc(100%-32px)] mx-auto rounded-[50px]"
+	class:list={hasSidebar ? 'top-0 w-full rounded-none' : 'top-4 w-[calc(100%-32px)] rounded-[50px]'}
+	class="flex sticky justify-between bg-white/80 dark:bg-zinc-950/80 backdrop-blur-lg h-14 items-center dark:text-white mx-auto"
 >
 	<SiteTitle {locale} />
-	{currentPath !== '/' ? <Search {locale} /> : null}
-	<div class="flex items-center space-x-2 pr-4">
+	{hasSidebar ? <Search {locale} /> : null}
+	<div class="md:flex items-center space-x-2 pr-4 hidden">
 		<SocialIcons />
-		<div class="h-4 w-[1px] bg-black dark:bg-white"></div>
+		<div class="h-4 w-[1px] bg-black/50 dark:bg-white/50"></div>
 		<ThemeSelect {locale} />
-		<div class="h-4 w-[1px] bg-black dark:bg-white"></div>
+		<div class="h-4 w-[1px] bg-black/50 dark:bg-white/50"></div>
 		<LanguageSelect {locale} />
 	</div>
 </div>

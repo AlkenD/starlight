@@ -1,0 +1,61 @@
+---
+import type { MarkdownHeading } from 'astro';
+import type { Route } from '../utils/routing';
+
+import config from 'virtual:starlight/user-config';
+import HeadSEO from '../components/HeadSEO.astro';
+import SkipLink from '../components/SkipLink.astro';
+import ThemeProvider from '../components/ThemeProvider.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import SideBar from '../components/SideBar/SideBar.astro';
+import { getSidebar } from '../utils/navigation';
+
+import 'virtual:starlight/user-css';
+
+type Props = Route & { headings: MarkdownHeading[] };
+
+const { dir, entry, entryMeta, headings, isFallback, lang, locale } = Astro.props;
+const sidebar = getSidebar(Astro.url.pathname, locale);
+
+const hasSidebar = entry.data.template !== 'splash';
+const tocConfig = !hasSidebar
+	? false
+	: entry.data.tableOfContents !== undefined
+	? entry.data.tableOfContents
+	: config.tableOfContents;
+const hasToC = Boolean(tocConfig);
+const hasHero = Boolean(entry.data.hero);
+const pagefindEnabled =
+	entry.slug !== '404' && !entry.slug.endsWith('/404') && entry.data.pagefind !== false;
+---
+
+<!DOCTYPE html>
+<html
+	lang={lang}
+	dir={dir}
+	data-has-toc={hasToC}
+	data-has-sidebar={hasSidebar}
+	data-has-hero={hasHero}
+>
+	<head>
+		<HeadSEO data={entry.data} lang={lang} />
+	</head>
+	<body
+		class="bg-no-repeat bg-cover bg-white dark:bg-black dark:text-white bg-opacity-0"
+		style=`background-image: url(${entry.data.background?.file?.src})`
+	>
+		<ThemeProvider />
+		<SkipLink {locale} />
+		<Header {hasSidebar} {locale} />
+		<main class="flex">
+			<div class="sticky top-0">
+				{hasSidebar && <SideBar {sidebar} {locale} />}
+			</div>
+			<div class="flex-1">
+				{entry.data.hero ? <Hero hero={entry.data.hero} fallbackTitle={entry.data.title} /> : null}
+				<slot />
+			</div>
+		</main>
+	</body>
+</html>
