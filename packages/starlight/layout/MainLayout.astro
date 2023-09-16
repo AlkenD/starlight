@@ -12,6 +12,12 @@ import SideBar from '../components/SideBar/SideBar.astro';
 import { getSidebar } from '../utils/navigation';
 
 import 'virtual:starlight/user-css';
+import MarkdownContent from '../components/MarkdownContent.astro';
+import ContentPanel from '../components/ContentPanel.astro';
+import FallbackContentNotice from '../components/FallbackContentNotice.astro';
+import Footer from '../components/Footer.astro';
+
+import '../styles/aside.css';
 
 type Props = Route & { headings: MarkdownHeading[] };
 
@@ -53,8 +59,31 @@ const pagefindEnabled =
 				{hasSidebar && <SideBar {sidebar} {locale} />}
 			</div>
 			<div class="flex-1">
-				{entry.data.hero ? <Hero hero={entry.data.hero} fallbackTitle={entry.data.title} /> : null}
-				<slot />
+				{
+					entry.data.hero ? (
+						<ContentPanel>
+							<Hero hero={entry.data.hero} fallbackTitle={entry.data.title} />
+							<MarkdownContent>
+								<slot />
+							</MarkdownContent>
+						</ContentPanel>
+					) : (
+						<>
+							<ContentPanel>
+								<h1 class="text-5xl my-6 font-bold" id="_top" data-page-title>
+									{entry.data.title}
+								</h1>
+								{isFallback && <FallbackContentNotice {locale} />}
+							</ContentPanel>
+							<ContentPanel>
+								<MarkdownContent>
+									<slot />
+								</MarkdownContent>
+								<Footer {...{ entry, dir, lang, locale, sidebar }} />
+							</ContentPanel>
+						</>
+					)
+				}
 			</div>
 		</main>
 	</body>

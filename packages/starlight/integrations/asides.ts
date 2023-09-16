@@ -125,7 +125,7 @@ function remarkAsides(): Plugin<[], Root> {
 				'aside',
 				{
 					'aria-label': title,
-					class: `starlight-aside starlight-aside--${variant}`,
+					class: `starlight-aside prose-none starlight-aside--${variant}`,
 				},
 				[
 					h('p', { class: 'starlight-aside__title', 'aria-hidden': 'true' }, [

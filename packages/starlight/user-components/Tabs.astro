@@ -5,14 +5,15 @@ const panelHtml = await Astro.slots.render('default');
 const { html, panels } = processPanels(panelHtml);
 ---
 
-<starlight-tabs>
+<starlight-tabs class="not-prose border border-zinc-400/40 rounded-xl flex flex-col justify-center">
 	{
 		panels && (
-			<div class="tablist-wrapper not-content">
-				<ul role="tablist">
+			<div class="p-4">
+				<ul class="flex space-x-2" role="tablist">
 					{panels.map(({ label, panelId, tabId }, idx) => (
-						<li role="presentation" class="tab">
+						<li role="presentation">
 							<a
+								class="px-4 py-2 rounded-md"
 								role="tab"
 								href={'#' + panelId}
 								id={tabId}
@@ -27,44 +28,26 @@ const { html, panels } = processPanels(panelHtml);
 			</div>
 		)
 	}
+	<div class="h-[1px] w-full bg-zinc-400/40"></div>
 	<Fragment set:html={html} />
 </starlight-tabs>
 
 <style>
-	starlight-tabs {
-		display: block;
+	[aria-selected='true'] {
+		@apply dark:bg-white dark:text-black text-white bg-black;
 	}
 
-	.tablist-wrapper {
-		overflow-x: auto;
-	}
-
-	[role='tablist'] {
-		display: flex;
-		list-style: none;
-		border-bottom: 2px solid var(--sl-color-gray-5);
-		padding: 0;
-	}
-
-	.tab {
-		margin-bottom: -2px;
-	}
-	.tab > [role='tab'] {
-		display: block;
-		padding: 0 1.25rem;
-		text-decoration: none;
-		border-bottom: 2px solid var(--sl-color-gray-5);
-		color: var(--sl-color-gray-3);
-		outline-offset: var(--sl-outline-offset-inside);
-	}
-	.tab [role='tab'][aria-selected] {
-		color: var(--sl-color-white);
-		border-color: var(--sl-color-text-accent);
-		font-weight: 600;
-	}
-
-	.tablist-wrapper ~ :global([role='tabpanel']) {
-		margin-top: 1rem;
+	:root {
+		--astro-code-color-text: #ffffff;
+		--astro-code-token-constant: #3b82f6;
+		--astro-code-token-string: #ec4899;
+		--astro-code-token-comment: #e4e4e7;
+		--astro-code-token-keyword: var(--sl-color-purple-high);
+		--astro-code-token-parameter: #8b5cf6;
+		--astro-code-token-function: #8b5cf6;
+		--astro-code-token-string-expression: var(--sl-color-green-high);
+		--astro-code-token-punctuation: var(--sl-color-gray-2);
+		--astro-code-token-link: var(--sl-color-blue-high);
 	}
 </style>
 
