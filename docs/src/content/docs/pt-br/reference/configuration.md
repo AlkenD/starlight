@@ -3,25 +3,25 @@ title: Referência da Configuração
 description: Uma visão geral de todas as opções de configuração que o Starlight suporta.
 ---
 
-## Configure a integração `starlight`
+## Configure a integração `starstruck`
 
 Starlight é uma integração construída acima do framework web [Astro](https://astro.build). Você pode configurar o seu projeto dentro do arquivo de configuração `astro.config.mjs`:
 
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
   integrations: [
-    starlight({
+    starstruck({
       title: 'Minha documentação de iluminar os olhos',
     }),
   ],
 });
 ```
 
-Você pode passar as seguintes opções para a integração `starlight`.
+Você pode passar as seguintes opções para a integração `starstruck`.
 
 ### `title` (obrigatório)
 
@@ -42,7 +42,7 @@ Define a descrição do seu website. Usado em metadados compartilhados com motor
 Define a imagem da logo a ser mostrada na barra de navegação ao lado ou no lugar do título da página. Você pode definir uma única propriedade `src` ou definir fontes de imagem separadas para os modos `light` e `dark`.
 
 ```js
-starlight({
+starstruck({
   logo: {
     src: './src/assets/minha-logo.svg',
   },
@@ -69,17 +69,17 @@ Configura o índice mostrado a direita de cada página. Por padrão, cabeçalhos
 
 **tipo:** `{ baseUrl: string }`
 
-Habilita links “Editar página” definindo a URL base que deve ser utilizada. O link final será `editLink.baseUrl` + o caminho da página atual. Por exemplo, para habilitar editar páginas no repositório `withastro/starlight` no GitHub:
+Habilita links “Editar página” definindo a URL base que deve ser utilizada. O link final será `editLink.baseUrl` + o caminho da página atual. Por exemplo, para habilitar editar páginas no repositório `withastro/starstruck` no GitHub:
 
 ```js
-starlight({
+starstruck({
   editLink: {
-    baseUrl: 'https://github.com/withastro/starlight/edit/main/',
+    baseUrl: 'https://github.com/withastro/starstruck/edit/main/',
   },
 });
 ```
 
-Com essa configuração, uma página `/introducao` teria um link de edição apontando para `https://github.com/withastro/starlight/edit/main/src/docs/introducao.md`.
+Com essa configuração, uma página `/introducao` teria um link de edição apontando para `https://github.com/withastro/starstruck/edit/main/src/docs/introducao.md`.
 
 ### `sidebar`
 
@@ -97,7 +97,7 @@ Cada item deve ter um `label` e uma das seguintes propriedades:
 - `autogenerate` — um objeto especificando um diretório da sua documentação para gerar automaticamente um grupo de links.
 
 ```js
-starlight({
+starstruck({
   sidebar: [
     // Um único link rotulado como "Início”.
     { label: 'Início', link: '/' },
@@ -121,7 +121,7 @@ starlight({
 #### Ordenação
 
 Grupos da barra lateral gerados automaticamente são ordenados pelo nome de arquivo alfabeticamente.
-Por exemplo, uma página gerada de `astro.md` apareceria acima da página de `starlight.md`.
+Por exemplo, uma página gerada de `astro.md` apareceria acima da página de `starstruck.md`.
 
 #### Escondendo grupos
 
@@ -216,11 +216,11 @@ Cada entrada deve usar o diretório onde os arquivos daquela língua estão salv
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
   integrations: [
-    starlight({
+    starstruck({
       title: 'Meu Site',
       // Define Inglês como a língua padrão para esse site.
       defaultLocale: 'en',
@@ -280,7 +280,7 @@ A direção de escrita dessa língua; `"ltr"` para esquerda-para-direita (o padr
 Você pode definir a língua padrão sem um diretório `/lingua/` definindo um local `root`:
 
 ```js
-starlight({
+starstruck({
   locales: {
     root: {
       label: 'English',
@@ -312,11 +312,11 @@ O local padrãoserá utilizado para providenciar conteúdo de fallback onde est�
 Detalhes opcionais sobre as contas de redes sociais para esse site. Adicionar qualquer um desses irá os mostrar como links de ícone no cabeçalho do site.
 
 ```js
-starlight({
+starstruck({
   social: {
     codeberg: 'https://codeberg.org/knut/examples',
     discord: 'https://astro.build/chat',
-    github: 'https://github.com/withastro/starlight',
+    github: 'https://github.com/withastro/starstruck',
     gitlab: 'https://gitlab.com/delucis',
     linkedin: 'https://www.linkedin.com/company/astroinc',
     mastodon: 'https://m.webtoo.ls/@astro',
@@ -337,7 +337,7 @@ Fornece arquivos CSS para customizar a aparência e sensação do seu site Starl
 Suporta arquivos CSS locais relativos a raiz do seu projeto, e.x. `'./src/customizado.css'` e CSS que você instalou como um módulo do npm, e.x. `'@fontsource/roboto'`.
 
 ```js
-starlight({
+starstruck({
   customCss: ['./src/estilos-customizados.css', '@fontsource/roboto'],
 });
 ```
@@ -350,7 +350,7 @@ Adiciona tags customizadas ao `<head>` do seu site Starlight.
 Pode ser útil para adicionar rastreamento de analytics e outros scripts e recursos de terceiros.
 
 ```js
-starlight({
+starstruck({
   head: [
     // Exemplo: adiciona a tag de script de analytics do Fathom.
     {
@@ -401,7 +401,7 @@ Uma página pode sobrescrever essa opção ou o texto do link e/ou a URL usando 
 Define o caminho do favicon padrão para seu website que deve estar localizado no diretório `public/` e ser um arquivo de ícone válido (`.ico`, `.gif`, `.jpg`, `.png` ou `.svg`).
 
 ```js
-starlight({
+starstruck({
   favicon: '/imagens/favicon.svg',
 }),
 ```
@@ -409,7 +409,7 @@ starlight({
 Se você precisa definir variantes adicionais ou favicons de fallback, você pode adicionar tags utilizando a [opção `head`](#head):
 
 ```js
-starlight({
+starstruck({
   favicon: '/imagens/favicon.svg'.
   head: [
     // Adiciona um favicon ICO de fallback para o Safari.

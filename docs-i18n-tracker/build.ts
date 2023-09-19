@@ -11,7 +11,7 @@ const translationStatusBuilder = new TranslationStatusBuilder({
 	languageLabels: Object.values(locales)
 		.filter((loc) => loc.lang !== 'en')
 		.reduce((acc, curr) => ({ [curr.lang]: curr.label, ...acc }), {}),
-	githubRepo: process.env.GITHUB_REPOSITORY || 'withastro/starlight',
+	githubRepo: process.env.GITHUB_REPOSITORY || 'withastro/starstruck',
 	githubToken: process.env.GITHUB_TOKEN,
 });
 

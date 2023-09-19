@@ -100,4 +100,4 @@ export class StarlightTOC extends HTMLElement {
 	}
 }
 
-customElements.define('starlight-toc', StarlightTOC);
+customElements.define('starstruck-toc', StarlightTOC);

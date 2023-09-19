@@ -1,14 +1,14 @@
-declare module 'virtual:starlight/user-config' {
+declare module 'virtual:starstruck/user-config' {
 	const Config: import('./types').StarlightConfig;
 	export default Config;
 }
-declare module 'virtual:starlight/project-context' {
+declare module 'virtual:starstruck/project-context' {
 	export default { root: string };
 }
 
-declare module 'virtual:starlight/user-css' {}
+declare module 'virtual:starstruck/user-css' {}
 
-declare module 'virtual:starlight/user-images' {
+declare module 'virtual:starstruck/user-images' {
 	type ImageMetadata = import('astro').ImageMetadata;
 	export const logos: {
 		dark?: ImageMetadata;

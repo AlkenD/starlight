@@ -1,4 +1,4 @@
-import config from 'virtual:starlight/user-config';
+import config from 'virtual:starstruck/user-config';
 
 export interface LocaleData {
 	/** Writing direction. */

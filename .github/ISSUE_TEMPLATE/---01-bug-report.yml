@@ -11,9 +11,9 @@ body:
         ✅ I am using the **latest versions of Starlight and Astro**.
         ✅ I am using a version of Node that supports ESM (`v14.18.0+`, or `v16.12.0+`).
   - type: input
-    id: starlight-version
+    id: starstruck-version
     attributes:
-      label: What version of `starlight` are you using?
+      label: What version of `starstruck` are you using?
       placeholder: 0.0.0
     validations:
       required: true

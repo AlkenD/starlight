@@ -1,7 +1,5 @@
 ---
 import type { MarkdownHeading } from 'astro';
-import RightSidebarPanel from './RightSidebarPanel.astro';
-import MobileTableOfContents from './TableOfContents/MobileTableOfContents.astro';
 import TableOfContents from './TableOfContents.astro';
 import { generateToC } from './TableOfContents/generateToC';
 import { useTranslations } from '../utils/translations';
@@ -24,13 +22,4 @@ const tocProps = tocConfig && {
 };
 ---
 
-{
-	tocProps && (
-		<>
-			<MobileTableOfContents {...tocProps} />
-			<RightSidebarPanel>
-				<TableOfContents {...tocProps} />
-			</RightSidebarPanel>
-		</>
-	)
-}
+{tocProps && <TableOfContents {...tocProps} />}

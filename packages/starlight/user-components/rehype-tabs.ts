@@ -14,7 +14,7 @@ declare module 'vfile' {
 	}
 }
 
-export const TabItemTagname = 'starlight-tab-item';
+export const TabItemTagname = 'starstruck-tab-item';
 
 // https://github.com/adobe/react-spectrum/blob/99ca82e87ba2d7fdd54f5b49326fd242320b4b51/packages/%40react-aria/focus/src/FocusScope.tsx#L256-L275
 const focusableElementSelectors = [
@@ -44,7 +44,7 @@ const getIDs = () => {
 
 /**
  * Rehype processor to extract tab panel data and turn each
- * `<starlight-tab-item>` into a `<section>` with the necessary
+ * `<starstruck-tab-item>` into a `<section>` with the necessary
  * attributes.
  */
 const tabsProcessor = rehype()

@@ -30,11 +30,11 @@ L'aggiunta di un logo personalizzato all'intestazione del sito è un modo rapido
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@awe-player/starstruck';
+   import starstruck from '@awe-player/starstruck';
 
    export default defineConfig({
    	integrations: [
-   		starlight({
+   		starstruck({
    			title: 'Documentazione con il mio logo',
    			logo: {
    				src: './src/assets/my-logo.svg',
@@ -49,7 +49,7 @@ Se l'immagine del tuo logo include già il titolo del sito, puoi nascondere visi
 Il testo del `title` verrà comunque incluso per gli screen reader in modo che l'intestazione rimanga accessibile.
 
 ```js
-starlight({
+starstruck({
   title: 'Documentazione con il mio logo',
   logo: {
     src: './src/assets/my-logo.svg',
@@ -78,7 +78,7 @@ Puoi visualizzare diverse versioni del tuo logo in modalità chiara e scura.
 2. Aggiungi il percorso alle varianti del tuo logo come opzioni `light` e `dark` invece di `src` in `astro.config.mjs`:
 
    ```js
-   starlight({
+   starstruck({
      title: 'Documentazione con il mio logo',
      logo: {
        light: './src/assets/light-logo.svg',
@@ -96,7 +96,7 @@ Starlight ha il supporto integrato per la generazione di una mappa del sito. Abi
 
 export default defineConfig({
 	site: 'https://stargazers.club/',
-	integrations: [starlight({ title: 'Sito con mappa del sito' })],
+	integrations: [starstruck({ title: 'Sito con mappa del sito' })],
 });
 ```
 
@@ -144,7 +144,7 @@ summary:
 
 defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: '',
 			tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 2 },
 		}),
@@ -176,7 +176,7 @@ tableOfContents: false
 
 defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title:
 				'Documentazione con indice dei contenuti disabilitato a livello globale',
 			tableOfContents: false,
@@ -198,15 +198,15 @@ Facci sapere su GitHub o Discord se hai bisogno di supporto per un altro servizi
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: 'Documentazione con link social',
 			social: {
 				discord: 'https://astro.build/chat',
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/withastro/starstruck',
 			},
 		}),
 	],
@@ -229,19 +229,19 @@ I modelli comuni includono:
 
 Se il tuo progetto Starlight non è nella radice del tuo repository, includi il percorso del progetto alla fine dell'URL di base.
 
-Questo esempio mostra il collegamento di modifica configurato per i documenti Starlight, che si trovano nella sottodirectory `docs/` sul ramo `main` del repository `withastro/starlight` su GitHub:
+Questo esempio mostra il collegamento di modifica configurato per i documenti Starlight, che si trovano nella sottodirectory `docs/` sul ramo `main` del repository `withastro/starstruck` su GitHub:
 
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: 'Documentazione con collegamenti di modifica',
 			editLink: {
-				baseUrl: 'https://github.com/withastro/starlight/edit/main/docs/',
+				baseUrl: 'https://github.com/withastro/starstruck/edit/main/docs/',
 			},
 		}),
 	],
@@ -325,11 +325,11 @@ Per utilizzare Google Fonts, segui la [guida alla configurazione di Fontsource](
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@awe-player/starstruck';
+   import starstruck from '@awe-player/starstruck';
 
    export default defineConfig({
    	integrations: [
-   		starlight({
+   		starstruck({
    			title: 'Documentazione con font personalizzato',
    			customCss: [
    				// Percorso relativo al file CSS @font-face.
@@ -384,11 +384,11 @@ Fornisce moduli npm che puoi installare per i caratteri che desideri utilizzare 
     ```js
     // astro.config.mjs
     import { defineConfig } from 'astro/config';
-    import starlight from '@awe-player/starstruck';
+    import starstruck from '@awe-player/starstruck';
 
     export default defineConfig({
     	integrations: [
-    		starlight({
+    		starstruck({
     			title: 'Docs With a Custom Typeface',
     			customCss: [
     				// File Fontsource per pesi di font regolari e semi-grassetto.

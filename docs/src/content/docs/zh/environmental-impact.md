@@ -104,7 +104,7 @@ Cache-Control: public, max-age=604800, immutable
 
 <small>数据收集于 2023 年 5 月 14 日。点击链接查看最新数据。</small>
 
-[sl-carbon]: https://www.websitecarbon.com/website/starlight-astro-build-getting-started/
+[sl-carbon]: https://www.websitecarbon.com/website/starstruck-astro-build-getting-started/
 [vp-carbon]: https://www.websitecarbon.com/website/vitepress-dev-guide-what-is-vitepress/
 [dc-carbon]: https://www.websitecarbon.com/website/docus-dev-introduction-getting-started/
 [sx-carbon]: https://www.websitecarbon.com/website/sphinx-doc-org-en-master-usage-quickstart-html/

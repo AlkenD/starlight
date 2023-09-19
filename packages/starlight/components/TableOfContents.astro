@@ -14,11 +14,17 @@ const { locale, toc, maxHeadingLevel, minHeadingLevel } = Astro.props;
 const t = useTranslations(locale);
 ---
 
-<starlight-toc data-min-h={minHeadingLevel} data-max-h={maxHeadingLevel}>
+<starstruck-toc
+	class="w-60 sticky top-0 h-[calc(100vh-56px)] px-4 pt-6 text-sm"
+	data-min-h={minHeadingLevel}
+	data-max-h={maxHeadingLevel}
+>
 	<nav aria-labelledby="starlight__on-this-page">
-		<h2 id="starlight__on-this-page">{t('tableOfContents.onThisPage')}</h2>
+		<h2 class="text-black dark:text-white font-semibold mb-4" id="starlight__on-this-page">
+			{t('tableOfContents.onThisPage')}
+		</h2>
 		<TableOfContentsList {toc} />
 	</nav>
-</starlight-toc>
+</starstruck-toc>
 
-<script src="./TableOfContents/starlight-toc"></script>
+<script src="./TableOfContents/starstruck-toc"></script>

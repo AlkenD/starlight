@@ -1,6 +1,6 @@
 import type { GetStaticPathsItem } from 'astro';
 import { type CollectionEntry, getCollection } from 'astro:content';
-import config from 'virtual:starlight/user-config';
+import config from 'virtual:starstruck/user-config';
 import {
 	type LocaleData,
 	localizedId,

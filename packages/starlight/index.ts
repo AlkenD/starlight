@@ -15,7 +15,7 @@ export default function StarlightIntegration(opts: StarlightUserConfig): AstroIn
 
 	if (!parsedConfig.success) {
 		throw new Error(
-			'Invalid config passed to starlight integration\n' +
+			'Invalid config passed to starstruck integration\n' +
 				parsedConfig.error.issues.map((i) => i.message).join('\n')
 		);
 	}

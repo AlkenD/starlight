@@ -25,11 +25,11 @@ Personnalisez les styles appliqués à votre site Starlight en fournissant des f
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@awe-player/starstruck';
+   import starstruck from '@awe-player/starstruck';
 
    export default defineConfig({
    	integrations: [
-   		starlight({
+   		starstruck({
    			title: 'Documentation avec CSS personnalisé',
    			customCss: [
    				// Chemin relatif vers votre fichier CSS personnalisé
@@ -40,7 +40,7 @@ Personnalisez les styles appliqués à votre site Starlight en fournissant des f
    });
    ```
 
-Vous pouvez retrouver toutes les propriétés CSS personnalisées utilisées par Starlight que vous pouvez définir pour personnaliser votre site dans le fichier [`props.css` sur GitHub](https://github.com/withastro/starlight/blob/main/packages/starlight/style/props.css).
+Vous pouvez retrouver toutes les propriétés CSS personnalisées utilisées par Starlight que vous pouvez définir pour personnaliser votre site dans le fichier [`props.css` sur GitHub](https://github.com/withastro/starstruck/blob/main/packages/starstruck/style/props.css).
 
 ## Tailwind CSS
 
@@ -50,7 +50,7 @@ Starlight fournit un module d'extension Tailwind complémentaire pour aider à c
 Le module d'extension Tailwind de Starlight applique la configuration suivante :
 
 - Configure les variantes `dark:` de Tailwind pour fonctionner avec le mode sombre de Starlight.
-- Utilise les [couleurs et polices de thème](#mettre-en-forme-starlight-avec-tailwind) de Tailwind dans l'interface utilisateur de Starlight.
+- Utilise les [couleurs et polices de thème](#mettre-en-forme-starstruck-avec-tailwind) de Tailwind dans l'interface utilisateur de Starlight.
 - Désactive les styles de réinitialisation [Preflight](https://tailwindcss.com/docs/preflight) de Tailwind tout en restaurant sélectivement les parties essentielles de Preflight requises pour les classes utilitaires de bordure de Tailwind.
 
 ### Créer un nouveau projet avec Tailwind
@@ -63,21 +63,21 @@ Démarrez un nouveau projet Starlight avec Tailwind CSS préconfiguré en utilis
 <TabItem label="npm">
 
 ```sh
-npm create astro@latest -- --template starlight/tailwind
+npm create astro@latest -- --template starstruck/tailwind
 ```
 
 </TabItem>
 <TabItem label="pnpm">
 
 ```sh
-pnpm create astro --template starlight/tailwind
+pnpm create astro --template starstruck/tailwind
 ```
 
 </TabItem>
 <TabItem label="Yarn">
 
 ```sh
-yarn create astro --template starlight/tailwind
+yarn create astro --template starstruck/tailwind
 ```
 
 </TabItem>
@@ -161,12 +161,12 @@ Si vous avez déjà un site Starlight et que vous souhaitez ajouter Tailwind CSS
     ```js {11-12,16-17}
     // astro.config.mjs
     import { defineConfig } from 'astro/config';
-    import starlight from '@awe-player/starstruck';
+    import starstruck from '@awe-player/starstruck';
     import tailwind from '@astrojs/tailwind';
 
     export default defineConfig({
     	integrations: [
-    		starlight({
+    		starstruck({
     			title: 'Documentation avec Tailwind',
     			customCss: [
     				// Chemin vers vos style de base de Tailwind:
@@ -288,7 +288,7 @@ import ThemeDesigner from '../../../../components/theme-designer.astro';
 	</Fragment>
 	<Fragment slot="tailwind-docs">
 		Le fichier d'exemple de [configuration
-		Tailwind](#mettre-en-forme-starlight-avec-tailwind) ci-dessous inclut les
+		Tailwind](#mettre-en-forme-starstruck-avec-tailwind) ci-dessous inclut les
 		palettes de couleurs `accent` et `gray` générées à utiliser dans l'objet de
 		configuration `theme.extend.colors`.
 	</Fragment>

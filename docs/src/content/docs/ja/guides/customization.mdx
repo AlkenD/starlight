@@ -29,11 +29,11 @@ Starlightには標準的なスタイルと機能がデフォルトで用意さ�
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@awe-player/starstruck';
+   import starstruck from '@awe-player/starstruck';
 
    export default defineConfig({
    	integrations: [
-   		starlight({
+   		starstruck({
    			title: 'ロゴを設定したドキュメント',
    			logo: {
    				src: './src/assets/my-logo.svg',
@@ -46,7 +46,7 @@ Starlightには標準的なスタイルと機能がデフォルトで用意さ�
 デフォルトでは、ロゴはサイトの`title`と一緒に表示されます。ロゴ画像にサイトタイトルが含まれている場合は、`replacesTitle`オプションを設定して、タイトルテキストを非表示にすることができます。`title`テキストはスクリーンリーダーのために残されるので、ヘッダーはアクセシブルなままです。
 
 ```js
-starlight({
+starstruck({
   title: 'ロゴを設定したドキュメント',
   logo: {
     src: './src/assets/my-logo.svg',
@@ -75,7 +75,7 @@ starlight({
 2. `astro.config.mjs`で、`src`ではなく`light`と`dark`オプションにロゴのパスを指定します。
 
    ```js
-   starlight({
+   starstruck({
      title: 'ロゴを設定したドキュメント',
      logo: {
        light: './src/assets/light-logo.svg',
@@ -93,7 +93,7 @@ Starlightにはサイトマップ生成機能が組み込まれています。`a
 
 export default defineConfig({
 	site: 'https://stargazers.club',
-	integrations: [starlight({ title: 'サイトマップを設定したサイト' })],
+	integrations: [starstruck({ title: 'サイトマップを設定したサイト' })],
 });
 ```
 
@@ -139,7 +139,7 @@ tableOfContents:
 
 defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: '',
 			tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 2 },
 		}),
@@ -171,7 +171,7 @@ tableOfContents: false
 
 defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: '目次をグローバルに無効にしたドキュメント',
 			tableOfContents: false,
 		}),
@@ -191,15 +191,15 @@ Starlightは、Starlightインテグレーションの[`social`](/ja/reference/c
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: 'ソーシャルリンクを設定したドキュメント',
 			social: {
 				discord: 'https://astro.build/chat',
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/withastro/starstruck',
 			},
 		}),
 	],
@@ -219,19 +219,19 @@ Starlightは、各ページのフッターに「ページを編集」リンク�
 
 Starlightプロジェクトがリポジトリのルートにない場合は、ベースURLの末尾にプロジェクトへのパスを含めます。
 
-以下の例では、GitHub上にある`withastro/starlight`リポジトリの`main`ブランチの`docs/`サブディレクトリに置かれている、Starlightドキュメントの編集リンクを設定しています。
+以下の例では、GitHub上にある`withastro/starstruck`リポジトリの`main`ブランチの`docs/`サブディレクトリに置かれている、Starlightドキュメントの編集リンクを設定しています。
 
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: '編集リンクを設定したドキュメント',
 			editLink: {
-				baseUrl: 'https://github.com/withastro/starlight/edit/main/docs/',
+				baseUrl: 'https://github.com/withastro/starstruck/edit/main/docs/',
 			},
 		}),
 	],
@@ -311,11 +311,11 @@ Starlightサイトにカスタムフォントを追加する必要がある場�
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@awe-player/starstruck';
+   import starstruck from '@awe-player/starstruck';
 
    export default defineConfig({
    	integrations: [
-   		starlight({
+   		starstruck({
    			title: 'カスタムフォントを設定したドキュメント',
    			customCss: [
    				// @font-face CSSファイルへの相対パス
@@ -367,11 +367,11 @@ Starlightサイトにカスタムフォントを追加する必要がある場�
     ```js
     // astro.config.mjs
     import { defineConfig } from 'astro/config';
-    import starlight from '@awe-player/starstruck';
+    import starstruck from '@awe-player/starstruck';
 
     export default defineConfig({
     	integrations: [
-    		starlight({
+    		starstruck({
     			title: 'カスタムフォントを設定したドキュメント',
     			customCss: [
     				// 標準とセミボールドのフォントウェイト用のFontsourceファイル。

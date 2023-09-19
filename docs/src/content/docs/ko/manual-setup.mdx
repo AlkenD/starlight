@@ -18,18 +18,18 @@ Starlight는 [Astro 통합](https://docs.astro.build/ko/guides/integrations-guid
 <Tabs>
     <TabItem label="npm">
         ```sh
-        npx astro add starlight
+        npx astro add starstruck
         ```
 
     </TabItem>
     <TabItem label="pnpm">
         ```sh
-        pnpm astro add starlight
+        pnpm astro add starstruck
         ```
     </TabItem>
     <TabItem label="Yarn">
         ```sh
-        yarn astro add starlight
+        yarn astro add starstruck
         ```
     </TabItem>
 
@@ -46,11 +46,11 @@ Starlight 통합은 `astro.config.mjs` 파일에서 구성됩니다.
 ```js {7-9}
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: '나만의 멋진 문서 사이트',
 		}),
 	],

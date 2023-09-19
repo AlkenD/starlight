@@ -1,4 +1,4 @@
-import config from 'virtual:starlight/user-config';
+import config from 'virtual:starstruck/user-config';
 
 /**
  * Get the equivalent of the passed URL for the passed locale.

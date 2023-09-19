@@ -29,11 +29,11 @@ Agregando un logo personalizado al encabezado del sitio es una forma rápida de 
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@awe-player/starstruck';
+   import starstruck from '@awe-player/starstruck';
 
    export default defineConfig({
    	integrations: [
-   		starlight({
+   		starstruck({
    			title: 'Docs Con Mi Logo',
    			logo: {
    				src: './src/assets/mi-logo.svg',
@@ -48,7 +48,7 @@ Si tu imagen de logo ya incluye el título del sitio, puedes ocultar visualmente
 El texto del título seguirá estando disponible para lectores de pantalla para garantizar la accesibilidad del encabezado.
 
 ```js
-starlight({
+starstruck({
   title: 'Docs Con Mi Logo',
   logo: {
     src: './src/assets/mi-logo.svg',
@@ -77,7 +77,7 @@ Puedes mostrar diferentes versiones de tu logo en modos claro y oscuro.
 2. Agrega la ruta de tus variantes de logo como opciones `light` y `dark` en lugar de `src` en el archivo `astro.config.mjs`:
 
    ```js
-   starlight({
+   starstruck({
      title: 'Docs Con Mi Logo',
      logo: {
        light: './src/assets/logo-claro.svg',
@@ -128,7 +128,7 @@ tableOfContents:
 
 defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: '',
 			tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 2 },
 		}),
@@ -160,7 +160,7 @@ tableOfContents: false
 
 defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: 'Docs con la tabla de contenidos desactivada globalmente',
 			tableOfContents: false,
 		}),
@@ -180,15 +180,15 @@ Actualmente, se admiten enlaces a Bitbucket, Codeberg, CodePen, Discord, GitHub,
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: 'Docs Con Mis Enlaces Sociales',
 			social: {
 				discord: 'https://astro.build/chat',
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/withastro/starstruck',
 			},
 		}),
 	],
@@ -209,19 +209,19 @@ Algunos patrones comunes incluyen:
 
 Si tu proyecto de Starlight no se encuentra en la raíz de tu repositorio, incluye la ruta al proyecto al final de la URL base.
 
-Este ejemplo muestra el enlace de edición configurado para la documentación de Starlight, que se encuentra en el subdirectorio `docs/` en la rama `main` del repositorio `withastro/starlight` en GitHub:
+Este ejemplo muestra el enlace de edición configurado para la documentación de Starlight, que se encuentra en el subdirectorio `docs/` en la rama `main` del repositorio `withastro/starstruck` en GitHub:
 
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: 'Docs Con Enlaces De Edición',
 			editLink: {
-				baseUrl: 'https://github.com/withastro/starlight/edit/main/docs/',
+				baseUrl: 'https://github.com/withastro/starstruck/edit/main/docs/',
 			},
 		}),
 	],
@@ -304,11 +304,11 @@ Para utilizar Google Fonts, sigue la [guía de configuración de Fontsource](#co
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@awe-player/starstruck';
+   import starstruck from '@awe-player/starstruck';
 
    export default defineConfig({
    	integrations: [
-   		starlight({
+   		starstruck({
    			title: 'Docs Con Un Tipo De Letra Personalizado',
    			customCss: [
    				// Ruta relativa al archivo CSS de `@font-face`.
@@ -363,11 +363,11 @@ Proporciona módulos npm que puedes instalar para las fuentes que deseas utiliza
     ```js
     // astro.config.mjs
     import { defineConfig } from 'astro/config';
-    import starlight from '@awe-player/starstruck';
+    import starstruck from '@awe-player/starstruck';
 
     export default defineConfig({
     	integrations: [
-    		starlight({
+    		starstruck({
     			title: 'Docs Con Un Tipo De Letra Personalizado',
     			customCss: [
     				// Archivos de Fontsource para las variantes de fuente regular y semi-bold.

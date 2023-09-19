@@ -87,7 +87,7 @@ JavaScriptの解析とコンパイルは、ブラウザが実行する最も高�
 
 <small>データは2023年5月14日に収集されたものです。リンクをクリックすると、最新の数値が表示されます。</small>
 
-[sl-carbon]: https://www.websitecarbon.com/website/starlight-astro-build-getting-started/
+[sl-carbon]: https://www.websitecarbon.com/website/starstruck-astro-build-getting-started/
 [vp-carbon]: https://www.websitecarbon.com/website/vitepress-dev-guide-what-is-vitepress/
 [dc-carbon]: https://www.websitecarbon.com/website/docus-dev-introduction-getting-started/
 [sx-carbon]: https://www.websitecarbon.com/website/sphinx-doc-org-en-master-usage-quickstart-html/

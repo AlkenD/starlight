@@ -30,11 +30,11 @@ Adding a custom logo to the site header is a quick way to add your individual br
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@awe-player/starstruck';
+   import starstruck from '@awe-player/starstruck';
 
    export default defineConfig({
    	integrations: [
-   		starlight({
+   		starstruck({
    			title: 'Docs With My Logo',
    			logo: {
    				src: './src/assets/my-logo.svg',
@@ -49,7 +49,7 @@ If your logo image already includes the site title, you can visually hide the ti
 The `title` text will still be included for screen readers so that the header remains accessible.
 
 ```js
-starlight({
+starstruck({
   title: 'Docs With My Logo',
   logo: {
     src: './src/assets/my-logo.svg',
@@ -78,7 +78,7 @@ You can display different versions of your logo in light and dark modes.
 2. Add the path to your logo variants as the `light` and `dark` options instead of `src` in `astro.config.mjs`:
 
    ```js
-   starlight({
+   starstruck({
      title: 'Docs With My Logo',
      logo: {
        light: './src/assets/light-logo.svg',
@@ -96,7 +96,7 @@ Starlight has built-in support for generating a sitemap. Enable sitemap generati
 
 export default defineConfig({
 	site: 'https://stargazers.club',
-	integrations: [starlight({ title: 'Site with sitemap' })],
+	integrations: [starstruck({ title: 'Site with sitemap' })],
 });
 ```
 
@@ -144,7 +144,7 @@ tableOfContents:
 
 defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: '',
 			tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 2 },
 		}),
@@ -176,7 +176,7 @@ tableOfContents: false
 
 defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: 'Docs with table of contents disabled globally',
 			tableOfContents: false,
 		}),
@@ -197,15 +197,15 @@ Let us know on GitHub or Discord if you need support for another service!
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: 'Docs With Social Links',
 			social: {
 				discord: 'https://astro.build/chat',
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/withastro/starstruck',
 			},
 		}),
 	],
@@ -228,19 +228,19 @@ Common patterns include:
 
 If your Starlight project is not in the root of your repository, include the path to the project at the end of the base URL.
 
-This example shows the edit link configured for the Starlight docs, which live in the `docs/` subdirectory on the `main` branch of the `withastro/starlight` repository on GitHub:
+This example shows the edit link configured for the Starlight docs, which live in the `docs/` subdirectory on the `main` branch of the `withastro/starstruck` repository on GitHub:
 
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: 'Docs With Edit Links',
 			editLink: {
-				baseUrl: 'https://github.com/withastro/starlight/edit/main/docs/',
+				baseUrl: 'https://github.com/withastro/starstruck/edit/main/docs/',
 			},
 		}),
 	],
@@ -324,11 +324,11 @@ To use Google Fonts, follow the [Fontsource set-up guide](#set-up-a-fontsource-f
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@awe-player/starstruck';
+   import starstruck from '@awe-player/starstruck';
 
    export default defineConfig({
    	integrations: [
-   		starlight({
+   		starstruck({
    			title: 'Docs With a Custom Typeface',
    			customCss: [
    				// Relative path to your @font-face CSS file.
@@ -383,11 +383,11 @@ It provides npm modules you can install for the fonts you want to use and includ
     ```js
     // astro.config.mjs
     import { defineConfig } from 'astro/config';
-    import starlight from '@awe-player/starstruck';
+    import starstruck from '@awe-player/starstruck';
 
     export default defineConfig({
     	integrations: [
-    		starlight({
+    		starstruck({
     			title: 'Docs With a Custom Typeface',
     			customCss: [
     				// Fontsource files for to regular and semi-bold font weights.

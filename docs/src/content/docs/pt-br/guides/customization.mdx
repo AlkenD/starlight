@@ -31,11 +31,11 @@ Adicionar uma logo customizada ao cabeçalho do site é uma forma rápida de adi
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@awe-player/starstruck';
+   import starstruck from '@awe-player/starstruck';
 
    export default defineConfig({
    	integrations: [
-   		starlight({
+   		starstruck({
    			title: 'Documentação com Minha Logo',
    			logo: {
    				src: './src/assets/minha-logo.svg',
@@ -50,7 +50,7 @@ Se sua imagem da logo já inclui o título do site, você pode esconder o texto 
 O texto do `title` ainda será incluido para leitores de tela para que o cabeçalho continue acessível.
 
 ```js
-starlight({
+starstruck({
   title: 'Documentação com Minha Logo',
   logo: {
     src: './src/assets/minha-logo.svg',
@@ -79,7 +79,7 @@ Você pode mostrar diferentes versões da sua logo no modo claro e escuro.
 2. Adicione o caminho para suas variantes da logo como as opções `light` e `dark` ao invés de `src` em `astro.config.mjs`:
 
    ```js
-   starlight({
+   starstruck({
      title: 'Documentação com Minha Logo',
      logo: {
        light: './src/assets/logo-clara.svg',
@@ -132,7 +132,7 @@ tableOfContents:
 
 defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: '',
 			tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 2 },
 		}),
@@ -164,7 +164,7 @@ tableOfContents: false
 
 defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: 'Documentação com um índice desabilitado globalmente',
 			tableOfContents: false,
 		}),
@@ -185,15 +185,15 @@ Nos avise no GitHub ou Discord se você precisa de suporte para outro serviço!
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: 'Documentação com Links de Redes Sociais',
 			social: {
 				discord: 'https://astro.build/chat',
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/withastro/starstruck',
 			},
 		}),
 	],
@@ -216,19 +216,19 @@ Padrões comuns incluem:
 
 Se o seu projeto Starlight não está na raiz do seu repositório, inclua o caminho ao projeto no fim da URL base.
 
-Este exemplo mostra o link de edição configurado para a documentação do Starlight, que vive no subdiretório `docs/` da branch `main` do repositório `withastro/starlight` no GitHub:
+Este exemplo mostra o link de edição configurado para a documentação do Starlight, que vive no subdiretório `docs/` da branch `main` do repositório `withastro/starstruck` no GitHub:
 
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: 'Documentação com Links de Edição',
 			editLink: {
-				baseUrl: 'https://github.com/withastro/starlight/edit/main/docs/',
+				baseUrl: 'https://github.com/withastro/starstruck/edit/main/docs/',
 			},
 		}),
 	],
@@ -312,11 +312,11 @@ Para utilizar Google Fonts, siga o [guia de configuração do Fontsource](#confi
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@awe-player/starstruck';
+   import starstruck from '@awe-player/starstruck';
 
    export default defineConfig({
    	integrations: [
-   		starlight({
+   		starstruck({
    			title: 'Documentação Com Meu Tipo de Letra Customizado',
    			customCss: [
    				// Caminho relativo para seu arquivo CSS @font-face.
@@ -371,11 +371,11 @@ Ele providencia módulos do npm que você pode isntalar para as fontes que você
     ```js
     // astro.config.mjs
     import { defineConfig } from 'astro/config';
-    import starlight from '@awe-player/starstruck';
+    import starstruck from '@awe-player/starstruck';
 
     export default defineConfig({
     	integrations: [
-    		starlight({
+    		starstruck({
     			title: 'Documentação Com Meu Tipo de Letra Customizado',
     			customCss: [
     				// Arquivos do Fontsource para as espessuras de fonte regular e semi-negrito.

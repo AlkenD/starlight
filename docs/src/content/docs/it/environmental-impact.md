@@ -104,7 +104,7 @@ Questi test eseguiti con [Website Carbon Calculator][wcc] confrontano pagine sim
 
 <small>Dati collezionati il 14 Maggio 2023. Clicca i link per vedere i dati aggiornati.</small>
 
-[sl-carbon]: https://www.websitecarbon.com/website/starlight-astro-build-getting-started/
+[sl-carbon]: https://www.websitecarbon.com/website/starstruck-astro-build-getting-started/
 [vp-carbon]: https://www.websitecarbon.com/website/vitepress-dev-guide-what-is-vitepress/
 [dc-carbon]: https://www.websitecarbon.com/website/docus-dev-introduction-getting-started/
 [sx-carbon]: https://www.websitecarbon.com/website/sphinx-doc-org-en-master-usage-quickstart-html/

@@ -29,11 +29,11 @@ Starlight는 합리적인 기본 스타일과 기능을 제공하므로 구성 �
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@awe-player/starstruck';
+   import starstruck from '@awe-player/starstruck';
 
    export default defineConfig({
    	integrations: [
-   		starlight({
+   		starstruck({
    			title: '로고를 사용하는 문서',
    			logo: {
    				src: './src/assets/my-logo.svg',
@@ -46,7 +46,7 @@ Starlight는 합리적인 기본 스타일과 기능을 제공하므로 구성 �
 기본적으로 로고는 사이트의 `title`과 함께 표시됩니다. 이미 로고 이미지에 사이트 제목이 포함되어 있는 경우, `replacementTitle` 옵션을 설정하여 제목 텍스트를 시각적으로 숨길 수 있습니다. `title` 텍스트는 스크린 리더를 위해 남아 있기 때문에 헤더의 접근성은 유지됩니다.
 
 ```js
-starlight({
+starstruck({
   title: '로고를 사용하는 문서',
   logo: {
     src: './src/assets/my-logo.svg',
@@ -75,7 +75,7 @@ starlight({
 2. `astro.config.mjs` 파일에서 `src` 대신 `light` 및 `dark` 옵션을 전달하여 로고 변형에 대한 경로를 추가합니다.
 
    ```js
-   starlight({
+   starstruck({
      title: '로고를 사용하는 문서',
      logo: {
        light: './src/assets/light-logo.svg',
@@ -93,7 +93,7 @@ Starlight에는 사이트맵 생성 기능이 내장되어 있습니다. `astro.
 
 export default defineConfig({
 	site: 'https://stargazers.club',
-	integrations: [starlight({ title: '사이트맵을 사용하는 웹 사이트' })],
+	integrations: [starstruck({ title: '사이트맵을 사용하는 웹 사이트' })],
 });
 ```
 
@@ -139,7 +139,7 @@ tableOfContents:
 
 defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: '',
 			tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 2 },
 		}),
@@ -171,7 +171,7 @@ tableOfContents: false
 
 defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: '모든 목차가 비활성화된 문서',
 			tableOfContents: false,
 		}),
@@ -191,15 +191,15 @@ Starlight에는 [`social`](/ko/reference/configuration/#social) 옵션을 사용
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: '소셜 링크를 사용하는 문서',
 			social: {
 				discord: 'https://astro.build/chat',
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/withastro/starstruck',
 			},
 		}),
 	],
@@ -219,19 +219,19 @@ Starlight는 각 페이지의 아래에 "페이지 편집" 링크를 표시할 �
 
 Starlight 프로젝트가 저장소의 루트에 없는 경우 기본 URL 끝에 프로젝트 경로를 포함합니다.
 
-아래 예시는 GitHub `withastro/starlight` 저장소의 `main` 브랜치에 있는 `docs/` 하위 디렉토리에 있는 Starlight 문서에 대해 구성된 편집 링크를 보여줍니다.
+아래 예시는 GitHub `withastro/starstruck` 저장소의 `main` 브랜치에 있는 `docs/` 하위 디렉토리에 있는 Starlight 문서에 대해 구성된 편집 링크를 보여줍니다.
 
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: '편집 링크가 있는 문서',
 			editLink: {
-				baseUrl: 'https://github.com/withastro/starlight/edit/main/docs/',
+				baseUrl: 'https://github.com/withastro/starstruck/edit/main/docs/',
 			},
 		}),
 	],
@@ -311,11 +311,11 @@ Starlight 사이트에 사용자 정의 글꼴을 추가해야 하는 경우, �
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@awe-player/starstruck';
+   import starstruck from '@awe-player/starstruck';
 
    export default defineConfig({
    	integrations: [
-   		starlight({
+   		starstruck({
    			title: '사용자 정의 글꼴을 사용하는 문서',
    			customCss: [
    				// @font-face CSS 파일의 상대 경로입니다.
@@ -367,11 +367,11 @@ Starlight 사이트에 사용자 정의 글꼴을 추가해야 하는 경우, �
     ```js
     // astro.config.mjs
     import { defineConfig } from 'astro/config';
-    import starlight from '@awe-player/starstruck';
+    import starstruck from '@awe-player/starstruck';
 
     export default defineConfig({
     	integrations: [
-    		starlight({
+    		starstruck({
     			title: '사용자 정의 글꼴을 사용하는 문서',
     			customCss: [
     				// 보통 및 약간 굵은 글꼴 두께에 대한 Fontsource 파일입니다.

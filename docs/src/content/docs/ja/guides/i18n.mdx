@@ -14,11 +14,11 @@ Starlightは、ルーティング、フォールバックコンテンツ、右�
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@awe-player/starstruck';
+   import starstruck from '@awe-player/starstruck';
 
    export default defineConfig({
    	integrations: [
-   		starlight({
+   		starstruck({
    			title: 'My Docs',
    			// このサイトのデフォルト言語として英語を設定します。
    			defaultLocale: 'en',
@@ -71,11 +71,11 @@ Starlightは、ルーティング、フォールバックコンテンツ、右�
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: 'My Docs',
 			defaultLocale: 'root', // 任意
 			locales: {
@@ -113,10 +113,10 @@ export default defineConfig({
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 export default defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: '私のドキュメント',
 			locales: {
 				root: {
@@ -141,7 +141,7 @@ Starlightは、すべての言語で同等のページが作成されること�
 
 Starlightでは、読者が選択した言語でサイト全体を体験できるように、翻訳されたコンテンツファイルをホストするだけでなく、デフォルトUIの文字列（たとえば目次に表示されている「目次」という見出し）も翻訳できるようになっています。
 
-英語、チェコ語、フランス語、ドイツ語、イタリア語、日本語、ポルトガル語、オランダ語、デンマーク語、スペイン語、トルコ語、アラビア語、ノルウェー語、ペルシア語、簡体字中国語、韓国語、スウェーデン語の翻訳済みUI文字列がすでに用意されていますが、[デフォルト言語をさらに追加するための貢献](https://github.com/withastro/starlight/blob/main/CONTRIBUTING.md)も歓迎します。
+英語、チェコ語、フランス語、ドイツ語、イタリア語、日本語、ポルトガル語、オランダ語、デンマーク語、スペイン語、トルコ語、アラビア語、ノルウェー語、ペルシア語、簡体字中国語、韓国語、スウェーデン語の翻訳済みUI文字列がすでに用意されていますが、[デフォルト言語をさらに追加するための貢献](https://github.com/withastro/starstruck/blob/main/CONTRIBUTING.md)も歓迎します。
 
 `18n`データコレクションを使用すると、サポートしたい言語の翻訳を追加したり、デフォルトのラベルを上書きしたりできます。
 

@@ -2,7 +2,7 @@
 import type { MarkdownHeading } from 'astro';
 import type { Route } from '../utils/routing';
 
-import config from 'virtual:starlight/user-config';
+import config from 'virtual:starstruck/user-config';
 import HeadSEO from '../components/HeadSEO.astro';
 import SkipLink from '../components/SkipLink.astro';
 import ThemeProvider from '../components/ThemeProvider.astro';
@@ -11,13 +11,9 @@ import Hero from '../components/Hero.astro';
 import SideBar from '../components/SideBar/SideBar.astro';
 import { getSidebar } from '../utils/navigation';
 
-import 'virtual:starlight/user-css';
-import MarkdownContent from '../components/MarkdownContent.astro';
-import ContentPanel from '../components/ContentPanel.astro';
+import 'virtual:starstruck/user-css';
+import RightSidebar from '../components/RightSidebar.astro';
 import FallbackContentNotice from '../components/FallbackContentNotice.astro';
-import Footer from '../components/Footer.astro';
-
-import '../styles/aside.css';
 
 type Props = Route & { headings: MarkdownHeading[] };
 
@@ -48,43 +44,37 @@ const pagefindEnabled =
 		<HeadSEO data={entry.data} lang={lang} />
 	</head>
 	<body
+		class:list={[hasSidebar && 'h-screen overflow-hidden']}
 		class="bg-no-repeat bg-cover bg-white dark:bg-black dark:text-white bg-opacity-0"
 		style=`background-image: url(${entry.data.background?.file?.src})`
 	>
 		<ThemeProvider />
-		<SkipLink {locale} />
-		<Header {hasSidebar} {locale} />
-		<main class="flex">
-			<div class="sticky top-0">
+		<!-- <SkipLink {locale} /> -->
+		<div class="h-full">
+			<Header {locale} {hasSidebar} />
+			<div class:list={[entry.data.hero ? 'w-full' : 'flex w-full h-[calc(100vh-56px)]', ,]}>
 				{hasSidebar && <SideBar {sidebar} {locale} />}
-			</div>
-			<div class="flex-1">
 				{
 					entry.data.hero ? (
-						<ContentPanel>
-							<Hero hero={entry.data.hero} fallbackTitle={entry.data.title} />
-							<MarkdownContent>
-								<slot />
-							</MarkdownContent>
-						</ContentPanel>
-					) : (
 						<>
-							<ContentPanel>
-								<h1 class="text-5xl my-6 font-bold" id="_top" data-page-title>
+							<Hero hero={entry.data.hero} fallbackTitle={entry.data.title} />
+							<slot />
+						</>
+					) : (
+						<div class="flex-1 p-6 prose prose-zinc dark:prose-invert max-w-none prose-headings:before:content-['#_'] overflow-scroll">
+							<div class="border-b py-4 border-zinc-800">
+								<h1 class="text-4xl m-0" class="border-b" id="_top" data-page-title>
 									{entry.data.title}
 								</h1>
 								{isFallback && <FallbackContentNotice {locale} />}
-							</ContentPanel>
-							<ContentPanel>
-								<MarkdownContent>
-									<slot />
-								</MarkdownContent>
-								<Footer {...{ entry, dir, lang, locale, sidebar }} />
-							</ContentPanel>
-						</>
+							</div>
+							<slot />
+						</div>
 					)
 				}
+
+				{hasSidebar && <RightSidebar {headings} {locale} {tocConfig} />}
 			</div>
-		</main>
+		</div>
 	</body>
 </html>

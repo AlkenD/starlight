@@ -7,7 +7,7 @@ We are happy to help with guidance on PRs, technical writing, and turning any fe
 > **Tip for new contributors:**
 > Take a look at [GitHub's Docs](https://docs.github.com/en/get-started/quickstart/hello-world) for helpful information on working with GitHub.
 
-This document is an active work in progress — like Starlight itself! Feel free to join us in [the Astro Discord server][discord] to join the discussion. Look for the `#starlight` channel and say “Hi!” when you arrive.
+This document is an active work in progress — like Starlight itself! Feel free to join us in [the Astro Discord server][discord] to join the discussion. Look for the `#starstruck` channel and say “Hi!” when you arrive.
 
 ## Types of contributions
 
@@ -49,13 +49,13 @@ You can [develop locally](#developing-locally) or use an online coding developme
 2. **Clone your fork** of Starlight to your computer. Replace `YOUR-USERNAME` in the command below with your GitHub username to clone in a Terminal:
 
    ```sh
-   git clone https://github.com/YOUR-USERNAME/starlight.git
+   git clone https://github.com/YOUR-USERNAME/starstruck.git
    ```
 
 3. **Change directory** to the cloned repo:
 
    ```sh
-   cd starlight
+   cd starstruck
    ```
 
 4. **Install dependencies** with `pnpm`:
@@ -68,7 +68,7 @@ You can [develop locally](#developing-locally) or use an online coding developme
 
 **Prerequisites:** Developing Starlight using Gitpod requires a free [Gitpod account](https://gitpod.io).
 
-1. **Open the Gitpod URL** [https://gitpod.io/#https://github.com/withastro/starlight](https://gitpod.io/#https://github.com/withastro/starlight). You can alternatively install a [Gitpod browser extension](https://www.gitpod.io/docs/configure/user-settings/browser-extension) which will add a "Gitpod" button when viewing [Starlight's repo on GitHub](https://github.com/withastro/starlight).
+1. **Open the Gitpod URL** [https://gitpod.io/#https://github.com/withastro/starstruck](https://gitpod.io/#https://github.com/withastro/starstruck). You can alternatively install a [Gitpod browser extension](https://www.gitpod.io/docs/configure/user-settings/browser-extension) which will add a "Gitpod" button when viewing [Starlight's repo on GitHub](https://github.com/withastro/starstruck).
 
 2. **Install dependencies** with `pnpm`:
 
@@ -78,7 +78,7 @@ You can [develop locally](#developing-locally) or use an online coding developme
 
 #### Developing using GitHub Codespaces
 
-1. **Create a new codespace** via https://codespaces.new/withastro/starlight
+1. **Create a new codespace** via https://codespaces.new/withastro/starstruck
 
 2. If running the docs site, pass the `--host` flag to avoid “502 Bad Gateway” errors:
 
@@ -109,12 +109,12 @@ You should then be able to open <http://localhost:4321> and see your changes.
 
 ### Unit tests
 
-The Starlight package includes unit tests in [`packages/starlight/__tests__/`](./packages/starlight/__tests__/), which are run using [Vitest][vitest].
+The Starlight package includes unit tests in [`packages/starstruck/__tests__/`](./packages/starstruck/__tests__/), which are run using [Vitest][vitest].
 
 To run tests, move into the Starlight package and then run `pnpm test`:
 
 ```sh
-cd packages/starlight
+cd packages/starstruck
 pnpm test
 ```
 
@@ -122,10 +122,10 @@ This will run tests and then listen for changes, re-running tests when files cha
 
 #### Test environments
 
-A lot of Starlight code relies on Vite virtual modules provided either by Astro or by Starlight itself. Each subdirectory of `packages/starlight/__tests__/` should contain a `vitest.config.ts` file that uses the `defineVitestConfig()` helper to define a valid test environment for tests in that directory. This helper takes a single argument, which provides a Starlight user config object:
+A lot of Starlight code relies on Vite virtual modules provided either by Astro or by Starlight itself. Each subdirectory of `packages/starstruck/__tests__/` should contain a `vitest.config.ts` file that uses the `defineVitestConfig()` helper to define a valid test environment for tests in that directory. This helper takes a single argument, which provides a Starlight user config object:
 
 ```ts
-// packages/starlight/__tests/basics/vitest.config.ts
+// packages/starstruck/__tests/basics/vitest.config.ts
 import { defineVitestConfig } from '../test-config';
 
 export default defineVitestConfig({
@@ -158,11 +158,11 @@ vi.mock('astro:content', async () =>
 To see how much of Starlight’s code is currently being tested, run `pnpm test:coverage` from the Starlight package:
 
 ```sh
-cd packages/starlight
+cd packages/starstruck
 pnpm test:coverage
 ```
 
-This will print a table to your terminal and also generate an HTML report you can load in a web browser by opening [`packages/starlight/__coverage__/index.html`](./packages/starlight/__coverage__/index.html).
+This will print a table to your terminal and also generate an HTML report you can load in a web browser by opening [`packages/starstruck/__coverage__/index.html`](./packages/starstruck/__coverage__/index.html).
 
 ## Translations
 
@@ -172,8 +172,8 @@ Translations help make Starlight accessible to more people.
 
 Starlight’s UI comes with some built-in text elements. For example, the table of contents on a Starlight page has a heading of “On this page” and the theme picker shows “Light”, “Dark”, and “Auto” labels. Starlight aims to provide these in as many languages as possible.
 
-Help out by adding or updating translation files in [`packages/starlight/translations`](./packages/starlight/translations/).
-Each language’s JSON file follows the [translation structure described in Starlight’s docs](https://starlight.astro.build/guides/i18n/#translate-starlights-ui).
+Help out by adding or updating translation files in [`packages/starstruck/translations`](./packages/starstruck/translations/).
+Each language’s JSON file follows the [translation structure described in Starlight’s docs](https://starstruck.astro.build/guides/i18n/#translate-starlights-ui).
 
 📺 **Prefer a visual walkthrough?** [Watch an introduction to Starlight’s translation files.](https://scrimba.com/scrim/cpb44bt3)
 
@@ -187,31 +187,31 @@ Help out by:
 - Updating out-of-date translated pages
 - Adding an untranslated page
 
-Visit **<https://i18n.starlight.astro.build>** to track translation progress for the currently supported languages.
+Visit **<https://i18n.starstruck.astro.build>** to track translation progress for the currently supported languages.
 
 ## Understanding Starlight
 
 - Starlight is built as an Astro integration.
   Read the [Astro Integration API docs][api-docs] to learn more about how integrations work.
 
-  The Starlight integration is exported from [`packages/starlight/index.ts`](./packages/starlight/index.ts).
+  The Starlight integration is exported from [`packages/starstruck/index.ts`](./packages/starstruck/index.ts).
   It sets up Starlight’s routing logic, parses user config, and adds configuration to a Starlight user’s Astro project.
 
-- Most pages in a Starlight project are built using a single [`packages/starlight/index.astro`](./packages/starlight/index.astro) route.
+- Most pages in a Starlight project are built using a single [`packages/starstruck/index.astro`](./packages/starstruck/index.astro) route.
   If you’ve worked on an Astro site before, much of this should look familiar: it’s an Astro component and uses a number of other components to build a page based on user content.
 
 - Starlight consumes a user’s content from the `'docs'` [content collection](https://docs.astro.build/en/guides/content-collections/).
-  This allows us to specify the permissible frontmatter via [a Starlight-specific schema](./packages/starlight/schema.ts) and get predictable data while providing clear error messages if a user sets invalid frontmatter in a page.
+  This allows us to specify the permissible frontmatter via [a Starlight-specific schema](./packages/starstruck/schema.ts) and get predictable data while providing clear error messages if a user sets invalid frontmatter in a page.
 
 - Components that require JavaScript for their functionality are all written without a UI framework, most often as custom elements.
   This helps keep Starlight lightweight and makes it easier for a user to choose to add components from a framework of their choice to their project.
 
 [discord]: https://astro.build/chat
-[issues]: https://github.com/withastro/starlight/issues
-[sl]: https://github.com/withastro/starlight/pulls
-[pulls]: https://github.com/withastro/starlight/pulls
-[new-issue]: https://github.com/withastro/starlight/issues/new/choose
+[issues]: https://github.com/withastro/starstruck/issues
+[sl]: https://github.com/withastro/starstruck/pulls
+[pulls]: https://github.com/withastro/starstruck/pulls
+[new-issue]: https://github.com/withastro/starstruck/issues/new/choose
 [pr-docs]: https://docs.github.com/en/get-started/quickstart/contributing-to-projects#making-a-pull-request
-[gfi]: https://github.com/withastro/starlight/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+
+[gfi]: https://github.com/withastro/starstruck/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+
 [api-docs]: https://docs.astro.build/en/reference/integrations-reference/
 [vitest]: https://vitest.dev/

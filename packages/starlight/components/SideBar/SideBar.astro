@@ -12,7 +12,7 @@ interface Props {
 const { sidebar, locale } = Astro.props;
 ---
 
-<div class="sticky top-14 w-80 p-4">
+<div class="w-80 sticky top-0 border-r dark:border-zinc-800/60 p-4 bg-zinc-800/20">
 	<SideBarList sublist={sidebar} />
 	<div class="block md:hidden">
 		<ThemeSelect {locale} />

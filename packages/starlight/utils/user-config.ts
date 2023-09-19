@@ -123,7 +123,7 @@ const UserConfigSchema = z.object({
 	 * social: {
 	 *   codeberg: 'https://codeberg.org/knut/examples',
 	 *   discord: 'https://astro.build/chat',
-	 *   github: 'https://github.com/withastro/starlight',
+	 *   github: 'https://github.com/withastro/starstruck',
 	 *   gitlab: 'https://gitlab.com/delucis',
 	 *   linkedin: 'https://www.linkedin.com/company/astroinc',
 	 *   mastodon: 'https://m.webtoo.ls/@astro',
@@ -233,7 +233,7 @@ const UserConfigSchema = z.object({
 	 *
 	 * @example
 	 * // Add Fathom analytics to your site
-	 * starlight({
+	 * starstruck({
 	 *  head: [
 	 *    {
 	 *      tag: 'script',
@@ -256,7 +256,7 @@ const UserConfigSchema = z.object({
 	 * module, e.g. `'@fontsource/roboto'`.
 	 *
 	 * @example
-	 * starlight({
+	 * starstruck({
 	 *  customCss: ['/src/custom-styles.css', '@fontsource/roboto'],
 	 * })
 	 */

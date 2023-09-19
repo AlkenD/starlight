@@ -3,25 +3,25 @@ title: 구성 참조
 description: Starlight가 지원하는 모든 구성 옵션에 대한 개요입니다.
 ---
 
-## `starlight` 통합 구성
+## `starstruck` 통합 구성
 
 Starlight는 [Astro](https://astro.build) 웹 프레임워크 위에 구축된 통합입니다. `astro.config.mjs` 구성 파일에서 프로젝트를 구성할 수 있습니다.
 
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
   integrations: [
-    starlight({
+    starstruck({
       title: '즐거운 문서 사이트',
     }),
   ],
 });
 ```
 
-`starlight` 통합에 다음 옵션을 전달할 수 있습니다.
+`starstruck` 통합에 다음 옵션을 전달할 수 있습니다.
 
 ### `title` (필수)
 
@@ -42,7 +42,7 @@ export default defineConfig({
 사이트 제목을 대체하거나 사이트 제목과 함께 네비게이션 바에 표시되는 로고 이미지를 설정합니다. 단일 `src` 속성을 설정하거나 `light` 및 `dark` 속성에 다른 이미지 소스를 전달할 수 있습니다.
 
 ```js
-starlight({
+starstruck({
   logo: {
     src: './src/assets/my-logo.svg',
   },
@@ -69,17 +69,17 @@ type LogoConfig = { alt?: string; replacesTitle?: boolean } & (
 
 **타입:** `{ baseUrl: string }`
 
-기본 URL을 설정하여 "페이지 편집" 링크를 활성화합니다. 최종 링크는 `editLink.baseUrl` + 현재 페이지 경로가 됩니다. 예를 들어, 다음 코드를 통해 GitHub의 `withastro/starlight` 저장소의 페이지 편집 기능을 활성화할 수 있습니다.
+기본 URL을 설정하여 "페이지 편집" 링크를 활성화합니다. 최종 링크는 `editLink.baseUrl` + 현재 페이지 경로가 됩니다. 예를 들어, 다음 코드를 통해 GitHub의 `withastro/starstruck` 저장소의 페이지 편집 기능을 활성화할 수 있습니다.
 
 ```js
-starlight({
+starstruck({
   editLink: {
-    baseUrl: 'https://github.com/withastro/starlight/edit/main/',
+    baseUrl: 'https://github.com/withastro/starstruck/edit/main/',
   },
 });
 ```
 
-이 구성을 통해 `/introduction` 페이지에 있는 편집 링크는 `https://github.com/withastro/starlight/edit/main/src/docs/introduction.md`를 가리킵니다.
+이 구성을 통해 `/introduction` 페이지에 있는 편집 링크는 `https://github.com/withastro/starstruck/edit/main/src/docs/introduction.md`를 가리킵니다.
 
 ### `sidebar`
 
@@ -96,7 +96,7 @@ starlight({
 - `autogenerate` — 링크 그룹을 자동으로 생성하기 위해 문서의 디렉토리를 지정하는 객체
 
 ```js
-starlight({
+starstruck({
   sidebar: [
     // '홈'이라는 라벨이 붙은 단일 링크 항목
     { label: '홈', link: '/' },
@@ -119,7 +119,7 @@ starlight({
 
 #### 정렬
 
-자동 생성된 사이드바 그룹은 파일 이름을 기준으로 알파벳순으로 정렬됩니다. 예를 들어 `astro.md`에서 생성된 페이지는 `starlight.md` 페이지 위에 표시됩니다.
+자동 생성된 사이드바 그룹은 파일 이름을 기준으로 알파벳순으로 정렬됩니다. 예를 들어 `astro.md`에서 생성된 페이지는 `starstruck.md` 페이지 위에 표시됩니다.
 
 #### 그룹 최소화
 
@@ -211,11 +211,11 @@ interface BadgeConfig {
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
   integrations: [
-    starlight({
+    starstruck({
       title: '나의 사이트',
       // 이 사이트의 기본 언어를 한국어로 설정합니다.
       defaultLocale: 'ko',
@@ -280,7 +280,7 @@ interface LocaleConfig {
 `root` 로케일을 설정하면 `/lang/` 디렉토리 없이 기본 언어를 제공할 수 있습니다.
 
 ```js
-starlight({
+starstruck({
   locales: {
     root: {
       label: '한국어',
@@ -312,11 +312,11 @@ starlight({
 이 사이트의 소셜 미디어 계정에 대한 선택적 세부 정보입니다. 이 중 하나를 추가하면 사이트 헤더에 아이콘 링크로 표시됩니다.
 
 ```js
-starlight({
+starstruck({
   social: {
     codeberg: 'https://codeberg.org/knut/examples',
     discord: 'https://astro.build/chat',
-    github: 'https://github.com/withastro/starlight',
+    github: 'https://github.com/withastro/starstruck',
     gitlab: 'https://gitlab.com/delucis',
     linkedin: 'https://www.linkedin.com/company/astroinc',
     mastodon: 'https://m.webtoo.ls/@astro',
@@ -337,7 +337,7 @@ Starlight 사이트의 모양과 느낌을 변경하려면 CSS 파일을 제공�
 `'./src/custom.css'`와 같은 프로젝트 루트에서 상대 경로로 지정한 로컬 CSS 파일 및 `'@fontsource/roboto'`와 같은 npm 모듈로 설치한 CSS를 지원합니다.
 
 ```js
-starlight({
+starstruck({
   customCss: ['./src/custom-styles.css', '@fontsource/roboto'],
 });
 ```
@@ -349,7 +349,7 @@ starlight({
 Starlight 사이트의 `<head>`에 사용자 정의 태그를 추가합니다. 분석 및 기타 서드파티 스크립트와 리소스를 추가하는 데 유용할 수 있습니다.
 
 ```js
-starlight({
+starstruck({
   head: [
     // Fathom 분석 스크립트 태그를 추가하는 예시
     {
@@ -400,7 +400,7 @@ interface HeadConfig {
 `public/` 디렉토리에 포함되어 있으며 유효한 아이콘 파일인 (`.ico`, `.gif`, `.jpg`, `.png`, 또는 `.svg`) 웹 사이트의 기본 파비콘 경로를 설정합니다.
 
 ```js
-starlight({
+starstruck({
   favicon: '/images/favicon.svg',
 }),
 ```
@@ -408,7 +408,7 @@ starlight({
 추가 변형이나 대체 파비콘을 설정해야 하는 경우 [`head` 옵션](#head)을 사용하여 태그를 추가할 수 있습니다.
 
 ```js
-starlight({
+starstruck({
   favicon: '/images/favicon.svg'.
   head: [
     // Safari용 대체 ICO 파비콘을 추가합니다.

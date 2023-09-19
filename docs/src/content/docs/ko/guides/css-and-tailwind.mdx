@@ -24,11 +24,11 @@ Starlight의 기본 스타일을 수정하거나 확장하기 위한 CSS 파일�
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@awe-player/starstruck';
+   import starstruck from '@awe-player/starstruck';
 
    export default defineConfig({
    	integrations: [
-   		starlight({
+   		starstruck({
    			title: '사용자 정의 CSS를 사용한 문서',
    			customCss: [
    				// 사용자 정의 CSS 파일의 상대 경로
@@ -39,7 +39,7 @@ Starlight의 기본 스타일을 수정하거나 확장하기 위한 CSS 파일�
    });
    ```
 
-사이트를 스타일링하기 위해 Starlight에서 사용되는 모든 CSS 속성을 [`props.css` 파일](https://github.com/withastro/starlight/blob/main/packages/starlight/style/props.css)에서 확인할 수 있습니다.
+사이트를 스타일링하기 위해 Starlight에서 사용되는 모든 CSS 속성을 [`props.css` 파일](https://github.com/withastro/starstruck/blob/main/packages/starstruck/style/props.css)에서 확인할 수 있습니다.
 
 ## Tailwind CSS
 
@@ -49,7 +49,7 @@ Starlight는 Starlight 스타일과 호환되도록 Tailwind를 구성하는 데
 Starlight Tailwind 플러그인은 다음 구성을 적용합니다.
 
 - Starlight의 다크 모드와 작동하도록 Tailwind의 `dark:` 변형을 구성합니다.
-- Starlight UI에서 Tailwind [테마 색상 및 글꼴](#tailwind로-starlight-스타일링하기)을 사용합니다.
+- Starlight UI에서 Tailwind [테마 색상 및 글꼴](#tailwind로-starstruck-스타일링하기)을 사용합니다.
 - Tailwind의 [Preflight](https://tailwindcss.com/docs/preflight) 초기화 스타일을 비활성화하는 동시에 Tailwind의 테두리 유틸리티 클래스에 필요한 Preflight의 필수 부분을 선택적으로 복원합니다.
 
 ### Tailwind가 포함된 새 프로젝트 만들기
@@ -62,21 +62,21 @@ import { Tabs, TabItem } from '@awe-player/starstruck/components';
 <TabItem label="npm">
 
 ```sh
-npm create astro@latest -- --template starlight/tailwind
+npm create astro@latest -- --template starstruck/tailwind
 ```
 
 </TabItem>
 <TabItem label="pnpm">
 
 ```sh
-pnpm create astro --template starlight/tailwind
+pnpm create astro --template starstruck/tailwind
 ```
 
 </TabItem>
 <TabItem label="Yarn">
 
 ```sh
-yarn create astro --template starlight/tailwind
+yarn create astro --template starstruck/tailwind
 ```
 
 </TabItem>
@@ -160,12 +160,12 @@ yarn create astro --template starlight/tailwind
     ```js {11-12,16-17}
     // astro.config.mjs
     import { defineConfig } from 'astro/config';
-    import starlight from '@awe-player/starstruck';
+    import starstruck from '@awe-player/starstruck';
     import tailwind from '@astrojs/tailwind';
 
     export default defineConfig({
     	integrations: [
-    		starlight({
+    		starstruck({
     			title: 'Tailwind를 사용한 문서',
     			customCss: [
     				// Tailwind 기반 스타일 경로
@@ -277,7 +277,7 @@ import ThemeDesigner from '../../../../components/theme-designer.astro';
 		[사용자 정의 CSS파일](#사용자-정의-css-스타일)에 아래 코드를 추가하여 현재 테마를 프로젝트에 적용하세요.
 	</Fragment>
 	<Fragment slot="tailwind-docs">
-		아래 [Tailwind 구성 파일](#tailwind로-starlight-스타일링하기)의 예시는 `theme.extend.colors`에서 사용할 `accent` 및 `gray` 색상 팔레트를 포함합니다.
+		아래 [Tailwind 구성 파일](#tailwind로-starstruck-스타일링하기)의 예시는 `theme.extend.colors`에서 사용할 `accent` 및 `gray` 색상 팔레트를 포함합니다.
     </Fragment>
 
 </ThemeDesigner>

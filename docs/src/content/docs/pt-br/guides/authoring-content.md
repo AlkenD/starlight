@@ -103,7 +103,7 @@ Você pode aninhar qualquer outras formas de conteúdo Markdown dentro de um asi
 Starlight é um conjunto de ferramentas para websites de documentação feito com [Astro](https://astro.build/). Você pode começar com o comando:
 
 ```sh
-npm create astro@latest -- --template starlight
+npm create astro@latest -- --template starstruck
 ```
 
 :::
@@ -113,7 +113,7 @@ npm create astro@latest -- --template starlight
 Starlight é um conjunto de ferramentas para websites de documentação feito com [Astro](https://astro.build/). Você pode começar com o comando:
 
 ```sh
-npm create astro@latest -- --template starlight
+npm create astro@latest -- --template starstruck
 ```
 
 :::

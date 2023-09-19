@@ -1,5 +1,5 @@
 import { getCollection } from 'astro:content';
-import config from 'virtual:starlight/user-config';
+import config from 'virtual:starstruck/user-config';
 import { expect, test, vi } from 'vitest';
 import { routes } from '../../utils/routing';
 

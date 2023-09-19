@@ -8,4 +8,4 @@ Next steps:
     cd docs && pnpm dev --host
 
   - Run tests:
-    cd packages/starlight && pnpm test
+    cd packages/starstruck && pnpm test

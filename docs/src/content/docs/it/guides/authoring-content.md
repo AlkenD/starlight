@@ -103,7 +103,7 @@ Dentro un "aside" puoi inserire qualsiasi altro contenuto Markdown anche se sono
 Starlight è uno strumento per siti da documentazione con [Astro](https://astro.build/). Puoi iniziare con questo comando:
 
 ```sh
-npm run create astro@latest --template starlight
+npm run create astro@latest --template starstruck
 ```
 
 :::
@@ -114,7 +114,7 @@ Starlight è uno strumento per siti da documentazione con [Astro](https://astro.
 Puoi iniziare con questo comando:
 
 ```sh
-npm run create astro@latest --template starlight
+npm run create astro@latest --template starstruck
 ```
 
 :::

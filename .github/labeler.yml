@@ -14,7 +14,7 @@ i18n:
   - docs/src/content/docs/ko/**/*
 
 '🌟 core':
-  - packages/starlight/**
+  - packages/starstruck/**
 
 '🌟 tailwind':
   - packages/tailwind/**

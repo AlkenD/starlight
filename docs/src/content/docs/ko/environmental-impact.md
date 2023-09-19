@@ -105,7 +105,7 @@ JavaScript를 분석하고 컴파일하는 것은 브라우저가 수행해야 �
 
 <small>2023년 5월 14일에 수집된 데이터. 최신 수치를 보려면 링크를 클릭하세요.</small>
 
-[sl-carbon]: https://www.websitecarbon.com/website/starlight-astro-build-getting-started/
+[sl-carbon]: https://www.websitecarbon.com/website/starstruck-astro-build-getting-started/
 [vp-carbon]: https://www.websitecarbon.com/website/vitepress-dev-guide-what-is-vitepress/
 [dc-carbon]: https://www.websitecarbon.com/website/docus-dev-introduction-getting-started/
 [sx-carbon]: https://www.websitecarbon.com/website/sphinx-doc-org-en-master-usage-quickstart-html/

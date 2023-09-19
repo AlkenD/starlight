@@ -42,9 +42,9 @@ function s(el: string, attrs: Properties = {}, children: any[] = []): P {
  * will produce this output
  *
  * ```astro
- * <aside class="starlight-aside starlight-aside--tip" aria-label="Did you know?">
- *   <p class="starlight-aside__title" aria-hidden="true">Did you know?</p>
- *   <section class="starlight-aside__content">
+ * <aside class="starstruck-aside starstruck-aside--tip" aria-label="Did you know?">
+ *   <p class="starstruck-aside__title" aria-hidden="true">Did you know?</p>
+ *   <section class="starstruck-aside__content">
  *     <p>Astro helps you build faster websites with “Islands Architecture”.</p>
  *   </section>
  * </Aside>
@@ -125,10 +125,10 @@ function remarkAsides(): Plugin<[], Root> {
 				'aside',
 				{
 					'aria-label': title,
-					class: `starlight-aside prose-none starlight-aside--${variant}`,
+					class: `starstruck-aside prose-none starstruck-aside--${variant}`,
 				},
 				[
-					h('p', { class: 'starlight-aside__title', 'aria-hidden': 'true' }, [
+					h('p', { class: 'starstruck-aside__title', 'aria-hidden': 'true' }, [
 						s(
 							'svg',
 							{
@@ -136,13 +136,13 @@ function remarkAsides(): Plugin<[], Root> {
 								width: 16,
 								height: 16,
 								fill: 'currentColor',
-								class: 'starlight-aside__icon',
+								class: 'starstruck-aside__icon',
 							},
 							iconPaths[variant]
 						),
 						{ type: 'text', value: title },
 					]),
-					h('section', { class: 'starlight-aside__content' }, node.children),
+					h('section', { class: 'starstruck-aside__content' }, node.children),
 				]
 			);
 

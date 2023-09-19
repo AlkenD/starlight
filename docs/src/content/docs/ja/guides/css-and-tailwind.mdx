@@ -24,11 +24,11 @@ Starlightサイトに適用されるスタイルをカスタマイズするに�
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@awe-player/starstruck';
+   import starstruck from '@awe-player/starstruck';
 
    export default defineConfig({
    	integrations: [
-   		starlight({
+   		starstruck({
    			title: 'カスタムCSSを設定したドキュメント',
    			customCss: [
    				// カスタムCSSファイルへの相対パス
@@ -39,7 +39,7 @@ Starlightサイトに適用されるスタイルをカスタマイズするに�
    });
    ```
 
-[GitHub上の`props.css`ファイル](https://github.com/withastro/starlight/blob/main/packages/starlight/style/props.css)で、サイトをカスタマイズするために設定可能な、Starlightが使用しているすべてのカスタムCSSプロパティを確認できます。
+[GitHub上の`props.css`ファイル](https://github.com/withastro/starstruck/blob/main/packages/starstruck/style/props.css)で、サイトをカスタマイズするために設定可能な、Starlightが使用しているすべてのカスタムCSSプロパティを確認できます。
 
 ## Tailwind CSS
 
@@ -61,21 +61,21 @@ import { Tabs, TabItem } from '@awe-player/starstruck/components';
 <TabItem label="npm">
 
 ```sh
-npm create astro@latest -- --template starlight/tailwind
+npm create astro@latest -- --template starstruck/tailwind
 ```
 
 </TabItem>
 <TabItem label="pnpm">
 
 ```sh
-pnpm create astro --template starlight/tailwind
+pnpm create astro --template starstruck/tailwind
 ```
 
 </TabItem>
 <TabItem label="Yarn">
 
 ```sh
-yarn create astro --template starlight/tailwind
+yarn create astro --template starstruck/tailwind
 ```
 
 </TabItem>
@@ -159,12 +159,12 @@ yarn create astro --template starlight/tailwind
     ```js {11-12,16-17}
     // astro.config.mjs
     import { defineConfig } from 'astro/config';
-    import starlight from '@awe-player/starstruck';
+    import starstruck from '@awe-player/starstruck';
     import tailwind from '@astrojs/tailwind';
 
     export default defineConfig({
     	integrations: [
-    		starlight({
+    		starstruck({
     			title: 'Tailwindを使ったドキュメント',
     			customCss: [
     				// Tailwindのベーススタイルへのパス

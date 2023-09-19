@@ -6,4 +6,4 @@ You can build the page locally by moving to this directory and running `pnpm bui
 
 The page will be built to `dist/index.html` in this directory.
 
-The live version of this tracker is available at **<https://i18n.starlight.astro.build>**.
+The live version of this tracker is available at **<https://i18n.starstruck.astro.build>**.

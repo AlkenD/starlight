@@ -8,12 +8,12 @@ body:
       value: |
         Thank you for getting in touch! Please fill out this form as completely as possible.
 
-        Want to report a bug instead? [Use our bug report form](https://github.com/withastro/starlight/issues/new?assignees=&labels=&projects=&template=---01-bug-report.yml)
-        Want to chat before posting? [Join us in the `#starlight` channel on Discord](https://astro.build/chat)
+        Want to report a bug instead? [Use our bug report form](https://github.com/withastro/starstruck/issues/new?assignees=&labels=&projects=&template=---01-bug-report.yml)
+        Want to chat before posting? [Join us in the `#starstruck` channel on Discord](https://astro.build/chat)
   - type: input
-    id: starlight-version
+    id: starstruck-version
     attributes:
-      label: What version of `starlight` are you using?
+      label: What version of `starstruck` are you using?
       placeholder: 0.0.0
     validations:
       required: true

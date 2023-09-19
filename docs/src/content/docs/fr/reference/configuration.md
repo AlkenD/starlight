@@ -3,25 +3,25 @@ title: Référence de configuration
 description: Une vue d'ensemble de toutes les options de configuration prises en charge par Starlight.
 ---
 
-## Configuration de l'intégration `starlight`
+## Configuration de l'intégration `starstruck`
 
 Starlight est une intégration construite sur le framework web [Astro](https://astro.build). Vous pouvez configurer votre projet dans le fichier de configuration `astro.config.mjs` :
 
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
   integrations: [
-    starlight({
+    starstruck({
       title: 'Mon délicieux site de docs',
     }),
   ],
 });
 ```
 
-Vous pouvez passer les options suivantes à l'intégration `starlight`.
+Vous pouvez passer les options suivantes à l'intégration `starstruck`.
 
 ### `title` (obligatoire)
 
@@ -42,7 +42,7 @@ Définissez la description de votre site web. Utilisée dans les métadonnées p
 Définit une image de logo à afficher dans la barre de navigation à côté ou à la place du titre du site. Vous pouvez soit définir une seule propriété `src`, soit définir des sources d'images séparées pour `light` et `dark`.
 
 ```js
-starlight({
+starstruck({
   logo: {
     src: './src/assets/my-logo.svg',
   },
@@ -69,17 +69,17 @@ Configurez la table des matières affichée à droite de chaque page. Par défau
 
 **type:** `{ baseUrl: string }`
 
-Permet d'activer les liens "Modifier cette page" en définissant l'URL de base qu'ils doivent utiliser. Le lien final sera `editLink.baseUrl` + le chemin de la page actuelle. Par exemple, pour permettre l'édition de pages dans le repo `withastro/starlight` sur GitHub :
+Permet d'activer les liens "Modifier cette page" en définissant l'URL de base qu'ils doivent utiliser. Le lien final sera `editLink.baseUrl` + le chemin de la page actuelle. Par exemple, pour permettre l'édition de pages dans le repo `withastro/starstruck` sur GitHub :
 
 ```js
-starlight({
+starstruck({
   editLink: {
-    baseUrl: 'https://github.com/withastro/starlight/edit/main/',
+    baseUrl: 'https://github.com/withastro/starstruck/edit/main/',
   },
 });
 ```
 
-Avec cette configuration, une page `/introduction` aurait un lien d'édition pointant vers `https://github.com/withastro/starlight/edit/main/src/docs/introduction.md`.
+Avec cette configuration, une page `/introduction` aurait un lien d'édition pointant vers `https://github.com/withastro/starstruck/edit/main/src/docs/introduction.md`.
 
 ### `sidebar`
 
@@ -97,7 +97,7 @@ Chaque élément doit comporter un `label` et l'une des propriétés suivantes :
 - `autogenerate` — un objet indiquant un répertoire de vos docs dpeuis lequel générer automatiquement un groupe de liens.
 
 ```js
-starlight({
+starstruck({
   sidebar: [
     // Un lien unique étiqueté “Accueil”.
     { label: 'Accueil', link: '/' },
@@ -121,7 +121,7 @@ starlight({
 #### Tri
 
 Les groupes de barres latérales générées automatiquement sont triés par nom de fichier et par ordre alphabétique.
-Par exemple, une page générée à partir de `astro.md` apparaîtrait au-dessus de la page de `starlight.md`.
+Par exemple, une page générée à partir de `astro.md` apparaîtrait au-dessus de la page de `starstruck.md`.
 
 #### Groupes rétractables
 
@@ -213,11 +213,11 @@ Chaque entrée doit utiliser comme clé le répertoire dans lequel les fichiers 
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
   integrations: [
-    starlight({
+    starstruck({
       title: 'My Site',
       // Définit l'anglais comme langue par défaut pour ce site.
       defaultLocale: 'en',
@@ -277,7 +277,7 @@ Le sens d'écriture de cette langue ; `"ltr"` pour gauche à droite (par défaut
 Vous pouvez servir la langue par défaut sans répertoire `/lang/` en définissant une locale `root` :
 
 ```js
-starlight({
+starstruck({
   locales: {
     root: {
       label: 'English',
@@ -309,11 +309,11 @@ La locale par défaut sera utilisée pour fournir un contenu de remplacement lor
 Détails optionnels sur les comptes de médias sociaux pour ce site. L'ajout de l'un d'entre eux les affichera sous forme de liens iconiques dans l'en-tête du site.
 
 ```js
-starlight({
+starstruck({
   social: {
     codeberg: 'https://codeberg.org/knut/examples',
     discord: 'https://astro.build/chat',
-    github: 'https://github.com/withastro/starlight',
+    github: 'https://github.com/withastro/starstruck',
     gitlab: 'https://gitlab.com/delucis',
     linkedin: 'https://www.linkedin.com/company/astroinc',
     mastodon: 'https://m.webtoo.ls/@astro',
@@ -334,7 +334,7 @@ Fournit des fichiers CSS pour personnaliser l'aspect et la convivialité de votr
 Prend en charge les fichiers CSS locaux relatifs à la racine de votre projet, par exemple `'./src/custom.css'`, et les CSS que vous avez installés en tant que module npm, par exemple `'@fontsource/roboto'`.
 
 ```js
-starlight({
+starstruck({
   customCss: ['./src/custom-styles.css', '@fontsource/roboto'],
 });
 ```
@@ -347,7 +347,7 @@ Ajoute des balises personnalisées au `<head>` de votre site Starlight.
 Cela peut être utile pour ajouter des analyses et d'autres scripts et ressources tiers.
 
 ```js
-starlight({
+starstruck({
   head: [
     // Exemple : ajouter un script d'analyse Fathom tag.
     {
@@ -400,7 +400,7 @@ Une page peut remplacer ce paramètre ou le texte du lien et/ou l'URL en utilisa
 Définnissez le chemin de l'icône par défaut pour votre site Web qui doit être situé dans le répertoire `public/` et être un fichier d'icône valide (`.ico`, `.gif`, `.jpg`, `.png` ou `.svg`).
 
 ```js
-starlight({
+starstruck({
   favicon: '/images/favicon.svg',
 }),
 ```
@@ -408,7 +408,7 @@ starlight({
 Si vous avez besoin de définir des variantes supplémentaires ou des icônes de secours, vous pouvez ajouter des balises en utilisant l'option [`head`](#head) :
 
 ```js
-starlight({
+starstruck({
   favicon: '/images/favicon.svg'.
   head: [
     // Ajouter une icône ICO de secours pour Safari.

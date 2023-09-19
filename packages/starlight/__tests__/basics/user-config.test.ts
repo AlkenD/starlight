@@ -6,7 +6,7 @@ test('preserve social config order', () => {
 		title: 'Test',
 		social: {
 			twitch: 'https://www.twitch.tv/bholmesdev',
-			github: 'https://github.com/withastro/starlight',
+			github: 'https://github.com/withastro/starstruck',
 			discord: 'https://astro.build/chat',
 		},
 	});

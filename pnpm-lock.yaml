@@ -34,7 +34,7 @@ importers:
     dependencies:
       '@awe-player/starstruck':
         specifier: workspace:*
-        version: link:../packages/starlight
+        version: link:../packages/starstruck
       '@types/culori':
         specifier: ^2.0.0
         version: 2.0.0
@@ -109,7 +109,7 @@ importers:
         specifier: ^2.3.0
         version: 2.3.0
 
-  packages/starlight:
+  packages/starstruck:
     dependencies:
       '@astrojs/mdx':
         specifier: ^1.0.0

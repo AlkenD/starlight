@@ -103,7 +103,7 @@ Vous pouvez imbriquer n'importe quel autre type de contenu Markdown à l'intéri
 Starlight est une boîte à outils pour sites web de documentation construite avec [Astro](https://astro.build/). Vous pouvez démarrer avec cette commande :
 
 ```sh
-npm run create astro@latest --template starlight
+npm run create astro@latest --template starstruck
 ```
 
 :::
@@ -113,7 +113,7 @@ npm run create astro@latest --template starlight
 Starlight est une boîte à outils pour sites web de documentation construite avec [Astro](https://astro.build/). Vous pouvez démarrer avec cette commande :
 
 ```sh
-npm run create astro@latest --template starlight
+npm run create astro@latest --template starstruck
 ```
 
 :::

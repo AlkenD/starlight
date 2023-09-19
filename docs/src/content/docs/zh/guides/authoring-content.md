@@ -103,7 +103,7 @@ Starlight 提供了一个自定义的 Markdown 语法来渲染旁白。旁白块
 Starlight 是一个使用 [Astro](https://astro.build/) 构建的文档网站工具包。 你可以使用此命令开始：
 
 ```sh
-npm create astro@latest -- --template starlight
+npm create astro@latest -- --template starstruck
 ```
 
 :::
@@ -113,7 +113,7 @@ npm create astro@latest -- --template starlight
 Starlight 是一个使用 [Astro](https://astro.build/) 构建的文档网站工具包。 你可以使用此命令开始：
 
 ```sh
-npm create astro@latest -- --template starlight
+npm create astro@latest -- --template starstruck
 ```
 
 :::

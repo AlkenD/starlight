@@ -1,29 +1,29 @@
-.starlight-aside {
+.starstruck-aside {
 	border-inline-start: 0.25rem solid;
 	color: var(--sl-color-white);
 	@apply px-4 py-px;
 }
-.starlight-aside--note {
+.starstruck-aside--note {
 	--sl-color-asides-text-accent: var(--sl-color-blue-high);
 	border-color: var(--sl-color-blue);
 	background-color: var(--sl-color-blue-low);
 }
-.starlight-aside--tip {
+.starstruck-aside--tip {
 	--sl-color-asides-text-accent: var(--sl-color-purple-high);
 	@apply bg-purple-500/20 border-purple-500;
 }
-.starlight-aside--caution {
+.starstruck-aside--caution {
 	--sl-color-asides-text-accent: var(--sl-color-orange-high);
 	border-color: var(--sl-color-orange);
 	background-color: var(--sl-color-orange-low);
 }
-.starlight-aside--danger {
+.starstruck-aside--danger {
 	--sl-color-asides-text-accent: var(--sl-color-red-high);
 	border-color: var(--sl-color-red);
 	background-color: var(--sl-color-red-low);
 }
 
-.starlight-aside__title {
+.starstruck-aside__title {
 	display: flex;
 	gap: 0.5rem;
 	align-items: center;
@@ -33,16 +33,16 @@
 	color: var(--sl-color-asides-text-accent);
 }
 
-.starlight-aside__icon {
+.starstruck-aside__icon {
 	font-size: 1.333em;
 	width: 1em;
 	height: 1em;
 }
 
-.starlight-aside__title + .starlight-aside__content {
+.starstruck-aside__title + .starstruck-aside__content {
 	margin-top: 0.5rem;
 }
 
-.starlight-aside__content a {
+.starstruck-aside__content a {
 	color: var(--sl-color-asides-text-accent);
 }

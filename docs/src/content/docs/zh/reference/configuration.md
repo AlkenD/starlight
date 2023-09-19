@@ -3,25 +3,25 @@ title: 配置参考
 description: Starlight 支持的所有配置选项的概述。
 ---
 
-## 配置 `starlight` 集成
+## 配置 `starstruck` 集成
 
 Starlight 是在 [Astro](https://astro.build) web 框架之上构建的集成。你可以在 `astro.config.mjs` 配置文件中配置你的项目：
 
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
   integrations: [
-    starlight({
+    starstruck({
       title: '我的令人愉快的文档网站',
     }),
   ],
 });
 ```
 
-你可以将以下选项传递给`starlight`集成。
+你可以将以下选项传递给`starstruck`集成。
 
 ### `title` (必填)
 
@@ -42,7 +42,7 @@ export default defineConfig({
 在导航栏中设置一个 logo 图片，与网站标题一起显示或替代网站标题。你可以设置单个 `src` 属性，也可以为 `light` 和 `dark` 设置单独的图像源。
 
 ```js
-starlight({
+starstruck({
   logo: {
     src: './src/assets/my-logo.svg',
   },
@@ -69,17 +69,17 @@ type LogoConfig = { alt?: string; replacesTitle?: boolean } & (
 
 **类型：** `{ baseUrl: string }`
 
-通过设置你要使用的 base URL 来启用 “编辑此页” 链接。最终链接将是`editLink.baseUrl` +当前页面路径。例如，要启用在 GitHub 上编辑`withastro/starlight` 仓库中的页面：
+通过设置你要使用的 base URL 来启用 “编辑此页” 链接。最终链接将是`editLink.baseUrl` +当前页面路径。例如，要启用在 GitHub 上编辑`withastro/starstruck` 仓库中的页面：
 
 ```js
-starlight({
+starstruck({
   editLink: {
-    baseUrl: 'https://github.com/withastro/starlight/edit/main/',
+    baseUrl: 'https://github.com/withastro/starstruck/edit/main/',
   },
 });
 ```
 
-使用此配置，`/introduction` 页面将具有指向 `https://github.com/withastro/starlight/edit/main/src/docs/introduction.md` 的编辑链接。
+使用此配置，`/introduction` 页面将具有指向 `https://github.com/withastro/starstruck/edit/main/src/docs/introduction.md` 的编辑链接。
 
 ### `sidebar`
 
@@ -96,7 +96,7 @@ starlight({
 - `autogenerate` — 指定要从中自动生成一组链接的文档目录的对象。
 
 ```js
-starlight({
+starstruck({
   sidebar: [
     // 标记为“Home”的单个链接项。
     { label: 'Home', link: '/' },
@@ -119,7 +119,7 @@ starlight({
 
 #### 排序
 
-自动生成的侧边栏组按文档名字母顺序排序。例如，从 `astro.md` 生成的页面将显示在 `starlight.md`页面上方。
+自动生成的侧边栏组按文档名字母顺序排序。例如，从 `astro.md` 生成的页面将显示在 `starstruck.md`页面上方。
 
 #### 折叠组
 
@@ -214,11 +214,11 @@ interface BadgeConfig {
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
   integrations: [
-    starlight({
+    starstruck({
       title: 'My Site',
       // 为这个网站设置英语作为默认语言。
       defaultLocale: 'en',
@@ -278,7 +278,7 @@ interface LocaleConfig {
 你可以通过设置 `root` locale 来提供不带 `/lang/` 目录的默认语言：
 
 ```js
-starlight({
+starstruck({
   locales: {
     root: {
       label: 'English',
@@ -310,11 +310,11 @@ starlight({
 可选的社交媒体账户详情。添加任何一个都会在网站标题中显示它们作为图标链接。
 
 ```js
-starlight({
+starstruck({
   social: {
     codeberg: 'https://codeberg.org/knut/examples',
     discord: 'https://astro.build/chat',
-    github: 'https://github.com/withastro/starlight',
+    github: 'https://github.com/withastro/starstruck',
     gitlab: 'https://gitlab.com/delucis',
     linkedin: 'https://www.linkedin.com/company/astroinc',
     mastodon: 'https://m.webtoo.ls/@astro',
@@ -335,7 +335,7 @@ starlight({
 支持相对于项目根目录的本地 CSS 文件，例如 `'./src/custom.css'`，以及你安装为 npm 模块的 CSS，例如 `'@fontsource/roboto'`。
 
 ```js
-starlight({
+starstruck({
   customCss: ['./src/custom-styles.css', '@fontsource/roboto'],
 });
 ```
@@ -348,7 +348,7 @@ starlight({
 可以用于添加分析和其他第三方脚本和资源。
 
 ```js
-starlight({
+starstruck({
   head: [
     // 示例：添加 Fathom 分析脚本标签。
     {
@@ -399,7 +399,7 @@ interface HeadConfig {
 设置网站的默认 favicon 的路径，它应该位于 `public/` 目录中，并且是一个有效的（`.ico`，`.gif`，`.jpg`，`.png` 或 `.svg`）图标文件。
 
 ```js
-starlight({
+starstruck({
   favicon: '/images/favicon.svg',
 }),
 ```
@@ -407,7 +407,7 @@ starlight({
 如果你需要设置其他变体或回退的 favicon，你可以使用 [`head` 选项](#head)添加标签：
 
 ```js
-starlight({
+starstruck({
   favicon: '/images/favicon.svg'.
   head: [
     // 为 Safari 添加 ICO favicon 回退。

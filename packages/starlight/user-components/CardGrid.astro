@@ -2,8 +2,8 @@
 interface Props {
 	stagger?: boolean;
 }
-
-const { stagger = false } = Astro.props;
 ---
 
-<div class="p-10 grid gap-4 md:grid-cols-2" class:list={['card-grid', { stagger }]}><slot /></div>
+<div class="p-10 grid gap-4 md:grid-cols-2">
+	<slot />
+</div>

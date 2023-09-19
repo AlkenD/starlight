@@ -1,5 +1,5 @@
 ---
-import config from 'virtual:starlight/user-config';
+import config from 'virtual:starstruck/user-config';
 import { localizedUrl } from '../utils/localizedUrl';
 import { useTranslations } from '../utils/translations';
 import Select from './Select.astro';
@@ -20,7 +20,7 @@ const t = useTranslations(Astro.props.locale);
 
 {
 	config.isMultilingual && (
-		<starlight-lang-select>
+		<starstruck-lang-select>
 			<Select
 				icon="translate"
 				label={t('languageSelect.accessibleLabel')}
@@ -31,7 +31,7 @@ const t = useTranslations(Astro.props.locale);
 					label: locale!.label,
 				}))}
 			/>
-		</starlight-lang-select>
+		</starstruck-lang-select>
 	)
 }
 
@@ -49,5 +49,5 @@ const t = useTranslations(Astro.props.locale);
 			}
 		}
 	}
-	customElements.define('starlight-lang-select', StarlightLanguageSelect);
+	customElements.define('starstruck-lang-select', StarlightLanguageSelect);
 </script>

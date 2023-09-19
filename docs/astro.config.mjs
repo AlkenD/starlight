@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 import tailwind from '@astrojs/tailwind';
 export const locales = {
 	root: {
@@ -39,13 +39,18 @@ export const locales = {
 		lang: 'ko',
 	},
 };
-const site = 'https://starlight.astro.build/';
+const site = 'https://starstruck.astro.build/';
 
 // https://astro.build/config
 export default defineConfig({
 	site,
+	markdown: {
+		shikiConfig: {
+			theme: 'github-dark',
+		},
+	},
 	integrations: [
-		starlight({
+		starstruck({
 			title: 'Starlight',
 			logo: {
 				light: '/src/assets/logo-light.svg',
@@ -53,10 +58,10 @@ export default defineConfig({
 				replacesTitle: true,
 			},
 			editLink: {
-				baseUrl: 'https://github.com/withastro/starlight/edit/main/docs/',
+				baseUrl: 'https://github.com/withastro/starstruck/edit/main/docs/',
 			},
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/withastro/starstruck',
 			},
 			head: [
 				{

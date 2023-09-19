@@ -3,24 +3,24 @@ title: 設定方法
 description: Starlightがサポートするすべての設定オプションの概要。
 ---
 
-## `starlight`インテグレーションの設定
+## `starstruck`インテグレーションの設定
 
 Starlightは[Astro](https://astro.build)ウェブフレームワークの上に構築されたインテグレーションです。`astro.config.mjs`設定ファイル内でプロジェクトの設定をおこないます。
 
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 export default defineConfig({
   integrations: [
-    starlight({
+    starstruck({
       title: '私の楽しいドキュメントサイト',
     }),
   ],
 });
 ```
 
-以下のオプションを`starlight`インテグレーションに設定できます。
+以下のオプションを`starstruck`インテグレーションに設定できます。
 
 ### `title`（必須）
 
@@ -41,7 +41,7 @@ export default defineConfig({
 ナビゲーションバーにサイトタイトルと並べて、またはその代わりとして表示するロゴ画像を設定します。単一の`src`プロパティを設定するか、`light`と`dark`用に別々の画像ソースを設定できます。
 
 ```js
-starlight({
+starstruck({
   logo: {
     src: './src/assets/my-logo.svg',
   },
@@ -68,17 +68,17 @@ type LogoConfig = { alt?: string; replacesTitle?: boolean } & (
 
 **type:** `{ baseUrl: string }`
 
-`editLink.baseUrl`を設定すると、「ページを編集」リンクが有効になります。最終的なリンクは、`editLink.baseUrl` + 現在のページのパスになります。たとえば、GitHubの`withastro/starlight`リポジトリのページを編集するには以下のようにします。
+`editLink.baseUrl`を設定すると、「ページを編集」リンクが有効になります。最終的なリンクは、`editLink.baseUrl` + 現在のページのパスになります。たとえば、GitHubの`withastro/starstruck`リポジトリのページを編集するには以下のようにします。
 
 ```js
-starlight({
+starstruck({
   editLink: {
-    baseUrl: 'https://github.com/withastro/starlight/edit/main/',
+    baseUrl: 'https://github.com/withastro/starstruck/edit/main/',
   },
 });
 ```
 
-この設定により、`/introduction`ページには`https://github.com/withastro/starlight/edit/main/src/docs/introduction.md`を指す編集リンクが表示されます。
+この設定により、`/introduction`ページには`https://github.com/withastro/starstruck/edit/main/src/docs/introduction.md`を指す編集リンクが表示されます。
 
 ### `sidebar`
 
@@ -95,7 +95,7 @@ starlight({
 - `autogenerate` — リンクのグループを自動的に生成するために、ドキュメントのディレクトリを指定するオブジェクト。
 
 ```js
-starlight({
+starstruck({
   sidebar: [
     // 「ホーム」というラベルのついた単一のリンク。
     { label: 'ホーム', link: '/' },
@@ -118,7 +118,7 @@ starlight({
 
 #### 並び順
 
-自動生成されたサイドバーグループは、ファイル名のアルファベット順に並べ替えられます。たとえば、`astro.md`から生成されたページは、`starlight.md`というページの上に表示されます。
+自動生成されたサイドバーグループは、ファイル名のアルファベット順に並べ替えられます。たとえば、`astro.md`から生成されたページは、`starstruck.md`というページの上に表示されます。
 
 #### グループの折りたたみ
 
@@ -213,11 +213,11 @@ interface BadgeConfig {
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
   integrations: [
-    starlight({
+    starstruck({
       title: 'My Site',
       // このサイトのデフォルト言語を英語に設定します。
       defaultLocale: 'en',
@@ -277,7 +277,7 @@ interface LocaleConfig {
 `root`ロケールを設定することで、`/lang/`ディレクトリなしでデフォルト言語を提供できます。
 
 ```js
-starlight({
+starstruck({
   locales: {
     root: {
       label: 'English',
@@ -307,11 +307,11 @@ starlight({
 このサイトのソーシャルメディアアカウントに関する任意の項目です。これらのいずれかを追加すると、サイトヘッダーにアイコンリンクとして表示されます。
 
 ```js
-starlight({
+starstruck({
   social: {
     codeberg: 'https://codeberg.org/knut/examples',
     discord: 'https://astro.build/chat',
-    github: 'https://github.com/withastro/starlight',
+    github: 'https://github.com/withastro/starstruck',
     gitlab: 'https://gitlab.com/delucis',
     linkedin: 'https://www.linkedin.com/company/astroinc',
     mastodon: 'https://m.webtoo.ls/@astro',
@@ -332,7 +332,7 @@ Starlightサイトの見た目をカスタマイズするためのCSSファイ�
 プロジェクトのルートからの相対パスで指定したローカルのCSSファイル（`'./src/custom.css'`など）と、npmモジュールとしてインストールしたCSS（`'@fontsource/roboto'`など）に対応しています。
 
 ```js
-starlight({
+starstruck({
   customCss: ['./src/custom-styles.css', '@fontsource/roboto'],
 });
 ```
@@ -344,7 +344,7 @@ starlight({
 Starlightサイトの`<head>`にカスタムタグを追加します。アナリティクスやその他のサードパーティのスクリプトやリソースを追加するのに便利です。
 
 ```js
-starlight({
+starstruck({
   head: [
     // Fathomのアナリティクススクリプトタグを追加する例。
     {
@@ -395,7 +395,7 @@ interface HeadConfig {
 サイトのデフォルトファビコンのパスを設定します。ファビコンは`public/`ディレクトリに配置され、また有効なアイコンファイル（`.ico`、`.gif`、`.jpg`、`.png`、または`.svg`）である必要があります。
 
 ```js
-starlight({
+starstruck({
   favicon: '/images/favicon.svg',
 }),
 ```
@@ -403,7 +403,7 @@ starlight({
 追加のバリアントやフォールバック用のファビコンを設定する必要がある場合は、[`head`オプション](#head)を使用してタグを追加できます。
 
 ```js
-starlight({
+starstruck({
   favicon: '/images/favicon.svg'.
   head: [
     // Safari用にICOファビコンのフォールバックを追加します。

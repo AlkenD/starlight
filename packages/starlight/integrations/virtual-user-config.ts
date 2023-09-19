@@ -17,10 +17,10 @@ export function vitePluginStarlightUserConfig(
 
 	/** Map of virtual module names to their code contents as strings. */
 	const modules = {
-		'virtual:starlight/user-config': `export default ${JSON.stringify(opts)}`,
-		'virtual:starlight/project-context': `export default ${JSON.stringify({ root })}`,
-		'virtual:starlight/user-css': opts.customCss.map((id) => `import ${resolveId(id)};`).join(''),
-		'virtual:starlight/user-images': opts.logo
+		'virtual:starstruck/user-config': `export default ${JSON.stringify(opts)}`,
+		'virtual:starstruck/project-context': `export default ${JSON.stringify({ root })}`,
+		'virtual:starstruck/user-css': opts.customCss.map((id) => `import ${resolveId(id)};`).join(''),
+		'virtual:starstruck/user-images': opts.logo
 			? 'src' in opts.logo
 				? `import src from ${resolveId(
 						opts.logo.src
@@ -40,7 +40,7 @@ export function vitePluginStarlightUserConfig(
 	);
 
 	return {
-		name: 'vite-plugin-starlight-user-config',
+		name: 'vite-plugin-starstruck-user-config',
 		resolveId(id): string | void {
 			if (id in modules) return resolveVirtualModuleId(id);
 		},

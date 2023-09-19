@@ -14,11 +14,11 @@ Starlight는 라우팅, 대체 콘텐츠 및 전체 RTL(오른쪽에서 왼쪽�
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@awe-player/starstruck';
+   import starstruck from '@awe-player/starstruck';
 
    export default defineConfig({
    	integrations: [
-   		starlight({
+   		starstruck({
    			title: '나의 문서',
    			// 사이트의 기본 언어를 영어로 설정합니다.
    			defaultLocale: 'en',
@@ -71,11 +71,11 @@ Starlight는 라우팅, 대체 콘텐츠 및 전체 RTL(오른쪽에서 왼쪽�
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: '나의 문서',
 			defaultLocale: 'root', // 선택적
 			locales: {
@@ -114,11 +114,11 @@ export default defineConfig({
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: '나의 문서',
 			locales: {
 				root: {
@@ -143,7 +143,7 @@ Starlight는 귀하가 모든 언어로 같은 페이지를 생성할 것을 기
 
 Starlight를 사용하면 번역된 콘텐츠 파일을 호스팅하는 것 외에도 독자가 선택한 언어로 사이트 전체를 경험할 수 있도록 기본 UI 문자열(예를 들어, 목차의 제목인 "목차")을 번역할 수 있습니다.
 
-영어, 체코어, 프랑스어, 독일어, 이탈리아어, 일본어, 포르투갈어, 네덜란드어, 덴마크어, 스페인어, 터키어, 아랍어, 노르웨이어, 페르시아어, 중국어 간체, 한국어 및 스웨덴어로 번역된 UI 문자열이 기본적으로 제공됩니다. 그리고 우리는 [더 많은 기본 언어를 추가하는 데 기여](https://github.com/withastro/starlight/blob/main/CONTRIBUTING.md)하는걸 환영합니다.
+영어, 체코어, 프랑스어, 독일어, 이탈리아어, 일본어, 포르투갈어, 네덜란드어, 덴마크어, 스페인어, 터키어, 아랍어, 노르웨이어, 페르시아어, 중국어 간체, 한국어 및 스웨덴어로 번역된 UI 문자열이 기본적으로 제공됩니다. 그리고 우리는 [더 많은 기본 언어를 추가하는 데 기여](https://github.com/withastro/starstruck/blob/main/CONTRIBUTING.md)하는걸 환영합니다.
 
 `i18n` 데이터 컬렉션을 통해 지원하는 추가 언어에 대한 번역을 제공하거나 기본 라벨을 변경할 수 있습니다.
 

@@ -1,5 +1,5 @@
 import { basename, dirname } from 'node:path';
-import config from 'virtual:starlight/user-config';
+import config from 'virtual:starstruck/user-config';
 import type { PrevNextLinkConfig } from '../schemas/prevNextLink';
 import { pathWithBase } from './base';
 import { pickLang } from './i18n';

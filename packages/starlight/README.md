@@ -10,7 +10,7 @@ Starstruck is just a modified version of Starlight to provide a premium and spac
 
 ## Documentation
 
-[Read the Starlight docs] (this is just a theme so it follows starlight docs!)
+[Read the Starlight docs] (this is just a theme so it follows starstruck docs!)
 
 ## License
 

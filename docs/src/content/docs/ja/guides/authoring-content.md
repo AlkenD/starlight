@@ -103,7 +103,7 @@ Starlightは、補足情報をレンダリングするためのカスタムMarkd
 Starlightは、[Astro](https://astro.build/)製のドキュメントサイト用ツールキットです。次のコマンドではじめられます。
 
 ```sh
-npm create astro@latest -- --template starlight
+npm create astro@latest -- --template starstruck
 ```
 
 :::
@@ -113,7 +113,7 @@ npm create astro@latest -- --template starlight
 Starlightは、[Astro](https://astro.build/)製のドキュメントサイト用ツールキットです。次のコマンドではじめられます。
 
 ```sh
-npm create astro@latest -- --template starlight
+npm create astro@latest -- --template starstruck
 ```
 
 :::

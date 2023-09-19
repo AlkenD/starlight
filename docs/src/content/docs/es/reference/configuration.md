@@ -3,24 +3,24 @@ title: Referencia de Configuración
 description: Una descripción general de todas las opciones de configuración que admite Starlight.
 ---
 
-## Configurar la integración `starlight`
+## Configurar la integración `starstruck`
 
 Starlight es una integración construida sobre el framework [Astro](https://astro.build). Puedes configurar tu proyecto dentro del archivo de configuración `astro.config.mjs`:
 
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 export default defineConfig({
   integrations: [
-    starlight({
+    starstruck({
       title: 'Mi encantador sitio de documentación',
     }),
   ],
 });
 ```
 
-Puedes pasar las siguientes opciones a la integración `starlight`.
+Puedes pasar las siguientes opciones a la integración `starstruck`.
 
 ### `title` (requerido)
 
@@ -41,7 +41,7 @@ Establece la descripción de tu sitio web. Es usada en los metadatos compartidos
 Establece un logotipo para mostrarlo en la barra de navegación junto al título del sitio o en su lugar. Puedes establecer una única propiedad `src` o establecer fuentes de imagen separadas para `light` y `dark`.
 
 ```js
-starlight({
+starstruck({
   logo: {
     src: './src/assets/mi-logo.svg',
   },
@@ -68,17 +68,17 @@ Configura la tabla de contenidos que se muestra a la derecha de cada página. De
 
 **tipo:** `{ baseUrl: string }`
 
-Hablita "Editar los enlaces" de está página estableciendo la URL base que se debe usar. El enlace final será `editLink.baseUrl` + la ruta de la página actual. Por ejemplo, para habilitar la edición de páginas en el repositorio `withastro/starlight` en GitHub:
+Hablita "Editar los enlaces" de está página estableciendo la URL base que se debe usar. El enlace final será `editLink.baseUrl` + la ruta de la página actual. Por ejemplo, para habilitar la edición de páginas en el repositorio `withastro/starstruck` en GitHub:
 
 ```js
-starlight({
+starstruck({
   editLink: {
-    baseUrl: 'https://github.com/withastro/starlight/edit/main/',
+    baseUrl: 'https://github.com/withastro/starstruck/edit/main/',
   },
 });
 ```
 
-Con esta configuración, una página `/introduction` tendría un enlace de edición que apunta a `https://github.com/withastro/starlight/edit/main/src/docs/introduction.md`.
+Con esta configuración, una página `/introduction` tendría un enlace de edición que apunta a `https://github.com/withastro/starstruck/edit/main/src/docs/introduction.md`.
 
 ### `sidebar`
 
@@ -96,7 +96,7 @@ Cada elemento debe tener una propiedad `label` y una de las siguientes propiedad
 - `autogenerate` — Un objeto que especifica un directorio de tus documentos para generar automáticamente un grupo de enlaces.
 
 ```js
-starlight({
+starstruck({
   sidebar: [
     // Un solo elemento de enlace etiquetado como “Home”.
     { label: 'Home', link: '/' },
@@ -122,7 +122,7 @@ starlight({
 #### Ordenación
 
 Los grupos de la barra lateral generados automáticamente se ordenan alfabéticamente por el nombre del archivo.
-Por ejemplo, una página generada a partir de `astro.md` aparecería por encima de la página `starlight.md`.
+Por ejemplo, una página generada a partir de `astro.md` aparecería por encima de la página `starstruck.md`.
 
 #### Colapsando grupos
 
@@ -217,11 +217,11 @@ Cada entrada debe usar el directorio donde se guardan los archivos de ese idioma
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
   integrations: [
-    starlight({
+    starstruck({
       title: 'My Docs',
       // Establece el inglés como el idioma predeterminado para este sitio.
       defaultLocale: 'en',
@@ -281,7 +281,7 @@ La dirección de escritura de este idioma; `"ltr"` para de izquierda a derecha (
 Puedes servir el idioma predeterminado sin un directorio `/lang/` estableciendo un idioma `root`:
 
 ```js
-starlight({
+starstruck({
   locales: {
     root: {
       label: 'English',
@@ -313,11 +313,11 @@ El idioma predeterminado se utilizará para proporcionar contenido de respaldo d
 Detalles opcionales sobre las cuentas de redes sociales para este sitio. Agregar cualquiera de estos los mostrará como enlaces de iconos en el encabezado del sitio.
 
 ```js
-starlight({
+starstruck({
   social: {
     codeberg: 'https://codeberg.org/knut/examples',
     discord: 'https://astro.build/chat',
-    github: 'https://github.com/withastro/starlight',
+    github: 'https://github.com/withastro/starstruck',
     linkedin: 'https://www.linkedin.com/company/astroinc',
     mastodon: 'https://m.webtoo.ls/@astro',
     threads: 'https://www.threads.net/@nmoodev',
@@ -337,7 +337,7 @@ Proporciona archivos CSS para personalizar el aspecto y la sensación de tu siti
 Admite archivos CSS locales relativos a la raíz de tu proyecto, por ejemplo, `'./src/custom.css'`, y CSS que instalaste como un módulo npm, por ejemplo, `'@fontsource/roboto'`.
 
 ```js
-starlight({
+starstruck({
   customCss: ['./src/custom-styles.css', '@fontsource/roboto'],
 });
 ```
@@ -350,7 +350,7 @@ Agrega etiquetas personalizadas a la etiqueta `<head>` de tu sitio Starlight.
 Puede ser útil para agregar análisis y otros scripts y recursos de terceros.
 
 ```js
-starlight({
+starstruck({
   head: [
     // Ejemplo: agregar etiqueta de script de análisis de Fathom.
     {
@@ -401,7 +401,7 @@ Una página puede anular esta configuración o el texto del enlace y/o la URL ut
 Establece la ruta del favicon predeterminado para tu sitio web, el cual debería ubicarse en el directorio `public/` y ser un archivo de icono válido (`.ico`, `.gif`, `.jpg`, `.png` o `.svg`).
 
 ```js
-starlight({
+starstruck({
   favicon: '/images/favicon.svg',
 }),
 ```
@@ -409,7 +409,7 @@ starlight({
 Si necesitas establecer variantes adicionales o favicons de respaldo, puedes agregar etiquetas utilizando la opción [`head`](#head):
 
 ```js
-starlight({
+starstruck({
   favicon: '/images/favicon.svg'.
   head: [
     // Agregar un favicon ICO de respaldo para Safari.

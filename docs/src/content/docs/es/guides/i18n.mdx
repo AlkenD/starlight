@@ -14,11 +14,11 @@ Starlight proporciona soporte incorporado para sitios multilingües, incluidas l
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@awe-player/starstruck';
+   import starstruck from '@awe-player/starstruck';
 
    export default defineConfig({
    	integrations: [
-   		starlight({
+   		starstruck({
    			title: 'Mis Docs',
    			// Establece el inglés como el idioma predeterminado para este sitio.
    			defaultLocale: 'en',
@@ -72,11 +72,11 @@ Para establecer una configuración regional, usa la clave `root` en tu configura
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: 'My Docs',
 			defaultLocale: 'root', // opcional
 			locales: {
@@ -114,10 +114,10 @@ De forma predeterminada, Starlight es un sitio monolingüe (en inglés). Para cr
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 export default defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: 'Mis docs',
 			locales: {
 				root: {
@@ -140,7 +140,7 @@ Si no hay una traducción disponible para un idioma, Starlight mostrará a los l
 
 ## Traduce la UI de Starlight
 
-Starlight proporciona de forma predeterminada traducciones para los textos utilizados en la UI al inglés, checo, francés, alemán, italiano, japonés, holandés, portugués, danés, español, turco, árabe, noruego, farsi, chino simplificado, coreano y sueco. También damos la bienvenida a [contribuciones para agregar más idiomas predeterminados](https://github.com/withastro/starlight/blob/main/CONTRIBUTING.md).
+Starlight proporciona de forma predeterminada traducciones para los textos utilizados en la UI al inglés, checo, francés, alemán, italiano, japonés, holandés, portugués, danés, español, turco, árabe, noruego, farsi, chino simplificado, coreano y sueco. También damos la bienvenida a [contribuciones para agregar más idiomas predeterminados](https://github.com/withastro/starstruck/blob/main/CONTRIBUTING.md).
 
 1. Configura la colección de datos `i18n` en `src/content/config.ts` si aún no está configurada:
 

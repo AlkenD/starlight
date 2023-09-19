@@ -1,7 +1,7 @@
 # Starlight UI translation files
 
 This directory contains translation data for Starlight’s UI.
-Each language has its own JSON file and follows the [translation structure described in Starlight’s docs](https://starlight.astro.build/guides/i18n/#translate-starlights-ui).
+Each language has its own JSON file and follows the [translation structure described in Starlight’s docs](https://starstruck.astro.build/guides/i18n/#translate-starlights-ui).
 
 ## Add a new language
 

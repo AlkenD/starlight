@@ -1,5 +1,5 @@
 import { type CollectionEntry, getCollection } from 'astro:content';
-import config from 'virtual:starlight/user-config';
+import config from 'virtual:starstruck/user-config';
 import builtinTranslations from '../translations';
 import { localeToLang } from './slugs';
 

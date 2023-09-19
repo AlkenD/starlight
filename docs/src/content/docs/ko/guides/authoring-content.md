@@ -104,7 +104,7 @@ Starlight는 주석 렌더링을 위한 사용자 정의 Markdown 구문을 제�
 Starlight는 [Astro](https://astro.build/)로 구축된 문서 웹사이트 툴킷입니다. 다음 명령으로 시작할 수 있습니다.
 
 ```sh
-npm create astro@latest -- --template starlight
+npm create astro@latest -- --template starstruck
 ```
 
 :::
@@ -114,7 +114,7 @@ npm create astro@latest -- --template starlight
 Starlight는 [Astro](https://astro.build/)로 구축된 문서 웹사이트 툴킷입니다. 다음 명령으로 시작할 수 있습니다.
 
 ```sh
-npm create astro@latest -- --template starlight
+npm create astro@latest -- --template starstruck
 ```
 
 :::

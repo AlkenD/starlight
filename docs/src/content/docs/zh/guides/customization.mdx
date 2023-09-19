@@ -30,11 +30,11 @@ Starlight 提供了合理的默认样式和功能，因此你可以快速开始�
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@awe-player/starstruck';
+   import starstruck from '@awe-player/starstruck';
 
    export default defineConfig({
    	integrations: [
-   		starlight({
+   		starstruck({
    			title: '带有我的标志的页面',
    			logo: {
    				src: './src/assets/my-logo.svg',
@@ -49,7 +49,7 @@ Starlight 提供了合理的默认样式和功能，因此你可以快速开始�
 标题文本仍包含在屏幕阅读器中，以便标题保持可访问性。
 
 ```js
-starlight({
+starstruck({
   title: '带有我的 logo 的页面',
   logo: {
     src: './src/assets/my-logo.svg',
@@ -78,7 +78,7 @@ starlight({
 2. 在 `astro.config.mjs` 中，将 logo 变体的路径添加为 `light` 和 `dark` 选项，而不是 `src`：
 
    ```js
-   starlight({
+   starstruck({
      title: '带有我的标志的页面',
      logo: {
        light: './src/assets/light-logo.svg',
@@ -95,7 +95,7 @@ Starlight 内置了生成站点地图（sitemap）的支持。通过在 `astro.c
 // astro.config.mjs
 export default defineConfig({
 	site: 'https://stargazers.club',
-	integrations: [starlight({ title: 'Site with sitemap' })],
+	integrations: [starstruck({ title: 'Site with sitemap' })],
 });
 ```
 
@@ -142,7 +142,7 @@ tableOfContents:
 
 defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: '',
 			tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 2 },
 		}),
@@ -174,7 +174,7 @@ tableOfContents: false
 
 defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: '全局禁用目录的页面',
 			tableOfContents: false,
 		}),
@@ -194,15 +194,15 @@ Starlight 内置了对通过 Starlight 集成中的 [`social`](/zh/reference/con
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: '带有社交链接的页面',
 			social: {
 				discord: 'https://astro.build/chat',
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/withastro/starstruck',
 			},
 		}),
 	],
@@ -222,19 +222,19 @@ Starlight 可以在每个页面的页脚中显示“编辑此页”链接。这�
 
 如果你的 Starlight 项目不在存储库的根目录中，请在基本 URL 的末尾包含项目的路径。
 
-下面的示例显示了为 Starlight 文档配置的编辑链接，这些文档位于 GitHub 上名为 `withastro/starlight` 的存储库的 `main` 分支的 `docs/` 子目录中：
+下面的示例显示了为 Starlight 文档配置的编辑链接，这些文档位于 GitHub 上名为 `withastro/starstruck` 的存储库的 `main` 分支的 `docs/` 子目录中：
 
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
 	integrations: [
-		starlight({
+		starstruck({
 			title: '带有编辑链接的页面',
 			editLink: {
-				baseUrl: 'https://github.com/withastro/starlight/edit/main/docs/',
+				baseUrl: 'https://github.com/withastro/starstruck/edit/main/docs/',
 			},
 		}),
 	],
@@ -314,11 +314,11 @@ hero:
    ```js
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
-   import starlight from '@awe-player/starstruck';
+   import starstruck from '@awe-player/starstruck';
 
    export default defineConfig({
    	integrations: [
-   		starlight({
+   		starstruck({
    			title: '使用自定义字体的页面',
    			customCss: [
    				// @font-face CSS文件的相对路径。
@@ -370,11 +370,11 @@ hero:
     ```js
     // astro.config.mjs
     import { defineConfig } from 'astro/config';
-    import starlight from '@awe-player/starstruck';
+    import starstruck from '@awe-player/starstruck';
 
     export default defineConfig({
     	integrations: [
-    		starlight({
+    		starstruck({
     			title: '使用自定义字体的文档',
     			customCss: [
     				// 用于普通和半粗字重的Fontsource文件。

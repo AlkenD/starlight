@@ -1,4 +1,4 @@
-import config from 'virtual:starlight/user-config';
+import config from 'virtual:starstruck/user-config';
 import { expect, test } from 'vitest';
 
 test('test suite is using correct env', () => {

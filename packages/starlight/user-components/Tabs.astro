@@ -5,7 +5,7 @@ const panelHtml = await Astro.slots.render('default');
 const { html, panels } = processPanels(panelHtml);
 ---
 
-<starlight-tabs class="not-prose border border-zinc-400/40 rounded-xl flex flex-col justify-center">
+<starstruck-tabs class="not-prose border border-zinc-800 rounded-xl flex flex-col justify-center">
 	{
 		panels && (
 			<div class="p-4">
@@ -13,7 +13,7 @@ const { html, panels } = processPanels(panelHtml);
 					{panels.map(({ label, panelId, tabId }, idx) => (
 						<li role="presentation">
 							<a
-								class="px-4 py-2 rounded-md"
+								class="px-2 py-1 rounded-md"
 								role="tab"
 								href={'#' + panelId}
 								id={tabId}
@@ -28,9 +28,9 @@ const { html, panels } = processPanels(panelHtml);
 			</div>
 		)
 	}
-	<div class="h-[1px] w-full bg-zinc-400/40"></div>
+	<div class="h-[1px] w-full bg-zinc-800"></div>
 	<Fragment set:html={html} />
-</starlight-tabs>
+</starstruck-tabs>
 
 <style>
 	[aria-selected='true'] {
@@ -38,6 +38,7 @@ const { html, panels } = processPanels(panelHtml);
 	}
 
 	:root {
+		--astro-code-color-background: #ffffff23;
 		--astro-code-color-text: #ffffff;
 		--astro-code-token-constant: #3b82f6;
 		--astro-code-token-string: #ec4899;
@@ -118,5 +119,5 @@ const { html, panels } = processPanels(panelHtml);
 		}
 	}
 
-	customElements.define('starlight-tabs', StarlightTabs);
+	customElements.define('starstruck-tabs', StarlightTabs);
 </script>

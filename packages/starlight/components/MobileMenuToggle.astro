@@ -9,7 +9,7 @@ interface Props {
 const t = useTranslations(Astro.props.locale);
 ---
 
-<starlight-menu-button>
+<starstruck-menu-button>
 	<button
 		aria-expanded="false"
 		aria-label={t('menuButton.accessibleLabel')}
@@ -18,7 +18,7 @@ const t = useTranslations(Astro.props.locale);
 	>
 		<Icon name="bars" />
 	</button>
-</starlight-menu-button>
+</starstruck-menu-button>
 
 <script>
 	class StarlightMenuButton extends HTMLElement {
@@ -53,7 +53,7 @@ const t = useTranslations(Astro.props.locale);
 		}
 	}
 
-	customElements.define('starlight-menu-button', StarlightMenuButton);
+	customElements.define('starstruck-menu-button', StarlightMenuButton);
 </script>
 
 <style>

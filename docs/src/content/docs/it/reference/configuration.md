@@ -3,25 +3,25 @@ title: Riferimenti configurazione
 description: Una panoramica sulle configurazione supportate da Starlight.
 ---
 
-## Configurare l'integrazione `starlight`
+## Configurare l'integrazione `starstruck`
 
 Starlight è un'integrazione costruita sul framework [Astro](https://astro.build). Puoi configurare il tuo progetto nel file `astro.config.mjs` :
 
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
   integrations: [
-    starlight({
+    starstruck({
       title: 'Il mio delizioso sito per documentazione',
     }),
   ],
 });
 ```
 
-Puoi configurare le seguenti opzioni nell'integrazione `starlight`.
+Puoi configurare le seguenti opzioni nell'integrazione `starstruck`.
 
 ### `title` (obbligatorio)
 
@@ -42,7 +42,7 @@ Definisce la descrizione del tuo sito. Sarà usato nei metadati condivisi con le
 Definisce il logo da rappresentare nella barra di navigazione con o al posto del nome del sito. Puoi definire un singolo `src` o indicare due separate immagini per `light` e `dark`.
 
 ```js
-starlight({
+starstruck({
   logo: {
     src: './src/assets/my-logo.svg',
   },
@@ -69,17 +69,17 @@ Configura la tabella dei contenuti vista a destra di ogni pagina. Per predefinit
 
 **type:** `{ baseUrl: string }`
 
-Abilita il link "Modifica questa pagina" definendo l'URL base da usare. Il link finale sarà `editLink.baseUrl` + il percorso corrente. Per esempio, per abilitare la possibilità di modificare la repository `withastro/starlight` su GitHub:
+Abilita il link "Modifica questa pagina" definendo l'URL base da usare. Il link finale sarà `editLink.baseUrl` + il percorso corrente. Per esempio, per abilitare la possibilità di modificare la repository `withastro/starstruck` su GitHub:
 
 ```js
-starlight({
+starstruck({
   editLink: {
-    baseUrl: 'https://github.com/withastro/starlight/edit/main/',
+    baseUrl: 'https://github.com/withastro/starstruck/edit/main/',
   },
 });
 ```
 
-Con questa configurazione, una pagina `/introduction` avrà un link di modifica a `https://github.com/withastro/starlight/edit/main/src/docs/introduction.md`.
+Con questa configurazione, una pagina `/introduction` avrà un link di modifica a `https://github.com/withastro/starstruck/edit/main/src/docs/introduction.md`.
 
 ### `sidebar`
 
@@ -97,7 +97,7 @@ Ogni elemento avente un `label` e una delle seguenti proprietà:
 - `autogenerate` — un oggetto indicante una cartella dei tuoi documenti di cui generare automaticamente i collegamenti.
 
 ```js
-starlight({
+starstruck({
   sidebar: [
     // Un singolo elemento chiamato “Home”.
     { label: 'Home', link: '/' },
@@ -121,7 +121,7 @@ starlight({
 #### Ordinamento
 
 I gruppi generati automaticamente sono ordinati alfabeticamente.
-Per esempio, una pagina generata da `astro.md` apparirà sopra a quella generata da `starlight.md`.
+Per esempio, una pagina generata da `astro.md` apparirà sopra a quella generata da `starstruck.md`.
 
 #### Gruppi comprimibili
 
@@ -216,11 +216,11 @@ Ogni elemento deve utilizzare come chiave la cartella dove i file della lingua a
 ```js
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import starlight from '@awe-player/starstruck';
+import starstruck from '@awe-player/starstruck';
 
 export default defineConfig({
   integrations: [
-    starlight({
+    starstruck({
       title: 'My Site',
       // Imposta inglese come il linguaggio predefinito.
       defaultLocale: 'en',
@@ -280,7 +280,7 @@ Il verso di scrittura della lingua; `"ltr"` per sinistra a destra (predefinita) 
 Puoi definire un linguaggio principale senza una cartella `/lang/` definendo `root`:
 
 ```js
-starlight({
+starstruck({
   locales: {
     root: {
       label: 'English',
@@ -312,11 +312,11 @@ Verrà utilizzato come fallback per le pagine non tradotte.
 Dettagli opzionali per gli account social del sito. Se vengono aggiunti apparirà l'icona corrispondente nella barra superiore.
 
 ```js
-starlight({
+starstruck({
   social: {
     codeberg: 'https://codeberg.org/knut/examples',
     discord: 'https://astro.build/chat',
-    github: 'https://github.com/withastro/starlight',
+    github: 'https://github.com/withastro/starstruck',
     gitlab: 'https://gitlab.com/delucis',
     linkedin: 'https://www.linkedin.com/company/astroinc',
     mastodon: 'https://m.webtoo.ls/@astro',
@@ -337,7 +337,7 @@ Utilizza file CSS aggiuntivi per personalizzare il sito Starlight.
 Supporta file CSS locali relativi alla cartella principale del progetto, ad esempio `'/src/custom.css'`, e CSS installato come modulo npm, per esempio `'@fontsource/roboto'`.
 
 ```js
-starlight({
+starstruck({
   customCss: ['/src/custom-styles.css', '@fontsource/roboto'],
 });
 ```
@@ -350,7 +350,7 @@ Aggiunge tag all'`<head>` del sito Starlight.
 Può essere utile per aggiungere script e risorse di terze parti.
 
 ```js
-starlight({
+starstruck({
   head: [
     // Esempio : aggiunge Fathom analytics.
     {
@@ -401,7 +401,7 @@ Una pagina può sovrascrivere questa impostazione o il testo del collegamento e/
 Imposta il percorso della favicon predefinita per il tuo sito web che dovrebbe trovarsi nella directory `public/` ed essere valido (`.ico`, `.gif`, `.jpg`, `.png` o `.svg`) file di icone.
 
 ```js
-starlight({
+starstruck({
   favicon: '/images/favicon.svg',
 }),
 ```
@@ -409,7 +409,7 @@ starlight({
 Se devi impostare varianti aggiuntive o favicon di fallback, puoi aggiungere tag utilizzando l'[opzione`head`](#head):
 
 ```js
-starlight({
+starstruck({
   favicon: '/images/favicon.svg'.
   head: [
     // Aggiungi il fallback della favicon ICO per Safari.
