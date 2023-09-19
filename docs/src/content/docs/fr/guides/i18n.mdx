@@ -1,15 +1,15 @@
 ---
 title: Internationalisation (i18n)
-description: Apprenez à configurer votre site Starlight pour qu'il prenne en charge plusieurs langues.
+description: Apprenez à configurer votre site Starstruck pour qu'il prenne en charge plusieurs langues.
 ---
 
 import FileTree from '../../../../components/file-tree.astro';
 
-Starlight offre une prise en charge intégrée des sites multilingues, y compris le routage, le contenu de repli et la prise en charge complète des langues de droite à gauche (RTL).
+Starstruck offre une prise en charge intégrée des sites multilingues, y compris le routage, le contenu de repli et la prise en charge complète des langues de droite à gauche (RTL).
 
 ## Configurer i18n
 
-1. Indiquez à Starlight les langues que vous prenez en charge en passant [`locales`](/fr/reference/configuration/#locales) et [`defaultLocale`](/fr/reference/configuration/#defaultlocale) à l'intégration Starlight :
+1. Indiquez à Starstruck les langues que vous prenez en charge en passant [`locales`](/fr/reference/configuration/#locales) et [`defaultLocale`](/fr/reference/configuration/#defaultlocale) à l'intégration Starstruck :
 
    ```js
    // astro.config.mjs
@@ -59,7 +59,7 @@ Starlight offre une prise en charge intégrée des sites multilingues, y compris
 
    </FileTree>
 
-3. Vous pouvez maintenant ajouter des fichiers de contenu dans vos répertoires de langues. Utilisez le même nom de fichier pour associer les pages d'une langue à l'autre et profiter de l'ensemble des fonctionnalités i18n de Starlight, y compris le contenu de repli, les avis de traduction, etc.
+3. Vous pouvez maintenant ajouter des fichiers de contenu dans vos répertoires de langues. Utilisez le même nom de fichier pour associer les pages d'une langue à l'autre et profiter de l'ensemble des fonctionnalités i18n de Starstruck, y compris le contenu de repli, les avis de traduction, etc.
 
    Par exemple, créez `ar/index.md` et `en/index.md` pour représenter la page d'accueil en arabe et en anglais respectivement.
 
@@ -109,7 +109,7 @@ Lorsque vous utilisez une locale `root`, gardez les pages pour cette langue dire
 
 #### Sites monolingues
 
-Par défaut, Starlight est un site monolingue (anglais). Pour créer un site monolingue dans une autre langue, définissez-la comme `root` dans votre configuration `locales` :
+Par défaut, Starstruck est un site monolingue (anglais). Pour créer un site monolingue dans une autre langue, définissez-la comme `root` dans votre configuration `locales` :
 
 ```js
 // astro.config.mjs
@@ -131,17 +131,17 @@ export default defineConfig({
 });
 ```
 
-Cela vous permet de remplacer la langue par défaut de Starlight sans activer d'autres fonctions d'internationalisation pour les sites multilingues, telles que le sélecteur de langue.
+Cela vous permet de remplacer la langue par défaut de Starstruck sans activer d'autres fonctions d'internationalisation pour les sites multilingues, telles que le sélecteur de langue.
 
 ## Contenu de repli
 
-Starlight s'attend à ce que vous créiez des pages équivalentes dans toutes vos langues. Par exemple, si vous avez un fichier `en/about.md`, créez un `about.md` pour chaque autre langue que vous supportez. Cela permet à Starlight de fournir un contenu de repli automatique pour les pages qui n'ont pas encore été traduites.
+Starstruck s'attend à ce que vous créiez des pages équivalentes dans toutes vos langues. Par exemple, si vous avez un fichier `en/about.md`, créez un `about.md` pour chaque autre langue que vous supportez. Cela permet à Starstruck de fournir un contenu de repli automatique pour les pages qui n'ont pas encore été traduites.
 
-Si une traduction n'est pas encore disponible pour une langue, Starlight affichera aux lecteurs le contenu de cette page dans la langue par défaut (définie via `defaultLocale`). Par exemple, si vous n'avez pas encore créé de version française de votre page À propos et que votre langue par défaut est l'anglais, les visiteurs de `/fr/about` verront le contenu anglais de `/en/about` avec un avis indiquant que cette page n'a pas encore été traduite. Cela vous permet d'ajouter du contenu dans votre langue par défaut et de le traduire progressivement lorsque vos traducteurs en ont le temps.
+Si une traduction n'est pas encore disponible pour une langue, Starstruck affichera aux lecteurs le contenu de cette page dans la langue par défaut (définie via `defaultLocale`). Par exemple, si vous n'avez pas encore créé de version française de votre page À propos et que votre langue par défaut est l'anglais, les visiteurs de `/fr/about` verront le contenu anglais de `/en/about` avec un avis indiquant que cette page n'a pas encore été traduite. Cela vous permet d'ajouter du contenu dans votre langue par défaut et de le traduire progressivement lorsque vos traducteurs en ont le temps.
 
-## Traduire l'interface utilisateur de Starlight
+## Traduire l'interface utilisateur de Starstruck
 
-En plus d'héberger des fichiers de contenu traduits, Starlight vous permet de traduire les chaînes de l'interface utilisateur par défaut (par exemple, l'en-tête "Sur cette page" dans la table des matières) afin que vos lecteurs puissent découvrir votre site entièrement dans la langue sélectionnée.
+En plus d'héberger des fichiers de contenu traduits, Starstruck vous permet de traduire les chaînes de l'interface utilisateur par défaut (par exemple, l'en-tête "Sur cette page" dans la table des matières) afin que vos lecteurs puissent découvrir votre site entièrement dans la langue sélectionnée.
 
 Les textes de l'interface utilisateur traduits en anglais, arabe, allemand, chinois simplifié, danois, espagnol, français, italien, japonais, néerlandais, norvégien, farsi, portugais, tchèque, turc, coréen et suédois sont disponibles prêts à l'emploi, et nous acceptons les [contributions pour ajouter d'autres langues par défaut](https://github.com/withastro/starstruck/blob/main/CONTRIBUTING.md).
 
@@ -175,7 +175,7 @@ Vous pouvez fournir des traductions pour les langues supplémentaires que vous s
 
 3. Ajoutez des traductions pour les clés que vous souhaitez traduire dans les fichiers JSON. Traduire uniquement les valeurs, en laissant les clés en anglais (e.g. `"search.label": "Buscar"`).
 
-   Il s'agit des valeurs anglaises par défaut des chaînes de caractères existantes avec lesquelles Starlight est livré :
+   Il s'agit des valeurs anglaises par défaut des chaînes de caractères existantes avec lesquelles Starstruck est livré :
 
    ```json
    {
@@ -202,7 +202,7 @@ Vous pouvez fournir des traductions pour les langues supplémentaires que vous s
    }
    ```
 
-   La module de recherche de Starlight’s est propulsé par la librairie [Pagefind](https://pagefind.app/).
+   La module de recherche de Starstruck’s est propulsé par la librairie [Pagefind](https://pagefind.app/).
    Vous pouvez défiinr les tradctions pour l'interface de Pagefinddans le même fichier JSON file en utilisant les propriétés `pagefind` :
 
    ```json

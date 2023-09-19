@@ -1,15 +1,15 @@
 import type { AstroConfig, ViteUserConfig } from 'astro';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import type { StarlightConfig } from '../utils/user-config';
+import type { StarstruckConfig } from '../utils/user-config';
 
 function resolveVirtualModuleId<T extends string>(id: T): `\0${T}` {
 	return `\0${id}`;
 }
 
-/** Vite plugin that exposes Starlight user config and project context via virtual modules. */
-export function vitePluginStarlightUserConfig(
-	opts: StarlightConfig,
+/** Vite plugin that exposes Starstruck user config and project context via virtual modules. */
+export function vitePluginStarstruckUserConfig(
+	opts: StarstruckConfig,
 	{ root }: Pick<AstroConfig, 'root'>
 ): NonNullable<ViteUserConfig['plugins']>[number] {
 	const resolveId = (id: string) =>

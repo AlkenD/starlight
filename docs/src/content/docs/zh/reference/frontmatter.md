@@ -1,9 +1,9 @@
 ---
 title: Frontmatter 参考
-description: Starlight 支持的默认 frontmatter 字段的概述。
+description: Starstruck 支持的默认 frontmatter 字段的概述。
 ---
 
-你可以通过设置 frontmatter 中的值来自定义 Starlight 中的单个 Markdown 和 MDX 页面。例如，一个常规页面可能会设置 `title` 和 `description` 字段：
+你可以通过设置 frontmatter 中的值来自定义 Starstruck 中的单个 Markdown 和 MDX 页面。例如，一个常规页面可能会设置 `title` 和 `description` 字段：
 
 ```md
 ---

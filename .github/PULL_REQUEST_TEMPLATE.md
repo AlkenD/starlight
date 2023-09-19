@@ -5,8 +5,8 @@
 <!-- Delete any that don’t apply -->
 
 - Minor content fixes (broken links, typos, etc.)
-- Changes or translations of Starlight docs site content
-- Changes to Starlight code
+- Changes or translations of Starstruck docs site content
+- Changes to Starstruck code
 - Something else!
 
 #### Description

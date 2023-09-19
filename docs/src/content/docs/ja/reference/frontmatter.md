@@ -1,9 +1,9 @@
 ---
 title: フロントマター
-description: Starlightがデフォルトでサポートするフロントマターのフィールドについて。
+description: Starstruckがデフォルトでサポートするフロントマターのフィールドについて。
 ---
 
-Starlightでは、フロントマターに値を設定することで、MarkdownとMDXのページを個別にカスタマイズできます。たとえば通常のページでは、`title`と`description`フィールドを設定します。
+Starstruckでは、フロントマターに値を設定することで、MarkdownとMDXのページを個別にカスタマイズできます。たとえば通常のページでは、`title`と`description`フィールドを設定します。
 
 ```md
 ---

@@ -1,9 +1,9 @@
 ---
 title: Markdownでのコンテンツ作成
-description: StarlightがサポートするMarkdown構文の概要。
+description: StarstruckがサポートするMarkdown構文の概要。
 ---
 
-Starlightでは、`.md`ファイルにおいて[Markdown](https://daringfireball.net/projects/markdown/)構文のすべての機能を利用できます。また、タイトルや説明文（description）などのメタデータを定義するためのフロントマター[YAML](https://dev.to/paulasantamaria/introduction-to-yaml-125f)もサポートしています。
+Starstruckでは、`.md`ファイルにおいて[Markdown](https://daringfireball.net/projects/markdown/)構文のすべての機能を利用できます。また、タイトルや説明文（description）などのメタデータを定義するためのフロントマター[YAML](https://dev.to/paulasantamaria/introduction-to-yaml-125f)もサポートしています。
 
 MDXやMarkdocを使用する場合、サポートされるMarkdownの機能や使用方法が異なることがあるため、[MDXドキュメント](https://mdxjs.com/docs/what-is-mdx/#markdown)や[Markdocドキュメント](https://markdoc.dev/docs/syntax)を必ず確認してください。
 
@@ -29,7 +29,7 @@ MDXやMarkdocを使用する場合、サポートされるMarkdownの機能や�
 
 ## 画像
 
-Starlightは、[Astro組み込みのアセット最適化機能](https://docs.astro.build/ja/guides/assets/)を使用して画像を表示します。
+Starstruckは、[Astro組み込みのアセット最適化機能](https://docs.astro.build/ja/guides/assets/)を使用して画像を表示します。
 
 MarkdownとMDXは、スクリーンリーダーや支援技術のための代替テキストを含む画像を表示するためのMarkdown構文をサポートしています。
 
@@ -53,15 +53,15 @@ MarkdownとMDXは、スクリーンリーダーや支援技術のための代替
 
 ### ページコンテンツを構造化する方法
 
-Starlightは、ページタイトルをトップレベルの見出しとして自動的に使用し、また各ページの目次の先頭に「概要」という見出しを含めます。各ページを通常のテキストコンテンツで開始し、ページ上の見出しは`<h2>`以下を使用することをおすすめします。
+Starstruckは、ページタイトルをトップレベルの見出しとして自動的に使用し、また各ページの目次の先頭に「概要」という見出しを含めます。各ページを通常のテキストコンテンツで開始し、ページ上の見出しは`<h2>`以下を使用することをおすすめします。
 
 ```md
 ---
 title: Markdownガイド
-description: StarlightでのMarkdownの使い方
+description: StarstruckでのMarkdownの使い方
 ---
 
-このページでは、StarlightでMarkdownを使用する方法について説明します。
+このページでは、StarstruckでMarkdownを使用する方法について説明します。
 
 ## インラインスタイル
 
@@ -75,7 +75,7 @@ Markdownで見出しを使用するとアンカーリンクが自動的に付与
 ```md
 ---
 title: 私のページコンテンツ
-description: Starlightの組み込みアンカーリンクの使い方
+description: Starstruckの組み込みアンカーリンクの使い方
 ---
 
 ## はじめに
@@ -93,14 +93,14 @@ description: Starlightの組み込みアンカーリンクの使い方
 
 補足情報（「警告」や「吹き出し」とも呼ばれます）は、ページのメインコンテンツと並べて補助的な情報を表示するのに便利です。
 
-Starlightは、補足情報をレンダリングするためのカスタムMarkdown構文を提供しています。補足情報のブロックは、コンテンツを囲む3つのコロン`:::`によって示し、`note`（注釈）、`tip`（ヒント）、`caution`（注意）、`danger`（危険）というタイプに設定できます。
+Starstruckは、補足情報をレンダリングするためのカスタムMarkdown構文を提供しています。補足情報のブロックは、コンテンツを囲む3つのコロン`:::`によって示し、`note`（注釈）、`tip`（ヒント）、`caution`（注意）、`danger`（危険）というタイプに設定できます。
 
 他のMarkdownコンテンツを補足情報の中にネストできますが、補足情報は短く簡潔なコンテンツに最も適しています。
 
 ### 注釈
 
 :::note
-Starlightは、[Astro](https://astro.build/)製のドキュメントサイト用ツールキットです。次のコマンドではじめられます。
+Starstruckは、[Astro](https://astro.build/)製のドキュメントサイト用ツールキットです。次のコマンドではじめられます。
 
 ```sh
 npm create astro@latest -- --template starstruck
@@ -110,7 +110,7 @@ npm create astro@latest -- --template starstruck
 
 ````md
 :::note
-Starlightは、[Astro](https://astro.build/)製のドキュメントサイト用ツールキットです。次のコマンドではじめられます。
+Starstruckは、[Astro](https://astro.build/)製のドキュメントサイト用ツールキットです。次のコマンドではじめられます。
 
 ```sh
 npm create astro@latest -- --template starstruck
@@ -138,11 +138,11 @@ Astroでは[「アイランドアーキテクチャ」](https://docs.astro.build
 注意（Caution）と危険（Danger）の補足は、ユーザーがつまずく可能性のある細かい点に注意を向けさせるのに役立ちます。もしこれらを多用しているとすれば、それはあなたがドキュメントを書いている対象の設計を見直す余地があることのサインかもしれません。
 
 :::caution
-もしあなたが素晴らしいドキュメントサイトを望んでいないのであれば、[Starlight](../../)は不要かもしれません。
+もしあなたが素晴らしいドキュメントサイトを望んでいないのであれば、[Starstruck](../../)は不要かもしれません。
 :::
 
 :::danger
-Starlightの便利な機能のおかげで、ユーザーはより生産的になり、プロダクトはより使いやすくなるかもしれません。
+Starstruckの便利な機能のおかげで、ユーザーはより生産的になり、プロダクトはより使いやすくなるかもしれません。
 
 - わかりやすいナビゲーション
 - ユーザーが設定可能なカラーテーマ
@@ -152,11 +152,11 @@ Starlightの便利な機能のおかげで、ユーザーはより生産的に�
 
 ```md
 :::caution
-もしあなたが素晴らしいドキュメントサイトを望んでいないのであれば、[Starlight](../../)は不要かもしれません。
+もしあなたが素晴らしいドキュメントサイトを望んでいないのであれば、[Starstruck](../../)は不要かもしれません。
 :::
 
 :::danger
-Starlightの便利な機能のおかげで、ユーザーはより生産的になり、プロダクトはより使いやすくなるかもしれません。
+Starstruckの便利な機能のおかげで、ユーザーはより生産的になり、プロダクトはより使いやすくなるかもしれません。
 
 - わかりやすいナビゲーション
 - ユーザーが設定可能なカラーテーマ
@@ -205,4 +205,4 @@ var fun = function lang(l) {
 
 ## その他のMarkdown機能
 
-Starlightは、リストやテーブルなど、その他のMarkdown記法をすべてサポートしています。Markdownのすべての構文要素の概要については、[The Markdown GuideのMarkdownチートシート](https://www.markdownguide.org/cheat-sheet/)を参照してください。
+Starstruckは、リストやテーブルなど、その他のMarkdown記法をすべてサポートしています。Markdownのすべての構文要素の概要については、[The Markdown GuideのMarkdownチートシート](https://www.markdownguide.org/cheat-sheet/)を参照してください。

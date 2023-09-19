@@ -1,15 +1,15 @@
 ---
 title: 入門
-description: AstroのStarlightで新しいドキュメントサイトを作成する方法について学びます。
+description: AstroのStarstruckで新しいドキュメントサイトを作成する方法について学びます。
 ---
 
 import { Tabs, TabItem } from '@awe-player/starstruck/components';
 
 ## 新しいプロジェクトを作成する
 
-Starlightは、[Astro](https://astro.build)の上に構築された、フル機能のドキュメント向けテーマです。
+Starstruckは、[Astro](https://astro.build)の上に構築された、フル機能のドキュメント向けテーマです。
 
-以下のコマンドにより、Astro + Starlightの新しいプロジェクトを作成できます。
+以下のコマンドにより、Astro + Starstruckの新しいプロジェクトを作成できます。
 
 <Tabs>
 <TabItem label="npm">
@@ -41,16 +41,16 @@ yarn create astro --template starstruck
 これにより、サイトに必要なすべてのファイルと設定が含まれた、新しい[プロジェクトディレクトリ](/ja/guides/project-structure/)が作成されます。
 
 :::tip[試してみよう]
-Starlightをブラウザで試すには、[StackBlitzでテンプレートを開きます](https://stackblitz.com/github/withastro/starstruck/tree/main/examples/basics)。
+Starstruckをブラウザで試すには、[StackBlitzでテンプレートを開きます](https://stackblitz.com/github/withastro/starstruck/tree/main/examples/basics)。
 :::
 
-## Starlightでコンテンツを作成する
+## Starstruckでコンテンツを作成する
 
-以上で、Starlightに新しいコンテンツを追加したり、既存のファイルを持ち込んだりする準備ができました！
+以上で、Starstruckに新しいコンテンツを追加したり、既存のファイルを持ち込んだりする準備ができました！
 
 ### ファイルフォーマット
 
-Starlightでは、MarkdownとMDXでコンテンツを作成できます。（Markdocのサポートは、実験的な[AstroのMarkdocインテグレーション](https://docs.astro.build/ja/guides/integrations-guide/markdoc/)をインストールして追加できます。）
+Starstruckでは、MarkdownとMDXでコンテンツを作成できます。（Markdocのサポートは、実験的な[AstroのMarkdocインテグレーション](https://docs.astro.build/ja/guides/integrations-guide/markdoc/)をインストールして追加できます。）
 
 ### ページの追加
 
@@ -63,36 +63,36 @@ src/content/docs/guides/faq.md => your-site.com/guides/faq
 
 ### 型安全なフロントマター
 
-Starlightのページは、ページの表示方法を制御するための、カスタマイズ可能な[共通のフロントマタープロパティ](/ja/reference/frontmatter/)を認識します。
+Starstruckのページは、ページの表示方法を制御するための、カスタマイズ可能な[共通のフロントマタープロパティ](/ja/reference/frontmatter/)を認識します。
 
 ```md
 ---
 title: こんにちは、世界！
-description: これはStarlightで作成されたサイトのページです
+description: これはStarstruckで作成されたサイトのページです
 ---
 ```
 
-何か重要なことを忘れてしまっていても、Starlightが教えてくれます。
+何か重要なことを忘れてしまっていても、Starstruckが教えてくれます。
 
-## Starlightサイトをデプロイする
+## Starstruckサイトをデプロイする
 
-Starlightサイトの作成とカスタマイズが完了したら、Netlify、Vercel、GitHub Pages、その他多くのお好みのウェブサーバーやホスティングプラットフォームにデプロイできます。
+Starstruckサイトの作成とカスタマイズが完了したら、Netlify、Vercel、GitHub Pages、その他多くのお好みのウェブサーバーやホスティングプラットフォームにデプロイできます。
 
 [Astroサイトのデプロイについては、Astroのドキュメントを参照してください。](https://docs.astro.build/ja/guides/deploy/)
 
-## Starlightを更新する
+## Starstruckを更新する
 
 :::tip[ヒント]
-Starlightはベータ版のソフトウェアであるため、頻繁に更新や改善がおこなわれます。Starlightを定期的に更新してください！
+Starstruckはベータ版のソフトウェアであるため、頻繁に更新や改善がおこなわれます。Starstruckを定期的に更新してください！
 :::
 
-StarlightはAstroインテグレーションであり、他の`@astrojs/*`インテグレーションと同様に更新できます。
+StarstruckはAstroインテグレーションであり、他の`@astrojs/*`インテグレーションと同様に更新できます。
 
 <Tabs>
 <TabItem label="npm">
 
 ```sh
-# npmでStarlightをアップグレードする
+# npmでStarstruckをアップグレードする
 npm install @awe-player/starstruck@latest
 ```
 
@@ -100,7 +100,7 @@ npm install @awe-player/starstruck@latest
 <TabItem label="pnpm">
 
 ```sh
-# pnpmでStarlightをアップグレードする
+# pnpmでStarstruckをアップグレードする
 pnpm upgrade @awe-player/starstruck --latest
 ```
 
@@ -108,21 +108,21 @@ pnpm upgrade @awe-player/starstruck --latest
 <TabItem label="Yarn">
 
 ```sh
-# yarnでStarlightをアップグレードする
+# yarnでStarstruckをアップグレードする
 yarn upgrade @awe-player/starstruck --latest
 ```
 
 </TabItem>
 </Tabs>
 
-各リリースでおこなわれた変更の全リストは、[Starlightのチェンジログ](https://github.com/withastro/starstruck/blob/main/packages/starstruck/CHANGELOG.md)で確認できます。
+各リリースでおこなわれた変更の全リストは、[Starstruckのチェンジログ](https://github.com/withastro/starstruck/blob/main/packages/starstruck/CHANGELOG.md)で確認できます。
 
-## Starlightのトラブルシューティング
+## Starstruckのトラブルシューティング
 
-Starlightの[プロジェクト設定](/ja/reference/configuration/)と[個別ページのフロントマターの設定](/ja/reference/frontmatter/)に関する情報は、このサイトのリファレンスセクションにあります。これらのページを利用して、Starlightサイトが正しく設定され、正常に動作していることを確認してください。
+Starstruckの[プロジェクト設定](/ja/reference/configuration/)と[個別ページのフロントマターの設定](/ja/reference/frontmatter/)に関する情報は、このサイトのリファレンスセクションにあります。これらのページを利用して、Starstruckサイトが正しく設定され、正常に動作していることを確認してください。
 
-コンテンツの追加やStarlightサイトのカスタマイズについては、サイドバーにあるガイドのリストを参照してください。
+コンテンツの追加やStarstruckサイトのカスタマイズについては、サイドバーにあるガイドのリストを参照してください。
 
-これらのドキュメントで答えが見つからない場合は、Astroに関してより詳細な記述がある[Astroドキュメント](https://docs.astro.build)を参照してください。Starlightテーマの下でAstroがどのように動作しているかを理解することで、疑問が解消されるかもしれません。
+これらのドキュメントで答えが見つからない場合は、Astroに関してより詳細な記述がある[Astroドキュメント](https://docs.astro.build)を参照してください。Starstruckテーマの下でAstroがどのように動作しているかを理解することで、疑問が解消されるかもしれません。
 
-また、[GithHub上のStarlightのIssue](https://github.com/withastro/starstruck/issues)を確認したり、[AstroのDiscord](https://astro.build/chat/)で活発でフレンドリーなコミュニティに助けを求めることもできます！`#support`フォーラムに「starstruck」タグを付けて質問を投稿したり、`#starstruck`専用のチャンネルにアクセスして、現在の開発などについて議論しましょう！
+また、[GithHub上のStarstruckのIssue](https://github.com/withastro/starstruck/issues)を確認したり、[AstroのDiscord](https://astro.build/chat/)で活発でフレンドリーなコミュニティに助けを求めることもできます！`#support`フォーラムに「starstruck」タグを付けて質問を投稿したり、`#starstruck`専用のチャンネルにアクセスして、現在の開発などについて議論しましょう！

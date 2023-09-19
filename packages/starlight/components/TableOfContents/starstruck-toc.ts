@@ -1,4 +1,4 @@
-export class StarlightTOC extends HTMLElement {
+export class StarstruckTOC extends HTMLElement {
 	private _current = this.querySelector('a[aria-current="true"]') as HTMLAnchorElement | null;
 	private minH = parseInt(this.dataset.minH || '2', 10);
 	private maxH = parseInt(this.dataset.maxH || '3', 10);
@@ -100,4 +100,4 @@ export class StarlightTOC extends HTMLElement {
 	}
 }
 
-customElements.define('starstruck-toc', StarlightTOC);
+customElements.define('starstruck-toc', StarstruckTOC);

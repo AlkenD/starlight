@@ -1,13 +1,13 @@
 ---
 title: CSS et mise en forme
-description: Apprendre à mettre en forme votre site Starlight avec du CSS personnalisé ou l'intégrer avec Tailwind CSS.
+description: Apprendre à mettre en forme votre site Starstruck avec du CSS personnalisé ou l'intégrer avec Tailwind CSS.
 ---
 
-Vous pouvez mettre en forme votre site Starlight avec du CSS personnalisé ou utiliser le module d'extension Tailwind de Starlight.
+Vous pouvez mettre en forme votre site Starstruck avec du CSS personnalisé ou utiliser le module d'extension Tailwind de Starstruck.
 
 ## Styles CSS personnalisés
 
-Personnalisez les styles appliqués à votre site Starlight en fournissant des fichiers CSS supplémentaires pour modifier ou étendre les styles par défaut de Starlight.
+Personnalisez les styles appliqués à votre site Starstruck en fournissant des fichiers CSS supplémentaires pour modifier ou étendre les styles par défaut de Starstruck.
 
 1. Ajoutez un fichier CSS à votre répertoire `src/`.
    Par exemple, vous pouvez définir une largeur de colonne par défaut plus large et une taille de texte plus grande pour les titres de page :
@@ -20,7 +20,7 @@ Personnalisez les styles appliqués à votre site Starlight en fournissant des f
    }
    ```
 
-2. Ajoutez le chemin vers votre fichier CSS au tableau `customCss` de Starlight dans votre configuration `astro.config.mjs` :
+2. Ajoutez le chemin vers votre fichier CSS au tableau `customCss` de Starstruck dans votre configuration `astro.config.mjs` :
 
    ```js
    // astro.config.mjs
@@ -40,24 +40,24 @@ Personnalisez les styles appliqués à votre site Starlight en fournissant des f
    });
    ```
 
-Vous pouvez retrouver toutes les propriétés CSS personnalisées utilisées par Starlight que vous pouvez définir pour personnaliser votre site dans le fichier [`props.css` sur GitHub](https://github.com/withastro/starstruck/blob/main/packages/starstruck/style/props.css).
+Vous pouvez retrouver toutes les propriétés CSS personnalisées utilisées par Starstruck que vous pouvez définir pour personnaliser votre site dans le fichier [`props.css` sur GitHub](https://github.com/withastro/starstruck/blob/main/packages/starstruck/style/props.css).
 
 ## Tailwind CSS
 
 Le support de Tailwind CSS dans les projets Astro est fourni par [l'intégration Astro pour Tailwind](https://docs.astro.build/en/guides/integrations-guide/tailwind/).
-Starlight fournit un module d'extension Tailwind complémentaire pour aider à configurer Tailwind pour une meilleure compatibilité avec les styles de Starlight.
+Starstruck fournit un module d'extension Tailwind complémentaire pour aider à configurer Tailwind pour une meilleure compatibilité avec les styles de Starstruck.
 
-Le module d'extension Tailwind de Starlight applique la configuration suivante :
+Le module d'extension Tailwind de Starstruck applique la configuration suivante :
 
-- Configure les variantes `dark:` de Tailwind pour fonctionner avec le mode sombre de Starlight.
-- Utilise les [couleurs et polices de thème](#mettre-en-forme-starstruck-avec-tailwind) de Tailwind dans l'interface utilisateur de Starlight.
+- Configure les variantes `dark:` de Tailwind pour fonctionner avec le mode sombre de Starstruck.
+- Utilise les [couleurs et polices de thème](#mettre-en-forme-starstruck-avec-tailwind) de Tailwind dans l'interface utilisateur de Starstruck.
 - Désactive les styles de réinitialisation [Preflight](https://tailwindcss.com/docs/preflight) de Tailwind tout en restaurant sélectivement les parties essentielles de Preflight requises pour les classes utilitaires de bordure de Tailwind.
 
 ### Créer un nouveau projet avec Tailwind
 
 import { Tabs, TabItem } from '@awe-player/starstruck/components';
 
-Démarrez un nouveau projet Starlight avec Tailwind CSS préconfiguré en utilisant `create astro` :
+Démarrez un nouveau projet Starstruck avec Tailwind CSS préconfiguré en utilisant `create astro` :
 
 <Tabs>
 <TabItem label="npm">
@@ -85,7 +85,7 @@ yarn create astro --template starstruck/tailwind
 
 ### Ajouter Tailwind à un projet existant
 
-Si vous avez déjà un site Starlight et que vous souhaitez ajouter Tailwind CSS, suivez ces étapes.
+Si vous avez déjà un site Starstruck et que vous souhaitez ajouter Tailwind CSS, suivez ces étapes.
 
 1.  Ajoutez l'intégration Astro pour Tailwind :
 
@@ -117,7 +117,7 @@ Si vous avez déjà un site Starlight et que vous souhaitez ajouter Tailwind CSS
 
     </Tabs>
 
-2.  Installez le module d'extension Tailwind de Starlight :
+2.  Installez le module d'extension Tailwind de Starstruck :
 
     <Tabs>
 
@@ -181,24 +181,24 @@ Si vous avez déjà un site Starlight et que vous souhaitez ajouter Tailwind CSS
     });
     ```
 
-5.  Ajoutez le module d'extension Tailwind de Starlight au fichier `tailwind.config.cjs` :
+5.  Ajoutez le module d'extension Tailwind de Starstruck au fichier `tailwind.config.cjs` :
 
     ```js ins={2,7}
     // tailwind.config.cjs
-    const starlightPlugin = require('@awe-player/starstruck-tailwind');
+    const starstruckPlugin = require('@awe-player/starstruck-tailwind');
 
     /** @type {import('tailwindcss').Config} */
     module.exports = {
     	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-    	plugins: [starlightPlugin()],
+    	plugins: [starstruckPlugin()],
     };
     ```
 
-### Mettre en forme Starlight avec Tailwind
+### Mettre en forme Starstruck avec Tailwind
 
-Starlight utilise les valeurs de votre [configuration de thème Tailwind](https://tailwindcss.com/docs/theme) dans son interface utilisateur.
+Starstruck utilise les valeurs de votre [configuration de thème Tailwind](https://tailwindcss.com/docs/theme) dans son interface utilisateur.
 
-Si définies, les options suivantes remplaceront les styles par défaut de Starlight :
+Si définies, les options suivantes remplaceront les styles par défaut de Starstruck :
 
 - `colors.accent` — utilisé pour les liens et la mise en évidence de l'élément courant
 - `colors.gray` — utilisé pour les couleurs d'arrière-plan et les bordures
@@ -207,7 +207,7 @@ Si définies, les options suivantes remplaceront les styles par défaut de Starl
 
 ```js {13,16,21,24}
 // tailwind.config.cjs
-const starlightPlugin = require('@awe-player/starstruck-tailwind');
+const starstruckPlugin = require('@awe-player/starstruck-tailwind');
 const colors = require('tailwindcss/colors');
 
 /** @type {import('tailwindcss').Config} */
@@ -217,34 +217,34 @@ module.exports = {
 		extend: {
 			colors: {
 				// Votre couleur d'accentuation préférée.
-				// Indigo est la plus proche des valeurs par défaut de Starlight.
+				// Indigo est la plus proche des valeurs par défaut de Starstruck.
 				accent: colors.indigo,
 				// Votre échelle de gris préférée.
-				// Zinc est la plus proche des valeurs par défaut de Starlight.
+				// Zinc est la plus proche des valeurs par défaut de Starstruck.
 				gray: colors.zinc,
 			},
 			fontFamily: {
 				// Votre police de texte préférée.
-				// Starlight utilise une pile de polices système par défaut.
+				// Starstruck utilise une pile de polices système par défaut.
 				sans: ['"Atkinson Hyperlegible"'],
 				// Votre police de code préférée.
-				// Starlight utilise des polices système à chasse fixe par défaut.
+				// Starstruck utilise des polices système à chasse fixe par défaut.
 				mono: ['"IBM Plex Mono"'],
 			},
 		},
 	},
-	plugins: [starlightPlugin()],
+	plugins: [starstruckPlugin()],
 };
 ```
 
 ## Personnalisation du thème
 
-Le thème de couleur de Starlight peut être contrôlé en remplaçant ses propriétés personnalisées par défaut.
+Le thème de couleur de Starstruck peut être contrôlé en remplaçant ses propriétés personnalisées par défaut.
 Ces variables sont utilisées dans toute l'interface utilisateur avec une gamme de nuances de gris utilisées pour les couleurs de texte et d'arrière-plan et une couleur d'accentuation utilisée pour les liens et pour mettre en évidence les éléments courants durant la navigation.
 
 ### Editeur de thème de couleur
 
-Utiliser les contrôles ci-dessous pour modifier les palettes de couleurs d'accentuation et de gris de Starlight.
+Utiliser les contrôles ci-dessous pour modifier les palettes de couleurs d'accentuation et de gris de Starstruck.
 Les zones d'aperçu sombre et clair afficheront les couleurs résultantes, et la page entière sera également mise à jour pour prévisualiser vos modifications.
 
 Quand vous êtes satisfait de vos modifications, copiez le code CSS ou Tailwind ci-dessous et utilisez-le dans votre projet.

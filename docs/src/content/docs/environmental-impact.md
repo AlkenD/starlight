@@ -1,12 +1,12 @@
 ---
 title: Eco-friendly docs
-description: Learn how Starlight can help you build greener documentation sites and reduce your carbon footprint.
+description: Learn how Starstruck can help you build greener documentation sites and reduce your carbon footprint.
 ---
 
 Estimates for the climate impact of the web industry range from between [2%][sf] and [4% of global carbon emissions][bbc], roughly equivalent to the emissions of the airline industry.
 There are many complex factors in calculating the ecological impact of a website, but this guide includes a few tips for reducing the environmental footprint of your docs site.
 
-The good news is, choosing Starlight is a great start.
+The good news is, choosing Starstruck is a great start.
 According to the Website Carbon Calculator, this site is [cleaner than 99% of web pages tested][sl-carbon], producing 0.01g of CO₂ per page visit.
 
 ## Page weight
@@ -14,19 +14,19 @@ According to the Website Carbon Calculator, this site is [cleaner than 99% of we
 The more data a web page transfers, the more energy resources it requires.
 In April 2023, the median web page required a user to download more than 2,000 KB according to [data from the HTTP Archive][http].
 
-Starlight builds pages that are as lightweight as possible.
+Starstruck builds pages that are as lightweight as possible.
 For example, on a first visit, a user will download less than 50 KB of compressed data — just 2.5% of the HTTP archive median.
 With a good caching strategy, subsequent navigations can download as little as 10 KB.
 
 ### Images
 
-While Starlight provides a good baseline, images you add to your docs pages can quickly increase your page weight.
-Starlight uses Astro’s [optimized asset support][assets] to optimize local images in your Markdown and MDX files.
+While Starstruck provides a good baseline, images you add to your docs pages can quickly increase your page weight.
+Starstruck uses Astro’s [optimized asset support][assets] to optimize local images in your Markdown and MDX files.
 
 ### UI components
 
 Components built with UI frameworks like React or Vue can easily add large amounts of JavaScript to a page.
-Because Starlight is built on Astro, components like this load **zero client-side JavaScript by default** thanks to [Astro Islands][islands].
+Because Starstruck is built on Astro, components like this load **zero client-side JavaScript by default** thanks to [Astro Islands][islands].
 
 ### Caching
 
@@ -34,7 +34,7 @@ Caching is used to control how long a browser stores and reuses data it already 
 A good caching strategy makes sure that a user gets new content as soon as possible when it changes, but also avoids pointlessly downloading the same content over and over when it hasn’t changed.
 
 The most common way to configure caching is with the [`Cache-Control` HTTP header][cache].
-When using Starlight, you can set a long cache time for everything in the `/_astro/` directory.
+When using Starstruck, you can set a long cache time for everything in the `/_astro/` directory.
 This directory contains CSS, JavaScript, and other bundled assets that can be safely cached forever, reducing unnecessary downloads:
 
 ```
@@ -56,7 +56,7 @@ How to configure caching depends on your web host. For example, Vercel applies t
 ## Power consumption
 
 How a web page is built can impact the power it takes to run on a user’s device.
-By using minimal JavaScript, Starlight reduces the amount of processing power a user’s phone, tablet, or computer needs to load and render pages.
+By using minimal JavaScript, Starstruck reduces the amount of processing power a user’s phone, tablet, or computer needs to load and render pages.
 
 Be mindful when adding features like analytics tracking scripts or JavaScript-heavy content like video embeds as these can increase the page power usage.
 If you need analytics, consider choosing a lightweight option like [Cabin][cabin], [Fathom][fathom], or [Plausible][plausible].
@@ -91,7 +91,7 @@ These tests with the [Website Carbon Calculator][wcc] compare similar pages buil
 
 | Framework                   | CO₂ per page visit |
 | --------------------------- | ------------------ |
-| [Starlight][sl-carbon]      | 0.01g              |
+| [Starstruck][sl-carbon]     | 0.01g              |
 | [VitePress][vp-carbon]      | 0.05g              |
 | [Docus][dc-carbon]          | 0.05g              |
 | [Sphinx][sx-carbon]         | 0.07g              |

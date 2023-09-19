@@ -1,9 +1,9 @@
 ---
 title: 마크다운으로 콘텐츠 작성
-description: Starlight가 지원하는 Markdown 구문의 개요입니다.
+description: Starstruck가 지원하는 Markdown 구문의 개요입니다.
 ---
 
-Starlight는 `.md` 파일에서 제목 및 설명과 같은 메타데이터를 정의하기 위해 [Markdown](https://daringfireball.net/projects/markdown/)의 모든 구문과 frontmatter [YAML](https://dev.to/paulasantamaria/introduction-to-yaml-125f)을 지원합니다.
+Starstruck는 `.md` 파일에서 제목 및 설명과 같은 메타데이터를 정의하기 위해 [Markdown](https://daringfireball.net/projects/markdown/)의 모든 구문과 frontmatter [YAML](https://dev.to/paulasantamaria/introduction-to-yaml-125f)을 지원합니다.
 
 해당 파일 형식을 사용하는 경우 Markdown 지원 및 사용법이 다를 수 있으므로 [MDX 문서](https://mdxjs.com/docs/what-is-mdx/#markdown) 또는 [Markdoc 문서](https://markdoc.dev/docs/syntax)를 확인하세요.
 
@@ -29,7 +29,7 @@ Starlight는 `.md` 파일에서 제목 및 설명과 같은 메타데이터를 �
 
 ## 이미지
 
-Starlight의 이미지는 [Astro에 내장된 최적화된 자산 지원](https://docs.astro.build/ko/guides/assets/)을 사용합니다.
+Starstruck의 이미지는 [Astro에 내장된 최적화된 자산 지원](https://docs.astro.build/ko/guides/assets/)을 사용합니다.
 
 Markdown 및 MDX는 스크린 리더 및 보조 기술에서 사용되는 대체 텍스트가 포함된 이미지를 표시하기 위한 Markdown 구문을 지원합니다.
 
@@ -51,17 +51,17 @@ Markdown 및 MDX는 스크린 리더 및 보조 기술에서 사용되는 대체
 
 제목을 사용하여 콘텐츠를 구조화할 수 있습니다. Markdown의 제목은 줄 시작 부분에 `#` 개수로 나타냅니다.
 
-### Starlight에서 페이지 콘텐츠를 구성하는 방법
+### Starstruck에서 페이지 콘텐츠를 구성하는 방법
 
-Starlight는 페이지 제목을 최상위 제목으로 사용하도록 구성되어 있으며 각 페이지 목차 상단에 "개요" 제목을 포함합니다. 각 페이지를 일반 단락 텍스트 콘텐츠로 시작하고 `<h2>`부터 아래로 페이지 제목을 사용하는 것이 좋습니다.
+Starstruck는 페이지 제목을 최상위 제목으로 사용하도록 구성되어 있으며 각 페이지 목차 상단에 "개요" 제목을 포함합니다. 각 페이지를 일반 단락 텍스트 콘텐츠로 시작하고 `<h2>`부터 아래로 페이지 제목을 사용하는 것이 좋습니다.
 
 ```md
 ---
 title: Markdown 가이드
-description: Starlight에서 Markdown을 사용하는 방법
+description: Starstruck에서 Markdown을 사용하는 방법
 ---
 
-이 페이지는 Starlight에서 Markdown을 사용하는 방법을 설명합니다.
+이 페이지는 Starstruck에서 Markdown을 사용하는 방법을 설명합니다.
 
 ## 인라인 스타일
 
@@ -75,7 +75,7 @@ Markdown에서 제목을 사용하면 자동으로 링크가 제공되므로 페
 ```md
 ---
 title: 내 콘텐츠 페이지
-description: Starlight에 내장된 링크를 사용하는 방법
+description: Starstruck에 내장된 링크를 사용하는 방법
 ---
 
 ## 서론
@@ -93,7 +93,7 @@ description: Starlight에 내장된 링크를 사용하는 방법
 
 주석은 "admonitions" 또는 "callouts" 라고도 하며, 페이지의 기본 콘텐츠 주변에 보조 정보를 표시하는 데 유용합니다.
 
-Starlight는 주석 렌더링을 위한 사용자 정의 Markdown 구문을 제공합니다. 주석 블록은 내용을 감싸기 위해 세 개의 콜론 `:::`을 사용하며 `note`, `tip`, `caution` 또는 `danger` 타입일 수 있습니다.
+Starstruck는 주석 렌더링을 위한 사용자 정의 Markdown 구문을 제공합니다. 주석 블록은 내용을 감싸기 위해 세 개의 콜론 `:::`을 사용하며 `note`, `tip`, `caution` 또는 `danger` 타입일 수 있습니다.
 
 다른 Markdown 콘텐츠를 주석 안에 중첩시킬 수도 있지만 짧고 간결한 콘텐츠 덩어리에 가장 적합합니다.
 
@@ -101,7 +101,7 @@ Starlight는 주석 렌더링을 위한 사용자 정의 Markdown 구문을 제�
 
 :::note
 
-Starlight는 [Astro](https://astro.build/)로 구축된 문서 웹사이트 툴킷입니다. 다음 명령으로 시작할 수 있습니다.
+Starstruck는 [Astro](https://astro.build/)로 구축된 문서 웹사이트 툴킷입니다. 다음 명령으로 시작할 수 있습니다.
 
 ```sh
 npm create astro@latest -- --template starstruck
@@ -111,7 +111,7 @@ npm create astro@latest -- --template starstruck
 
 ````md
 :::note
-Starlight는 [Astro](https://astro.build/)로 구축된 문서 웹사이트 툴킷입니다. 다음 명령으로 시작할 수 있습니다.
+Starstruck는 [Astro](https://astro.build/)로 구축된 문서 웹사이트 툴킷입니다. 다음 명령으로 시작할 수 있습니다.
 
 ```sh
 npm create astro@latest -- --template starstruck
@@ -140,11 +140,11 @@ Astro는 ["Islands Architecture"](https://docs.astro.build/ko/concepts/islands/)
 Caution과 Danger 주석은 실수하기 쉬운 세부 사항에 대해 사용자를 집중시키는 데 도움이 됩니다. 이러한 기능을 많이 사용하고 있다면, 문서화중인 내용을 다시 디자인하는 것이 좋습니다.
 
 :::caution
-당신이 멋진 문서 사이트를 원하지 않는다면 [Starlight](../../)는 필요하지 않을 수도 있습니다.
+당신이 멋진 문서 사이트를 원하지 않는다면 [Starstruck](../../)는 필요하지 않을 수도 있습니다.
 :::
 
 :::danger
-Starlight의 유용한 기능 덕분에 사용자의 생산성이 향상되고 제품을 더 쉽게 사용할 수 있습니다.
+Starstruck의 유용한 기능 덕분에 사용자의 생산성이 향상되고 제품을 더 쉽게 사용할 수 있습니다.
 
 - 쉬운 탐색
 - 사용자 구성 가능한 색상 테마
@@ -154,11 +154,11 @@ Starlight의 유용한 기능 덕분에 사용자의 생산성이 향상되고 �
 
 ```md
 :::caution
-당신이 멋진 문서 사이트를 원하지 않는다면 [Starlight](../../)는 필요하지 않을 수도 있습니다.
+당신이 멋진 문서 사이트를 원하지 않는다면 [Starstruck](../../)는 필요하지 않을 수도 있습니다.
 :::
 
 :::danger
-Starlight의 유용한 기능 덕분에 사용자의 생산성이 향상되고 제품을 더 쉽게 사용할 수 있습니다.
+Starstruck의 유용한 기능 덕분에 사용자의 생산성이 향상되고 제품을 더 쉽게 사용할 수 있습니다.
 
 - 쉬운 탐색
 - 사용자 구성 가능한 색상 테마
@@ -207,4 +207,4 @@ var fun = function lang(l) {
 
 ## 기타 일반적인 Markdown 기능
 
-Starlight는 목록 및 테이블과 같은 다른 모든 Markdown 작성 구문을 지원합니다. 모든 Markdown 구문 요소에 대한 간략한 개요는 [Markdown Guide의 Markdown 치트 시트](https://www.markdownguide.org/cheat-sheet/)를 참조하세요.
+Starstruck는 목록 및 테이블과 같은 다른 모든 Markdown 작성 구문을 지원합니다. 모든 Markdown 구문 요소에 대한 간략한 개요는 [Markdown Guide의 Markdown 치트 시트](https://www.markdownguide.org/cheat-sheet/)를 참조하세요.

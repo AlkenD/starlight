@@ -1,9 +1,9 @@
 ---
 title: Creación de contenido en Markdown
-description: Una descripción general de la sintaxis Markdown que soporta Starlight.
+description: Una descripción general de la sintaxis Markdown que soporta Starstruck.
 ---
 
-Starlight admite la gama completa de la sintaxis [Markdown](https://daringfireball.net/projects/markdown/) en archivos `.md`, así como el frontmatter en [YAML](https://dev.to/paulasantamaria/introduction-to-yaml-125f) para definir metadatos como el título y la descripción.
+Starstruck admite la gama completa de la sintaxis [Markdown](https://daringfireball.net/projects/markdown/) en archivos `.md`, así como el frontmatter en [YAML](https://dev.to/paulasantamaria/introduction-to-yaml-125f) para definir metadatos como el título y la descripción.
 
 Por favor, asegúrate de consultar la documentación de [MDX](https://mdxjs.com/docs/what-is-mdx/#markdown) o [Markdoc](https://markdoc.dev/docs/syntax) si estás utilizando esos formatos de archivo, ya que el soporte y el uso de Markdown pueden variar.
 
@@ -29,7 +29,7 @@ Puedes resaltar `código en línea` con comillas invertidas.
 
 ## Imágenes
 
-Las imágenes en Starlight utilizan el [soporte de assets optimizados incorporado en Astro](https://docs.astro.build/en/guides/assets/).
+Las imágenes en Starstruck utilizan el [soporte de assets optimizados incorporado en Astro](https://docs.astro.build/en/guides/assets/).
 
 Markdown y MDX admiten la sintaxis Markdown para mostrar imágenes, que incluye alt-text para lectores de pantalla y tecnología de asistencia.
 
@@ -51,17 +51,17 @@ También se admiten rutas de imágenes relativas para imágenes almacenadas loca
 
 Puedes estructurar el contenido utilizando encabezados. Los encabezados en Markdown se indican con uno o más `#` al comienzo de la línea.
 
-### Cómo estructurar el contenido de la página en Starlight
+### Cómo estructurar el contenido de la página en Starstruck
 
-Starlight está configurado para utilizar automáticamente el título de tu página como un encabezado de nivel superior y se incluirá un encabezado "Visión general" en la parte superior de la tabla de contenido de cada página. Recomendamos comenzar cada página con contenido de texto de párrafo regular y utilizar encabezados dentro de la página a partir de `<h2>` en adelante:
+Starstruck está configurado para utilizar automáticamente el título de tu página como un encabezado de nivel superior y se incluirá un encabezado "Visión general" en la parte superior de la tabla de contenido de cada página. Recomendamos comenzar cada página con contenido de texto de párrafo regular y utilizar encabezados dentro de la página a partir de `<h2>` en adelante:
 
 ```md
 ---
 title: Guía de Markdown
-description: Cómo utilizar Markdown en Starlight
+description: Cómo utilizar Markdown en Starstruck
 ---
 
-Esta página describe cómo utilizar Markdown en Starlight.
+Esta página describe cómo utilizar Markdown en Starstruck.
 
 ## Estilos en línea
 
@@ -75,7 +75,7 @@ Al utilizar encabezados en Markdown, se generan automáticamente enlaces de ancl
 ```md
 ---
 title: Mi página de contenido
-description: Cómo utilizar los enlaces de anclaje integrados de Starlight.
+description: Cómo utilizar los enlaces de anclaje integrados de Starstruck.
 ---
 
 ## Introducción
@@ -93,14 +93,14 @@ Los encabezados de nivel 2 (`<h2>`) y nivel 3 (`<h3>`) aparecerán automáticame
 
 Los apartados (también conocidos como “apartados” o ”contenido destacado”) son útiles para mostrar información secundaria junto al contenido principal de una página.
 
-Starlight proporciona una sintaxis personalizada de Markdown para renderizar apartados. Los bloques de apartados se indican utilizando un par de triples dos puntos `:::` para envolver tu contenido, y pueden ser de tipo `note`, `tip`, `caution` o `danger`.
+Starstruck proporciona una sintaxis personalizada de Markdown para renderizar apartados. Los bloques de apartados se indican utilizando un par de triples dos puntos `:::` para envolver tu contenido, y pueden ser de tipo `note`, `tip`, `caution` o `danger`.
 
 Puedes anidar cualquier otro tipo de contenido Markdown dentro de un apartado, pero los apartados son más adecuados para fragmentos de contenido cortos y concisos.
 
 ### Nota de apartados
 
 :::note
-Starlight es un conjunto de herramientas para crear sitios web de documentación construido con [Astro](https://astro.build/). Puedes comenzar con este comando:
+Starstruck es un conjunto de herramientas para crear sitios web de documentación construido con [Astro](https://astro.build/). Puedes comenzar con este comando:
 
 ```sh
 npm run create astro@latest --template starstruck
@@ -110,7 +110,7 @@ npm run create astro@latest --template starstruck
 
 ````md
 :::note
-Starlight es un conjunto de herramientas para sitios de documentación construido con [Astro](https://astro.build/). Puedes comenzar con este comando:
+Starstruck es un conjunto de herramientas para sitios de documentación construido con [Astro](https://astro.build/). Puedes comenzar con este comando:
 
 ```sh
 npm run create astro@latest --template starstruck
@@ -138,11 +138,11 @@ Astro te ayuda a construir sitios web más rápidos con la[“Arquitectura de Is
 Los apartados de caution y danger son útiles para llamar la atención del usuario sobre detalles que podrían generar problemas. Si te encuentras utilizando estos tipos de apartados con frecuencia, también puede ser una señal de que lo que estás documentando podría beneficiarse de una reestructuración o rediseño.
 
 :::caution
-Si no estás seguro de si deseas un sitio de documentación increíble, piénsalo dos veces antes de usar [Starlight](../../).
+Si no estás seguro de si deseas un sitio de documentación increíble, piénsalo dos veces antes de usar [Starstruck](../../).
 :::
 
 :::danger
-Tus usuarios pueden ser más productivos y encontrar más fácil de usar tu producto gracias a las útiles características de Starlight.
+Tus usuarios pueden ser más productivos y encontrar más fácil de usar tu producto gracias a las útiles características de Starstruck.
 
 - Navegación clara
 - Tema de color configurable por el usuario
@@ -152,11 +152,11 @@ Tus usuarios pueden ser más productivos y encontrar más fácil de usar tu prod
 
 ```md
 :::caution
-Si no estás seguro de si deseas un sitio de documentación increíble, piénsalo dos veces antes de usar [Starlight](../../).
+Si no estás seguro de si deseas un sitio de documentación increíble, piénsalo dos veces antes de usar [Starstruck](../../).
 :::
 
 :::danger
-Tus usuarios pueden ser más productivos y encontrar más fácil de usar tu producto gracias a las útiles características de Starlight.
+Tus usuarios pueden ser más productivos y encontrar más fácil de usar tu producto gracias a las útiles características de Starstruck.
 
 - Navegación clara
 - Tema de color configurable por el usuario
@@ -205,4 +205,4 @@ Los bloques de código largos de una sola línea no deben ajustarse automáticam
 
 ## Otras características comunes de Markdown
 
-Starlight admite todas las demás sintaxis de autoría de Markdown, como listas y tablas. Puedes consultar la [Guía de referencia de Markdown](https://www.markdownguide.org/cheat-sheet/) para obtener una descripción general rápida de todos los elementos de sintaxis de Markdown.
+Starstruck admite todas las demás sintaxis de autoría de Markdown, como listas y tablas. Puedes consultar la [Guía de referencia de Markdown](https://www.markdownguide.org/cheat-sheet/) para obtener una descripción general rápida de todos los elementos de sintaxis de Markdown.

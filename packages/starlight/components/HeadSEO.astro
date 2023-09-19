@@ -29,7 +29,7 @@ const headDefaults: z.input<ReturnType<typeof HeadConfigSchema>> = [
 	{ tag: 'meta', attrs: { name: 'generator', content: Astro.generator } },
 	{
 		tag: 'meta',
-		attrs: { name: 'generator', content: `Starlight v${version}` },
+		attrs: { name: 'generator', content: `Starstruck v${version}` },
 	},
 	// Favicon
 	{
@@ -89,7 +89,7 @@ if (Astro.site) {
 	});
 }
 
-// Link to Twitter account if set in Starlight config.
+// Link to Twitter account if set in Starstruck config.
 if (config.social?.twitter) {
 	headDefaults.push({
 		tag: 'meta',

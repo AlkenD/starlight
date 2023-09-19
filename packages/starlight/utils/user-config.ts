@@ -249,7 +249,7 @@ const UserConfigSchema = z.object({
 	head: HeadConfigSchema(),
 
 	/**
-	 * Provide CSS files to customize the look and feel of your Starlight site.
+	 * Provide CSS files to customize the look and feel of your Starstruck site.
 	 *
 	 * Supports local CSS files relative to the root of your project,
 	 * e.g. `'/src/custom.css'`, and CSS you installed as an npm
@@ -278,7 +278,7 @@ const UserConfigSchema = z.object({
 	favicon: FaviconSchema(),
 });
 
-export const StarlightConfigSchema = UserConfigSchema.strict().transform(
+export const StarstruckConfigSchema = UserConfigSchema.strict().transform(
 	({ locales, defaultLocale, ...config }, ctx) => {
 		if (locales !== undefined && Object.keys(locales).length > 1) {
 			// This is a multilingual site (more than one locale configured).
@@ -294,7 +294,7 @@ export const StarlightConfigSchema = UserConfigSchema.strict().transform(
 					code: 'custom',
 					message:
 						'Could not determine the default locale. ' +
-						'Please make sure `defaultLocale` in your Starlight config is one of ' +
+						'Please make sure `defaultLocale` in your Starstruck config is one of ' +
 						availableLocales,
 				});
 				return z.NEVER;
@@ -328,5 +328,5 @@ export const StarlightConfigSchema = UserConfigSchema.strict().transform(
 	}
 );
 
-export type StarlightConfig = z.infer<typeof StarlightConfigSchema>;
-export type StarlightUserConfig = z.input<typeof StarlightConfigSchema>;
+export type StarstruckConfig = z.infer<typeof StarstruckConfigSchema>;
+export type StarstruckUserConfig = z.input<typeof StarstruckConfigSchema>;

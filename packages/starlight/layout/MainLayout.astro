@@ -44,7 +44,6 @@ const pagefindEnabled =
 		<HeadSEO data={entry.data} lang={lang} />
 	</head>
 	<body
-		class:list={[hasSidebar && 'h-screen overflow-hidden']}
 		class="bg-no-repeat bg-cover bg-white dark:bg-black dark:text-white bg-opacity-0"
 		style=`background-image: url(${entry.data.background?.file?.src})`
 	>
@@ -52,7 +51,7 @@ const pagefindEnabled =
 		<!-- <SkipLink {locale} /> -->
 		<div class="h-full">
 			<Header {locale} {hasSidebar} />
-			<div class:list={[entry.data.hero ? 'w-full' : 'flex w-full h-[calc(100vh-56px)]', ,]}>
+			<div class:list={[entry.data.hero ? 'w-full' : 'flex w-full']}>
 				{hasSidebar && <SideBar {sidebar} {locale} />}
 				{
 					entry.data.hero ? (
@@ -61,8 +60,8 @@ const pagefindEnabled =
 							<slot />
 						</>
 					) : (
-						<div class="flex-1 p-6 prose prose-zinc dark:prose-invert max-w-none prose-headings:before:content-['#_'] overflow-scroll">
-							<div class="border-b py-4 border-zinc-800">
+						<div class="flex-1 p-6 prose prose-zinc dark:prose-invert max-w-none prose-headings:before:content-['#_'] h-full overflow-scroll">
+							<div class="border-b py-4 border-zinc-200 dark:border-zinc-800">
 								<h1 class="text-4xl m-0" class="border-b" id="_top" data-page-title>
 									{entry.data.title}
 								</h1>
@@ -72,7 +71,6 @@ const pagefindEnabled =
 						</div>
 					)
 				}
-
 				{hasSidebar && <RightSidebar {headings} {locale} {tocConfig} />}
 			</div>
 		</div>

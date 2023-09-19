@@ -7,21 +7,21 @@ We are happy to help with guidance on PRs, technical writing, and turning any fe
 > **Tip for new contributors:**
 > Take a look at [GitHub's Docs](https://docs.github.com/en/get-started/quickstart/hello-world) for helpful information on working with GitHub.
 
-This document is an active work in progress — like Starlight itself! Feel free to join us in [the Astro Discord server][discord] to join the discussion. Look for the `#starstruck` channel and say “Hi!” when you arrive.
+This document is an active work in progress — like Starstruck itself! Feel free to join us in [the Astro Discord server][discord] to join the discussion. Look for the `#starstruck` channel and say “Hi!” when you arrive.
 
 ## Types of contributions
 
-There are lots of ways to contribute to Starlight.
+There are lots of ways to contribute to Starstruck.
 
-Maintaining Starlight requires writing Astro code, as well as addressing accessibility, styling, and UX concerns.
-This repository also contains the code for the Starlight docs website.
+Maintaining Starstruck requires writing Astro code, as well as addressing accessibility, styling, and UX concerns.
+This repository also contains the code for the Starstruck docs website.
 Help writing docs, catching typos and errors, as well as translating docs into other languages is always welcome.
 
 You can also get involved by leaving feedback on [issues][issues] or reviewing [pull requests][pulls] by other contributors.
 
 We encourage you to:
 
-- [**Open an issue**][new-issue] to let us know of bugs in Starlight, documentation you found unclear, or other issues you run into.
+- [**Open an issue**][new-issue] to let us know of bugs in Starstruck, documentation you found unclear, or other issues you run into.
 
 - [**Look at existing issues**][issues] (especially those labelled [“good first issue”][gfi]) to find ways to contribute.
 
@@ -30,11 +30,11 @@ We encourage you to:
 
 - [**Review existing PRs**][pulls] to help us merge contributions sooner.
 
-- [**Add or update translations**](#translations). We need help translating both Starlight’s UI and documentation.
+- [**Add or update translations**](#translations). We need help translating both Starstruck’s UI and documentation.
 
 ## About this repo
 
-This repo is a “monorepo,” meaning it contains several projects in one. It contains the Starlight docs site in [`docs/`](./docs/) and the packages that make up Starlight in [`packages/`](./packages/).
+This repo is a “monorepo,” meaning it contains several projects in one. It contains the Starstruck docs site in [`docs/`](./docs/) and the packages that make up Starstruck in [`packages/`](./packages/).
 
 ### Setting up a development environment
 
@@ -42,11 +42,11 @@ You can [develop locally](#developing-locally) or use an online coding developme
 
 #### Developing locally
 
-**Prerequisites:** Developing Starlight requires [Node.js](https://nodejs.org/en) (v16 or higher) and [pnpm](https://pnpm.io/) (v8.2 or higher). Make sure you have these installed before following these steps.
+**Prerequisites:** Developing Starstruck requires [Node.js](https://nodejs.org/en) (v16 or higher) and [pnpm](https://pnpm.io/) (v8.2 or higher). Make sure you have these installed before following these steps.
 
-1. **Fork Starlight** to your personal GitHub account by clicking <kbd>Fork</kbd> on the [main Starlight repo page][sl].
+1. **Fork Starstruck** to your personal GitHub account by clicking <kbd>Fork</kbd> on the [main Starstruck repo page][sl].
 
-2. **Clone your fork** of Starlight to your computer. Replace `YOUR-USERNAME` in the command below with your GitHub username to clone in a Terminal:
+2. **Clone your fork** of Starstruck to your computer. Replace `YOUR-USERNAME` in the command below with your GitHub username to clone in a Terminal:
 
    ```sh
    git clone https://github.com/YOUR-USERNAME/starstruck.git
@@ -66,9 +66,9 @@ You can [develop locally](#developing-locally) or use an online coding developme
 
 #### Developing using Gitpod
 
-**Prerequisites:** Developing Starlight using Gitpod requires a free [Gitpod account](https://gitpod.io).
+**Prerequisites:** Developing Starstruck using Gitpod requires a free [Gitpod account](https://gitpod.io).
 
-1. **Open the Gitpod URL** [https://gitpod.io/#https://github.com/withastro/starstruck](https://gitpod.io/#https://github.com/withastro/starstruck). You can alternatively install a [Gitpod browser extension](https://www.gitpod.io/docs/configure/user-settings/browser-extension) which will add a "Gitpod" button when viewing [Starlight's repo on GitHub](https://github.com/withastro/starstruck).
+1. **Open the Gitpod URL** [https://gitpod.io/#https://github.com/withastro/starstruck](https://gitpod.io/#https://github.com/withastro/starstruck). You can alternatively install a [Gitpod browser extension](https://www.gitpod.io/docs/configure/user-settings/browser-extension) which will add a "Gitpod" button when viewing [Starstruck's repo on GitHub](https://github.com/withastro/starstruck).
 
 2. **Install dependencies** with `pnpm`:
 
@@ -93,7 +93,7 @@ The dev container used for GitHub Codespaces can also be used with [other suppor
 
 ### Testing visual changes while you work
 
-Run the Astro dev server on the docs site to see how changes you make impact a project using Starlight.
+Run the Astro dev server on the docs site to see how changes you make impact a project using Starstruck.
 
 To do this, move into the `docs/` directory from the root of the repo and then run `pnpm dev`:
 
@@ -105,13 +105,13 @@ pnpm dev
 You should then be able to open <http://localhost:4321> and see your changes.
 
 > **Note**
-> Changes to the Starlight integration will require you to quit and restart the dev server to take effect.
+> Changes to the Starstruck integration will require you to quit and restart the dev server to take effect.
 
 ### Unit tests
 
-The Starlight package includes unit tests in [`packages/starstruck/__tests__/`](./packages/starstruck/__tests__/), which are run using [Vitest][vitest].
+The Starstruck package includes unit tests in [`packages/starstruck/__tests__/`](./packages/starstruck/__tests__/), which are run using [Vitest][vitest].
 
-To run tests, move into the Starlight package and then run `pnpm test`:
+To run tests, move into the Starstruck package and then run `pnpm test`:
 
 ```sh
 cd packages/starstruck
@@ -122,7 +122,7 @@ This will run tests and then listen for changes, re-running tests when files cha
 
 #### Test environments
 
-A lot of Starlight code relies on Vite virtual modules provided either by Astro or by Starlight itself. Each subdirectory of `packages/starstruck/__tests__/` should contain a `vitest.config.ts` file that uses the `defineVitestConfig()` helper to define a valid test environment for tests in that directory. This helper takes a single argument, which provides a Starlight user config object:
+A lot of Starstruck code relies on Vite virtual modules provided either by Astro or by Starstruck itself. Each subdirectory of `packages/starstruck/__tests__/` should contain a `vitest.config.ts` file that uses the `defineVitestConfig()` helper to define a valid test environment for tests in that directory. This helper takes a single argument, which provides a Starstruck user config object:
 
 ```ts
 // packages/starstruck/__tests/basics/vitest.config.ts
@@ -133,11 +133,11 @@ export default defineVitestConfig({
 });
 ```
 
-This allows you to run tests of Starlight code against different combinations of Starlight configuration options.
+This allows you to run tests of Starstruck code against different combinations of Starstruck configuration options.
 
 #### Mocking content collections
 
-Starlight relies on a user’s `docs` and (optional) `i18n` content collections, which aren’t available during testing. You can use a top-level `vi.mock()` call and the `mockedAstroContent` helper to set up fake collection entries for the current test file:
+Starstruck relies on a user’s `docs` and (optional) `i18n` content collections, which aren’t available during testing. You can use a top-level `vi.mock()` call and the `mockedAstroContent` helper to set up fake collection entries for the current test file:
 
 ```js
 import { describe, expect, test, vi } from 'vitest';
@@ -155,7 +155,7 @@ vi.mock('astro:content', async () =>
 
 #### Test coverage
 
-To see how much of Starlight’s code is currently being tested, run `pnpm test:coverage` from the Starlight package:
+To see how much of Starstruck’s code is currently being tested, run `pnpm test:coverage` from the Starstruck package:
 
 ```sh
 cd packages/starstruck
@@ -166,20 +166,20 @@ This will print a table to your terminal and also generate an HTML report you ca
 
 ## Translations
 
-Translations help make Starlight accessible to more people.
+Translations help make Starstruck accessible to more people.
 
-### Translating Starlight’s UI
+### Translating Starstruck’s UI
 
-Starlight’s UI comes with some built-in text elements. For example, the table of contents on a Starlight page has a heading of “On this page” and the theme picker shows “Light”, “Dark”, and “Auto” labels. Starlight aims to provide these in as many languages as possible.
+Starstruck’s UI comes with some built-in text elements. For example, the table of contents on a Starstruck page has a heading of “On this page” and the theme picker shows “Light”, “Dark”, and “Auto” labels. Starstruck aims to provide these in as many languages as possible.
 
 Help out by adding or updating translation files in [`packages/starstruck/translations`](./packages/starstruck/translations/).
-Each language’s JSON file follows the [translation structure described in Starlight’s docs](https://starstruck.astro.build/guides/i18n/#translate-starlights-ui).
+Each language’s JSON file follows the [translation structure described in Starstruck’s docs](https://starstruck.astro.build/guides/i18n/#translate-starstrucks-ui).
 
-📺 **Prefer a visual walkthrough?** [Watch an introduction to Starlight’s translation files.](https://scrimba.com/scrim/cpb44bt3)
+📺 **Prefer a visual walkthrough?** [Watch an introduction to Starstruck’s translation files.](https://scrimba.com/scrim/cpb44bt3)
 
-### Translating Starlight’s docs
+### Translating Starstruck’s docs
 
-Starlight’s documentation is also translated into multiple languages. You can find the source code for the site in [the `docs/` directory](./docs/) of this repository.
+Starstruck’s documentation is also translated into multiple languages. You can find the source code for the site in [the `docs/` directory](./docs/) of this repository.
 
 Help out by:
 
@@ -189,22 +189,22 @@ Help out by:
 
 Visit **<https://i18n.starstruck.astro.build>** to track translation progress for the currently supported languages.
 
-## Understanding Starlight
+## Understanding Starstruck
 
-- Starlight is built as an Astro integration.
+- Starstruck is built as an Astro integration.
   Read the [Astro Integration API docs][api-docs] to learn more about how integrations work.
 
-  The Starlight integration is exported from [`packages/starstruck/index.ts`](./packages/starstruck/index.ts).
-  It sets up Starlight’s routing logic, parses user config, and adds configuration to a Starlight user’s Astro project.
+  The Starstruck integration is exported from [`packages/starstruck/index.ts`](./packages/starstruck/index.ts).
+  It sets up Starstruck’s routing logic, parses user config, and adds configuration to a Starstruck user’s Astro project.
 
-- Most pages in a Starlight project are built using a single [`packages/starstruck/index.astro`](./packages/starstruck/index.astro) route.
+- Most pages in a Starstruck project are built using a single [`packages/starstruck/index.astro`](./packages/starstruck/index.astro) route.
   If you’ve worked on an Astro site before, much of this should look familiar: it’s an Astro component and uses a number of other components to build a page based on user content.
 
-- Starlight consumes a user’s content from the `'docs'` [content collection](https://docs.astro.build/en/guides/content-collections/).
-  This allows us to specify the permissible frontmatter via [a Starlight-specific schema](./packages/starstruck/schema.ts) and get predictable data while providing clear error messages if a user sets invalid frontmatter in a page.
+- Starstruck consumes a user’s content from the `'docs'` [content collection](https://docs.astro.build/en/guides/content-collections/).
+  This allows us to specify the permissible frontmatter via [a Starstruck-specific schema](./packages/starstruck/schema.ts) and get predictable data while providing clear error messages if a user sets invalid frontmatter in a page.
 
 - Components that require JavaScript for their functionality are all written without a UI framework, most often as custom elements.
-  This helps keep Starlight lightweight and makes it easier for a user to choose to add components from a framework of their choice to their project.
+  This helps keep Starstruck lightweight and makes it easier for a user to choose to add components from a framework of their choice to their project.
 
 [discord]: https://astro.build/chat
 [issues]: https://github.com/withastro/starstruck/issues

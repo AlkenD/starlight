@@ -1,1 +1,1 @@
-export type { StarlightConfig } from './utils/user-config';
+export type { StarstruckConfig } from './utils/user-config';

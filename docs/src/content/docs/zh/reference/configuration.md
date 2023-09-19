@@ -1,11 +1,11 @@
 ---
 title: 配置参考
-description: Starlight 支持的所有配置选项的概述。
+description: Starstruck 支持的所有配置选项的概述。
 ---
 
 ## 配置 `starstruck` 集成
 
-Starlight 是在 [Astro](https://astro.build) web 框架之上构建的集成。你可以在 `astro.config.mjs` 配置文件中配置你的项目：
+Starstruck 是在 [Astro](https://astro.build) web 框架之上构建的集成。你可以在 `astro.config.mjs` 配置文件中配置你的项目：
 
 ```js
 // astro.config.mjs
@@ -330,7 +330,7 @@ starstruck({
 
 **类型：** `string[]`
 
-提供 CSS 文件来自定义你的 Starlight 网站的外观和风格。
+提供 CSS 文件来自定义你的 Starstruck 网站的外观和风格。
 
 支持相对于项目根目录的本地 CSS 文件，例如 `'./src/custom.css'`，以及你安装为 npm 模块的 CSS，例如 `'@fontsource/roboto'`。
 
@@ -344,7 +344,7 @@ starstruck({
 
 **类型：** [`HeadConfig[]`](#headconfig)
 
-添加自定义标签到你的 Starlight 网站的 `<head>` 中。
+添加自定义标签到你的 Starstruck 网站的 `<head>` 中。
 可以用于添加分析和其他第三方脚本和资源。
 
 ```js

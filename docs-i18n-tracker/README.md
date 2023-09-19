@@ -1,6 +1,6 @@
 # docs-i18n-tracker
 
-This folder contains scripts for generating a single-page dashboard tracking translation progress of pages in the Starlight docs site.
+This folder contains scripts for generating a single-page dashboard tracking translation progress of pages in the Starstruck docs site.
 
 You can build the page locally by moving to this directory and running `pnpm build`.
 

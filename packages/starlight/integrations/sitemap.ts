@@ -1,11 +1,11 @@
 import sitemap, { type SitemapOptions } from '@astrojs/sitemap';
-import type { StarlightConfig } from '../types';
+import type { StarstruckConfig } from '../types';
 
 /**
  * A wrapped version of the `@astrojs/sitemap` integration configured based
- * on Starlight i18n config.
+ * on Starstruck i18n config.
  */
-export function starlightSitemap(opts: StarlightConfig) {
+export function starstruckSitemap(opts: StarstruckConfig) {
 	const sitemapConfig: SitemapOptions = {};
 	if (opts.isMultilingual) {
 		sitemapConfig.i18n = {

@@ -1,11 +1,11 @@
 ---
 title: 컴포넌트
-description: Starlight를 이용해 MDX에서 컴포넌트 사용하기.
+description: Starstruck를 이용해 MDX에서 컴포넌트 사용하기.
 ---
 
 컴포넌트를 사용하면 쉽고 일관되게 UI 조각이나 스타일을 재사용할 수 있습니다.
 링크 카드나 YouTube 삽입 등을 예로 들 수 있습니다.
-Starlight는 [MDX](https://mdxjs.com/) 파일에서 컴포넌트 사용을 지원하며 사용할 수 있는 몇 가지 공통 컴포넌트를 제공합니다.
+Starstruck는 [MDX](https://mdxjs.com/) 파일에서 컴포넌트 사용을 지원하며 사용할 수 있는 몇 가지 공통 컴포넌트를 제공합니다.
 
 [Astro 문서에서 컴포넌트 구축에 대해 자세히 알아보세요](https://docs.astro.build/ko/core-concepts/astro-components/).
 
@@ -30,12 +30,12 @@ import AnotherComponent from '../../../components/AnotherComponent.astro';
 </AnotherComponent>
 ```
 
-Starlight는 Astro로 구동되므로 [지원되는 UI 프레임워크(React, Preact, Svelte, Vue, Solid, Lit 및 Alpine)](https://docs.astro.build/ko/core-concepts/framework-components/)로 빌드된 컴포넌트를 MDX 파일에 추가할 수 있습니다.
+Starstruck는 Astro로 구동되므로 [지원되는 UI 프레임워크(React, Preact, Svelte, Vue, Solid, Lit 및 Alpine)](https://docs.astro.build/ko/core-concepts/framework-components/)로 빌드된 컴포넌트를 MDX 파일에 추가할 수 있습니다.
 Astro 문서에서 [MDX에서 컴포넌트 사용](https://docs.astro.build/ko/guides/markdown-content/#using-comComponents-in-mdx)에 대해 자세히 알아보세요.
 
-### Starlight 스타일과의 호환성
+### Starstruck 스타일과의 호환성
 
-Starlight는 요소 사이에 여백을 추가하는 등 Markdown 콘텐츠에 기본 스타일을 적용합니다.
+Starstruck는 요소 사이에 여백을 추가하는 등 Markdown 콘텐츠에 기본 스타일을 적용합니다.
 이러한 스타일이 컴포넌트의 모양과 충돌하는 경우 컴포넌트에 `not-content` 클래스를 추가하여 비활성화하세요.
 
 ```astro
@@ -44,13 +44,13 @@ Starlight는 요소 사이에 여백을 추가하는 등 Markdown 콘텐츠에 �
 ---
 
 <div class="not-content">
-	<p>Starlight의 기본 콘텐츠 스타일에 영향을 받지 않습니다.</p>
+	<p>Starstruck의 기본 콘텐츠 스타일에 영향을 받지 않습니다.</p>
 </div>
 ```
 
 ## 내장된 컴포넌트
 
-Starlight는 일반적인 문서 사용 사례를 위한 몇 가지 내장 컴포넌트를 제공합니다.
+Starstruck는 일반적인 문서 사용 사례를 위한 몇 가지 내장 컴포넌트를 제공합니다.
 이러한 컴포넌트는 `@awe-player/starstruck/components` 패키지를 통해 사용할 수 있습니다.
 
 ### 탭
@@ -80,10 +80,10 @@ import { Tabs, TabItem } from '@awe-player/starstruck/components';
 
 import { Card, CardGrid } from '@awe-player/starstruck/components';
 
-`<Card>` 컴포넌트를 사용하면 Starlight 스타일의 상자에 콘텐츠를 표시할 수 있습니다.
+`<Card>` 컴포넌트를 사용하면 Starstruck 스타일의 상자에 콘텐츠를 표시할 수 있습니다.
 공간이 충분할 때 카드를 나란히 표시하려면 `<CardGrid>` 컴포넌트로 여러 카드를 감싸세요.
 
-`<Card>` 컴포넌트에는 `title` 속성이 반드시 필요하며 선택적으로 [Starlight 내장 아이콘 중 하나](#모든-아이콘)의 이름으로 설정된 `icon` 속성을 포함할 수 있습니다.
+`<Card>` 컴포넌트에는 `title` 속성이 반드시 필요하며 선택적으로 [Starstruck 내장 아이콘 중 하나](#모든-아이콘)의 이름으로 설정된 `icon` 속성을 포함할 수 있습니다.
 
 ```mdx
 import { Card, CardGrid } from '@awe-player/starstruck/components';
@@ -138,8 +138,8 @@ import { Card, CardGrid } from '@awe-player/starstruck/components';
 import { LinkCard, CardGrid } from '@awe-player/starstruck/components';
 
 <LinkCard
-	title="Starlight 사용자 정의"
-	description="사용자 정의 스타일, 글꼴 등을 사용하여 나만의 Starlight 사이트를 만드는 방법을 알아보세요."
+	title="Starstruck 사용자 정의"
+	description="사용자 정의 스타일, 글꼴 등을 사용하여 나만의 Starstruck 사이트를 만드는 방법을 알아보세요."
 	href="/ko/guides/customization/"
 />
 
@@ -157,8 +157,8 @@ import { LinkCard, CardGrid } from '@awe-player/starstruck/components';
 import { LinkCard } from '@awe-player/starstruck/components';
 
 <LinkCard
-	title="Starlight 사용자 정의"
-	description="사용자 정의 스타일, 글꼴 등을 사용하여 나만의 Starlight 사이트를 만드는 방법을 알아보세요."
+	title="Starstruck 사용자 정의"
+	description="사용자 정의 스타일, 글꼴 등을 사용하여 나만의 Starstruck 사이트를 만드는 방법을 알아보세요."
 	href="/ko/guides/customization/"
 />
 
@@ -175,7 +175,7 @@ import { LinkCard } from '@awe-player/starstruck/components';
 import { Icon } from '@awe-player/starstruck/components';
 import IconsList from '../../../../components/icons-list.astro';
 
-Starlight는 `<Icon>` 컴포넌트를 사용하여 콘텐츠에 표시할 수 있는 공통 아이콘 세트를 제공합니다.
+Starstruck는 `<Icon>` 컴포넌트를 사용하여 콘텐츠에 표시할 수 있는 공통 아이콘 세트를 제공합니다.
 
 각 `<Icon>` 컴포넌트에는 [`name`](#모든-아이콘) 속성이 필요하며 선택적으로 `label`, `size` 및 `color` 속성을 포함할 수 있습니다.
 

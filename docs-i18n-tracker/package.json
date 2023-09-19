@@ -2,7 +2,7 @@
   "name": "docs-i18n-tracker",
   "private": true,
   "version": "1.0.0",
-  "description": "A single-page dashboard that tracks translation status across Starlight docs pages",
+  "description": "A single-page dashboard that tracks translation status across Starstruck docs pages",
   "scripts": {
     "build": "tsm --require=./lib/filter-warnings.cjs ./build.ts"
   },

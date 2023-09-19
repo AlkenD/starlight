@@ -1,9 +1,9 @@
 ---
 title: Frontmatter Reference
-description: An overview of the default frontmatter fields Starlight supports.
+description: An overview of the default frontmatter fields Starstruck supports.
 ---
 
-You can customize individual Markdown and MDX pages in Starlight by setting values in their frontmatter. For example, a regular page might set `title` and `description` fields:
+You can customize individual Markdown and MDX pages in Starstruck by setting values in their frontmatter. For example, a regular page might set `title` and `description` fields:
 
 ```md
 ---

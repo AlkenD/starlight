@@ -1,16 +1,16 @@
 ---
-title: Personalizando Starlight
-description: Aprende cómo personalizar tu sitio de Starlight con estilos personalizados, fuentes y mucho más.
+title: Personalizando Starstruck
+description: Aprende cómo personalizar tu sitio de Starstruck con estilos personalizados, fuentes y mucho más.
 ---
 
 import { Tabs, TabItem } from '@awe-player/starstruck/components';
 import FileTree from '../../../../components/file-tree.astro';
 
-Starlight proporciona estilos y características predeterminadas sensatas, por lo que puedes comenzar rápidamente sin necesidad de configuración. Cuando desees comenzar a personalizar la apariencia de tu sitio de Starlight, esta guía te proporciona toda la información necesaria.
+Starstruck proporciona estilos y características predeterminadas sensatas, por lo que puedes comenzar rápidamente sin necesidad de configuración. Cuando desees comenzar a personalizar la apariencia de tu sitio de Starstruck, esta guía te proporciona toda la información necesaria.
 
 ## Añade tu logo
 
-Agregando un logo personalizado al encabezado del sitio es una forma rápida de agregar tu marca personalizada a un sitio de Starlight.
+Agregando un logo personalizado al encabezado del sitio es una forma rápida de agregar tu marca personalizada a un sitio de Starstruck.
 
 1. Agrega el archivo de imagen de tu logo al directorio `src/assets/`:
 
@@ -24,7 +24,7 @@ Agregando un logo personalizado al encabezado del sitio es una forma rápida de 
 
    </FileTree>
 
-2. Agrega la ruta de tu logotipo como opción [`logo.src`](/es/reference/configuration/#logo) de Starlight en el archivo `astro.config.mjs`:
+2. Agrega la ruta de tu logotipo como opción [`logo.src`](/es/reference/configuration/#logo) de Starstruck en el archivo `astro.config.mjs`:
 
    ```js
    // astro.config.mjs
@@ -88,7 +88,7 @@ Puedes mostrar diferentes versiones de tu logo en modos claro y oscuro.
 
 ## Diseño de página
 
-De forma predeterminada, las páginas de Starlight utilizan un diseño con una barra lateral de navegación global y una tabla de contenidos que muestra los encabezados de la página actual.
+De forma predeterminada, las páginas de Starstruck utilizan un diseño con una barra lateral de navegación global y una tabla de contenidos que muestra los encabezados de la página actual.
 
 Puedes aplicar un diseño de página más amplio sin barras laterales estableciendo [`template: splash`](/es/reference/frontmatter/#template) en el frontmatter de una página. Esto funciona especialmente bien para páginas de inicio y puedes verlo en acción en la [página de inicio de este sitio](/es/).
 
@@ -103,7 +103,7 @@ template: splash
 
 ## Tabla de contenidos
 
-Starlight muestra una tabla de contenidos en cada página para facilitar que los lectores naveguen hasta el encabezado que están buscando. Puedes personalizar — e incluso desactivar — la tabla de contenidos de forma global en la integración de Starlight o de forma individual en el frontmatter de cada página.
+Starstruck muestra una tabla de contenidos en cada página para facilitar que los lectores naveguen hasta el encabezado que están buscando. Puedes personalizar — e incluso desactivar — la tabla de contenidos de forma global en la integración de Starstruck o de forma individual en el frontmatter de cada página.
 
 De forma predeterminada, los encabezados `<h2>` y `<h3>` se incluyen en la tabla de contenidos. Puedes cambiar qué niveles de encabezados se incluyen en toda la página utilizando las opciones `minHeadingLevel` y `maxHeadingLevel` en tu configuración [global de `tableOfContents`](/es/reference/configuration/#tableofcontents). Puedes anular estas configuraciones predeterminadas en una página individual agregando las propiedades correspondientes de [`tableOfContents` en el frontmatter](/es/reference/frontmatter/#tableofcontents):
 
@@ -173,7 +173,7 @@ defineConfig({
 
 ## Enlaces sociales
 
-Starlight cuenta con soporte incorporado para agregar enlaces a tus cuentas de redes sociales en el encabezado del sitio mediante la opción [`social`](/es/reference/configuration/#social) en la integración de Starlight.
+Starstruck cuenta con soporte incorporado para agregar enlaces a tus cuentas de redes sociales en el encabezado del sitio mediante la opción [`social`](/es/reference/configuration/#social) en la integración de Starstruck.
 
 Actualmente, se admiten enlaces a Bitbucket, Codeberg, CodePen, Discord, GitHub, GitLab, Gitter, Instagram, LinkedIn, Mastodon, Microsoft Teams, Stack Overflow, Threads, Twitch, Twitter, y Youtube ¡Háznoslo saber en GitHub o Discord si necesitas soporte para otro servicio!
 
@@ -197,9 +197,9 @@ export default defineConfig({
 
 ## Enlaces de edición
 
-Starlight puede mostrar un enlace ”Editar página” en el pie de cada página. Esto facilita que los lectores encuentren el archivo que deben editar para mejorar tus documentos. Para proyectos de código abierto en particular, esto puede ayudar a fomentar las contribuciones de tu comunidad.
+Starstruck puede mostrar un enlace ”Editar página” en el pie de cada página. Esto facilita que los lectores encuentren el archivo que deben editar para mejorar tus documentos. Para proyectos de código abierto en particular, esto puede ayudar a fomentar las contribuciones de tu comunidad.
 
-Para habilitar los enlaces de edición, establece [`editLink.baseUrl`](/es/reference/configuration/#editlink) en la URL utilizada para editar tu repositorio en la configuración de integración de Starlight.
+Para habilitar los enlaces de edición, establece [`editLink.baseUrl`](/es/reference/configuration/#editlink) en la URL utilizada para editar tu repositorio en la configuración de integración de Starstruck.
 El valor de `editLink.baseUrl` se añadirá al inicio de la ruta de la página actual para formar el enlace de edición completo.
 
 Algunos patrones comunes incluyen:
@@ -207,9 +207,9 @@ Algunos patrones comunes incluyen:
 - GitHub: `https://github.com/USER_NAME/REPO_NAME/edit/BRANCH_NAME/`
 - GitLab: `https://gitlab.com/USER_NAME/REPO_NAME/-/edit/BRANCH_NAME/`
 
-Si tu proyecto de Starlight no se encuentra en la raíz de tu repositorio, incluye la ruta al proyecto al final de la URL base.
+Si tu proyecto de Starstruck no se encuentra en la raíz de tu repositorio, incluye la ruta al proyecto al final de la URL base.
 
-Este ejemplo muestra el enlace de edición configurado para la documentación de Starlight, que se encuentra en el subdirectorio `docs/` en la rama `main` del repositorio `withastro/starstruck` en GitHub:
+Este ejemplo muestra el enlace de edición configurado para la documentación de Starstruck, que se encuentra en el subdirectorio `docs/` en la rama `main` del repositorio `withastro/starstruck` en GitHub:
 
 ```js
 // astro.config.mjs
@@ -230,7 +230,7 @@ export default defineConfig({
 
 ## Páginas 404 personalizadas
 
-Los sitios de Starlight muestran de forma predeterminada una página de error 404 simple. Puedes personalizarla agregando un archivo `404.md` (o `404.mdx`) a tu directorio `src/content/docs/`.
+Los sitios de Starstruck muestran de forma predeterminada una página de error 404 simple. Puedes personalizarla agregando un archivo `404.md` (o `404.mdx`) a tu directorio `src/content/docs/`.
 
 <FileTree>
 
@@ -243,7 +243,7 @@ Los sitios de Starlight muestran de forma predeterminada una página de error 40
 
 </FileTree>
 
-Puedes utilizar todas las técnicas de diseño y personalización de páginas de Starlight en tu página de error 404. Por ejemplo, la página de error 404 predeterminada utiliza la [plantilla `splash`](#diseño-de-página) y el componente [`hero`](/es/reference/frontmatter/#hero) en el frontmatter:
+Puedes utilizar todas las técnicas de diseño y personalización de páginas de Starstruck en tu página de error 404. Por ejemplo, la página de error 404 predeterminada utiliza la [plantilla `splash`](#diseño-de-página) y el componente [`hero`](/es/reference/frontmatter/#hero) en el frontmatter:
 
 ```md
 ---
@@ -258,10 +258,10 @@ hero:
 
 ## Fuentes personalizadas
 
-De forma predeterminada, Starlight utiliza fuentes sans-serif disponibles en el dispositivo local del usuario para todo el texto.
+De forma predeterminada, Starstruck utiliza fuentes sans-serif disponibles en el dispositivo local del usuario para todo el texto.
 Esto asegura que la documentación se cargue rápidamente en una fuente que sea familiar para cada usuario, sin necesidad de utilizar ancho de banda adicional para descargar archivos de fuentes grandes.
 
-Si necesitas agregar una fuente personalizada a tu sitio de Starlight, puedes configurar las fuentes para utilizarlas en archivos CSS personalizados o mediante cualquier otra [técnica de estilo de Astro](https://docs.astro.build/es/guides/styling/).
+Si necesitas agregar una fuente personalizada a tu sitio de Starstruck, puedes configurar las fuentes para utilizarlas en archivos CSS personalizados o mediante cualquier otra [técnica de estilo de Astro](https://docs.astro.build/es/guides/styling/).
 
 ### Configurar fuentes
 
@@ -299,7 +299,7 @@ Para utilizar Google Fonts, sigue la [guía de configuración de Fontsource](#co
    }
    ```
 
-3. Agrega la ruta al archivo `font-face.css` al arreglo `customCss` de Starlight en `astro.config.mjs`.
+3. Agrega la ruta al archivo `font-face.css` al arreglo `customCss` de Starstruck en `astro.config.mjs`.
 
    ```js
    // astro.config.mjs
@@ -358,7 +358,7 @@ Proporciona módulos npm que puedes instalar para las fuentes que deseas utiliza
 
           </Tabs>
 
-3.  Agrega los archivos CSS de Fontsource al arreglo `customCss` de Starlight en `astro.config.mjs`.
+3.  Agrega los archivos CSS de Fontsource al arreglo `customCss` de Starstruck en `astro.config.mjs`.
 
     ```js
     // astro.config.mjs
@@ -384,7 +384,7 @@ Proporciona módulos npm que puedes instalar para las fuentes que deseas utiliza
 ### Usar fuentes
 
 Para aplicar la fuente que configuraste a tu sitio, utiliza el nombre de la fuente elegida en un [archivo CSS personalizado](/es/guides/css-and-tailwind/#custom-css-styles).
-Por ejemplo, para anular la fuente predeterminada de Starlight en todas partes, establece la propiedad personalizada `--sl-font`:
+Por ejemplo, para anular la fuente predeterminada de Starstruck en todas partes, establece la propiedad personalizada `--sl-font`:
 
 ```css
 /* src/styles/custom.css */

@@ -1,13 +1,13 @@
 ---
 title: CSSとスタイリング
-description: カスタムCSSやTailwind CSSを使用して、Starlightサイトをスタイリングする方法を学びます。
+description: カスタムCSSやTailwind CSSを使用して、Starstruckサイトをスタイリングする方法を学びます。
 ---
 
-カスタムCSSファイルやStarlightのTailwindプラグインを使用して、Starlightサイトをスタイリングできます。
+カスタムCSSファイルやStarstruckのTailwindプラグインを使用して、Starstruckサイトをスタイリングできます。
 
 ## カスタムCSSスタイル
 
-Starlightサイトに適用されるスタイルをカスタマイズするには、追加のCSSファイルを作成し、Starlightのデフォルトスタイルを変更または拡張します。
+Starstruckサイトに適用されるスタイルをカスタマイズするには、追加のCSSファイルを作成し、Starstruckのデフォルトスタイルを変更または拡張します。
 
 1. `src/`ディレクトリにCSSファイルを追加します。たとえば、以下ではデフォルトのカラム幅を広げ、ページタイトルのテキストサイズを大きくしています。
 
@@ -19,7 +19,7 @@ Starlightサイトに適用されるスタイルをカスタマイズするに�
    }
    ```
 
-2. `astro.config.mjs`で、Starlightの`customCss`配列にCSSファイルへのパスを追加します。
+2. `astro.config.mjs`で、Starstruckの`customCss`配列にCSSファイルへのパスを追加します。
 
    ```js
    // astro.config.mjs
@@ -39,23 +39,23 @@ Starlightサイトに適用されるスタイルをカスタマイズするに�
    });
    ```
 
-[GitHub上の`props.css`ファイル](https://github.com/withastro/starstruck/blob/main/packages/starstruck/style/props.css)で、サイトをカスタマイズするために設定可能な、Starlightが使用しているすべてのカスタムCSSプロパティを確認できます。
+[GitHub上の`props.css`ファイル](https://github.com/withastro/starstruck/blob/main/packages/starstruck/style/props.css)で、サイトをカスタマイズするために設定可能な、Starstruckが使用しているすべてのカスタムCSSプロパティを確認できます。
 
 ## Tailwind CSS
 
-AstroプロジェクトでのTailwind CSSのサポートは、[AstroのTailwindインテグレーション](https://docs.astro.build/ja/guides/integrations-guide/tailwind/)によって提供されています。また、Starlightは、Starlightのスタイルとの互換性を保ちつつTailwindを設定するのに役立つ、補完的なTailwindプラグインを提供しています。
+AstroプロジェクトでのTailwind CSSのサポートは、[AstroのTailwindインテグレーション](https://docs.astro.build/ja/guides/integrations-guide/tailwind/)によって提供されています。また、Starstruckは、Starstruckのスタイルとの互換性を保ちつつTailwindを設定するのに役立つ、補完的なTailwindプラグインを提供しています。
 
-StarlightのTailwindプラグインは、以下の設定を適用します。
+StarstruckのTailwindプラグインは、以下の設定を適用します。
 
-- Tailwindの`dark:`バリアントをStarlightのダークモードと連携するように設定します。
-- UStarlightのUIでTailwindの[テーマカラーとフォント](#starlightをtailwindでスタイリングする)を使用します。
+- Tailwindの`dark:`バリアントをStarstruckのダークモードと連携するように設定します。
+- UStarstruckのUIでTailwindの[テーマカラーとフォント](#starstruckをtailwindでスタイリングする)を使用します。
 - Tailwindの[Preflight](https://tailwindcss.com/docs/preflight)リセットスタイルを無効化した上で、Tailwindのボーダーユーティリティクラスに必要なPreflightの必須部分のみ有効化します。
 
 ### Tailwindを使用して新しいプロジェクトを作成する
 
 import { Tabs, TabItem } from '@awe-player/starstruck/components';
 
-`create astro`を使用して、Tailwind CSSが組み込まれた新しいStarlightプロジェクトを開始します。
+`create astro`を使用して、Tailwind CSSが組み込まれた新しいStarstruckプロジェクトを開始します。
 
 <Tabs>
 <TabItem label="npm">
@@ -83,7 +83,7 @@ yarn create astro --template starstruck/tailwind
 
 ### Tailwindを既存のプロジェクトに追加する
 
-既存のStarlightサイトにTailwind CSSを追加する場合は、以下の手順に従ってください。
+既存のStarstruckサイトにTailwind CSSを追加する場合は、以下の手順に従ってください。
 
 1.  AstroのTailwindインテグレーションを追加します。
 
@@ -115,7 +115,7 @@ yarn create astro --template starstruck/tailwind
 
     </Tabs>
 
-2.  StarlightのTailwindプラグインをインストールします。
+2.  StarstruckのTailwindプラグインをインストールします。
 
     <Tabs>
 
@@ -179,24 +179,24 @@ yarn create astro --template starstruck/tailwind
     });
     ```
 
-5.  StarlightのTailwindプラグインを`tailwind.config.cjs`に追加します。
+5.  StarstruckのTailwindプラグインを`tailwind.config.cjs`に追加します。
 
     ```js ins={2,7}
     // tailwind.config.cjs
-    const starlightPlugin = require('@awe-player/starstruck-tailwind');
+    const starstruckPlugin = require('@awe-player/starstruck-tailwind');
 
     /** @type {import('tailwindcss').Config} */
     module.exports = {
     	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-    	plugins: [starlightPlugin()],
+    	plugins: [starstruckPlugin()],
     };
     ```
 
-### StarlightをTailwindでスタイリングする
+### StarstruckをTailwindでスタイリングする
 
-Starlightは、[Tailwindのテーマ](https://tailwindcss.com/docs/theme)の設定値をUIで使用します。
+Starstruckは、[Tailwindのテーマ](https://tailwindcss.com/docs/theme)の設定値をUIで使用します。
 
-以下のオプションが設定されている場合、Starlightのデフォルトスタイルが上書きされます。
+以下のオプションが設定されている場合、Starstruckのデフォルトスタイルが上書きされます。
 
 - `colors.accent` — リンクと現在のアイテムのハイライトに使用されます
 - `colors.gray` — バックグラウンドカラーとボーダーに使用されます
@@ -205,7 +205,7 @@ Starlightは、[Tailwindのテーマ](https://tailwindcss.com/docs/theme)の設�
 
 ```js {12,14,18,20}
 // tailwind.config.cjs
-const starlightPlugin = require('@awe-player/starstruck-tailwind');
+const starstruckPlugin = require('@awe-player/starstruck-tailwind');
 const colors = require('tailwindcss/colors');
 
 /** @type {import('tailwindcss').Config} */
@@ -214,30 +214,30 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				// 好みのアクセントカラー。インディゴはStarlightのデフォルトに最も近い色です。
+				// 好みのアクセントカラー。インディゴはStarstruckのデフォルトに最も近い色です。
 				accent: colors.indigo,
-				// 好みのグレースケール。ZincはStarlightのデフォルトに最も近い色です。
+				// 好みのグレースケール。ZincはStarstruckのデフォルトに最も近い色です。
 				gray: colors.zinc,
 			},
 			fontFamily: {
-				// 好みのテキストフォント。Starlightはデフォルトでシステムフォントスタックを使用します。
+				// 好みのテキストフォント。Starstruckはデフォルトでシステムフォントスタックを使用します。
 				sans: ['"Atkinson Hyperlegible"'],
-				// 好みのコードフォント。Starlightはデフォルトでシステムの等幅フォントを使用します。
+				// 好みのコードフォント。Starstruckはデフォルトでシステムの等幅フォントを使用します。
 				mono: ['"IBM Plex Mono"'],
 			},
 		},
 	},
-	plugins: [starlightPlugin()],
+	plugins: [starstruckPlugin()],
 };
 ```
 
 ## テーマの設定
 
-Starlightのカラーテーマは、デフォルトのカスタムプロパティを上書きしてコントロールできます。これらの変数はUI全体で使用されます。テキストと背景色にはグレーシェードが使用され、リンクとナビゲーションの現在のアイテムをハイライトするためにはアクセントカラーが使用されます。
+Starstruckのカラーテーマは、デフォルトのカスタムプロパティを上書きしてコントロールできます。これらの変数はUI全体で使用されます。テキストと背景色にはグレーシェードが使用され、リンクとナビゲーションの現在のアイテムをハイライトするためにはアクセントカラーが使用されます。
 
 ### テーマカラーエディタ
 
-以下のスライダーを使用して、Starlightのアクセントカラーとグレーカラーのパレットを変更してみましょう。ダークとライトのプレビューエリアには、結果となる色の組み合わせが表示されます。また、このページ自体も合わせて更新されるため、変更内容をプレビューできます。
+以下のスライダーを使用して、Starstruckのアクセントカラーとグレーカラーのパレットを変更してみましょう。ダークとライトのプレビューエリアには、結果となる色の組み合わせが表示されます。また、このページ自体も合わせて更新されるため、変更内容をプレビューできます。
 
 変更内容に満足できたら、以下のCSSまたはTailwindコードをコピーしてプロジェクトで使用します。
 
@@ -276,6 +276,6 @@ import ThemeDesigner from '../../../../components/theme-designer.astro';
 		以下のCSSを[カスタムCSSファイル](#カスタムcssスタイル)に追加して、このテーマをサイトに適用します。
 	</Fragment>
 	<Fragment slot="tailwind-docs">
-		以下の[Tailwindの設定ファイル](#starlightをtailwindでスタイリングする)の例には、`theme.extend.colors`の設定で使用するために生成された`accent`と`gray`のカラーパレットが含まれています。
+		以下の[Tailwindの設定ファイル](#starstruckをtailwindでスタイリングする)の例には、`theme.extend.colors`の設定で使用するために生成された`accent`と`gray`のカラーパレットが含まれています。
 	</Fragment>
 </ThemeDesigner>

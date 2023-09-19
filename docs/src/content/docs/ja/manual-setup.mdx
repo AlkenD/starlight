@@ -1,19 +1,19 @@
 ---
 title: 手動セットアップ
-description: 既存のAstroプロジェクトにStarlightを追加するために、Starlightを手動で設定する方法を学びます。
+description: 既存のAstroプロジェクトにStarstruckを追加するために、Starstruckを手動で設定する方法を学びます。
 ---
 
 import { Tabs, TabItem } from '@awe-player/starstruck/components';
 
-[入門](/ja/getting-started/#新しいプロジェクトを作成する)で述べたように、新しいStarlightサイトを作成する最も簡単な方法は、`create astro`を使用することです。このガイドでは、既存のAstroプロジェクトにStarlightを追加する方法について説明します。
+[入門](/ja/getting-started/#新しいプロジェクトを作成する)で述べたように、新しいStarstruckサイトを作成する最も簡単な方法は、`create astro`を使用することです。このガイドでは、既存のAstroプロジェクトにStarstruckを追加する方法について説明します。
 
-## Starlightをセットアップする
+## Starstruckをセットアップする
 
 このガイドを進めるには、既存のAstroプロジェクトが必要です。
 
-### Starlightインテグレーションの追加
+### Starstruckインテグレーションの追加
 
-Starlightは[Astroのインテグレーション](https://docs.astro.build/ja/guides/integrations-guide/)です。プロジェクトのルートディレクトリで`astro add`コマンドを実行してサイトに追加します。
+Starstruckは[Astroのインテグレーション](https://docs.astro.build/ja/guides/integrations-guide/)です。プロジェクトのルートディレクトリで`astro add`コマンドを実行してサイトに追加します。
 
 <Tabs>
     <TabItem label="npm">
@@ -35,11 +35,11 @@ Starlightは[Astroのインテグレーション](https://docs.astro.build/ja/gu
 
 </Tabs>
 
-これにより、必要な依存関係がインストールされ、Astro設定ファイルの`integrations`配列にStarlightが追加されます。
+これにより、必要な依存関係がインストールされ、Astro設定ファイルの`integrations`配列にStarstruckが追加されます。
 
 ### インテグレーションの設定
 
-Starlightインテグレーションの設定は、`astro.config.mjs`ファイルでおこないます。
+Starstruckインテグレーションの設定は、`astro.config.mjs`ファイルでおこないます。
 
 まずは`title`を追加してみましょう。
 
@@ -57,13 +57,13 @@ export default defineConfig({
 });
 ```
 
-他の利用可能なオプションについては、[Starlightの設定リファレンス](/ja/reference/configuration/)を参照してください。
+他の利用可能なオプションについては、[Starstruckの設定リファレンス](/ja/reference/configuration/)を参照してください。
 
 ### コンテンツコレクションの設定
 
-StarlightはAstroの[コンテンツコレクション](https://docs.astro.build/ja/guides/content-collections/)の上に構築されています。この設定は`src/content/config.ts`ファイルでおこないます。
+StarstruckはAstroの[コンテンツコレクション](https://docs.astro.build/ja/guides/content-collections/)の上に構築されています。この設定は`src/content/config.ts`ファイルでおこないます。
 
-コンテンツの設定ファイルを作成または更新し、Starlightの`docsSchema`を使用する`docs`コレクションを追加します。
+コンテンツの設定ファイルを作成または更新し、Starstruckの`docsSchema`を使用する`docs`コレクションを追加します。
 
 ```js ins={3,6}
 // src/content/config.ts
@@ -77,7 +77,7 @@ export const collections = {
 
 ### コンテンツの追加
 
-以上でStarlightの設定は完了し、コンテンツを追加する準備が整いました！
+以上でStarstruckの設定は完了し、コンテンツを追加する準備が整いました！
 
 `src/content/docs/`ディレクトリを作成し、`index.md`ファイルを追加します。これが新しいサイトのホームページになります。
 
@@ -85,23 +85,23 @@ export const collections = {
 ---
 # src/content/docs/index.md
 title: 私のドキュメント
-description: Starlightで作成されたこのドキュメントサイトで、私のプロジェクトについてもっと学びましょう。
+description: Starstruckで作成されたこのドキュメントサイトで、私のプロジェクトについてもっと学びましょう。
 ---
 
 ようこそ私のプロジェクトへ！
 ```
 
-Starlightはファイルベースのルーティングを使用してます。そのため、`src/content/docs/`にあるMarkdown、MDX、Markdocファイルはすべて、サイトのページへと変換されます。フロントマターのメタデータ（上記の例では`title`と`description`フィールド）により、各ページの表示方法を変更できます。利用可能なオプションについては、[フロントマターのリファレンス](/ja/reference/frontmatter/)を参照してください。
+Starstruckはファイルベースのルーティングを使用してます。そのため、`src/content/docs/`にあるMarkdown、MDX、Markdocファイルはすべて、サイトのページへと変換されます。フロントマターのメタデータ（上記の例では`title`と`description`フィールド）により、各ページの表示方法を変更できます。利用可能なオプションについては、[フロントマターのリファレンス](/ja/reference/frontmatter/)を参照してください。
 
 ## 既存サイトのためのヒント
 
-既存のAstroプロジェクトがある場合は、Starlightを使用して、サイトにドキュメントセクションを迅速に追加できます。
+既存のAstroプロジェクトがある場合は、Starstruckを使用して、サイトにドキュメントセクションを迅速に追加できます。
 
-### サブパスへのStarlightの追加
+### サブパスへのStarstruckの追加
 
-Starlightのすべてのページをサブパスに追加するには、ドキュメントのコンテンツを`src/content/docs/`のサブディレクトリに配置します。
+Starstruckのすべてのページをサブパスに追加するには、ドキュメントのコンテンツを`src/content/docs/`のサブディレクトリに配置します。
 
-たとえば、Starlightのページがすべて`/guides/`で始まる場合は、コンテンツを`src/content/docs/guides/`ディレクトリに追加します。
+たとえば、Starstruckのページがすべて`/guides/`で始まる場合は、コンテンツを`src/content/docs/guides/`ディレクトリに追加します。
 
 import FileTree from '../../../components/file-tree.astro';
 
@@ -120,6 +120,6 @@ import FileTree from '../../../components/file-tree.astro';
 
 将来的には、`src/content/docs/`内にネストされたディレクトリを必要としないよう、このユースケースに対するサポートを改善する予定です。
 
-### StarlightとSSR
+### StarstruckとSSR
 
-現在、StarlightはAstroのサーバーアダプタを使用した[SSRデプロイ](https://docs.astro.build/ja/guides/server-side-rendering/)をサポートしていません。近いうちにサポートできるようにしたいと考えています。
+現在、StarstruckはAstroのサーバーアダプタを使用した[SSRデプロイ](https://docs.astro.build/ja/guides/server-side-rendering/)をサポートしていません。近いうちにサポートできるようにしたいと考えています。

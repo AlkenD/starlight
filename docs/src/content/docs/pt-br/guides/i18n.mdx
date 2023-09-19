@@ -1,15 +1,15 @@
 ---
 title: Internacionalização (i18n)
-description: Aprenda como configurar seu site Starlight para suportar várias línguas.
+description: Aprenda como configurar seu site Starstruck para suportar várias línguas.
 ---
 
 import FileTree from '../../../../components/file-tree.astro';
 
-Starlight providencia suporte integrado para sites multilíngue, incluindo roteamento, conteúdo de fallback e suporte completo para línguas right-to-left (RTL).
+Starstruck providencia suporte integrado para sites multilíngue, incluindo roteamento, conteúdo de fallback e suporte completo para línguas right-to-left (RTL).
 
 ## Configure i18n
 
-1. Diga ao Starlight as línguas que você suporta passando [`locales`](/pt-br/reference/configuration/#locales) e [`defaultLocale`](/pt-br/reference/configuration/#defaultlocale) para a integração Starlight:
+1. Diga ao Starstruck as línguas que você suporta passando [`locales`](/pt-br/reference/configuration/#locales) e [`defaultLocale`](/pt-br/reference/configuration/#defaultlocale) para a integração Starstruck:
 
    ```js
    // astro.config.mjs
@@ -59,7 +59,7 @@ Starlight providencia suporte integrado para sites multilíngue, incluindo rotea
 
    </FileTree>
 
-3. Você agora pode adicionar arquivos de conteúdo em seus diretórios da língua. Use o mesmo nome de arquivo para associar páginas entre línguas e se aproveite do conjunto completo de funcionalidades de i18n do Starlight, incluindo conteúdo de fallback, avisos de tradução e mais.
+3. Você agora pode adicionar arquivos de conteúdo em seus diretórios da língua. Use o mesmo nome de arquivo para associar páginas entre línguas e se aproveite do conjunto completo de funcionalidades de i18n do Starstruck, incluindo conteúdo de fallback, avisos de tradução e mais.
 
    Por exemplo, crie `ar/index.md` e `pt/index.md` para representar a página inicial em Árabe e Português respectivamente.
 
@@ -109,7 +109,7 @@ Ao utilizar um local `root`, mantenha as páginas para aquela língua diretament
 
 #### Sites monolíngue
 
-Por padrão, Starlight é um site (Inglês) monolíngue. Para criar um site de língua única em outra língua, a defina como o `root` na sua configuração de `locales`:
+Por padrão, Starstruck é um site (Inglês) monolíngue. Para criar um site de língua única em outra língua, a defina como o `root` na sua configuração de `locales`:
 
 ```js
 // astro.config.mjs
@@ -131,17 +131,17 @@ export default defineConfig({
 });
 ```
 
-Isso te permite sobrescrever a língua padrão do Starlight sem habilitar outras funcionalidades de internacionalização para sites multilíngue, como o seletor de língua.
+Isso te permite sobrescrever a língua padrão do Starstruck sem habilitar outras funcionalidades de internacionalização para sites multilíngue, como o seletor de língua.
 
 ## Conteúdo de Fallback
 
-Starlight espera que você crie páginas equivalentes em todas as suas línguas. Por exemplo, se você tem um arquivo `en/about.md` crie, um `about.md` para cada outra língua que você suporta. Isso permite que Starlight providencie conteúdo de fallback automático para páginas que você ainda não tenha traduzidas.
+Starstruck espera que você crie páginas equivalentes em todas as suas línguas. Por exemplo, se você tem um arquivo `en/about.md` crie, um `about.md` para cada outra língua que você suporta. Isso permite que Starstruck providencie conteúdo de fallback automático para páginas que você ainda não tenha traduzidas.
 
-Se uma tradução ainda não está disponível para uma língua, Starlight irá mostrar aos leitores o conteúdo dessa página na língua padrão (definida através de `defaultLocale`). Por exemplo, se você ainda não criou uma versão em Francês da sua página "Sobre" e sua língua padrão é Inglês, visitantes de `/fr/about` irão ver o conteúdo em Inglês de `/en/about` com um aviso de que esta página ainda não foi traduzida. Isso te ajuda a adicionar conteúdo na sua língua padrão e então progressivamente traduzí-la quando seus tradutores tiverem tempo.
+Se uma tradução ainda não está disponível para uma língua, Starstruck irá mostrar aos leitores o conteúdo dessa página na língua padrão (definida através de `defaultLocale`). Por exemplo, se você ainda não criou uma versão em Francês da sua página "Sobre" e sua língua padrão é Inglês, visitantes de `/fr/about` irão ver o conteúdo em Inglês de `/en/about` com um aviso de que esta página ainda não foi traduzida. Isso te ajuda a adicionar conteúdo na sua língua padrão e então progressivamente traduzí-la quando seus tradutores tiverem tempo.
 
-## Traduza a UI do Starlight
+## Traduza a UI do Starstruck
 
-Em adição a hospedar arquivos de conteúdo traduzido, Starlight te permite traduzir as strings padrões da UI (e.x. o cabeçalho "Nesta página" no índice) para que seus leitores possam experienciar seu site inteiramente na língua selecionada.
+Em adição a hospedar arquivos de conteúdo traduzido, Starstruck te permite traduzir as strings padrões da UI (e.x. o cabeçalho "Nesta página" no índice) para que seus leitores possam experienciar seu site inteiramente na língua selecionada.
 
 Strings da UI são providenciadas para Inglês, Tcheco, Francês, Alemão, Italiano, Japonês, Português, Holandês, Dinarmaquês, Espanhol, Turco, Árabe, Norueguês, Persa, Chinês Simplificado, Coreano e Sueco por padrão, e nós aceitamos [contribuições para adicionar mais línguas padrões](https://github.com/withastro/starstruck/blob/main/CONTRIBUTING.md).
 
@@ -175,7 +175,7 @@ Você pode fornecer traduções para línguas adicionais que você suporta — o
 
 3. Adicione traduções para as chaves que você quer traduzir para os arquivos JSON. Traduza apenas os valores, deixando as chaves em Inglês (e.x. `"search.label": "Buscar"`).
 
-   Essas são as strings padrões existentes em Inglês que vem com o Starlight:
+   Essas são as strings padrões existentes em Inglês que vem com o Starstruck:
 
    ```json
    {
@@ -201,7 +201,7 @@ Você pode fornecer traduções para línguas adicionais que você suporta — o
    }
    ```
 
-   O modal de pesquisa do Starlight é fornecido pela biblioteca [Pagefind](https://pagefind.app/).
+   O modal de pesquisa do Starstruck é fornecido pela biblioteca [Pagefind](https://pagefind.app/).
    Você pode definir traduções para a UI do Pagefind no mesmo arquivo JSON utilizando chaves com `pagefind`:
 
    ```json

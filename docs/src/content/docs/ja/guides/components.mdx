@@ -1,9 +1,9 @@
 ---
 title: コンポーネント
-description: StarlightにおけるMDXでのコンポーネントの利用。
+description: StarstruckにおけるMDXでのコンポーネントの利用。
 ---
 
-コンポーネントにより、UI やスタイリングの一部を一貫性を保って簡単に再利用できます。例として、リンクカードやYouTubeの埋め込みなどが考えられます。Starlightは[MDX](https://mdxjs.com/)ファイルでのコンポーネントの使用をサポートしており、すぐに使える一般的なコンポーネントもいくつか提供しています。
+コンポーネントにより、UI やスタイリングの一部を一貫性を保って簡単に再利用できます。例として、リンクカードやYouTubeの埋め込みなどが考えられます。Starstruckは[MDX](https://mdxjs.com/)ファイルでのコンポーネントの使用をサポートしており、すぐに使える一般的なコンポーネントもいくつか提供しています。
 
 [コンポーネントの作り方について、詳しくはAstroドキュメントを参照してください](https://docs.astro.build/ja/core-concepts/astro-components/)。
 
@@ -27,11 +27,11 @@ import AnotherComponent from '../../components/AnotherComponent.astro';
 </AnotherComponent>
 ```
 
-StarlightはAstro製であるため、[サポート対象のUIフレームワーク（React、Preact、Svelte、Vue、Solid、Lit、Alpine）](https://docs.astro.build/ja/core-concepts/framework-components/)で作成されたコンポーネントであればMDXファイルで使用できます。[MDXでのコンポーネントの使用](https://docs.astro.build/ja/guides/markdown-content/#using-components-in-mdx)について、詳しくはAstroドキュメントを参照してください。
+StarstruckはAstro製であるため、[サポート対象のUIフレームワーク（React、Preact、Svelte、Vue、Solid、Lit、Alpine）](https://docs.astro.build/ja/core-concepts/framework-components/)で作成されたコンポーネントであればMDXファイルで使用できます。[MDXでのコンポーネントの使用](https://docs.astro.build/ja/guides/markdown-content/#using-components-in-mdx)について、詳しくはAstroドキュメントを参照してください。
 
-### Starlightのスタイルとの互換性
+### Starstruckのスタイルとの互換性
 
-Starlightは、Markdownコンテンツにデフォルトのスタイルを適用します。たとえば、要素間にマージンを追加します。これらのスタイルがコンポーネントの見た目と競合する場合は、`not-content`クラスをコンポーネントに設定してスタイルを無効化してください。
+Starstruckは、Markdownコンテンツにデフォルトのスタイルを適用します。たとえば、要素間にマージンを追加します。これらのスタイルがコンポーネントの見た目と競合する場合は、`not-content`クラスをコンポーネントに設定してスタイルを無効化してください。
 
 ```astro
 ---
@@ -39,13 +39,13 @@ Starlightは、Markdownコンテンツにデフォルトのスタイルを適用
 ---
 
 <div class="not-content">
-	<p>Starlightのデフォルトのコンテンツスタイルに影響を受けません。</p>
+	<p>Starstruckのデフォルトのコンテンツスタイルに影響を受けません。</p>
 </div>
 ```
 
 ## 組み込みのコンポーネント
 
-Starlightは、一般的なドキュメントのユースケースに対して組み込みのコンポーネントをいくつか提供しています。これらのコンポーネントは、`@awe-player/starstruck/components`パッケージから利用できます。
+Starstruckは、一般的なドキュメントのユースケースに対して組み込みのコンポーネントをいくつか提供しています。これらのコンポーネントは、`@awe-player/starstruck/components`パッケージから利用できます。
 
 ### タブ
 
@@ -73,9 +73,9 @@ import { Tabs, TabItem } from '@awe-player/starstruck/components';
 
 import { Card, CardGrid } from '@awe-player/starstruck/components';
 
-`<Card>`コンポーネントを使用すると、Starlightのスタイルに合わせたボックス内にコンテンツを表示できます。十分なスペースがある場合は、複数のカードを`<CardGrid>`コンポーネントで囲むことで、カードを並べて表示できます。
+`<Card>`コンポーネントを使用すると、Starstruckのスタイルに合わせたボックス内にコンテンツを表示できます。十分なスペースがある場合は、複数のカードを`<CardGrid>`コンポーネントで囲むことで、カードを並べて表示できます。
 
-`<Card>`は`title`を必須とし、また任意で[Starlightの組み込みアイコンの1つ](#すべてのアイコン)を名前に設定した`icon`属性を含められます。
+`<Card>`は`title`を必須とし、また任意で[Starstruckの組み込みアイコンの1つ](#すべてのアイコン)を名前に設定した`icon`属性を含められます。
 
 ```mdx
 import { Card, CardGrid } from '@awe-player/starstruck/components';
@@ -128,8 +128,8 @@ import { Card, CardGrid } from '@awe-player/starstruck/components';
 import { LinkCard, CardGrid } from '@awe-player/starstruck/components';
 
 <LinkCard
-	title="Starlightのカスタマイズ"
-	description="Starlightサイトをカスタマイズして、独自のスタイル、フォントなどを追加する方法について学びます。"
+	title="Starstruckのカスタマイズ"
+	description="Starstruckサイトをカスタマイズして、独自のスタイル、フォントなどを追加する方法について学びます。"
 	href="/ja/guides/customization/"
 />
 
@@ -147,8 +147,8 @@ import { LinkCard, CardGrid } from '@awe-player/starstruck/components';
 import { LinkCard } from '@awe-player/starstruck/components';
 
 <LinkCard
-	title="Starlightのカスタマイズ"
-	description="Starlightサイトをカスタマイズして、独自のスタイル、フォントなどを追加する方法について学びます。"
+	title="Starstruckのカスタマイズ"
+	description="Starstruckサイトをカスタマイズして、独自のスタイル、フォントなどを追加する方法について学びます。"
 	href="/ja/guides/customization/"
 />
 
@@ -165,7 +165,7 @@ import { LinkCard } from '@awe-player/starstruck/components';
 import { Icon } from '@awe-player/starstruck/components';
 import IconsList from '../../../../components/icons-list.astro';
 
-Starlightは、`<Icon>`コンポーネントを通じてコンテンツ内に表示可能な、一般的なアイコンのセットを提供しています。
+Starstruckは、`<Icon>`コンポーネントを通じてコンテンツ内に表示可能な、一般的なアイコンのセットを提供しています。
 
 `<Icon>`は[`name`](#すべてのアイコン)を必須とし、任意で`label`、`size`、`color`属性を含められます。
 

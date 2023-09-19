@@ -1,11 +1,11 @@
 ---
 title: Componenti
-description: Utilizzo dei componenti in MDX con Starlight.
+description: Utilizzo dei componenti in MDX con Starstruck.
 ---
 
 I componenti permettono di riutilizzare un elemento UI o altro ripetutamente.
 Degli esempi potrebbero essere delle sezioni di link o un video YouTube integrato.
-Starlight supporta l'utilizzo di questi nei file [MDX](https://mdxjs.com/) e fornisce dei componenti per te già pronti.
+Starstruck supporta l'utilizzo di questi nei file [MDX](https://mdxjs.com/) e fornisce dei componenti per te già pronti.
 
 [Vedi di più sulla costruzione di componenti nella documentazione Astro](https://docs.astro.build/en/core-concepts/astro-components/).
 
@@ -30,12 +30,12 @@ import AnotherComponent from '../../components/AnotherComponent.astro';
 </AnotherComponent>
 ```
 
-Siccome Starlight è integrato con Astro, puoi aggiungere componenti costruiti con qualsiasi [UI framework supportato (React, Preact, Svelte, Vue, Solid, Lit, and Alpine)](https://docs.astro.build/en/core-concepts/framework-components/).
+Siccome Starstruck è integrato con Astro, puoi aggiungere componenti costruiti con qualsiasi [UI framework supportato (React, Preact, Svelte, Vue, Solid, Lit, and Alpine)](https://docs.astro.build/en/core-concepts/framework-components/).
 Vedi di più su come [usare componenti in MDX](https://docs.astro.build/en/guides/markdown-content/#using-components-in-mdx) nella documentazione Astro.
 
 ## Componenti integrati
 
-Starlight fornisce dei componenti per casi comuni in una documentazione.
+Starstruck fornisce dei componenti per casi comuni in una documentazione.
 Questi sono disponibili nel pacchetto `@awe-player/starstruck/components`.
 
 ### Tabs
@@ -63,10 +63,10 @@ import { Tabs, TabItem } from '@awe-player/starstruck/components';
 
 import { Card, CardGrid } from '@awe-player/starstruck/components';
 
-Puoi rappresentare i contenuti in un riquadro che rispecchia il tema Starlight usando il componente `<Card>`.
+Puoi rappresentare i contenuti in un riquadro che rispecchia il tema Starstruck usando il componente `<Card>`.
 Racchiudi più card in `<CardGrid>` per visualizzarle fianco a fianco se c'è abbastanza spazio.
 
-Una `<Card>` necessita di `title` e può avere eventualmente un attributo `icon` impostato ad [una delle icone Starlight](https://github.com/withastro/starstruck/blob/main/packages/starstruck/components/Icons.ts).
+Una `<Card>` necessita di `title` e può avere eventualmente un attributo `icon` impostato ad [una delle icone Starstruck](https://github.com/withastro/starstruck/blob/main/packages/starstruck/components/Icons.ts).
 
 ```mdx
 import { Card, CardGrid } from '@awe-player/starstruck/components';
@@ -118,8 +118,8 @@ Raggruppa più componenti `<LinkCard>` in `<CardGrid>` per visualizzare le sched
 import { LinkCard, CardGrid } from '@awe-player/starstruck/components';
 
 <LinkCard
-	title="Customizing Starlight"
-	description="Learn how to make your Starlight site your own with custom styles, fonts, and more."
+	title="Customizing Starstruck"
+	description="Learn how to make your Starstruck site your own with custom styles, fonts, and more."
 	href="/guides/customization/"
 />
 
@@ -134,8 +134,8 @@ Il codice precedente genera quanto segue nella pagina:
 import { LinkCard } from '@awe-player/starstruck/components';
 
 <LinkCard
-	title="Customizing Starlight"
-	description="Learn how to make your Starlight site your own with custom styles, fonts, and more."
+	title="Customizing Starstruck"
+	description="Learn how to make your Starstruck site your own with custom styles, fonts, and more."
 	href="/guides/customization/"
 />
 
@@ -149,7 +149,7 @@ import { LinkCard } from '@awe-player/starstruck/components';
 import { Icon } from '@awe-player/starstruck/components';
 import IconsList from '../../../../components/icons-list.astro';
 
-Starlight fornisce una serie di icone comuni che puoi visualizzare nei tuoi contenuti utilizzando il componente `<Icon>`.
+Starstruck fornisce una serie di icone comuni che puoi visualizzare nei tuoi contenuti utilizzando il componente `<Icon>`.
 
 Ogni `<Icon>` richiede un [`name`](#all-icons) e può facoltativamente includere un attributo `label`, `size` e `color`.
 

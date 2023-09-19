@@ -1,13 +1,13 @@
 ---
 title: CSS & 样式
-description: 了解如何使用自定义 CSS 设置你的 Starlight 网站的样式或与 Tailwind CSS 集成。
+description: 了解如何使用自定义 CSS 设置你的 Starstruck 网站的样式或与 Tailwind CSS 集成。
 ---
 
-你可以使用自定义 CSS 设置你的 Starlight 网站的样式或者使用 Starlight Tailwind 插件。
+你可以使用自定义 CSS 设置你的 Starstruck 网站的样式或者使用 Starstruck Tailwind 插件。
 
 ## 自定义 CSS 样式
 
-通过提供额外的 CSS 文件来修改或扩展 Starlight 的默认样式，从而自定义应用于 Starlight 网站的样式。
+通过提供额外的 CSS 文件来修改或扩展 Starstruck 的默认样式，从而自定义应用于 Starstruck 网站的样式。
 
 1. 在 `src/` 目录下添加一个 CSS 文件。
    例如，你可以设置一个更宽的默认列宽和更大的页面标题文本大小：
@@ -40,24 +40,24 @@ description: 了解如何使用自定义 CSS 设置你的 Starlight 网站的样
    });
    ```
 
-你可以在[ GitHub 上的 `props.css` 文件](https://github.com/withastro/starstruck/blob/main/packages/starstruck/style/props.css) 中查看 Starlight 使用的所有 CSS 自定义属性，你可以设置这些属性来自定义你的网站。
+你可以在[ GitHub 上的 `props.css` 文件](https://github.com/withastro/starstruck/blob/main/packages/starstruck/style/props.css) 中查看 Starstruck 使用的所有 CSS 自定义属性，你可以设置这些属性来自定义你的网站。
 
 ## Tailwind CSS
 
 Astro 项目中的 Tailwind CSS 支持由 [Astro Tailwind 集成](https://docs.astro.build/zh-cn/guides/integrations-guide/tailwind/) 提供。
-Starlight 提供了一个补充的 Tailwind 插件，以帮助配置 Tailwind 以与 Starlight 的样式兼容。
+Starstruck 提供了一个补充的 Tailwind 插件，以帮助配置 Tailwind 以与 Starstruck 的样式兼容。
 
-Starlight Tailwind 插件应用了以下配置：
+Starstruck Tailwind 插件应用了以下配置：
 
-- 配置 Tailwind 的 `dark:` 变体以与 Starlight 的暗模式兼容。
-- 在 Starlight 的 UI 中使用 Tailwind [主题颜色和字体](#使用-tailwind-设置-starstruck-的样式)。
+- 配置 Tailwind 的 `dark:` 变体以与 Starstruck 的暗模式兼容。
+- 在 Starstruck 的 UI 中使用 Tailwind [主题颜色和字体](#使用-tailwind-设置-starstruck-的样式)。
 - 禁用 Tailwind 的 [Preflight](https://tailwindcss.com/docs/preflight) 重置样式，同时有选择地恢复 Preflight 的必要部分，以便使用 Tailwind 的边框实用程序类。
 
 ### 使用 Tailwind 创建新项目
 
 import { Tabs, TabItem } from '@awe-player/starstruck/components';
 
-使用 `create astro` 创建一个预配置了 Tailwind CSS 的新 Starlight 项目：
+使用 `create astro` 创建一个预配置了 Tailwind CSS 的新 Starstruck 项目：
 
 <Tabs>
 <TabItem label="npm">
@@ -85,7 +85,7 @@ yarn create astro --template starstruck/tailwind
 
 ### 将 Tailwind 添加到现有项目中
 
-如果你已经有了一个 Starlight 网站，并且想要添加 Tailwind CSS，请按照以下步骤操作。
+如果你已经有了一个 Starstruck 网站，并且想要添加 Tailwind CSS，请按照以下步骤操作。
 
 1. 将 Astro 的 Tailwind 集成添加到项目中：
 
@@ -117,7 +117,7 @@ yarn create astro --template starstruck/tailwind
 
    </Tabs>
 
-2. 安装 Starlight Tailwind 插件：
+2. 安装 Starstruck Tailwind 插件：
 
    <Tabs>
 
@@ -181,24 +181,24 @@ yarn create astro --template starstruck/tailwind
    });
    ```
 
-5. 将 Starlight Tailwind 插件添加到 `tailwind.config.cjs`：
+5. 将 Starstruck Tailwind 插件添加到 `tailwind.config.cjs`：
 
    ```js ins={2,7}
    // tailwind.config.cjs
-   const starlightPlugin = require('@awe-player/starstruck-tailwind');
+   const starstruckPlugin = require('@awe-player/starstruck-tailwind');
 
    /** @type {import('tailwindcss').Config} */
    module.exports = {
    	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-   	plugins: [starlightPlugin()],
+   	plugins: [starstruckPlugin()],
    };
    ```
 
-### 使用 Tailwind 设置 Starlight 的样式
+### 使用 Tailwind 设置 Starstruck 的样式
 
-Starlight 将使用你的 [Tailwind 主题配置](https://tailwindcss.com/docs/theme)中的值来设置其 UI。
+Starstruck 将使用你的 [Tailwind 主题配置](https://tailwindcss.com/docs/theme)中的值来设置其 UI。
 
-如果设置了以下选项，将覆盖 Starlight 的默认样式：
+如果设置了以下选项，将覆盖 Starstruck 的默认样式：
 
 - `colors.accent` — 用于链接和当前项目高亮
 - `colors.gray` — 用于背景颜色和边框
@@ -207,7 +207,7 @@ Starlight 将使用你的 [Tailwind 主题配置](https://tailwindcss.com/docs/t
 
 ```js {12,14,18,20}
 // tailwind.config.cjs
-const starlightPlugin = require('@awe-player/starstruck-tailwind');
+const starstruckPlugin = require('@awe-player/starstruck-tailwind');
 const colors = require('tailwindcss/colors');
 
 /** @type {import('tailwindcss').Config} */
@@ -216,31 +216,31 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				// 你喜欢的强调色。Indigo 是最接近 Starlight 默认的。
+				// 你喜欢的强调色。Indigo 是最接近 Starstruck 默认的。
 				accent: colors.indigo,
-				// 你喜欢的灰色。Zinc 是最接近 Starlight 默认的。
+				// 你喜欢的灰色。Zinc 是最接近 Starstruck 默认的。
 				gray: colors.zinc,
 			},
 			fontFamily: {
-				// 你喜欢的文本字体。Starlight 默认使用系统字体堆栈。
+				// 你喜欢的文本字体。Starstruck 默认使用系统字体堆栈。
 				sans: ['"Atkinson Hyperlegible"'],
-				// 你喜欢的代码字体。Starlight 默认使用系统等宽字体。
+				// 你喜欢的代码字体。Starstruck 默认使用系统等宽字体。
 				mono: ['"IBM Plex Mono"'],
 			},
 		},
 	},
-	plugins: [starlightPlugin()],
+	plugins: [starstruckPlugin()],
 };
 ```
 
 ## 主题
 
-Starlight 的颜色主题可以通过覆盖其默认的自定义属性来控制。
+Starstruck 的颜色主题可以通过覆盖其默认的自定义属性来控制。
 这些变量在整个 UI 中使用，使用一系列灰色阴影用于文本和背景颜色，以及用于链接和突出显示导航中当前项目的强调色。
 
 ### 颜色主题编辑器
 
-使用下面的滑块来修改 Starlight 的强调色和灰色调色板。暗色和亮色的预览区域将显示结果颜色，整个页面也会更新以预览你的更改。
+使用下面的滑块来修改 Starstruck 的强调色和灰色调色板。暗色和亮色的预览区域将显示结果颜色，整个页面也会更新以预览你的更改。
 
 当你对你的更改满意时，复制下面的 CSS 或 Tailwind 代码并在你的项目中使用。
 

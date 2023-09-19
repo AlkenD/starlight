@@ -9,12 +9,12 @@ import {
 	slugToParam,
 } from './slugs';
 
-export type StarlightDocsEntry = Omit<CollectionEntry<'docs'>, 'slug'> & {
+export type StarstruckDocsEntry = Omit<CollectionEntry<'docs'>, 'slug'> & {
 	slug: string;
 };
 
 export interface Route extends LocaleData {
-	entry: StarlightDocsEntry;
+	entry: StarstruckDocsEntry;
 	entryMeta: LocaleData;
 	slug: string;
 	id: string;
@@ -35,7 +35,7 @@ interface Path extends GetStaticPathsItem {
 const normalizeIndexSlug = (slug: string) => (slug === 'index' ? '' : slug);
 
 /** All entries in the docs content collection. */
-const docs: StarlightDocsEntry[] = (await getCollection('docs')).map(({ slug, ...entry }) => ({
+const docs: StarstruckDocsEntry[] = (await getCollection('docs')).map(({ slug, ...entry }) => ({
 	...entry,
 	slug: normalizeIndexSlug(slug),
 }));
@@ -104,7 +104,7 @@ export function getLocaleRoutes(locale: string | undefined): Route[] {
  * Get all entries in the docs content collection for a specific locale.
  * A locale of `undefined` is treated as the “root” locale, if configured.
  */
-function getLocaleDocs(locale: string | undefined): StarlightDocsEntry[] {
+function getLocaleDocs(locale: string | undefined): StarstruckDocsEntry[] {
 	return filterByLocale(docs, locale);
 }
 

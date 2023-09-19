@@ -14,7 +14,7 @@ const { toc, isMobile = false, depth = 0 } = Astro.props;
 <ul class="text-zinc-400" class:list={[depth !== 0 && 'pt-1']}>
 	{
 		toc.map((heading) => (
-			<li class="py-1">
+			<li class:list={[heading.children.length > 0 ? 'pt-1' : 'py-1']}>
 				<span class="flex items-center">
 					{depth !== 0 && <Icon name="right-caret" class="p-1" size="1.5rem" />}
 					<a href={'#' + heading.slug}>

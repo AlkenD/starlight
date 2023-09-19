@@ -15,12 +15,12 @@ const t = useTranslations(locale);
 ---
 
 <starstruck-toc
-	class="w-60 sticky top-0 h-[calc(100vh-56px)] px-4 pt-6 text-sm"
+	class="w-60 sticky top-14 h-fit py-4 text-sm border-b border-zinc-200 dark:border-zinc-800 pl-4"
 	data-min-h={minHeadingLevel}
 	data-max-h={maxHeadingLevel}
 >
-	<nav aria-labelledby="starlight__on-this-page">
-		<h2 class="text-black dark:text-white font-semibold mb-4" id="starlight__on-this-page">
+	<nav aria-labelledby="starstruck__on-this-page">
+		<h2 class="text-black dark:text-white font-semibold mb-4" id="starstruck__on-this-page">
 			{t('tableOfContents.onThisPage')}
 		</h2>
 		<TableOfContentsList {toc} />

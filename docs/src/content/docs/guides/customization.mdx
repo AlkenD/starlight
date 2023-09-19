@@ -1,17 +1,17 @@
 ---
-title: Customizing Starlight
-description: Learn how to make your Starlight site your own with your logo, custom fonts, landing page design and more.
+title: Customizing Starstruck
+description: Learn how to make your Starstruck site your own with your logo, custom fonts, landing page design and more.
 ---
 
 import { Tabs, TabItem } from '@awe-player/starstruck/components';
 import FileTree from '../../../components/file-tree.astro';
 
-Starlight provides sensible default styling and features, so you can get started quickly with no configuration needed.
-When you want to start customizing the look and feel of your Starlight site, this guide has you covered.
+Starstruck provides sensible default styling and features, so you can get started quickly with no configuration needed.
+When you want to start customizing the look and feel of your Starstruck site, this guide has you covered.
 
 ## Add your logo
 
-Adding a custom logo to the site header is a quick way to add your individual branding to a Starlight site.
+Adding a custom logo to the site header is a quick way to add your individual branding to a Starstruck site.
 
 1. Add your logo image file to the `src/assets/` directory:
 
@@ -25,7 +25,7 @@ Adding a custom logo to the site header is a quick way to add your individual br
 
    </FileTree>
 
-2. Add the path to your logo as Starlight’s [`logo.src`](/reference/configuration/#logo) option in `astro.config.mjs`:
+2. Add the path to your logo as Starstruck’s [`logo.src`](/reference/configuration/#logo) option in `astro.config.mjs`:
 
    ```js
    // astro.config.mjs
@@ -89,7 +89,7 @@ You can display different versions of your logo in light and dark modes.
 
 ## Enable sitemap
 
-Starlight has built-in support for generating a sitemap. Enable sitemap generation by setting your URL as `site` in `astro.config.mjs`:
+Starstruck has built-in support for generating a sitemap. Enable sitemap generation by setting your URL as `site` in `astro.config.mjs`:
 
 ```js
 // astro.config.mjs
@@ -102,7 +102,7 @@ export default defineConfig({
 
 ## Page layout
 
-By default, Starlight pages use a layout with a global navigation sidebar and a table of contents that shows the current page headings.
+By default, Starstruck pages use a layout with a global navigation sidebar and a table of contents that shows the current page headings.
 
 You can apply a wider page layout without sidebars by setting [`template: splash`](/reference/frontmatter/#template) in a page’s frontmatter.
 This works particularly well for landing pages and you can see it in action on the [homepage of this site](/).
@@ -118,8 +118,8 @@ template: splash
 
 ## Table of contents
 
-Starlight displays a table of contents on each page to make it easier for readers to jump to the heading they are looking for.
-You can customize — or even disable — the table of contents globally in the Starlight integration or on a page-by-page basis in frontmatter.
+Starstruck displays a table of contents on each page to make it easier for readers to jump to the heading they are looking for.
+You can customize — or even disable — the table of contents globally in the Starstruck integration or on a page-by-page basis in frontmatter.
 
 By default, `<h2>` and `<h3>` headings are included in the table of contents. Change which headings levels to include site-wide using the `minHeadingLevel` and `maxHeadingLevel` options in your [global `tableOfContents`](/reference/configuration/#tableofcontents). Override these defaults on an individual page by adding the corresponding [frontmatter `tableOfContents`](/reference/frontmatter/#tableofcontents) properties:
 
@@ -189,7 +189,7 @@ defineConfig({
 
 ## Social links
 
-Starlight has built-in support for adding links to your social media accounts to the site header via the [`social`](/reference/configuration/#social) option in the Starlight integration.
+Starstruck has built-in support for adding links to your social media accounts to the site header via the [`social`](/reference/configuration/#social) option in the Starstruck integration.
 
 Currently, links to Bitbucket, Codeberg, CodePen, Discord, GitHub, GitLab, Gitter, Instagram, LinkedIn, Mastodon, Microsoft Teams, Stack Overflow, Threads, Twitch, Twitter, and Youtube are supported.
 Let us know on GitHub or Discord if you need support for another service!
@@ -214,11 +214,11 @@ export default defineConfig({
 
 ## Edit links
 
-Starlight can display an “Edit page” link in each page’s footer.
+Starstruck can display an “Edit page” link in each page’s footer.
 This makes it easy for a reader to find the file to edit to improve your docs.
 For open-source projects in particular, this can help encourage contributions from your community.
 
-To enable edit links, set [`editLink.baseUrl`](/reference/configuration/#editlink) to the URL used to edit your repository in the Starlight integration config.
+To enable edit links, set [`editLink.baseUrl`](/reference/configuration/#editlink) to the URL used to edit your repository in the Starstruck integration config.
 The value of `editLink.baseUrl` will be prepended to the path to the current page to form the full edit link.
 
 Common patterns include:
@@ -226,9 +226,9 @@ Common patterns include:
 - GitHub: `https://github.com/USER_NAME/REPO_NAME/edit/BRANCH_NAME/`
 - GitLab: `https://gitlab.com/USER_NAME/REPO_NAME/-/edit/BRANCH_NAME/`
 
-If your Starlight project is not in the root of your repository, include the path to the project at the end of the base URL.
+If your Starstruck project is not in the root of your repository, include the path to the project at the end of the base URL.
 
-This example shows the edit link configured for the Starlight docs, which live in the `docs/` subdirectory on the `main` branch of the `withastro/starstruck` repository on GitHub:
+This example shows the edit link configured for the Starstruck docs, which live in the `docs/` subdirectory on the `main` branch of the `withastro/starstruck` repository on GitHub:
 
 ```js
 // astro.config.mjs
@@ -249,7 +249,7 @@ export default defineConfig({
 
 ## Custom 404 page
 
-Starlight sites display a simple 404 page by default.
+Starstruck sites display a simple 404 page by default.
 You can customize this by adding a `404.md` (or `404.mdx`) file to your `src/content/docs/` directory:
 
 <FileTree>
@@ -263,7 +263,7 @@ You can customize this by adding a `404.md` (or `404.mdx`) file to your `src/con
 
 </FileTree>
 
-You can use all of Starlight’s page layout and customization techniques in your 404 page. For example, the default 404 page uses the [`splash` template](#page-layout) and [`hero`](/reference/frontmatter/#hero) component in frontmatter:
+You can use all of Starstruck’s page layout and customization techniques in your 404 page. For example, the default 404 page uses the [`splash` template](#page-layout) and [`hero`](/reference/frontmatter/#hero) component in frontmatter:
 
 ```md
 ---
@@ -278,10 +278,10 @@ hero:
 
 ## Custom fonts
 
-By default, Starlight uses sans-serif fonts available on a user’s local device for all text.
+By default, Starstruck uses sans-serif fonts available on a user’s local device for all text.
 This ensures documentation loads quickly in a font that is familiar to each user, without requiring extra bandwidth to download large font files.
 
-If you must add a custom font to your Starlight site, you can set up fonts to use in custom CSS files or with any other [Astro styling technique](https://docs.astro.build/en/guides/styling/).
+If you must add a custom font to your Starstruck site, you can set up fonts to use in custom CSS files or with any other [Astro styling technique](https://docs.astro.build/en/guides/styling/).
 
 ### Set up fonts
 
@@ -319,7 +319,7 @@ To use Google Fonts, follow the [Fontsource set-up guide](#set-up-a-fontsource-f
    }
    ```
 
-3. Add the path to your `font-face.css` file to Starlight’s `customCss` array in `astro.config.mjs`:
+3. Add the path to your `font-face.css` file to Starstruck’s `customCss` array in `astro.config.mjs`:
 
    ```js
    // astro.config.mjs
@@ -378,7 +378,7 @@ It provides npm modules you can install for the fonts you want to use and includ
 
       </Tabs>
 
-3.  Add Fontsource CSS files to Starlight’s `customCss` array in `astro.config.mjs`:
+3.  Add Fontsource CSS files to Starstruck’s `customCss` array in `astro.config.mjs`:
 
     ```js
     // astro.config.mjs
@@ -404,7 +404,7 @@ It provides npm modules you can install for the fonts you want to use and includ
 ### Use fonts
 
 To apply the font you set up to your site, use your chosen font’s name in a [custom CSS file](/guides/css-and-tailwind/#custom-css-styles).
-For example, to override Starlight’s default font everywhere, set the `--sl-font` custom property:
+For example, to override Starstruck’s default font everywhere, set the `--sl-font` custom property:
 
 ```css
 /* src/styles/custom.css */

@@ -3,15 +3,15 @@ import type { AstroIntegration, AstroUserConfig } from 'astro';
 import { spawn } from 'node:child_process';
 import { dirname, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { starlightAsides } from './integrations/asides';
-import { starlightSitemap } from './integrations/sitemap';
-import { vitePluginStarlightUserConfig } from './integrations/virtual-user-config';
+import { starstruckAsides } from './integrations/asides';
+import { starstruckSitemap } from './integrations/sitemap';
+import { vitePluginStarstruckUserConfig } from './integrations/virtual-user-config';
 import { errorMap } from './utils/error-map';
-import { StarlightConfigSchema, type StarlightUserConfig } from './utils/user-config';
+import { StarstruckConfigSchema, type StarstruckUserConfig } from './utils/user-config';
 import { rehypeRtlCodeSupport } from './integrations/code-rtl-support';
 
-export default function StarlightIntegration(opts: StarlightUserConfig): AstroIntegration[] {
-	const parsedConfig = StarlightConfigSchema.safeParse(opts, { errorMap });
+export default function StarstruckIntegration(opts: StarstruckUserConfig): AstroIntegration[] {
+	const parsedConfig = StarstruckConfigSchema.safeParse(opts, { errorMap });
 
 	if (!parsedConfig.success) {
 		throw new Error(
@@ -22,7 +22,7 @@ export default function StarlightIntegration(opts: StarlightUserConfig): AstroIn
 
 	const userConfig = parsedConfig.data;
 
-	const Starlight: AstroIntegration = {
+	const Starstruck: AstroIntegration = {
 		name: '@awe-player/starstruck',
 		hooks: {
 			'astro:config:setup': ({ config, injectRoute, updateConfig }) => {
@@ -36,10 +36,10 @@ export default function StarlightIntegration(opts: StarlightUserConfig): AstroIn
 				});
 				const newConfig: AstroUserConfig = {
 					vite: {
-						plugins: [vitePluginStarlightUserConfig(userConfig, config)],
+						plugins: [vitePluginStarstruckUserConfig(userConfig, config)],
 					},
 					markdown: {
-						remarkPlugins: [...starlightAsides()],
+						remarkPlugins: [...starstruckAsides()],
 						rehypePlugins: [rehypeRtlCodeSupport()],
 						shikiConfig:
 							// Configure Shiki theme if the user is using the default github-dark theme.
@@ -56,7 +56,7 @@ export default function StarlightIntegration(opts: StarlightUserConfig): AstroIn
 					if (integrations.filter((name) => name === builtin).length > 1) {
 						throw new Error(
 							`Found more than one instance of ${builtin}.\n` +
-								`Starlight includes ${builtin} by default.\n` +
+								`Starstruck includes ${builtin} by default.\n` +
 								'Please remove it from your integrations array in astro.config.mjs'
 						);
 					}
@@ -78,5 +78,5 @@ export default function StarlightIntegration(opts: StarlightUserConfig): AstroIn
 		},
 	};
 
-	return [starlightSitemap(userConfig), Starlight, mdx()];
+	return [starstruckSitemap(userConfig), Starstruck, mdx()];
 }

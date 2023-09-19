@@ -2,7 +2,7 @@
 import { getEntry } from 'astro:content';
 import config from 'virtual:starstruck/user-config';
 import EmptyContent from './components/EmptyMarkdown.md';
-import type { StarlightDocsEntry } from './utils/routing';
+import type { StarstruckDocsEntry } from './utils/routing';
 import { useTranslations } from './utils/translations';
 import MainLayout from './layout/MainLayout.astro';
 
@@ -13,9 +13,9 @@ if (locale === 'root') locale = undefined;
 const entryMeta = { dir, lang, locale };
 const t = useTranslations(locale);
 
-const fallbackEntry: StarlightDocsEntry = {
+const fallbackEntry: StarstruckDocsEntry = {
 	slug: '404',
-	id: '404.md' as StarlightDocsEntry['id'],
+	id: '404.md' as StarstruckDocsEntry['id'],
 	body: '',
 	collection: 'docs',
 	data: {

@@ -15,7 +15,7 @@ try {
 	);
 } catch {}
 
-/** Default map of UI strings based on Starlight and user-configured defaults. */
+/** Default map of UI strings based on Starstruck and user-configured defaults. */
 const defaults = buildDictionary(
 	builtinTranslations.en!,
 	userTranslations.en,

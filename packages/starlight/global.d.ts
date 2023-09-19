@@ -1,5 +1,5 @@
 declare global {
-	var StarlightThemeProvider: {
+	var StarstruckThemeProvider: {
 		updatePickers(theme?: string): void;
 	};
 }

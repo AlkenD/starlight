@@ -55,7 +55,7 @@ export function getPalettes(config: {
 }
 
 /*
-This is the default Starlight color palette in OKLCH.
+This is the default Starstruck color palette in OKLCH.
 Used as a reference when designing the algorithm for mapping
 user hue and chroma pairs to a similar palette.
 

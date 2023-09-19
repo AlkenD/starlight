@@ -1,9 +1,9 @@
 ---
 title: Riferimenti frontmatter
-description: Una panoramica sui campi predefiniti del frontmatter Starlight.
+description: Una panoramica sui campi predefiniti del frontmatter Starstruck.
 ---
 
-Puoi personalizzare pagine Markdown e MDX in Starlight definendo i valori nel frontmatter. Per esempio, una pagina potrebbe definire `title` e `description` :
+Puoi personalizzare pagine Markdown e MDX in Starstruck definendo i valori nel frontmatter. Per esempio, una pagina potrebbe definire `title` e `description` :
 
 ```md
 ---

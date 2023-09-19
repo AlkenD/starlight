@@ -1,9 +1,9 @@
 ---
 title: Referência do Frontmatter
-description: Uma visão geral dos campos padrões do frontmatter que o Starlight suporta.
+description: Uma visão geral dos campos padrões do frontmatter que o Starstruck suporta.
 ---
 
-Você pode customizar páginas Markdown e MDX no Starlight definindo valores em seu frontmatter. Por exemplo, uma página comum pode definir os campos `title` e `description`:
+Você pode customizar páginas Markdown e MDX no Starstruck definindo valores em seu frontmatter. Por exemplo, uma página comum pode definir os campos `title` e `description`:
 
 ```md
 ---

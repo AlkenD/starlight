@@ -157,6 +157,6 @@ function remarkAsides(): Plugin<[], Root> {
 
 type RemarkPlugins = NonNullable<NonNullable<AstroUserConfig['markdown']>['remarkPlugins']>;
 
-export function starlightAsides(): RemarkPlugins {
+export function starstruckAsides(): RemarkPlugins {
 	return [remarkDirective, remarkAsides()];
 }

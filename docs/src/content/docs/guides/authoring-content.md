@@ -1,9 +1,9 @@
 ---
 title: Authoring Content in Markdown
-description: An overview of the Markdown syntax Starlight supports.
+description: An overview of the Markdown syntax Starstruck supports.
 ---
 
-Starlight supports the full range of [Markdown](https://daringfireball.net/projects/markdown/) syntax in `.md` files as well as frontmatter [YAML](https://dev.to/paulasantamaria/introduction-to-yaml-125f) to define metadata such as a title and description.
+Starstruck supports the full range of [Markdown](https://daringfireball.net/projects/markdown/) syntax in `.md` files as well as frontmatter [YAML](https://dev.to/paulasantamaria/introduction-to-yaml-125f) to define metadata such as a title and description.
 
 Please be sure to check the [MDX docs](https://mdxjs.com/docs/what-is-mdx/#markdown) or [Markdoc docs](https://markdoc.dev/docs/syntax) if using those file formats, as Markdown support and usage can differ.
 
@@ -29,7 +29,7 @@ You can highlight `inline code` with backticks.
 
 ## Images
 
-Images in Starlight use [Astro’s built-in optimized asset support](https://docs.astro.build/en/guides/assets/).
+Images in Starstruck use [Astro’s built-in optimized asset support](https://docs.astro.build/en/guides/assets/).
 
 Markdown and MDX support the Markdown syntax for displaying images that includes alt-text for screen readers and assistive technology.
 
@@ -51,17 +51,17 @@ Relative image paths are also supported for images stored locally in your projec
 
 You can structure content using a heading. Headings in Markdown are indicated by a number of `#` at the start of the line.
 
-### How to structure page content in Starlight
+### How to structure page content in Starstruck
 
-Starlight is configured to automatically use your page title as a top-level heading and will include an "Overview" heading at top of each page's table of contents. We recommend starting each page with regular paragraph text content and using on-page headings from `<h2>` and down:
+Starstruck is configured to automatically use your page title as a top-level heading and will include an "Overview" heading at top of each page's table of contents. We recommend starting each page with regular paragraph text content and using on-page headings from `<h2>` and down:
 
 ```md
 ---
 title: Markdown Guide
-description: How to use Markdown in Starlight
+description: How to use Markdown in Starstruck
 ---
 
-This page describes how to use Markdown in Starlight.
+This page describes how to use Markdown in Starstruck.
 
 ## Inline Styles
 
@@ -75,7 +75,7 @@ Using headings in Markdown will automatically give you anchor links so you can l
 ```md
 ---
 title: My page of content
-description: How to use Starlight's built-in anchor links
+description: How to use Starstruck's built-in anchor links
 ---
 
 ## Introduction
@@ -93,14 +93,14 @@ Level 2 (`<h2>`) and Level 3 (`<h3>`) headings will automatically appear in the 
 
 Asides (also known as “admonitions” or “callouts”) are useful for displaying secondary information alongside a page’s main content.
 
-Starlight provides a custom Markdown syntax for rendering asides. Aside blocks are indicated using a pair of triple colons `:::` to wrap your content, and can be of type `note`, `tip`, `caution` or `danger`.
+Starstruck provides a custom Markdown syntax for rendering asides. Aside blocks are indicated using a pair of triple colons `:::` to wrap your content, and can be of type `note`, `tip`, `caution` or `danger`.
 
 You can nest any other Markdown content types inside an aside, but asides are best suited to short and concise chunks of content.
 
 ### Note aside
 
 :::note
-Starlight is a documentation website toolkit built with [Astro](https://astro.build/). You can get started with this command:
+Starstruck is a documentation website toolkit built with [Astro](https://astro.build/). You can get started with this command:
 
 ```sh
 npm create astro@latest -- --template starstruck
@@ -110,7 +110,7 @@ npm create astro@latest -- --template starstruck
 
 ````md
 :::note
-Starlight is a documentation website toolkit built with [Astro](https://astro.build/). You can get started with this command:
+Starstruck is a documentation website toolkit built with [Astro](https://astro.build/). You can get started with this command:
 
 ```sh
 npm create astro@latest -- --template starstruck
@@ -139,11 +139,11 @@ Caution and danger asides are helpful for drawing a user’s attention to detail
 If you find yourself using these a lot, it may also be a sign that the thing you are documenting could benefit from being redesigned.
 
 :::caution
-If you are not sure you want an awesome docs site, think twice before using [Starlight](../../).
+If you are not sure you want an awesome docs site, think twice before using [Starstruck](../../).
 :::
 
 :::danger
-Your users may be more productive and find your product easier to use thanks to helpful Starlight features.
+Your users may be more productive and find your product easier to use thanks to helpful Starstruck features.
 
 - Clear navigation
 - User-configurable colour theme
@@ -153,11 +153,11 @@ Your users may be more productive and find your product easier to use thanks to 
 
 ```md
 :::caution
-If you are not sure you want an awesome docs site, think twice before using [Starlight](../../).
+If you are not sure you want an awesome docs site, think twice before using [Starstruck](../../).
 :::
 
 :::danger
-Your users may be more productive and find your product easier to use thanks to helpful Starlight features.
+Your users may be more productive and find your product easier to use thanks to helpful Starstruck features.
 
 - Clear navigation
 - User-configurable colour theme
@@ -206,4 +206,4 @@ Long, single-line code blocks should not wrap. They should horizontally scroll i
 
 ## Other common Markdown features
 
-Starlight supports all other Markdown authoring syntax, such as lists and tables. See the [Markdown Cheat Sheet from The Markdown Guide](https://www.markdownguide.org/cheat-sheet/) for a quick overview of all the Markdown syntax elements.
+Starstruck supports all other Markdown authoring syntax, such as lists and tables. See the [Markdown Cheat Sheet from The Markdown Guide](https://www.markdownguide.org/cheat-sheet/) for a quick overview of all the Markdown syntax elements.

@@ -1,5 +1,5 @@
 declare module 'virtual:starstruck/user-config' {
-	const Config: import('./types').StarlightConfig;
+	const Config: import('./types').StarstruckConfig;
 	export default Config;
 }
 declare module 'virtual:starstruck/project-context' {

@@ -2,7 +2,7 @@
 
 > **_NOTE:_** Currently Work In Progress
 
-Starstruck is just a modified version of Starlight to provide a premium and space-themed experience.
+Starstruck is just a modified version of Starstruck to provide a premium and space-themed experience.
 
 ## Preview
 
@@ -10,7 +10,7 @@ Starstruck is just a modified version of Starlight to provide a premium and spac
 
 ## Documentation
 
-[Read the Starlight docs] (this is just a theme so it follows starstruck docs!)
+[Read the Starstruck docs] (this is just a theme so it follows starstruck docs!)
 
 ## License
 

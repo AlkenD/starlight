@@ -36,7 +36,7 @@ const t = useTranslations(Astro.props.locale);
 }
 
 <script>
-	class StarlightLanguageSelect extends HTMLElement {
+	class StarstruckLanguageSelect extends HTMLElement {
 		constructor() {
 			super();
 			const select = this.querySelector('select');
@@ -49,5 +49,5 @@ const t = useTranslations(Astro.props.locale);
 			}
 		}
 	}
-	customElements.define('starstruck-lang-select', StarlightLanguageSelect);
+	customElements.define('starstruck-lang-select', StarstruckLanguageSelect);
 </script>

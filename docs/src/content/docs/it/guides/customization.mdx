@@ -1,17 +1,17 @@
 ---
-title: Personalizzazione di Starlight
-description: Scopri come personalizzare il tuo sito Starlight con il tuo logo, caratteri personalizzati, design della pagina di destinazione e altro ancora.
+title: Personalizzazione di Starstruck
+description: Scopri come personalizzare il tuo sito Starstruck con il tuo logo, caratteri personalizzati, design della pagina di destinazione e altro ancora.
 ---
 
 import { Tabs, TabItem } from '@awe-player/starstruck/components';
 import FileTree from '../../../../components/file-tree.astro';
 
-Starlight fornisce stili e funzionalità predefiniti sensati, così puoi iniziare rapidamente senza bisogno di configurazione.
-Se vuoi iniziare a personalizzare l'aspetto del tuo sito Starlight, questa guida fa al caso tuo.
+Starstruck fornisce stili e funzionalità predefiniti sensati, così puoi iniziare rapidamente senza bisogno di configurazione.
+Se vuoi iniziare a personalizzare l'aspetto del tuo sito Starstruck, questa guida fa al caso tuo.
 
 ## Aggiungi il tuo logo
 
-L'aggiunta di un logo personalizzato all'intestazione del sito è un modo rapido per aggiungere il tuo marchio individuale a un sito Starlight.
+L'aggiunta di un logo personalizzato all'intestazione del sito è un modo rapido per aggiungere il tuo marchio individuale a un sito Starstruck.
 
 1. Aggiungi il file immagine del tuo logo alla directory `src/assets/`:
 
@@ -25,7 +25,7 @@ L'aggiunta di un logo personalizzato all'intestazione del sito è un modo rapido
 
    </FileTree>
 
-2. Aggiungi il percorso del tuo logo come opzione [`logo.src`](/it/reference/configuration/#logo) di Starlight in `astro.config.mjs`:
+2. Aggiungi il percorso del tuo logo come opzione [`logo.src`](/it/reference/configuration/#logo) di Starstruck in `astro.config.mjs`:
 
    ```js
    // astro.config.mjs
@@ -89,7 +89,7 @@ Puoi visualizzare diverse versioni del tuo logo in modalità chiara e scura.
 
 ## Enable sitemap
 
-Starlight ha il supporto integrato per la generazione di una mappa del sito. Abilita la generazione della mappa del sito impostando il tuo URL come `site` in `astro.config.mjs`:
+Starstruck ha il supporto integrato per la generazione di una mappa del sito. Abilita la generazione della mappa del sito impostando il tuo URL come `site` in `astro.config.mjs`:
 
 ```js
 // astro.config.mjs
@@ -102,7 +102,7 @@ export default defineConfig({
 
 ## Layout della pagina
 
-Per impostazione predefinita, le pagine Starlight utilizzano un layout con una barra laterale di navigazione globale e un indice dei contenuti che mostra le intestazioni della pagina corrente.
+Per impostazione predefinita, le pagine Starstruck utilizzano un layout con una barra laterale di navigazione globale e un indice dei contenuti che mostra le intestazioni della pagina corrente.
 
 Puoi applicare un layout di pagina più ampio senza barre laterali impostando [`template: splash`](/it/reference/frontmatter/#template) nel frontmatter di una pagina.
 Funziona particolarmente bene per le pagine di destinazione e puoi vederlo in azione sulla [home page di questo sito](/it/).
@@ -118,8 +118,8 @@ template: splash
 
 ## Indice dei contenuti
 
-Starlight visualizza un indice dei contenuti su ogni pagina per consentire ai lettori di passare più facilmente all'intestazione che stanno cercando.
-Puoi personalizzare, o addirittura disabilitare, l'indice dei contenuti a livello globale nell'integrazione Starlight o pagina per pagina in Frontmatter.
+Starstruck visualizza un indice dei contenuti su ogni pagina per consentire ai lettori di passare più facilmente all'intestazione che stanno cercando.
+Puoi personalizzare, o addirittura disabilitare, l'indice dei contenuti a livello globale nell'integrazione Starstruck o pagina per pagina in Frontmatter.
 
 Per impostazione predefinita, le intestazioni `<h2>` e `<h3>` sono incluse nell'indice dei contenuti. Modifica i livelli delle intestazioni da includere in tutto il sito utilizzando le opzioni `minHeadingLevel` e `maxHeadingLevel` nel tuo [global `tableOfContents`](/it/reference/configuration/#tableofcontents). Sostituisci queste impostazioni predefinite su una singola pagina aggiungendo le proprietà [frontmatter `tableOfContents`](/it/reference/frontmatter/#tableofcontents) corrispondenti:
 
@@ -190,7 +190,7 @@ defineConfig({
 
 ## Collegamenti social
 
-Starlight dispone del supporto integrato per aggiungere collegamenti ai tuoi account di social media all'intestazione del sito tramite l'opzione [`social`](/it/reference/configuration/#social) nell'integrazione Starlight.
+Starstruck dispone del supporto integrato per aggiungere collegamenti ai tuoi account di social media all'intestazione del sito tramite l'opzione [`social`](/it/reference/configuration/#social) nell'integrazione Starstruck.
 
 Attualmente sono supportati i collegamenti a Bitbucket, Codeberg, CodePen, Discord, GitHub, GitLab, Gitter, Instagram, LinkedIn, Mastodon, Microsoft Teams, Stack Overflow, Threads, Twitch, Twitter e Youtube.
 Facci sapere su GitHub o Discord se hai bisogno di supporto per un altro servizio!
@@ -215,11 +215,11 @@ export default defineConfig({
 
 ## Collegamenti di Modifica
 
-Starlight può visualizzare un collegamento "Modifica pagina" nel piè di pagina di ciascuna pagina.
+Starstruck può visualizzare un collegamento "Modifica pagina" nel piè di pagina di ciascuna pagina.
 Ciò rende più semplice per il lettore trovare il file da modificare per migliorare i tuoi documenti.
 Per i progetti open source in particolare, questo può aiutare a incoraggiare i contributi della tua comunità.
 
-Per abilitare i collegamenti di modifica, imposta [`editLink.baseUrl`](/it/reference/configuration/#editlink) sull'URL utilizzato per modificare il tuo repository nella configurazione dell'integrazione Starlight.
+Per abilitare i collegamenti di modifica, imposta [`editLink.baseUrl`](/it/reference/configuration/#editlink) sull'URL utilizzato per modificare il tuo repository nella configurazione dell'integrazione Starstruck.
 Il valore di `editLink.baseUrl` verrà anteposto al percorso della pagina corrente per formare il collegamento di modifica completo.
 
 I modelli comuni includono:
@@ -227,9 +227,9 @@ I modelli comuni includono:
 - GitHub: `https://github.com/USER_NAME/REPO_NAME/edit/BRANCH_NAME/`
 - GitLab: `https://gitlab.com/USER_NAME/REPO_NAME/-/edit/BRANCH_NAME/`
 
-Se il tuo progetto Starlight non è nella radice del tuo repository, includi il percorso del progetto alla fine dell'URL di base.
+Se il tuo progetto Starstruck non è nella radice del tuo repository, includi il percorso del progetto alla fine dell'URL di base.
 
-Questo esempio mostra il collegamento di modifica configurato per i documenti Starlight, che si trovano nella sottodirectory `docs/` sul ramo `main` del repository `withastro/starstruck` su GitHub:
+Questo esempio mostra il collegamento di modifica configurato per i documenti Starstruck, che si trovano nella sottodirectory `docs/` sul ramo `main` del repository `withastro/starstruck` su GitHub:
 
 ```js
 // astro.config.mjs
@@ -250,7 +250,7 @@ export default defineConfig({
 
 ## Pagina 404 personalizzata
 
-Per impostazione predefinita, i siti Starlight visualizzano una semplice pagina 404.
+Per impostazione predefinita, i siti Starstruck visualizzano una semplice pagina 404.
 Puoi personalizzarlo aggiungendo un file `404.md` (o `404.mdx`) alla tua directory `src/content/docs/`:
 
 <FileTree>
@@ -264,7 +264,7 @@ Puoi personalizzarlo aggiungendo un file `404.md` (o `404.mdx`) alla tua directo
 
 </FileTree>
 
-Puoi utilizzare tutto il layout di pagina e le tecniche di personalizzazione di Starlight nella tua pagina 404. Ad esempio, la pagina 404 predefinita utilizza il componente [`splash` template](#page-layout) e [`hero`](/it/reference/frontmatter/#hero) in frontmatter:
+Puoi utilizzare tutto il layout di pagina e le tecniche di personalizzazione di Starstruck nella tua pagina 404. Ad esempio, la pagina 404 predefinita utilizza il componente [`splash` template](#page-layout) e [`hero`](/it/reference/frontmatter/#hero) in frontmatter:
 
 ```md
 ---
@@ -279,10 +279,10 @@ hero:
 
 ## Caratteri personalizzati
 
-Per impostazione predefinita, Starlight utilizza i caratteri sans-serif disponibili sul dispositivo locale dell'utente per tutto il testo.
+Per impostazione predefinita, Starstruck utilizza i caratteri sans-serif disponibili sul dispositivo locale dell'utente per tutto il testo.
 Ciò garantisce che la documentazione venga caricata rapidamente in un carattere familiare a ciascun utente, senza richiedere larghezza di banda aggiuntiva per scaricare file di caratteri di grandi dimensioni.
 
-Se devi aggiungere un carattere personalizzato al tuo sito Starlight, puoi impostare i caratteri da utilizzare nei file CSS personalizzati o con qualsiasi altra [tecnica di stile Astro](https://docs.astro.build/it/guides/styling/) .
+Se devi aggiungere un carattere personalizzato al tuo sito Starstruck, puoi impostare i caratteri da utilizzare nei file CSS personalizzati o con qualsiasi altra [tecnica di stile Astro](https://docs.astro.build/it/guides/styling/) .
 
 ### Imposta i caratteri
 
@@ -320,7 +320,7 @@ Per utilizzare Google Fonts, segui la [guida alla configurazione di Fontsource](
    }
    ```
 
-3. Aggiungi il percorso del tuo file `font-face.css` all'array `customCss` di Starlight in `astro.config.mjs`:
+3. Aggiungi il percorso del tuo file `font-face.css` all'array `customCss` di Starstruck in `astro.config.mjs`:
 
    ```js
    // astro.config.mjs
@@ -379,7 +379,7 @@ Fornisce moduli npm che puoi installare per i caratteri che desideri utilizzare 
 
       </Tabs>
 
-3.  Aggiungi i file CSS Fontsource all'array `customCss` di Starlight in `astro.config.mjs`:
+3.  Aggiungi i file CSS Fontsource all'array `customCss` di Starstruck in `astro.config.mjs`:
 
     ```js
     // astro.config.mjs
@@ -405,7 +405,7 @@ Fornisce moduli npm che puoi installare per i caratteri che desideri utilizzare 
 ### Usa i caratteri
 
 Per applicare il font che hai impostato al tuo sito, utilizza il nome del font scelto in un [file CSS personalizzato](/it/guides/css-and-tailwind/#custom-css-styles).
-Ad esempio, per sovrascrivere ovunque il font predefinito di Starlight, imposta la proprietà personalizzata `--sl-font`:
+Ad esempio, per sovrascrivere ovunque il font predefinito di Starstruck, imposta la proprietà personalizzata `--sl-font`:
 
 ```css
 /* src/styles/custom.css */

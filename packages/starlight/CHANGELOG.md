@@ -22,7 +22,7 @@
 
 - [#615](https://github.com/withastro/starstruck/pull/615) [`7b75b3e`](https://github.com/withastro/starstruck/commit/7b75b3eb7e6f7870a0adef2d6534ff48309fdb0e) Thanks [@delucis](https://github.com/delucis)! - Bump minimum required Astro version to 3.0
 
-  ⚠️ **BREAKING CHANGE** Astro v2 is no longer supported. Make sure you [update Astro](https://docs.astro.build/en/guides/upgrade-to/v3/) and any other integrations at the same time as updating Starlight.
+  ⚠️ **BREAKING CHANGE** Astro v2 is no longer supported. Make sure you [update Astro](https://docs.astro.build/en/guides/upgrade-to/v3/) and any other integrations at the same time as updating Starstruck.
 
 ## 0.8.1
 
@@ -34,7 +34,7 @@
 
 ### Minor Changes
 
-- [#529](https://github.com/withastro/starstruck/pull/529) [`c2d0e7f`](https://github.com/withastro/starstruck/commit/c2d0e7f2699e60a48a3a9074eee6439dee8624a1) Thanks [@delucis](https://github.com/delucis)! - For improved compatibility with Tailwind, some Starlight built-in class names are now prefixed with `"sl-"`.
+- [#529](https://github.com/withastro/starstruck/pull/529) [`c2d0e7f`](https://github.com/withastro/starstruck/commit/c2d0e7f2699e60a48a3a9074eee6439dee8624a1) Thanks [@delucis](https://github.com/delucis)! - For improved compatibility with Tailwind, some Starstruck built-in class names are now prefixed with `"sl-"`.
 
   While not likely, if you were relying on one of these internal class names in your own components or custom CSS, you will need to update to use the prefixed version.
 
@@ -99,7 +99,7 @@
 
 - [#470](https://github.com/withastro/starstruck/pull/470) [`d076aec`](https://github.com/withastro/starstruck/commit/d076aec856921c2fe8a5204a0c31580a846af180) Thanks [@delucis](https://github.com/delucis)! - Drop support for the `--sl-hue-accent` CSS custom property.
 
-  ⚠️ **BREAKING CHANGE** — In previous Starlight versions you could control the accent color by setting the `--sl-hue-accent` custom property. This could result in inaccessible color contrast and unpredictable results.
+  ⚠️ **BREAKING CHANGE** — In previous Starstruck versions you could control the accent color by setting the `--sl-hue-accent` custom property. This could result in inaccessible color contrast and unpredictable results.
 
   You must now set accent colors directly. If you relied on setting `--sl-hue-accent`, migrate by setting light and dark mode colors in your custom CSS:
 
@@ -234,7 +234,7 @@
 
 ### Minor Changes
 
-- [#313](https://github.com/withastro/starstruck/pull/313) [`dc42569`](https://github.com/withastro/starstruck/commit/dc42569bddfae2c48ea60c0dd5cc70643a129a68) Thanks [@delucis](https://github.com/delucis)! - Add a `not-content` CSS class that allows users to opt out of Starlight’s default content styling
+- [#313](https://github.com/withastro/starstruck/pull/313) [`dc42569`](https://github.com/withastro/starstruck/commit/dc42569bddfae2c48ea60c0dd5cc70643a129a68) Thanks [@delucis](https://github.com/delucis)! - Add a `not-content` CSS class that allows users to opt out of Starstruck’s default content styling
 
 - [#297](https://github.com/withastro/starstruck/pull/297) [`fb15a9b`](https://github.com/withastro/starstruck/commit/fb15a9b65252ac5fa32304096fbdb49ecdd6009b) Thanks [@HiDeoo](https://github.com/HiDeoo)! - Improve `<Tabs>` component keyboard interactions
 
@@ -242,7 +242,7 @@
 
 ### Patch Changes
 
-- [#318](https://github.com/withastro/starstruck/pull/318) [`5db3e6e`](https://github.com/withastro/starstruck/commit/5db3e6ea2e5cb7d9552fc54567811358851fb533) Thanks [@delucis](https://github.com/delucis)! - Support relative paths in Starlight config for `customCSS` and `logo` paths
+- [#318](https://github.com/withastro/starstruck/pull/318) [`5db3e6e`](https://github.com/withastro/starstruck/commit/5db3e6ea2e5cb7d9552fc54567811358851fb533) Thanks [@delucis](https://github.com/delucis)! - Support relative paths in Starstruck config for `customCSS` and `logo` paths
 
 ## 0.4.2
 
@@ -272,7 +272,7 @@
 
 - [#256](https://github.com/withastro/starstruck/pull/256) [`048e948`](https://github.com/withastro/starstruck/commit/048e948bce650d559517850c73d827733b8164c4) Thanks [@HiDeoo](https://github.com/HiDeoo)! - Add new global `lastUpdated` option defaulting to `false` to define whether or not the last updated date is shown in the footer. A page can override this setting or the generated date using the new `lastUpdated` frontmatter field.
 
-  ⚠️ Breaking change. Starlight will no longer show this date by default. To keep the previous behavior, you must explicitly set `lastUpdated` to `true` in your configuration.
+  ⚠️ Breaking change. Starstruck will no longer show this date by default. To keep the previous behavior, you must explicitly set `lastUpdated` to `true` in your configuration.
 
   ```diff
   starstruck({
@@ -333,7 +333,7 @@
 
 ### Minor Changes
 
-- [#171](https://github.com/withastro/starstruck/pull/171) [`198c3f0`](https://github.com/withastro/starstruck/commit/198c3f001410f259dab7d085136a37afe863cfa4) Thanks [@delucis](https://github.com/delucis)! - Add Starlight generator tag to HTML output
+- [#171](https://github.com/withastro/starstruck/pull/171) [`198c3f0`](https://github.com/withastro/starstruck/commit/198c3f001410f259dab7d085136a37afe863cfa4) Thanks [@delucis](https://github.com/delucis)! - Add Starstruck generator tag to HTML output
 
 - [#217](https://github.com/withastro/starstruck/pull/217) [`490fd98`](https://github.com/withastro/starstruck/commit/490fd98d4e7b38ec01c568eee0ab00844e59c53d) Thanks [@delucis](https://github.com/delucis)! - Updated sidebar styles. Sidebars now support top-level links and groups are styled with a subtle border and indentation to improve comprehension of nesting.
 
@@ -341,7 +341,7 @@
 
 - [#210](https://github.com/withastro/starstruck/pull/210) [`cb5b121`](https://github.com/withastro/starstruck/commit/cb5b1210e23548e2983865a4b38308b0f54dc7ce) Thanks [@delucis](https://github.com/delucis)! - Change page title ID to `_top` for cleaner hash URLs
 
-  ⚠️ Potentially breaking change if you were linking manually to `#starlight__overview` anywhere. If you were, update these links to use `#_top` instead.
+  ⚠️ Potentially breaking change if you were linking manually to `#starstruck__overview` anywhere. If you were, update these links to use `#_top` instead.
 
 ### Patch Changes
 
@@ -487,7 +487,7 @@
 
 ### Patch Changes
 
-- [#78](https://github.com/withastro/starstruck/pull/78) [`d3ee6fc`](https://github.com/withastro/starstruck/commit/d3ee6fc643de7a320a6bb83432cdcfbb0a4e4289) Thanks [@delucis](https://github.com/delucis)! - Add support for customising and translating Starlight’s UI.
+- [#78](https://github.com/withastro/starstruck/pull/78) [`d3ee6fc`](https://github.com/withastro/starstruck/commit/d3ee6fc643de7a320a6bb83432cdcfbb0a4e4289) Thanks [@delucis](https://github.com/delucis)! - Add support for customising and translating Starstruck’s UI.
 
   Users can provide translations in JSON files in `src/content/i18n/` which is a data collection. For example, a `src/content/i18n/de.json` might translate the search UI:
 
@@ -498,7 +498,7 @@
   }
   ```
 
-  This change also allows Starlight to provide built-in support for more languages than just English and adds German & Spanish support.
+  This change also allows Starstruck to provide built-in support for more languages than just English and adds German & Spanish support.
 
 - [#76](https://github.com/withastro/starstruck/pull/76) [`5e82073`](https://github.com/withastro/starstruck/commit/5e8207350dba0fce92fa101d311db627e2157654) Thanks [@lloydjatkinson](https://github.com/lloydjatkinson)! - Scale down code block font size to match Figma design
 
@@ -540,7 +540,7 @@
 
 - [#51](https://github.com/withastro/starstruck/pull/51) [`3adbdbb`](https://github.com/withastro/starstruck/commit/3adbdbbb71a4b3648984fa1028fa116d0aff9a7d) Thanks [@delucis](https://github.com/delucis)! - Support displaying a custom logo in the nav bar.
 
-- [#51](https://github.com/withastro/starstruck/pull/51) [`3adbdbb`](https://github.com/withastro/starstruck/commit/3adbdbbb71a4b3648984fa1028fa116d0aff9a7d) Thanks [@delucis](https://github.com/delucis)! - All Starlight projects now use Astro’s experimental optimized asset support.
+- [#51](https://github.com/withastro/starstruck/pull/51) [`3adbdbb`](https://github.com/withastro/starstruck/commit/3adbdbbb71a4b3648984fa1028fa116d0aff9a7d) Thanks [@delucis](https://github.com/delucis)! - All Starstruck projects now use Astro’s experimental optimized asset support.
 
 ## 0.0.6
 
@@ -568,7 +568,7 @@
 
 ### Patch Changes
 
-- [#40](https://github.com/withastro/starstruck/pull/40) [`e22dd76`](https://github.com/withastro/starstruck/commit/e22dd76136f9749bb5d43f96241385faccfc90a1) Thanks [@delucis](https://github.com/delucis)! - Generate sitemaps for Starlight sites
+- [#40](https://github.com/withastro/starstruck/pull/40) [`e22dd76`](https://github.com/withastro/starstruck/commit/e22dd76136f9749bb5d43f96241385faccfc90a1) Thanks [@delucis](https://github.com/delucis)! - Generate sitemaps for Starstruck sites
 
 - [#38](https://github.com/withastro/starstruck/pull/38) [`623b577`](https://github.com/withastro/starstruck/commit/623b577319b1dea2d6c42f1b680139fb858d85d6) Thanks [@delucis](https://github.com/delucis)! - Add tab components for use in MDX.
 

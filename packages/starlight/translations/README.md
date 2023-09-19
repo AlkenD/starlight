@@ -1,7 +1,7 @@
-# Starlight UI translation files
+# Starstruck UI translation files
 
-This directory contains translation data for Starlight’s UI.
-Each language has its own JSON file and follows the [translation structure described in Starlight’s docs](https://starstruck.astro.build/guides/i18n/#translate-starlights-ui).
+This directory contains translation data for Starstruck’s UI.
+Each language has its own JSON file and follows the [translation structure described in Starstruck’s docs](https://starstruck.astro.build/guides/i18n/#translate-starstrucks-ui).
 
 ## Add a new language
 
@@ -11,4 +11,4 @@ Each language has its own JSON file and follows the [translation structure descr
 
 3. Import your file in [`index.ts`](./index.ts) and add your language to the `Object.entries`.
 
-4. Open a pull request on GitHub to add your file to Starlight!
+4. Open a pull request on GitHub to add your file to Starstruck!

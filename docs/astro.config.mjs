@@ -51,7 +51,7 @@ export default defineConfig({
 	},
 	integrations: [
 		starstruck({
-			title: 'Starlight',
+			title: 'Starstruck',
 			logo: {
 				light: '/src/assets/logo-light.svg',
 				dark: '/src/assets/logo-dark.svg',

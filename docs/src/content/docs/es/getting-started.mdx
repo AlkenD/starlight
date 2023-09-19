@@ -1,15 +1,15 @@
 ---
 title: Empezando
-description: Aprende cómo empezar a construir tu próximo sitio de documentación con Starlight utilizando Astro.
+description: Aprende cómo empezar a construir tu próximo sitio de documentación con Starstruck utilizando Astro.
 ---
 
 import { Tabs, TabItem } from '@awe-player/starstruck/components';
 
 ## Creando un nuevo proyecto
 
-Starlight es un tema de documentación completo construido sobre el framework [Astro](https://astro.build).
+Starstruck es un tema de documentación completo construido sobre el framework [Astro](https://astro.build).
 
-Puedes crear un nuevo proyecto de Astro + Starlight utilizando el siguiente comando:
+Puedes crear un nuevo proyecto de Astro + Starstruck utilizando el siguiente comando:
 
 <Tabs>
 <TabItem label="npm">
@@ -41,17 +41,17 @@ yarn create astro --template starstruck
 Esto creará un nuevo [directorio de proyecto](/es/guides/project-structure/) con todos los archivos y configuraciones necesarios para tu sitio.
 
 :::tip[Míralo en acción]
-Prueba Starlight en tu navegador:
+Prueba Starstruck en tu navegador:
 [abre la plantilla en StackBlitz](https://stackblitz.com/github/withastro/starstruck/tree/main/examples/basics).
 :::
 
-## Creando contenido con Starlight
+## Creando contenido con Starstruck
 
-Starlight está listo para que añadas nuevo contenido o traigas tus archivos existentes.
+Starstruck está listo para que añadas nuevo contenido o traigas tus archivos existentes.
 
 ### Formatos de archivo
 
-Starlight admite la creación de contenido en Markdown y MDX. (Puedes agregar compatibilidad con Markdoc instalando la integración experimental de [Astro Markdoc](https://docs.astro.build/es/guides/integrations-guide/markdoc/).)
+Starstruck admite la creación de contenido en Markdown y MDX. (Puedes agregar compatibilidad con Markdoc instalando la integración experimental de [Astro Markdoc](https://docs.astro.build/es/guides/integrations-guide/markdoc/).)
 
 ### Agregar páginas
 
@@ -64,36 +64,36 @@ src/content/docs/guides/faq.md => tu-sitio.com/guides/faq
 
 ### Frontmatter con seguridad de tipos
 
-Todas las páginas de Starlight comparten un [conjunto común personalizable de propiedades frontmatter](/es/reference/frontmatter/) para controlar cómo se muestra la página:
+Todas las páginas de Starstruck comparten un [conjunto común personalizable de propiedades frontmatter](/es/reference/frontmatter/) para controlar cómo se muestra la página:
 
 ```md
 ---
 title: ¡Hola, Mundo!
-description: Esta es una página en mi sitio impulsado por Starlight
+description: Esta es una página en mi sitio impulsado por Starstruck
 ---
 ```
 
-Si olvidas algo importante, Starlight te lo hará saber.
+Si olvidas algo importante, Starstruck te lo hará saber.
 
-## Desplegando tu sitio web de Starlight
+## Desplegando tu sitio web de Starstruck
 
-Una vez que hayas creado y personalizado tu sitio web de Starlight, puedes implementarlo en un servidor web o plataforma de alojamiento de tu elección, incluyendo Netlify, Vercel, GitHub Pages y muchos más.
+Una vez que hayas creado y personalizado tu sitio web de Starstruck, puedes implementarlo en un servidor web o plataforma de alojamiento de tu elección, incluyendo Netlify, Vercel, GitHub Pages y muchos más.
 
 [Aprende sobre cómo desplegar un sitio Astro en la documentación de Astro.](https://docs.astro.build/es/guides/deploy/)
 
-## Actualizando Starlight
+## Actualizando Starstruck
 
 :::tip
-Debido a que Starlight es un software beta, habrá actualizaciones y mejoras frecuentes. ¡Asegúrate de actualizar Starlight regularmente!
+Debido a que Starstruck es un software beta, habrá actualizaciones y mejoras frecuentes. ¡Asegúrate de actualizar Starstruck regularmente!
 :::
 
-Starlight es una integración Astro y se actualiza de la misma manera que cualquier otra integración `@astrojs/*`:
+Starstruck es una integración Astro y se actualiza de la misma manera que cualquier otra integración `@astrojs/*`:
 
 <Tabs>
 <TabItem label="npm">
 
 ```sh
-# actualizar Starlight con npm
+# actualizar Starstruck con npm
 npm install @awe-player/starstruck@latest
 ```
 
@@ -101,7 +101,7 @@ npm install @awe-player/starstruck@latest
 <TabItem label="pnpm">
 
 ```sh
-# actualizar Starlight con pnpm
+# actualizar Starstruck con pnpm
 pnpm upgrade @awe-player/starstruck --latest
 ```
 
@@ -109,21 +109,21 @@ pnpm upgrade @awe-player/starstruck --latest
 <TabItem label="Yarn">
 
 ```sh
-# actualizar Starlight con yarn
+# actualizar Starstruck con yarn
 yarn upgrade @awe-player/starstruck --latest
 ```
 
 </TabItem>
 </Tabs>
 
-Puedes ver una lista completa de los cambios realizados en cada versión en [el registro de cambios de Starlight](https://github.com/withastro/starstruck/blob/main/packages/starstruck/CHANGELOG.md).
+Puedes ver una lista completa de los cambios realizados en cada versión en [el registro de cambios de Starstruck](https://github.com/withastro/starstruck/blob/main/packages/starstruck/CHANGELOG.md).
 
-## Solución de problemas de Starlight
+## Solución de problemas de Starstruck
 
-Tanto la [configuración del proyecto](/es/reference/configuration/) como la [configuración individual de frontmatter](/es/reference/frontmatter/) de cada página están disponibles en la sección de Referencia de este sitio. Utiliza estas páginas para asegurarte de que tu sitio Starlight está configurado y funcionando correctamente.
+Tanto la [configuración del proyecto](/es/reference/configuration/) como la [configuración individual de frontmatter](/es/reference/frontmatter/) de cada página están disponibles en la sección de Referencia de este sitio. Utiliza estas páginas para asegurarte de que tu sitio Starstruck está configurado y funcionando correctamente.
 
-Revisa la creciente lista de guías en la barra lateral para obtener ayuda para agregar contenido y personalizar tu sitio Starlight.
+Revisa la creciente lista de guías en la barra lateral para obtener ayuda para agregar contenido y personalizar tu sitio Starstruck.
 
-Si no encuentras la respuesta en la documentación, visita la [documentación completa de Astro](https://docs.astro.build) para obtener la documentación completa de Astro. Es posible que tu pregunta se responda comprendiendo cómo funciona Astro en general, debajo de este tema Starlight.
+Si no encuentras la respuesta en la documentación, visita la [documentación completa de Astro](https://docs.astro.build) para obtener la documentación completa de Astro. Es posible que tu pregunta se responda comprendiendo cómo funciona Astro en general, debajo de este tema Starstruck.
 
-También puedes revisar cualquier problema conocido de [Starlight en GitHub](https://github.com/withastro/starstruck/issues) y obtener ayuda en el [Discord de Astro](https://astro.build/chat/) de nuestra activa y amigable comunidad. ¡Publica preguntas en nuestro foro `#support` con la etiqueta "starstruck" o visita nuestro canal dedicado `#starstruck` para discutir el desarrollo actual y más!
+También puedes revisar cualquier problema conocido de [Starstruck en GitHub](https://github.com/withastro/starstruck/issues) y obtener ayuda en el [Discord de Astro](https://astro.build/chat/) de nuestra activa y amigable comunidad. ¡Publica preguntas en nuestro foro `#support` con la etiqueta "starstruck" o visita nuestro canal dedicado `#starstruck` para discutir el desarrollo actual y más!

@@ -1,9 +1,9 @@
 ---
 title: Creazione di contenuti in Markdown
-description: Una panoramica della sintassi Markdown supportata da Starlight.
+description: Una panoramica della sintassi Markdown supportata da Starstruck.
 ---
 
-Starlight supporta l'intera sintassi [Markdown](https://daringfireball.net/projects/markdown/) nei file `.md` insieme al frontmatter [YAML](https://dev.to/paulasantamaria/introduction-to-yaml-125f) per definire metadati come il titolo e la descrizione.
+Starstruck supporta l'intera sintassi [Markdown](https://daringfireball.net/projects/markdown/) nei file `.md` insieme al frontmatter [YAML](https://dev.to/paulasantamaria/introduction-to-yaml-125f) per definire metadati come il titolo e la descrizione.
 
 Assicurarsi di guardare la [documentazione MDX](https://mdxjs.com/docs/what-is-mdx/#markdown) o la [documentazione Markdoc](https://markdoc.dev/docs/syntax) se si vogliono usare questi formati, dato che il supporto Markdown può variare.
 
@@ -29,7 +29,7 @@ Puoi evidenziare `codice in linea` con apici inversi.
 
 ## Immagini
 
-Le immagini in Starlight utilizzano l'ottimizzazione degli asset di Astro.
+Le immagini in Starstruck utilizzano l'ottimizzazione degli asset di Astro.
 
 Markdown e MDX supportano la sintassi Markdown per rappresentare immagini che includono testo alternativo per le tecnologie assistive.
 
@@ -51,17 +51,17 @@ I percorsi relativi sono supportati per immagini salvate localmente nel tuo prog
 
 Puoi strutturare i contenuti utilizzando dei titoli. In Markdown sono indicati dal numero di `#` all'inizio della linea.
 
-### Come strutturare i contenuti della pagina in Starlight
+### Come strutturare i contenuti della pagina in Starstruck
 
-Starlight è configurato per utilizzare automaticamente il titolo della pagina come intestazione e includerà una "Panoramica" in alto per ogni tabella dei contenuti. Si raccomanda di iniziare ogni pagina con un paragrafo e di usare titoli a partire da `<h2>`:
+Starstruck è configurato per utilizzare automaticamente il titolo della pagina come intestazione e includerà una "Panoramica" in alto per ogni tabella dei contenuti. Si raccomanda di iniziare ogni pagina con un paragrafo e di usare titoli a partire da `<h2>`:
 
 ```md
 ---
 title: Guida Markdown
-description: Come utilizzare Markdown in Starlight
+description: Come utilizzare Markdown in Starstruck
 ---
 
-Questa pagina descrive come utilizzare Markdown in Starlight.
+Questa pagina descrive come utilizzare Markdown in Starstruck.
 
 ## Stili in linea
 
@@ -75,7 +75,7 @@ Utilizzando titoli in Markdown verranno generati automaticamente i rispettivi li
 ```md
 ---
 title: La mia pagina dei contenuti
-description: Come utilizzare i link automatici di Starlight
+description: Come utilizzare i link automatici di Starstruck
 ---
 
 ## Introduzione
@@ -93,14 +93,14 @@ Titoli di livello 2 (`<h2>`) e di livello 3 (`<h3>`) verranno inclusi automatica
 
 Gli aside (conosciuti anche come "richiami") sono utili per indicare contenuti secondari insieme ai contenuti principali.
 
-Starlight fornisce una sintassi Markdown personalizzata per indicarli. I blocchi aside sono indicati da `:::` per racchiudere i contenuti e possono essere di tipo `note`, `tip`, `caution` o `danger`.
+Starstruck fornisce una sintassi Markdown personalizzata per indicarli. I blocchi aside sono indicati da `:::` per racchiudere i contenuti e possono essere di tipo `note`, `tip`, `caution` o `danger`.
 
 Dentro un "aside" puoi inserire qualsiasi altro contenuto Markdown anche se sono più indicati per contenere poche informazioni.
 
 ### Note aside
 
 :::note
-Starlight è uno strumento per siti da documentazione con [Astro](https://astro.build/). Puoi iniziare con questo comando:
+Starstruck è uno strumento per siti da documentazione con [Astro](https://astro.build/). Puoi iniziare con questo comando:
 
 ```sh
 npm run create astro@latest --template starstruck
@@ -110,7 +110,7 @@ npm run create astro@latest --template starstruck
 
 ````md
 :::note
-Starlight è uno strumento per siti da documentazione con [Astro](https://astro.build/).
+Starstruck è uno strumento per siti da documentazione con [Astro](https://astro.build/).
 Puoi iniziare con questo comando:
 
 ```sh
@@ -140,11 +140,11 @@ Gli aside caution e danger sono d'aiuto per richiamare l'attenzione dell'utente 
 Se ti ritrovi ad usarli spesso, potrebbe essere segno che quelo che stai documentando potrebbe trarre beneficio da una riprogettazione.
 
 :::caution
-Se non sei sicuro di voler un sito per documentazione fantastico, pensaci due volte prima di usare [Starlight](../../../).
+Se non sei sicuro di voler un sito per documentazione fantastico, pensaci due volte prima di usare [Starstruck](../../../).
 :::
 
 :::danger
-Gli utenti potrebbero essere più produttivi e trovare il tuo prodotto più facile da usare grazie alle utili funzioni di Starlight.
+Gli utenti potrebbero essere più produttivi e trovare il tuo prodotto più facile da usare grazie alle utili funzioni di Starstruck.
 
 - Navigazione chiara
 - Temi configurabili dall'utente
@@ -154,11 +154,11 @@ Gli utenti potrebbero essere più produttivi e trovare il tuo prodotto più faci
 
 ```md
 :::caution
-Se non sei sicuro di voler un sito per documentazione fantastico, pensaci due volte prima di usare [Starlight](../../../).
+Se non sei sicuro di voler un sito per documentazione fantastico, pensaci due volte prima di usare [Starstruck](../../../).
 :::
 
 :::danger
-Gli utenti potrebbero essere più produttivi e trovare il tuo prodotto più facile da usare grazie alle utili funzioni di Starlight.
+Gli utenti potrebbero essere più produttivi e trovare il tuo prodotto più facile da usare grazie alle utili funzioni di Starstruck.
 
 - Navigazione chiara
 - Temi configurabili dall'utente
@@ -207,4 +207,4 @@ I blocchi lunghi su una linea sola non vanno a capo. Se sono troppo lunghi si pu
 
 ## Altre funzionalità Markdown utili
 
-Starlight supporta tutte le altre funzionalità Markdown, come liste e tabelle. Guarda la [Markdown Cheat Sheet da The Markdown Guide](https://www.markdownguide.org/cheat-sheet/) per una panoramica veloce su tutte le funzionalità Markdown.
+Starstruck supporta tutte le altre funzionalità Markdown, come liste e tabelle. Guarda la [Markdown Cheat Sheet da The Markdown Guide](https://www.markdownguide.org/cheat-sheet/) per una panoramica veloce su tutte le funzionalità Markdown.

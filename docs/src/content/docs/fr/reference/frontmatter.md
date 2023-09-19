@@ -1,9 +1,9 @@
 ---
 title: Référence du frontmatter
-description: Une vue d'ensemble des champs du frontmatter par défaut pris en charge par Starlight.
+description: Une vue d'ensemble des champs du frontmatter par défaut pris en charge par Starstruck.
 ---
 
-Vous pouvez personnaliser des pages Markdown et MDX individuelles dans Starlight en définissant des valeurs dans leur frontmatter. Par exemple, une page normale peut définir les champs `title` et `description` :
+Vous pouvez personnaliser des pages Markdown et MDX individuelles dans Starstruck en définissant des valeurs dans leur frontmatter. Par exemple, une page normale peut définir les champs `title` et `description` :
 
 ```md
 ---

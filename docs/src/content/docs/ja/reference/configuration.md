@@ -1,11 +1,11 @@
 ---
 title: 設定方法
-description: Starlightがサポートするすべての設定オプションの概要。
+description: Starstruckがサポートするすべての設定オプションの概要。
 ---
 
 ## `starstruck`インテグレーションの設定
 
-Starlightは[Astro](https://astro.build)ウェブフレームワークの上に構築されたインテグレーションです。`astro.config.mjs`設定ファイル内でプロジェクトの設定をおこないます。
+Starstruckは[Astro](https://astro.build)ウェブフレームワークの上に構築されたインテグレーションです。`astro.config.mjs`設定ファイル内でプロジェクトの設定をおこないます。
 
 ```js
 // astro.config.mjs
@@ -327,7 +327,7 @@ starstruck({
 
 **type:** `string[]`
 
-Starlightサイトの見た目をカスタマイズするためのCSSファイルを設定します。
+Starstruckサイトの見た目をカスタマイズするためのCSSファイルを設定します。
 
 プロジェクトのルートからの相対パスで指定したローカルのCSSファイル（`'./src/custom.css'`など）と、npmモジュールとしてインストールしたCSS（`'@fontsource/roboto'`など）に対応しています。
 
@@ -341,7 +341,7 @@ starstruck({
 
 **type:** [`HeadConfig[]`](#headconfig)
 
-Starlightサイトの`<head>`にカスタムタグを追加します。アナリティクスやその他のサードパーティのスクリプトやリソースを追加するのに便利です。
+Starstruckサイトの`<head>`にカスタムタグを追加します。アナリティクスやその他のサードパーティのスクリプトやリソースを追加するのに便利です。
 
 ```js
 starstruck({

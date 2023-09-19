@@ -1,6 +1,6 @@
 import { z } from 'astro/zod';
 import { docsSchema, i18nSchema } from '../schema';
-import type { StarlightDocsEntry } from '../utils/routing';
+import type { StarstruckDocsEntry } from '../utils/routing';
 import { vi } from 'vitest';
 
 const frontmatterSchema = docsSchema()({
@@ -22,17 +22,17 @@ const frontmatterSchema = docsSchema()({
 });
 
 function mockDoc(
-	id: StarlightDocsEntry['id'],
+	id: StarstruckDocsEntry['id'],
 	data: z.input<typeof frontmatterSchema>,
 	body = ''
-): StarlightDocsEntry {
+): StarstruckDocsEntry {
 	return {
 		id,
 		slug: id.replace(/\.[^\.]+$/, '').replace(/\/index$/, ''),
 		body,
 		collection: 'docs',
 		data: frontmatterSchema.parse(data),
-		render: (() => {}) as StarlightDocsEntry['render'],
+		render: (() => {}) as StarstruckDocsEntry['render'],
 	};
 }
 

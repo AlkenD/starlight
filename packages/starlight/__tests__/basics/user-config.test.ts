@@ -1,8 +1,8 @@
 import { expect, test } from 'vitest';
-import { StarlightConfigSchema } from '../../utils/user-config';
+import { StarstruckConfigSchema } from '../../utils/user-config';
 
 test('preserve social config order', () => {
-	const config = StarlightConfigSchema.parse({
+	const config = StarstruckConfigSchema.parse({
 		title: 'Test',
 		social: {
 			twitch: 'https://www.twitch.tv/bholmesdev',

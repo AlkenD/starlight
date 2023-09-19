@@ -1,11 +1,11 @@
 ---
 title: 组件
-description: 使用 Starlight 在 MDX 中使用组件
+description: 使用 Starstruck 在 MDX 中使用组件
 ---
 
 组件让你可以轻松地重用 UI 或样式。
 例如，链接卡片或 YouTube 嵌入。
-Starlight 支持在 [MDX](https://mdxjs.com/) 文件中使用组件，并提供了一些常用组件供你使用。
+Starstruck 支持在 [MDX](https://mdxjs.com/) 文件中使用组件，并提供了一些常用组件供你使用。
 
 [在 Astro 文档中了解更多关于构建组件的内容](https://docs.astro.build/zh-cn/core-concepts/astro-components/).
 
@@ -28,12 +28,12 @@ import AnotherComponent from '../../../components/AnotherComponent.astro';
 <AnotherComponent>组件也可以包含**嵌套内容**。</AnotherComponent>
 ```
 
-因为 Starlight 是由 Astro 提供支持的，所以你可以在 MDX 文件中添加对任何 [支持的 UI 框架（React、Preact、Svelte、Vue、Solid、Lit 和 Alpine）](https://docs.astro.build/zh-cn/core-concepts/framework-components/) 构建的组件的支持。
+因为 Starstruck 是由 Astro 提供支持的，所以你可以在 MDX 文件中添加对任何 [支持的 UI 框架（React、Preact、Svelte、Vue、Solid、Lit 和 Alpine）](https://docs.astro.build/zh-cn/core-concepts/framework-components/) 构建的组件的支持。
 在 Astro 文档中了解更多关于 [在 MDX 中使用组件](https://docs.astro.build/zh-cn/guides/markdown-content/#在-mdx-中使用组件) 的内容。
 
-### 与 Starlight 样式的兼容
+### 与 Starstruck 样式的兼容
 
-Starlight 为你的 Markdown 内容应用了默认样式，例如在元素之间添加边距。
+Starstruck 为你的 Markdown 内容应用了默认样式，例如在元素之间添加边距。
 
 如果这些样式与你的组件的外观冲突，请在组件上设置 `not-content` 类来禁用它们。
 
@@ -43,13 +43,13 @@ Starlight 为你的 Markdown 内容应用了默认样式，例如在元素之间
 ---
 
 <div class="not-content">
-	<p>不受 Starlight 默认内容样式的影响。</p>
+	<p>不受 Starstruck 默认内容样式的影响。</p>
 </div>
 ```
 
 ## 内置组件
 
-Starlight 为常见的文档用例提供了一些内置组件。
+Starstruck 为常见的文档用例提供了一些内置组件。
 这些组件可以从 `@awe-player/starstruck/components` 包中获取。
 
 ### 选项卡
@@ -79,10 +79,10 @@ import { Tabs, TabItem } from '@awe-player/starstruck/components';
 
 import { Card, CardGrid } from '@awe-player/starstruck/components';
 
-你可以使用 `<Card>` 组件在与 Starlight 样式匹配的盒子中显示内容。
+你可以使用 `<Card>` 组件在与 Starstruck 样式匹配的盒子中显示内容。
 当有足够的空间时，可以使用 `<CardGrid>` 组件将多个卡片封装在一起，以便并排显示卡片。
 
-`<Card>` 需要一个 `title`，并且可以选择包含一个 `icon` 属性，该属性设置为 [Starlight 内置图标](#所有图标) 之一的名称。
+`<Card>` 需要一个 `title`，并且可以选择包含一个 `icon` 属性，该属性设置为 [Starstruck 内置图标](#所有图标) 之一的名称。
 
 ```mdx
 import { Card, CardGrid } from '@awe-player/starstruck/components';
@@ -136,8 +136,8 @@ import { Card, CardGrid } from '@awe-player/starstruck/components';
 import { LinkCard, CardGrid } from '@awe-player/starstruck/components';
 
 <LinkCard
-	title="自定义 Starlight"
-	description="了解如何使用自定义样式、字体等打造你自己的 Starlight 网站。"
+	title="自定义 Starstruck"
+	description="了解如何使用自定义样式、字体等打造你自己的 Starstruck 网站。"
 	href="/zh/guides/customization/"
 />
 
@@ -152,8 +152,8 @@ import { LinkCard, CardGrid } from '@awe-player/starstruck/components';
 import { LinkCard } from '@awe-player/starstruck/components';
 
 <LinkCard
-	title="自定义 Starlight"
-	description="了解如何使用自定义样式、字体等打造你自己的 Starlight 网站。"
+	title="自定义 Starstruck"
+	description="了解如何使用自定义样式、字体等打造你自己的 Starstruck 网站。"
 	href="/zh/guides/customization/"
 />
 
@@ -167,7 +167,7 @@ import { LinkCard } from '@awe-player/starstruck/components';
 import { Icon } from '@awe-player/starstruck/components';
 import IconsList from '../../../../components/icons-list.astro';
 
-Starlight 提供了一组常用的图标，你可以使用 `<Icon>` 组件在你的内容中显示。
+Starstruck 提供了一组常用的图标，你可以使用 `<Icon>` 组件在你的内容中显示。
 
 每个 `<Icon>` 都需要一个 [`name`](#所有图标)，并且可以选择包含 `label`、`size` 和 `color` 属性。
 

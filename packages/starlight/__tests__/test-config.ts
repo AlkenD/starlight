@@ -2,13 +2,13 @@
 
 import { getViteConfig } from 'astro/config';
 import type { z } from 'astro/zod';
-import { vitePluginStarlightUserConfig } from '../integrations/virtual-user-config';
-import { StarlightConfigSchema } from '../utils/user-config';
+import { vitePluginStarstruckUserConfig } from '../integrations/virtual-user-config';
+import { StarstruckConfigSchema } from '../utils/user-config';
 
-export function defineVitestConfig(config: z.input<typeof StarlightConfigSchema>) {
+export function defineVitestConfig(config: z.input<typeof StarstruckConfigSchema>) {
 	return getViteConfig({
 		plugins: [
-			vitePluginStarlightUserConfig(StarlightConfigSchema.parse(config), {
+			vitePluginStarstruckUserConfig(StarstruckConfigSchema.parse(config), {
 				root: new URL(import.meta.url),
 			}),
 		],

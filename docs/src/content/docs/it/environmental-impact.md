@@ -1,12 +1,12 @@
 ---
 title: Documentazione ecologica
-description: Impara come Starlight può aiutarti a costruire siti per documentazione più verdi e ridurre la tua impronta ecologica.
+description: Impara come Starstruck può aiutarti a costruire siti per documentazione più verdi e ridurre la tua impronta ecologica.
 ---
 
 Le stime dell'impatto ambientale del web si aggirano tra il [2%][sf] e il [4% delle emissioni globali di gas serra][bbc], equivalente circa alle emissioni dell'industria aerea.
 Ci sono molti complessi fattori per calcolare l'impatto ambientale di un sito web, ma questa guida include dei consigli per ridurre l'impronta ecologica del tuo sito.
 
-La buona notizia è che scegliere Starlight è un ottimo punto di partenza.
+La buona notizia è che scegliere Starstruck è un ottimo punto di partenza.
 Secondo il Website Carbon Calculator, questo sito è [più pulito del 99% delle pagine web testate][sl-carbon], producendo 0,01 g di CO₂ per pagina visitata.
 
 ## Peso per pagina
@@ -14,19 +14,19 @@ Secondo il Website Carbon Calculator, questo sito è [più pulito del 99% delle 
 Più dati una pagina web trasferisce, più risorse energetiche sono necessarie.
 Nell'aprile 2023, la pagina web media richiede all'utente di scaricare più di 2.000 KB secondo i [dati dell'HTTP Archive][http].
 
-Starlight costruisce le pagine nel modo più leggero possibile.
+Starstruck costruisce le pagine nel modo più leggero possibile.
 Per esempio, alla prima visita, l'utente scaricherà meno di 50 KB di dati compressi — soltanto il 2,5 % della media dell'HTTP Archive.
 Inoltre, con una strategia appropriata di cache, successive visite potranno richiedere solamente 10 KB.
 
 ### Immagini
 
-Anche se Starlight fornisce un buon punto di partenza, le immagini possono velocemente aumentare il peso della pagina.
-Starlight usa il [supporto ottimizzato degli asset][assets] di Astro per ottimizzare le immagini nei file Markdown e MDX.
+Anche se Starstruck fornisce un buon punto di partenza, le immagini possono velocemente aumentare il peso della pagina.
+Starstruck usa il [supporto ottimizzato degli asset][assets] di Astro per ottimizzare le immagini nei file Markdown e MDX.
 
 ### Componenti UI
 
 I componenti costruiti con framework UI come React o Vue possono facilmente aggiungere grandi quantità di JavaScript nella pagina.
-Dato che Starlight è costruito su Astro, i componenti come questo caricano **zero JavaScript all'utente per default** grazie alle [Isole Astro][islands].
+Dato che Starstruck è costruito su Astro, i componenti come questo caricano **zero JavaScript all'utente per default** grazie alle [Isole Astro][islands].
 
 ### Caching
 
@@ -34,7 +34,7 @@ La cache è utilizzata per salvare per un periodo di tempo dati già scaricati i
 Una buona strategia di cache permette all'utente di scaricare nuovi contenuti il prima possibile quando cambiano, ma anche evitare di scaricare nuovamente gli stessi più volte quando non sono cambiati.
 
 Il modo più comune per configurarla è grazie al [`Cache-Control` header HTTP][cache].
-Quando si utilizza Starlight, puoi controllare per quanto tempo salvare in cache nella cartella `/_astro/`.
+Quando si utilizza Starstruck, puoi controllare per quanto tempo salvare in cache nella cartella `/_astro/`.
 Questa cartella contiene CSS, JavaScript e altri asset che possono essere salvati in cache per sempre, riducendo download non necessari:
 
 ```
@@ -56,7 +56,7 @@ La configurazione della cache dipende dal tuo host. Per esempio, Vercel applica 
 ## Consumo energetico
 
 Come una pagina web sia costruita può impattare l'energia richiesta per visualizzarla nel dispositivo dell'utente.
-Starlight riduce il consumo energetico del cellulare, tablet o computer che l'utente utilizza sfruttando pochissimo JavaScript.
+Starstruck riduce il consumo energetico del cellulare, tablet o computer che l'utente utilizza sfruttando pochissimo JavaScript.
 
 Bisogna fare attenzione quando si vuole aggiungere funzionalità come script analitici o contenuti che utilizzano grandi quantità di JavaScript come video incorporati, dato che questi possono aumentare il consumo energetico.
 Se necessario, si considerino [Cabin][cabin], [Fathom][fathom], o [Plausible][plausible] per funzionalità analitiche siccome non sono pesanti.
@@ -91,7 +91,7 @@ Questi test eseguiti con [Website Carbon Calculator][wcc] confrontano pagine sim
 
 | Framework                   | CO₂ per visita |
 | --------------------------- | -------------- |
-| [Starlight][sl-carbon]      | 0,01 g         |
+| [Starstruck][sl-carbon]     | 0,01 g         |
 | [VitePress][vp-carbon]      | 0,05 g         |
 | [Docus][dc-carbon]          | 0,05 g         |
 | [Sphinx][sx-carbon]         | 0,07 g         |

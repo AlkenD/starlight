@@ -1,11 +1,11 @@
 ---
 title: Configuration Reference
-description: An overview of all the configuration options Starlight supports.
+description: An overview of all the configuration options Starstruck supports.
 ---
 
 ## Configure the `starstruck` integration
 
-Starlight is an integration built on top the [Astro](https://astro.build) web framework. You can configure your project inside the `astro.config.mjs` configuration file:
+Starstruck is an integration built on top the [Astro](https://astro.build) web framework. You can configure your project inside the `astro.config.mjs` configuration file:
 
 ```js
 // astro.config.mjs
@@ -332,7 +332,7 @@ starstruck({
 
 **type:** `string[]`
 
-Provide CSS files to customize the look and feel of your Starlight site.
+Provide CSS files to customize the look and feel of your Starstruck site.
 
 Supports local CSS files relative to the root of your project, e.g. `'./src/custom.css'`, and CSS you installed as an npm module, e.g. `'@fontsource/roboto'`.
 
@@ -346,7 +346,7 @@ starstruck({
 
 **type:** [`HeadConfig[]`](#headconfig)
 
-Add custom tags to the `<head>` of your Starlight site.
+Add custom tags to the `<head>` of your Starstruck site.
 Can be useful for adding analytics and other third-party scripts and resources.
 
 ```js

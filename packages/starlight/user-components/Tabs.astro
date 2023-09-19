@@ -5,7 +5,9 @@ const panelHtml = await Astro.slots.render('default');
 const { html, panels } = processPanels(panelHtml);
 ---
 
-<starstruck-tabs class="not-prose border border-zinc-800 rounded-xl flex flex-col justify-center">
+<starstruck-tabs
+	class="not-prose border border-zinc-200 dark:border-zinc-800 rounded-xl flex flex-col justify-center"
+>
 	{
 		panels && (
 			<div class="p-4">
@@ -28,7 +30,7 @@ const { html, panels } = processPanels(panelHtml);
 			</div>
 		)
 	}
-	<div class="h-[1px] w-full bg-zinc-800"></div>
+	<div class="h-[1px] w-full bg-zinc-200 dark:bg-zinc-800"></div>
 	<Fragment set:html={html} />
 </starstruck-tabs>
 
@@ -36,24 +38,10 @@ const { html, panels } = processPanels(panelHtml);
 	[aria-selected='true'] {
 		@apply dark:bg-white dark:text-black text-white bg-black;
 	}
-
-	:root {
-		--astro-code-color-background: #ffffff23;
-		--astro-code-color-text: #ffffff;
-		--astro-code-token-constant: #3b82f6;
-		--astro-code-token-string: #ec4899;
-		--astro-code-token-comment: #e4e4e7;
-		--astro-code-token-keyword: var(--sl-color-purple-high);
-		--astro-code-token-parameter: #8b5cf6;
-		--astro-code-token-function: #8b5cf6;
-		--astro-code-token-string-expression: var(--sl-color-green-high);
-		--astro-code-token-punctuation: var(--sl-color-gray-2);
-		--astro-code-token-link: var(--sl-color-blue-high);
-	}
 </style>
 
 <script>
-	class StarlightTabs extends HTMLElement {
+	class StarstruckTabs extends HTMLElement {
 		tabs: HTMLAnchorElement[];
 		panels: HTMLElement[];
 
@@ -119,5 +107,5 @@ const { html, panels } = processPanels(panelHtml);
 		}
 	}
 
-	customElements.define('starstruck-tabs', StarlightTabs);
+	customElements.define('starstruck-tabs', StarstruckTabs);
 </script>

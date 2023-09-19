@@ -1,9 +1,9 @@
 ---
 title: Frontmatter 참조
-description: Starlight가 지원하는 기본 frontmatter 필드에 대한 개요입니다.
+description: Starstruck가 지원하는 기본 frontmatter 필드에 대한 개요입니다.
 ---
 
-Frontmatter의 값을 설정하여 Starlight에서 개별 Markdown 및 MDX 페이지를 변경할 수 있습니다. 예를 들어 일반 페이지에서는 `title` 및 `description` 필드를 설정할 수 있습니다.
+Frontmatter의 값을 설정하여 Starstruck에서 개별 Markdown 및 MDX 페이지를 변경할 수 있습니다. 예를 들어 일반 페이지에서는 `title` 및 `description` 필드를 설정할 수 있습니다.
 
 ```md
 ---

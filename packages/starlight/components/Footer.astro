@@ -1,7 +1,7 @@
 ---
 import config from 'virtual:starstruck/user-config';
 import { type SidebarEntry, getPrevNextLinks } from '../utils/navigation';
-import type { StarlightDocsEntry } from '../utils/routing';
+import type { StarstruckDocsEntry } from '../utils/routing';
 import type { LocaleData } from '../utils/slugs';
 
 import LastUpdated from '../components/LastUpdated.astro';
@@ -9,7 +9,7 @@ import PrevNextLinks from '../components/PrevNextLinks.astro';
 import EditLink from './EditLink.astro';
 
 interface Props extends LocaleData {
-	entry: StarlightDocsEntry;
+	entry: StarstruckDocsEntry;
 	sidebar: SidebarEntry[];
 }
 

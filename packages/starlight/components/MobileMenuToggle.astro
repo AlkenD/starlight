@@ -13,7 +13,7 @@ const t = useTranslations(Astro.props.locale);
 	<button
 		aria-expanded="false"
 		aria-label={t('menuButton.accessibleLabel')}
-		aria-controls="starlight__sidebar"
+		aria-controls="starstruck__sidebar"
 		class="sl-flex md:sl-hidden"
 	>
 		<Icon name="bars" />
@@ -21,7 +21,7 @@ const t = useTranslations(Astro.props.locale);
 </starstruck-menu-button>
 
 <script>
-	class StarlightMenuButton extends HTMLElement {
+	class StarstruckMenuButton extends HTMLElement {
 		btn = this.querySelector('button')!;
 
 		constructor() {
@@ -53,7 +53,7 @@ const t = useTranslations(Astro.props.locale);
 		}
 	}
 
-	customElements.define('starstruck-menu-button', StarlightMenuButton);
+	customElements.define('starstruck-menu-button', StarstruckMenuButton);
 </script>
 
 <style>

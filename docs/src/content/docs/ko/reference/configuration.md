@@ -1,11 +1,11 @@
 ---
 title: 구성 참조
-description: Starlight가 지원하는 모든 구성 옵션에 대한 개요입니다.
+description: Starstruck가 지원하는 모든 구성 옵션에 대한 개요입니다.
 ---
 
 ## `starstruck` 통합 구성
 
-Starlight는 [Astro](https://astro.build) 웹 프레임워크 위에 구축된 통합입니다. `astro.config.mjs` 구성 파일에서 프로젝트를 구성할 수 있습니다.
+Starstruck는 [Astro](https://astro.build) 웹 프레임워크 위에 구축된 통합입니다. `astro.config.mjs` 구성 파일에서 프로젝트를 구성할 수 있습니다.
 
 ```js
 // astro.config.mjs
@@ -332,7 +332,7 @@ starstruck({
 
 **타입:** `string[]`
 
-Starlight 사이트의 모양과 느낌을 변경하려면 CSS 파일을 제공하세요.
+Starstruck 사이트의 모양과 느낌을 변경하려면 CSS 파일을 제공하세요.
 
 `'./src/custom.css'`와 같은 프로젝트 루트에서 상대 경로로 지정한 로컬 CSS 파일 및 `'@fontsource/roboto'`와 같은 npm 모듈로 설치한 CSS를 지원합니다.
 
@@ -346,7 +346,7 @@ starstruck({
 
 **타입:** [`HeadConfig[]`](#headconfig)
 
-Starlight 사이트의 `<head>`에 사용자 정의 태그를 추가합니다. 분석 및 기타 서드파티 스크립트와 리소스를 추가하는 데 유용할 수 있습니다.
+Starstruck 사이트의 `<head>`에 사용자 정의 태그를 추가합니다. 분석 및 기타 서드파티 스크립트와 리소스를 추가하는 데 유용할 수 있습니다.
 
 ```js
 starstruck({

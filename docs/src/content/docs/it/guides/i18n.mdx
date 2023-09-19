@@ -1,15 +1,15 @@
 ---
 title: Internazionalizzazione (i18n)
-description: Impara come configurare il tuo sito Starlight per supportare più lingue.
+description: Impara come configurare il tuo sito Starstruck per supportare più lingue.
 ---
 
 import FileTree from '../../../../components/file-tree.astro';
 
-Starlight offre il supporto per siti multilingua, compreso di indirizzamento, contenuti fallback e completo supporto per lingue scritte da destra a sinistra (RTL).
+Starstruck offre il supporto per siti multilingua, compreso di indirizzamento, contenuti fallback e completo supporto per lingue scritte da destra a sinistra (RTL).
 
 ## Configurare i18n
 
-1. Indicare a Starlight le lingue che si vuole supportare passando [`locales`](/it/reference/configuration/#locales) e [`defaultLocale`](/it/reference/configuration/#defaultlocale) all'integrazione Starlight:
+1. Indicare a Starstruck le lingue che si vuole supportare passando [`locales`](/it/reference/configuration/#locales) e [`defaultLocale`](/it/reference/configuration/#defaultlocale) all'integrazione Starstruck:
 
    ```js
    // astro.config.mjs
@@ -59,7 +59,7 @@ Starlight offre il supporto per siti multilingua, compreso di indirizzamento, co
 
    </FileTree>
 
-3. Puoi ora aggiungere file nelle cartelle. Usa file con lo stesso nome per associare pagine tra i linguaggi e sfruttare le funzionalità di Starlight per i18n, compresi i contenuti di fallback, avvisi di traduzione e altro.
+3. Puoi ora aggiungere file nelle cartelle. Usa file con lo stesso nome per associare pagine tra i linguaggi e sfruttare le funzionalità di Starstruck per i18n, compresi i contenuti di fallback, avvisi di traduzione e altro.
 
    Per esempio, crea `ar/index.md` e `en/index.md` per rappresentare la homepage rispettivamente in arabo e inglese.
 
@@ -109,7 +109,7 @@ Quando si usa una lingua `root`, metti le pagine direttamente in `src/content/do
 
 #### Siti monolingua
 
-Per default, Starlight è un sito monolingua (inglese). Per creare un sito monolingua in un'altra, impostala come `root` in `locales`:
+Per default, Starstruck è un sito monolingua (inglese). Per creare un sito monolingua in un'altra, impostala come `root` in `locales`:
 
 ```js
 // astro.config.mjs
@@ -131,17 +131,17 @@ export default defineConfig({
 });
 ```
 
-Questo ti permette di sovrascrivere le impostazione predefinite di Starlight per la lingua senza abilitare l'internazionalizzazione.
+Questo ti permette di sovrascrivere le impostazione predefinite di Starstruck per la lingua senza abilitare l'internazionalizzazione.
 
 ## Contenuti fallback
 
-Starlight si aspetta che crei pagine equivalenti per tutte le lingue impostate. Per esempio, se hai un file `en/about.md`, crea un `about.md` per ogni altra lingua impostata. Questo permette a Starlight di avere contenuti fallback per le pagine che non hai ancora tradotto.
+Starstruck si aspetta che crei pagine equivalenti per tutte le lingue impostate. Per esempio, se hai un file `en/about.md`, crea un `about.md` per ogni altra lingua impostata. Questo permette a Starstruck di avere contenuti fallback per le pagine che non hai ancora tradotto.
 
-Se una traduzione non è ancora disponibile per una lingua, Starlight mostrerà ai lettori i contenuti per quella pagina nel linguaggio predefinito (impostato da `defaultLocale`). Per esempio, se non hai ancora creato una versione italiana della pagina About e la lingua predefinita è inglese, gli utenti per `/it/about` vedranno i contenuti in inglese di `/en/about` con un avviso che la pagina non è stata ancora tradotta.
+Se una traduzione non è ancora disponibile per una lingua, Starstruck mostrerà ai lettori i contenuti per quella pagina nel linguaggio predefinito (impostato da `defaultLocale`). Per esempio, se non hai ancora creato una versione italiana della pagina About e la lingua predefinita è inglese, gli utenti per `/it/about` vedranno i contenuti in inglese di `/en/about` con un avviso che la pagina non è stata ancora tradotta.
 
-## Tradurre l'interfaccia Starlight
+## Tradurre l'interfaccia Starstruck
 
-In aggiunta alla possibilità di avere pagine multilingua, Starlight permette di tradurre le scritte dell'interfaccia (per esempio l'intestazione "In questa pagina" nella tabella dei contenuti) in modo che i lettori possano vedere il sito interamente nella lingua selezionata.
+In aggiunta alla possibilità di avere pagine multilingua, Starstruck permette di tradurre le scritte dell'interfaccia (per esempio l'intestazione "In questa pagina" nella tabella dei contenuti) in modo che i lettori possano vedere il sito interamente nella lingua selezionata.
 
 Le stringhe dell'interfaccia utente tradotte in inglese, ceco, francese, tedesco, italiano, giapponese, portoghese, olandese, danese, spagnolo, turco, arabo, norvegese, farsi, cinese semplificato, coreano e svedese sono disponibili di default e accettiamo [contributi per aggiungere altre lingue predefinite](https://github.com/withastro/starstruck/blob/main/CONTRIBUTING.md).
 

@@ -1,12 +1,12 @@
 ---
 title: 环保文档
-description: 了解 Starlight 如何帮助你构建更环保的文档站点并减少碳足迹。
+description: 了解 Starstruck 如何帮助你构建更环保的文档站点并减少碳足迹。
 ---
 
 网络行业对气候影响的估计范围从[2%][sf]到[全球碳排放量的4%][bbc]，大致相当于航空业的排放量。
 计算网站生态影响的因素很多，但本指南包含了一些减少文档站点环境足迹的技巧。
 
-好消息是，选择 Starlight 是一个很好的开始。
+好消息是，选择 Starstruck 是一个很好的开始。
 根据网站碳计算器的数据，本站点[比 99% 的网页更环保][sl-carbon]，每个页面访问产生 0.01g 的 CO₂。
 
 ## 页面大小
@@ -14,19 +14,19 @@ description: 了解 Starlight 如何帮助你构建更环保的文档站点并�
 网页传输的数据越多，它所需的能源资源就越多。
 根据[来自 HTTP 存档的数据][http]，2023 年 4 月，中位数网页需要用户下载超过 2,000 KB。
 
-Starlight 构建的页面尽可能轻量。
+Starstruck 构建的页面尽可能轻量。
 例如，在第一次访问时，用户将下载少于 50 KB 的压缩数据，仅为 HTTP 存档中位数的 2.5%。
 通过良好的缓存策略，后续导航可以下载少至 10 KB。
 
 ### 图片
 
-虽然 Starlight 提供了一个很好的基线，但是你添加到文档页面的图片可能会快速增加页面的大小。
-Starlight 使用 Astro 的 [优化的资源支持][assets] 来优化 Markdown 和 MDX 文件中的本地图片。
+虽然 Starstruck 提供了一个很好的基线，但是你添加到文档页面的图片可能会快速增加页面的大小。
+Starstruck 使用 Astro 的 [优化的资源支持][assets] 来优化 Markdown 和 MDX 文件中的本地图片。
 
 ### UI 组件
 
 使用 React 或 Vue 等 UI 框架构建的组件可以轻松地向页面添加大量 JavaScript。
-因为 Starlight 是基于 Astro 构建的，所以这样的组件默认情况下不会加载**任何客户端 JavaScript**，这要归功于 [Astro 岛屿][islands]。
+因为 Starstruck 是基于 Astro 构建的，所以这样的组件默认情况下不会加载**任何客户端 JavaScript**，这要归功于 [Astro 岛屿][islands]。
 
 ### 缓存
 
@@ -34,7 +34,7 @@ Starlight 使用 Astro 的 [优化的资源支持][assets] 来优化 Markdown �
 良好的缓存策略确保用户在内容更改时尽快获得新内容，但也避免了在内容未更改时反复下载相同的内容。
 
 最常见的配置缓存的方法是使用 [`Cache-Control` HTTP headers][cache]。
-使用 Starlight 时，你可以为 `/_astro/` 目录中的所有内容设置长时间缓存。
+使用 Starstruck 时，你可以为 `/_astro/` 目录中的所有内容设置长时间缓存。
 该目录包含可以安全永久缓存的 CSS、JavaScript 和其他捆绑的资源，从而减少不必要的下载：
 
 ```
@@ -56,7 +56,7 @@ Cache-Control: public, max-age=604800, immutable
 ## 功耗
 
 网页的制作方式会影响其在用户设备上的运行功率。
-通过使用最少的 JavaScript，Starlight 减少了用户手机、平板电脑或电脑加载和呈现网页所需的处理能力。
+通过使用最少的 JavaScript，Starstruck 减少了用户手机、平板电脑或电脑加载和呈现网页所需的处理能力。
 
 当添加诸如分析跟踪脚本或 JavaScript 重型内容（如视频嵌入）之类的功能时，请注意这些功能会增加页面的功耗。
 如果你需要分析，请考虑选择像 [Cabin][cabin]、[Fathom][fathom] 或 [Plausible][plausible] 这样的轻量级选项。
@@ -91,7 +91,7 @@ Cache-Control: public, max-age=604800, immutable
 
 | 框架                        | 每页访问量产生 CO₂ |
 | --------------------------- | ------------------ |
-| [Starlight][sl-carbon]      | 0.01g              |
+| [Starstruck][sl-carbon]     | 0.01g              |
 | [VitePress][vp-carbon]      | 0.05g              |
 | [Docus][dc-carbon]          | 0.05g              |
 | [Sphinx][sx-carbon]         | 0.07g              |

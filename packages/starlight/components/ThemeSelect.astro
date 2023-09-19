@@ -26,13 +26,13 @@ const t = useTranslations(Astro.props.locale);
 
 {/* Inlined to avoid FOUC. Uses global scope from `ThemeProvider.astro` */}
 <script is:inline>
-	StarlightThemeProvider.updatePickers();
+	StarstruckThemeProvider.updatePickers();
 </script>
 
 <script>
 	type Theme = 'auto' | 'dark' | 'light';
 
-	class StarlightThemeSelect extends HTMLElement {
+	class StarstruckThemeSelect extends HTMLElement {
 		/** Key in `localStorage` to store color theme preference at. */
 		#key = 'starstruck-theme';
 
@@ -65,7 +65,7 @@ const t = useTranslations(Astro.props.locale);
 
 		/** Update select menu UI, document theme, and local storage state. */
 		#onThemeChange(theme: Theme): void {
-			StarlightThemeProvider.updatePickers(theme);
+			StarstruckThemeProvider.updatePickers(theme);
 			document.documentElement.dataset.theme =
 				theme === 'auto' ? this.#getPreferredColorScheme() : theme;
 			this.#storeTheme(theme);
@@ -89,5 +89,5 @@ const t = useTranslations(Astro.props.locale);
 		}
 	}
 
-	customElements.define('starstruck-theme-select', StarlightThemeSelect);
+	customElements.define('starstruck-theme-select', StarstruckThemeSelect);
 </script>

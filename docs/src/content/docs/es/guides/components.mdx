@@ -1,9 +1,9 @@
 ---
 title: Componentes
-description: Utilizando componentes en MDX con Starlight.
+description: Utilizando componentes en MDX con Starstruck.
 ---
 
-Los componentes te permiten reutilizar fácilmente una parte de la interfaz de usuario o un estilo de manera consistente. Ejemplos podrían incluir una tarjeta de enlace o un incrustado de YouTube. Starlight admite el uso de componentes en archivos [MDX](https://mdxjs.com/) y proporciona algunos componentes comunes para que los utilices.
+Los componentes te permiten reutilizar fácilmente una parte de la interfaz de usuario o un estilo de manera consistente. Ejemplos podrían incluir una tarjeta de enlace o un incrustado de YouTube. Starstruck admite el uso de componentes en archivos [MDX](https://mdxjs.com/) y proporciona algunos componentes comunes para que los utilices.
 
 [Aprende más sobre la construcción de componentes en los docs de Astro](https://docs.astro.build/en/core-concepts/astro-components/).
 
@@ -27,11 +27,11 @@ import OtroComponente from '../../componentes/OtroComponente.astro';
 </OtroComponente>
 ```
 
-Debido a que Starlight está impulsado por Astro, puedes agregar soporte para componentes construidos con cualquier [framework UI compatible (React, Preact, Svelte, Vue, Solid, Lit y Alpine)](https://docs.astro.build/en/core-concepts/framework-components/) en tus archivos MDX.
+Debido a que Starstruck está impulsado por Astro, puedes agregar soporte para componentes construidos con cualquier [framework UI compatible (React, Preact, Svelte, Vue, Solid, Lit y Alpine)](https://docs.astro.build/en/core-concepts/framework-components/) en tus archivos MDX.
 
-### Compatibilidad con los estilos de Starlight
+### Compatibilidad con los estilos de Starstruck
 
-Starlight aplica estilos predeterminados a tu contenido de Markdown, por ejemplo, agregando márgenes entre elementos.
+Starstruck aplica estilos predeterminados a tu contenido de Markdown, por ejemplo, agregando márgenes entre elementos.
 Si estos estilos entran en conflicto con la apariencia de tu componente, establece la clase `not-content` en tu componente para desactivarlos.
 
 ```astro
@@ -41,14 +41,15 @@ Si estos estilos entran en conflicto con la apariencia de tu componente, estable
 
 <div class="not-content">
 	<p>
-		No se ve afectado por los estilos predeterminados de contenido de Starlight.
+		No se ve afectado por los estilos predeterminados de contenido de
+		Starstruck.
 	</p>
 </div>
 ```
 
-### Compatibilidad con los estilos de Starlight
+### Compatibilidad con los estilos de Starstruck
 
-Starlight aplica estilos predeterminados a tu contenido en Markdown, por ejemplo, añadiendo margen entre elementos.
+Starstruck aplica estilos predeterminados a tu contenido en Markdown, por ejemplo, añadiendo margen entre elementos.
 Si estos estilos entran en conflicto con la apariencia de tu componente, establece la clase `not-content` en tu componente para deshabilitarlos.
 
 ```astro
@@ -58,14 +59,14 @@ Si estos estilos entran en conflicto con la apariencia de tu componente, estable
 
 <div class="not-content">
 	<p>
-		No se ve afectado por el estilo de contenido predeterminado de Starlight.
+		No se ve afectado por el estilo de contenido predeterminado de Starstruck.
 	</p>
 </div>
 ```
 
 ## Componentes integrados
 
-Starlight proporciona algunos componentes integrados para casos de uso comunes en la documentación. Estos componentes están disponibles en el paquete `@awe-player/starstruck/components`.
+Starstruck proporciona algunos componentes integrados para casos de uso comunes en la documentación. Estos componentes están disponibles en el paquete `@awe-player/starstruck/components`.
 
 ### Pestañas
 
@@ -93,9 +94,9 @@ El código anterior genera las siguientes pestañas en la página:
 
 import { Card, CardGrid } from '@awe-player/starstruck/components';
 
-Puedes mostrar contenido en una caja que coincida con los estilos de Starlight utilizando el componente `<Card>`. Envuelve varias tarjetas en el componente `<CardGrid>` para mostrar las tarjetas una al lado de la otra cuando hay suficiente espacio.
+Puedes mostrar contenido en una caja que coincida con los estilos de Starstruck utilizando el componente `<Card>`. Envuelve varias tarjetas en el componente `<CardGrid>` para mostrar las tarjetas una al lado de la otra cuando hay suficiente espacio.
 
-El componente `<Card>` requiere un `title` y opcionalmente puede incluir un atributo `icon` establecido con el nombre de [uno de los iconos integrados de Starlight](#todos-los-iconos).
+El componente `<Card>` requiere un `title` y opcionalmente puede incluir un atributo `icon` establecido con el nombre de [uno de los iconos integrados de Starstruck](#todos-los-iconos).
 
 ```mdx
 import { Card, CardGrid } from '@awe-player/starstruck/components';
@@ -152,8 +153,8 @@ Agrupa varios componentes `<LinkCard>` en `<CardGrid>` para mostrar las tarjetas
 import { LinkCard, CardGrid } from '@awe-player/starstruck/components';
 
 <LinkCard
-	title="Personalizando Starlight"
-	description="Aprende a hacer que tu sitio Starlight sea único con estilos personalizados, fuentes y más."
+	title="Personalizando Starstruck"
+	description="Aprende a hacer que tu sitio Starstruck sea único con estilos personalizados, fuentes y más."
 	href="/es/guides/customization/"
 />
 
@@ -171,8 +172,8 @@ El código anterior genera lo siguiente en la página:
 import { LinkCard } from '@awe-player/starstruck/components';
 
 <LinkCard
-	title="Personalizando Starlight"
-	description="Aprende a hacer que tu sitio Starlight sea único con estilos personalizados, fuentes y más."
+	title="Personalizando Starstruck"
+	description="Aprende a hacer que tu sitio Starstruck sea único con estilos personalizados, fuentes y más."
 	href="/es/guides/customization/"
 />
 
@@ -189,7 +190,7 @@ import { LinkCard } from '@awe-player/starstruck/components';
 import { Icon } from '@awe-player/starstruck/components';
 import IconsList from '../../../../components/icons-list.astro';
 
-Starlight proporciona un conjunto de iconos comunes que puedes mostrar en tu contenido utilizando el componente `<Icon>`.
+Starstruck proporciona un conjunto de iconos comunes que puedes mostrar en tu contenido utilizando el componente `<Icon>`.
 
 Cada `<Icon>` requiere un atributo `name` que se puede encontrar en la lista de [todos los iconos](#all-icons), y opcionalmente puede incluir atributos como `label`, `size` y `color`.
 

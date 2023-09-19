@@ -1,31 +1,31 @@
 ---
 title: Documentación ecológica
-description: Aprende cómo Starlight puede ayudarte a construir sitios de documentación más ecológicos y reducir tu huella de carbono.
+description: Aprende cómo Starstruck puede ayudarte a construir sitios de documentación más ecológicos y reducir tu huella de carbono.
 ---
 
 Las estimaciones del impacto climático de la industria web oscilan entre el [2%][sf] y el [4% de las emisiones globales de carbono][bbc], equivalente aproximadamente a las emisiones de la industria de la aviación. Hay muchos factores complejos en el cálculo del impacto ecológico de un sitio web, pero esta guía incluye algunos consejos para reducir la huella ambiental de tu sitio de documentación.
 
-La buena noticia es que elegir Starlight es un excelente comienzo. Según el Website Carbon Calculator, este sitio es [más limpio que el 99% de las páginas web analizadas][sl-carbon], produciendo 0.01g de CO₂ por visita a la página.
+La buena noticia es que elegir Starstruck es un excelente comienzo. Según el Website Carbon Calculator, este sitio es [más limpio que el 99% de las páginas web analizadas][sl-carbon], produciendo 0.01g de CO₂ por visita a la página.
 
 ## Peso de la página
 
 Cuanto más datos transfiera una página web, más recursos energéticos requerirá. En abril de 2023, la mediana de una página web requería que un usuario descargara más de 2.000 KB, según [los datos del HTTP Archive][http].
 
-Starlight construye páginas que son lo más livianas posible. Por ejemplo, en una primera visita, un usuario descargará menos de 50 KB de datos comprimidos, lo que representa solo el 2.5% de la mediana del archivo HTTP. Con una buena estrategia de almacenamiento en caché, las navegaciones posteriores pueden descargar tan solo 10 KB.
+Starstruck construye páginas que son lo más livianas posible. Por ejemplo, en una primera visita, un usuario descargará menos de 50 KB de datos comprimidos, lo que representa solo el 2.5% de la mediana del archivo HTTP. Con una buena estrategia de almacenamiento en caché, las navegaciones posteriores pueden descargar tan solo 10 KB.
 
 ### Imágenes
 
-Si bien Starlight proporciona una buena base, las imágenes que agregas a tus páginas de documentación pueden aumentar rápidamente el peso de la página. Starlight utiliza el [soporte de assets optimizados][assets] de Astro para optimizar las imágenes locales en tus archivos Markdown y MDX.
+Si bien Starstruck proporciona una buena base, las imágenes que agregas a tus páginas de documentación pueden aumentar rápidamente el peso de la página. Starstruck utiliza el [soporte de assets optimizados][assets] de Astro para optimizar las imágenes locales en tus archivos Markdown y MDX.
 
 ### Componentes UI
 
-Los componentes construidos con frameworks UI como React o Vue pueden añadir fácilmente grandes cantidades de JavaScript a una página. Sin embargo, debido a que Starlight está construido sobre Astro, los componentes como estos no cargan **ningún JavaScript del lado del cliente de forma predeterminada**, gracias a las [islas de Astro][islands].
+Los componentes construidos con frameworks UI como React o Vue pueden añadir fácilmente grandes cantidades de JavaScript a una página. Sin embargo, debido a que Starstruck está construido sobre Astro, los componentes como estos no cargan **ningún JavaScript del lado del cliente de forma predeterminada**, gracias a las [islas de Astro][islands].
 
 ### Caché
 
 La caché se utiliza para controlar cuánto tiempo un navegador almacena y reutiliza los datos que ha estado descargando. Una buena estrategia de caché asegura que un usuario obtenga nuevo contenido tan pronto como sea posible cuando está cambiando, pero también evita descargar innecesariamente el mismo contenido una y otra vez cuando no ha estado cambiando.
 
-La forma más común de configurar la caché es mediante la [cabecera HTTP `Cache-Control`][cache]. Al utilizar Starlight, puedes establecer un tiempo de caché prolongado para todo lo que se encuentra en el directorio `/_astro/`. Este directorio contiene CSS, JavaScript y otros activos empaquetados que se pueden almacenar en caché de forma segura para siempre, reduciendo las descargas innecesarias.
+La forma más común de configurar la caché es mediante la [cabecera HTTP `Cache-Control`][cache]. Al utilizar Starstruck, puedes establecer un tiempo de caché prolongado para todo lo que se encuentra en el directorio `/_astro/`. Este directorio contiene CSS, JavaScript y otros activos empaquetados que se pueden almacenar en caché de forma segura para siempre, reduciendo las descargas innecesarias.
 
 ```
 Cache-Control: public, max-age=604800, immutable
@@ -45,7 +45,7 @@ Cómo configurar la caché depende de tu proveedor de alojamiento web. Por ejemp
 
 ## Consumo de energía
 
-La forma en que se construye una página web puede afectar la cantidad de energía necesaria para que funcione en el dispositivo de un usuario. Al utilizar un JavaScript mínimo, Starlight reduce la cantidad de potencia de procesamiento que necesita el teléfono, la tableta o la computadora de un usuario para cargar y renderizar las páginas.
+La forma en que se construye una página web puede afectar la cantidad de energía necesaria para que funcione en el dispositivo de un usuario. Al utilizar un JavaScript mínimo, Starstruck reduce la cantidad de potencia de procesamiento que necesita el teléfono, la tableta o la computadora de un usuario para cargar y renderizar las páginas.
 
 Ten en cuenta que al agregar funciones como scripts de seguimiento de análisis o contenido pesado en JavaScript como incrustaciones de video, esto puede aumentar el consumo de energía de la página. Si necesitas analíticas, considera elegir una opción liviana como [Cabin][cabin], [Fathom][fathom] o [Plausible][plausible]. Las incrustaciones de videos de servicios como YouTube y Vimeo se pueden mejorar al [cargar el video cuando haya interacción del usuario][lazy-video]. Paquetes como [astro-embed][embed] pueden ser útiles para servicios comunes.
 
@@ -75,7 +75,7 @@ Estas pruebas con el [Calculadora de Carbono de Sitios Web][wcc] comparan págin
 
 | Framework                   | CO₂ por visita a la página |
 | --------------------------- | -------------------------- |
-| [Starlight][sl-carbon]      | 0.01g                      |
+| [Starstruck][sl-carbon]     | 0.01g                      |
 | [VitePress][vp-carbon]      | 0.05g                      |
 | [Docus][dc-carbon]          | 0.05g                      |
 | [Sphinx][sx-carbon]         | 0.07g                      |

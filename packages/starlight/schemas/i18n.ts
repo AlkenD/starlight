@@ -1,14 +1,14 @@
 import { z } from 'astro/zod';
 
 export function i18nSchema() {
-	return starlightI18nSchema().merge(pagefindI18nSchema());
+	return starstruckI18nSchema().merge(pagefindI18nSchema());
 }
 
 export function builtinI18nSchema() {
-	return starlightI18nSchema().required().strict().merge(pagefindI18nSchema());
+	return starstruckI18nSchema().required().strict().merge(pagefindI18nSchema());
 }
 
-function starlightI18nSchema() {
+function starstruckI18nSchema() {
 	return z
 		.object({
 			'skipLink.label': z
@@ -87,7 +87,7 @@ function starlightI18nSchema() {
 				.string()
 				.describe('Label shown on the “next page” pagination arrow in the page footer.'),
 
-			'404.text': z.string().describe('Text shown on Starlight’s default 404 page'),
+			'404.text': z.string().describe('Text shown on Starstruck’s default 404 page'),
 		})
 		.partial();
 }

@@ -1,20 +1,20 @@
 ---
 title: Manuelle Einrichtung
-description: Lerne wie du Starlight manuell konfigurierst, um es zu einem bestehenden Astro-Projekt hinzuzufügen.
+description: Lerne wie du Starstruck manuell konfigurierst, um es zu einem bestehenden Astro-Projekt hinzuzufügen.
 ---
 
 import { Tabs, TabItem } from '@awe-player/starstruck/components';
 
-Der schnellste Weg, eine neue Starlight-Site zu erstellen, ist die Verwendung von `create astro`, wie auf der Seite [Erste Schritte](/de/getting-started/#erstelle-ein-neues-projekt) beschrieben.
-Wie du Starlight zu einem bestehenden Astro-Projekt hinzufügst, wird in dieser Anleitung erklärt.
+Der schnellste Weg, eine neue Starstruck-Site zu erstellen, ist die Verwendung von `create astro`, wie auf der Seite [Erste Schritte](/de/getting-started/#erstelle-ein-neues-projekt) beschrieben.
+Wie du Starstruck zu einem bestehenden Astro-Projekt hinzufügst, wird in dieser Anleitung erklärt.
 
-## Starlight einrichten
+## Starstruck einrichten
 
 Um dieser Anleitung folgen zu können, benötigst du ein bestehendes Astro-Projekt.
 
-### Hinzufügen der Starlight-Integration
+### Hinzufügen der Starstruck-Integration
 
-Starlight ist eine [Astro-Integration](https://docs.astro.build/de/guides/integrations-guide/). Füge sie zu deiner Website hinzu, indem du den Befehl `astro add` im Wurzelverzeichnis deines Projekts ausführst:
+Starstruck ist eine [Astro-Integration](https://docs.astro.build/de/guides/integrations-guide/). Füge sie zu deiner Website hinzu, indem du den Befehl `astro add` im Wurzelverzeichnis deines Projekts ausführst:
 
 <Tabs>
     <TabItem label="npm">
@@ -36,11 +36,11 @@ Starlight ist eine [Astro-Integration](https://docs.astro.build/de/guides/integr
 
 </Tabs>
 
-Dies installiert die erforderlichen Abhängigkeiten und fügt Starlight zum Array `integrations` in deiner Astro-Konfigurationsdatei hinzu.
+Dies installiert die erforderlichen Abhängigkeiten und fügt Starstruck zum Array `integrations` in deiner Astro-Konfigurationsdatei hinzu.
 
 ### Konfiguriere die Integration
 
-Die Starlight-Integration wird in der Datei `astro.config.mjs` konfiguriert.
+Die Starstruck-Integration wird in der Datei `astro.config.mjs` konfiguriert.
 
 Füge zunächst einen Titel mit der Eigenschaft `title` hinzu:
 
@@ -58,13 +58,13 @@ export default defineConfig({
 });
 ```
 
-Alle verfügbaren Optionen findest du in der [Starlight-Konfigurationsreferenz](/de/reference/configuration/).
+Alle verfügbaren Optionen findest du in der [Starstruck-Konfigurationsreferenz](/de/reference/configuration/).
 
 ### Konfigurieren von Inhaltssammlungen
 
-Starlight baut auf Astros [Inhaltssammlungen](https://docs.astro.build/de/guides/content-collections/) auf, die in der Datei `src/content/config.ts` konfiguriert werden.
+Starstruck baut auf Astros [Inhaltssammlungen](https://docs.astro.build/de/guides/content-collections/) auf, die in der Datei `src/content/config.ts` konfiguriert werden.
 
-Erstelle oder aktualisiere die Inhaltskonfigurationsdatei und füge eine `docs`-Sammlung hinzu, die Starlight's `docsSchema` verwendet:
+Erstelle oder aktualisiere die Inhaltskonfigurationsdatei und füge eine `docs`-Sammlung hinzu, die Starstruck's `docsSchema` verwendet:
 
 ```js ins={3,6}
 // src/content/config.ts
@@ -78,7 +78,7 @@ export const collections = {
 
 ### Inhalte hinzufügen
 
-Starlight ist jetzt konfiguriert und du kannst Inhalte hinzuzufügen.
+Starstruck ist jetzt konfiguriert und du kannst Inhalte hinzuzufügen.
 
 Erstelle ein Verzeichnis `src/content/docs/` und füge zunächst eine `index.md`-Datei hinzu.
 Dies wird die Startseite deiner neuen Website sein:
@@ -87,24 +87,24 @@ Dies wird die Startseite deiner neuen Website sein:
 ---
 # src/content/docs/index.md
 title: Meine Dokumentation
-description: Erfahre mehr über mein Projekt auf dieser mit Starlight erstellten Dokumentseite.
+description: Erfahre mehr über mein Projekt auf dieser mit Starstruck erstellten Dokumentseite.
 ---
 
 Willkommen bei meinem Projekt!
 ```
 
-Starlight verwendet dateibasiertes Routing, was bedeutet, dass jede Markdown-, MDX- oder Markdoc-Datei in `src/content/docs/` zu einer Seite auf deiner Website wird. Frontmatter-Metadaten (die Felder `title` und `description` im obigen Beispiel) können ändern, wie jede Seite angezeigt wird.
+Starstruck verwendet dateibasiertes Routing, was bedeutet, dass jede Markdown-, MDX- oder Markdoc-Datei in `src/content/docs/` zu einer Seite auf deiner Website wird. Frontmatter-Metadaten (die Felder `title` und `description` im obigen Beispiel) können ändern, wie jede Seite angezeigt wird.
 Alle verfügbaren Optionen findest du in der [Frontmatter-Referenz](/de/reference/frontmatter/).
 
 ## Tipps für bestehende Websites
 
-Wenn du ein bestehendes Astro-Projekt hast, kannst du mit Starlight schnell eine Dokumentation zu deiner Website hinzufügen.
+Wenn du ein bestehendes Astro-Projekt hast, kannst du mit Starstruck schnell eine Dokumentation zu deiner Website hinzufügen.
 
-### Starlight mit einem anderen Pfad verwenden
+### Starstruck mit einem anderen Pfad verwenden
 
-Um alle Starlight-Seiten mit einem anderen Pfad aufrufen zu können, lege den gesamten Inhalt in einem Unterverzeichnis von `src/content/docs/` ab.
+Um alle Starstruck-Seiten mit einem anderen Pfad aufrufen zu können, lege den gesamten Inhalt in einem Unterverzeichnis von `src/content/docs/` ab.
 
-Wenn zum Beispiel die URL alle Starlight-Seiten mit `/guides/` beginnen sollen, füge deine Inhalte in das Verzeichnis `src/content/docs/guides/` ein:
+Wenn zum Beispiel die URL alle Starstruck-Seiten mit `/guides/` beginnen sollen, füge deine Inhalte in das Verzeichnis `src/content/docs/guides/` ein:
 
 import FileTree from '../../../components/file-tree.astro';
 
@@ -123,6 +123,6 @@ import FileTree from '../../../components/file-tree.astro';
 
 Für die Zukunft planen wir, diesen Anwendungsfall besser zu unterstützen, um die Notwendigkeit eines zusätzlichen verschachtelten Verzeichnisses in `src/content/docs/` zu vermeiden.
 
-### Starlight mit SSR verwenden
+### Starstruck mit SSR verwenden
 
-Derzeit unterstützt Starlight kein [Serverseitiges Rendern \(SSR\)](https://docs.astro.build/de/guides/server-side-rendering/) mit Astros Server-Adaptern. Wir hoffen, dies bald unterstützen zu können.
+Derzeit unterstützt Starstruck kein [Serverseitiges Rendern \(SSR\)](https://docs.astro.build/de/guides/server-side-rendering/) mit Astros Server-Adaptern. Wir hoffen, dies bald unterstützen zu können.

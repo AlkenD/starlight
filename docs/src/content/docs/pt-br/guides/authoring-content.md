@@ -1,9 +1,9 @@
 ---
 title: Escrevendo Conteúdo em Markdown
-description: Uma visão geral da sintaxe Markdown suportada pelo Starlight.
+description: Uma visão geral da sintaxe Markdown suportada pelo Starstruck.
 ---
 
-Starlight suporta completamente a sintaxe [Markdown](https://daringfireball.net/projects/markdown/) em arquivos `.md` assim como frontmatter [YAML](https://dev.to/paulasantamaria/introduction-to-yaml-125f) para definir metadados como o título e a descrição.
+Starstruck suporta completamente a sintaxe [Markdown](https://daringfireball.net/projects/markdown/) em arquivos `.md` assim como frontmatter [YAML](https://dev.to/paulasantamaria/introduction-to-yaml-125f) para definir metadados como o título e a descrição.
 
 Por favor verifique a [documentação do MDX](https://mdxjs.com/docs/what-is-mdx/#markdown) ou a [documentação do Markdoc](https://markdoc.dev/docs/syntax) se estiver utilizando esses formatos de arquivo, já que o suporte e uso do Markdown podem variar.
 
@@ -29,7 +29,7 @@ Você pode destacar `código inline` com crases.
 
 ## Imagens
 
-Imagens no Starlight usam o [suporte integrado a assets otimizados do Astro](https://docs.astro.build/pt-br/guides/assets/).
+Imagens no Starstruck usam o [suporte integrado a assets otimizados do Astro](https://docs.astro.build/pt-br/guides/assets/).
 
 Markdown e MDX suportam a sintaxe do Markdown para mostrar imagens que incluem texto alternativo para leitores de tela e tecnologias assistivas.
 
@@ -51,17 +51,17 @@ Caminhos de imagem relativos também são suportados para imagens armazenadas lo
 
 Você pode estruturar o conteúdo utilizando um cabeçalho. Cabeçalhos no Markdown são indicados pelo número de `#` no início de uma linha.
 
-### Como estruturar o conteúdo da página no Starlight
+### Como estruturar o conteúdo da página no Starstruck
 
-Starlight é configurado para automaticamente utilizar o título da sua página como um cabeçalho superior e irá incluir um cabeçalho "Visão geral" no topo do índice de cada página. Nós recomendamos começar cada página com um parágrafo normal e utilizar cabeçalhos na página a partir de `<h2>` para baixo:
+Starstruck é configurado para automaticamente utilizar o título da sua página como um cabeçalho superior e irá incluir um cabeçalho "Visão geral" no topo do índice de cada página. Nós recomendamos começar cada página com um parágrafo normal e utilizar cabeçalhos na página a partir de `<h2>` para baixo:
 
 ```md
 ---
 title: Guia de Markdown
-description: Como utilizar Markdown no Starlight
+description: Como utilizar Markdown no Starstruck
 ---
 
-Esta página descreve como utilizar Markdown no Starlight.
+Esta página descreve como utilizar Markdown no Starstruck.
 
 ## Estilos Inline
 
@@ -75,7 +75,7 @@ Utilizar cabeçalhos no Markdown irá automaticamente dá-lo links de âncora pa
 ```md
 ---
 title: Minha página de conteúdo
-description: Como utilizar os links de âncora integrados do Starlight
+description: Como utilizar os links de âncora integrados do Starstruck
 ---
 
 ## Introdução
@@ -93,14 +93,14 @@ Cabeçalhos de Nível 2 (`<h2>`) e Nível 3 (`<h3>`) vão aparecer automaticamen
 
 Asides (também conhecidos como “advertências” ou “frases de destaque”) são úteis para mostrar informações secundárias ao lado do conteúdo principal de uma página.
 
-Starlight providencia uma sintaxe Markdown customizada para renderizar asides. Blocos Aside são indicados utilizando um par de dois pontos triplo `:::` para envolver o seu conteúdo, e podem ser do tipo `note`, `tip`, `caution` ou `danger`.
+Starstruck providencia uma sintaxe Markdown customizada para renderizar asides. Blocos Aside são indicados utilizando um par de dois pontos triplo `:::` para envolver o seu conteúdo, e podem ser do tipo `note`, `tip`, `caution` ou `danger`.
 
 Você pode aninhar qualquer outras formas de conteúdo Markdown dentro de um aside, mas asides são mais adequados para blocos curtos e concisos de conteúdo.
 
 ### Aside de Nota
 
 :::note
-Starlight é um conjunto de ferramentas para websites de documentação feito com [Astro](https://astro.build/). Você pode começar com o comando:
+Starstruck é um conjunto de ferramentas para websites de documentação feito com [Astro](https://astro.build/). Você pode começar com o comando:
 
 ```sh
 npm create astro@latest -- --template starstruck
@@ -110,7 +110,7 @@ npm create astro@latest -- --template starstruck
 
 ````md
 :::note
-Starlight é um conjunto de ferramentas para websites de documentação feito com [Astro](https://astro.build/). Você pode começar com o comando:
+Starstruck é um conjunto de ferramentas para websites de documentação feito com [Astro](https://astro.build/). Você pode começar com o comando:
 
 ```sh
 npm create astro@latest -- --template starstruck
@@ -139,11 +139,11 @@ Asides de cuidado e perigo são úteis para chamar a atenção de um usuário a 
 Se você anda os utilizando muito, pode ser um sinal de que o que você está documentando se beneficiaria com uma mudança.
 
 :::caution
-Se você não tem certeza de que você quer um site de documentação incrível, pense novamente antes de utilizar [Starlight](../../).
+Se você não tem certeza de que você quer um site de documentação incrível, pense novamente antes de utilizar [Starstruck](../../).
 :::
 
 :::danger
-Seus usuários podem ser mais produtivos e considerar seu produto mais fácil de usar graças a funcionalidades úteis do Starlight.
+Seus usuários podem ser mais produtivos e considerar seu produto mais fácil de usar graças a funcionalidades úteis do Starstruck.
 
 - Navegação compreensível
 - Tema de cores configurável pelo usuário
@@ -153,11 +153,11 @@ Seus usuários podem ser mais produtivos e considerar seu produto mais fácil de
 
 ```md
 :::caution
-Se você não tem certeza de que você quer um site de documentação incrível, pense novamente antes de utilizar [Starlight](../../).
+Se você não tem certeza de que você quer um site de documentação incrível, pense novamente antes de utilizar [Starstruck](../../).
 :::
 
 :::danger
-Seus usuários podem ser mais produtivos e considerar seu produto mais fácil de usar graças a funcionalidades úteis do Starlight.
+Seus usuários podem ser mais produtivos e considerar seu produto mais fácil de usar graças a funcionalidades úteis do Starstruck.
 
 - Navegação compreensível
 - Tema de cores configurável pelo usuário
@@ -206,4 +206,4 @@ Longos blocos de código de linha única não devem quebrar linha. Eles devem ro
 
 ## Outras funcionalidades comuns do Markdown
 
-Starlight suporta todo o resto da sintaxe de escrita do Markdown, como listas e tabelas. Veja a [Cheat Sheet de Markdown do The Markdown Guide](https://www.markdownguide.org/cheat-sheet/) para uma visão geral rápida de todos os elementos da sintaxe do Markdown.
+Starstruck suporta todo o resto da sintaxe de escrita do Markdown, como listas e tabelas. Veja a [Cheat Sheet de Markdown do The Markdown Guide](https://www.markdownguide.org/cheat-sheet/) para uma visão geral rápida de todos os elementos da sintaxe do Markdown.

@@ -109,7 +109,7 @@ export function docsSchema() {
 							variant: z.enum(['primary', 'secondary', 'minimal']).default('minimal'),
 							/**
 							 * An optional icon to display alongside the link text.
-							 * Can be an inline `<svg>` or the name of one of Starlight’s built-in icons.
+							 * Can be an inline `<svg>` or the name of one of Starstruck’s built-in icons.
 							 */
 							icon: z
 								.union([z.enum(iconNames), z.string().startsWith('<svg')])

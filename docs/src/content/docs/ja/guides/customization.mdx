@@ -1,16 +1,16 @@
 ---
-title: Starlightのカスタマイズ
-description: Starlightサイトをカスタマイズして、ロゴ、カスタムフォント、ランディングページのデザインなどを追加する方法について学びます。
+title: Starstruckのカスタマイズ
+description: Starstruckサイトをカスタマイズして、ロゴ、カスタムフォント、ランディングページのデザインなどを追加する方法について学びます。
 ---
 
 import { Tabs, TabItem } from '@awe-player/starstruck/components';
 import FileTree from '../../../../components/file-tree.astro';
 
-Starlightには標準的なスタイルと機能がデフォルトで用意されているため、設定不要ですぐに使い始めることができますが、Starlightサイトの見た目をカスタマイズしたくなった場合は、このガイドを参照してください。
+Starstruckには標準的なスタイルと機能がデフォルトで用意されているため、設定不要ですぐに使い始めることができますが、Starstruckサイトの見た目をカスタマイズしたくなった場合は、このガイドを参照してください。
 
 ## ロゴを追加する
 
-カスタムロゴをサイトヘッダーに設定して、Starlightサイトに個別のブランディングを追加することができます。
+カスタムロゴをサイトヘッダーに設定して、Starstruckサイトに個別のブランディングを追加することができます。
 
 1. ロゴ画像のファイルを`src/assets/`ディレクトリに追加します。
 
@@ -24,7 +24,7 @@ Starlightには標準的なスタイルと機能がデフォルトで用意さ�
 
    </FileTree>
 
-2. `astro.config.mjs`で、Starlightの[`logo.src`](/ja/reference/configuration/#logo)オプションにロゴのパスを指定します。
+2. `astro.config.mjs`で、Starstruckの[`logo.src`](/ja/reference/configuration/#logo)オプションにロゴのパスを指定します。
 
    ```js
    // astro.config.mjs
@@ -86,7 +86,7 @@ starstruck({
 
 ## サイトマップを有効化する
 
-Starlightにはサイトマップ生成機能が組み込まれています。`astro.config.mjs`の`site`にURLを設定すると、サイトマップの生成が有効になります。
+Starstruckにはサイトマップ生成機能が組み込まれています。`astro.config.mjs`の`site`にURLを設定すると、サイトマップの生成が有効になります。
 
 ```js
 // astro.config.mjs
@@ -99,7 +99,7 @@ export default defineConfig({
 
 ## ページレイアウト
 
-Starlightのページはデフォルトで、グローバルなナビゲーションサイドバーと、現在のページの見出しを表示する目次を配置したレイアウトを使用します。
+Starstruckのページはデフォルトで、グローバルなナビゲーションサイドバーと、現在のページの見出しを表示する目次を配置したレイアウトを使用します。
 
 ページのフロントマターで[`template: splash`](/ja/reference/frontmatter/#template)を設定することで、サイドバーのない、より広いページレイアウトを適用できます。これはランディングページに特に適しており、[このサイトのホームページ](/ja/)で確認することができます。
 
@@ -114,7 +114,7 @@ template: splash
 
 ## 目次
 
-Starlightは、目当ての見出しに読者が簡単にジャンプできるように、各ページに目次を表示します。目次は、Starlightインテグレーションでグローバルにカスタマイズ・無効化できます。また、フロントマターでページごとの設定も可能です。
+Starstruckは、目当ての見出しに読者が簡単にジャンプできるように、各ページに目次を表示します。目次は、Starstruckインテグレーションでグローバルにカスタマイズ・無効化できます。また、フロントマターでページごとの設定も可能です。
 
 デフォルトでは、目次には`<h2>`と`<h3>`の見出しが含まれます。目次に含める見出しレベルをサイト全体で変更するには、[グローバルな`tableOfContents`](/ja/reference/configuration/#tableofcontents)の`minHeadingLevel`と`maxHeadingLevel`オプションを使用します。個々のページでこれらのデフォルト値を上書きするには、対応する[フロントマターの`tableOfContents`](/ja/reference/frontmatter/#tableofcontents)プロパティを追加します。
 
@@ -184,7 +184,7 @@ defineConfig({
 
 ## ソーシャルリンク
 
-Starlightは、Starlightインテグレーションの[`social`](/ja/reference/configuration/#social)オプションを使用して、サイトヘッダーにソーシャルメディアアカウントへのリンクを追加する機能を備えています。
+Starstruckは、Starstruckインテグレーションの[`social`](/ja/reference/configuration/#social)オプションを使用して、サイトヘッダーにソーシャルメディアアカウントへのリンクを追加する機能を備えています。
 
 現在、Bitbucket、Codeberg、CodePen、Discord、GitHub、GitLab、Gitter、Instagram、LinkedIn、Mastodon、Microsoft Teams、Stack Overflow、Threads、Twitch、Twitter、YouTubeへのリンクがサポートされています。他のサービスのサポートが必要な場合は、GitHubまたはDiscordでお知らせください！
 
@@ -208,18 +208,18 @@ export default defineConfig({
 
 ## 編集リンク
 
-Starlightは、各ページのフッターに「ページを編集」リンクを表示できます。これにより読者は、ドキュメントを改善するために編集すべきファイルを簡単に見つけられます。特にオープンソースプロジェクトでは、コミュニティからの貢献を促すのに役立ちます。
+Starstruckは、各ページのフッターに「ページを編集」リンクを表示できます。これにより読者は、ドキュメントを改善するために編集すべきファイルを簡単に見つけられます。特にオープンソースプロジェクトでは、コミュニティからの貢献を促すのに役立ちます。
 
-編集リンクを有効にするには、Starlightインテグレーションの設定で、[`editLink.baseUrl`](/ja/reference/configuration/#editlink)をリポジトリの編集に使用するURLに設定します。`editLink.baseUrl`の値は現在のページへのパスの先頭に追加されて、最終的な編集リンクを形成します。
+編集リンクを有効にするには、Starstruckインテグレーションの設定で、[`editLink.baseUrl`](/ja/reference/configuration/#editlink)をリポジトリの編集に使用するURLに設定します。`editLink.baseUrl`の値は現在のページへのパスの先頭に追加されて、最終的な編集リンクを形成します。
 
 よくあるパターンは以下の通りです。
 
 - GitHub: `https://github.com/USER_NAME/REPO_NAME/edit/BRANCH_NAME/`
 - GitLab: `https://gitlab.com/USER_NAME/REPO_NAME/-/edit/BRANCH_NAME/`
 
-Starlightプロジェクトがリポジトリのルートにない場合は、ベースURLの末尾にプロジェクトへのパスを含めます。
+Starstruckプロジェクトがリポジトリのルートにない場合は、ベースURLの末尾にプロジェクトへのパスを含めます。
 
-以下の例では、GitHub上にある`withastro/starstruck`リポジトリの`main`ブランチの`docs/`サブディレクトリに置かれている、Starlightドキュメントの編集リンクを設定しています。
+以下の例では、GitHub上にある`withastro/starstruck`リポジトリの`main`ブランチの`docs/`サブディレクトリに置かれている、Starstruckドキュメントの編集リンクを設定しています。
 
 ```js
 // astro.config.mjs
@@ -240,7 +240,7 @@ export default defineConfig({
 
 ## カスタム404ページ
 
-Starlightサイトは、デフォルトでシンプルな404ページを表示します。これは、`src/content/docs/`ディレクトリに`404.md`（または`404.mdx`）ファイルを追加することでカスタマイズできます。
+Starstruckサイトは、デフォルトでシンプルな404ページを表示します。これは、`src/content/docs/`ディレクトリに`404.md`（または`404.mdx`）ファイルを追加することでカスタマイズできます。
 
 <FileTree>
 
@@ -253,7 +253,7 @@ Starlightサイトは、デフォルトでシンプルな404ページを表示�
 
 </FileTree>
 
-404ページでは、Starlightのページレイアウトとカスタマイズ機能をすべて使用できます。たとえば、デフォルトの404ページは、フロントマターで[`splash`テンプレート](#ページレイアウト)と[`hero`](/ja/reference/frontmatter/#hero)コンポーネントを使用しています。
+404ページでは、Starstruckのページレイアウトとカスタマイズ機能をすべて使用できます。たとえば、デフォルトの404ページは、フロントマターで[`splash`テンプレート](#ページレイアウト)と[`hero`](/ja/reference/frontmatter/#hero)コンポーネントを使用しています。
 
 ```md
 ---
@@ -268,9 +268,9 @@ hero:
 
 ## カスタムフォント
 
-デフォルトでは、Starlightはユーザーのローカルデバイスで利用可能なサンセリフフォントをすべてのテキストに使用します。これにより、大きなフォントファイルをダウンロードするための余分な帯域幅を必要とせず、各ユーザーに馴染みのあるフォントでドキュメントを高速に読み込むことができます。
+デフォルトでは、Starstruckはユーザーのローカルデバイスで利用可能なサンセリフフォントをすべてのテキストに使用します。これにより、大きなフォントファイルをダウンロードするための余分な帯域幅を必要とせず、各ユーザーに馴染みのあるフォントでドキュメントを高速に読み込むことができます。
 
-Starlightサイトにカスタムフォントを追加する必要がある場合は、カスタムCSSファイルまたは他の[Astroのスタイリング手法](https://docs.astro.build/ja/guides/styling/)により使用するフォントを設定できます。
+Starstruckサイトにカスタムフォントを追加する必要がある場合は、カスタムCSSファイルまたは他の[Astroのスタイリング手法](https://docs.astro.build/ja/guides/styling/)により使用するフォントを設定できます。
 
 ### フォントの設定
 
@@ -306,7 +306,7 @@ Starlightサイトにカスタムフォントを追加する必要がある場�
    }
    ```
 
-3. `astro.config.mjs`で、Starlightの`customCss`配列に`font-face.css`ファイルへのパスを追加します。
+3. `astro.config.mjs`で、Starstruckの`customCss`配列に`font-face.css`ファイルへのパスを追加します。
 
    ```js
    // astro.config.mjs
@@ -362,7 +362,7 @@ Starlightサイトにカスタムフォントを追加する必要がある場�
 
       </Tabs>
 
-3.  `astro.config.mjs`で、FontsourceのCSSファイルをStarlightの`customCss`配列に追加します。
+3.  `astro.config.mjs`で、FontsourceのCSSファイルをStarstruckの`customCss`配列に追加します。
 
     ```js
     // astro.config.mjs
@@ -387,7 +387,7 @@ Starlightサイトにカスタムフォントを追加する必要がある場�
 
 ### フォントを使う
 
-設定したフォントをサイトに適用するには、選択したフォントの名前を[カスタムCSSファイル](/ja/guides/css-and-tailwind/#カスタムcssスタイル)で指定します。たとえば、Starlightのデフォルトフォントをすべての場所で上書きするには、`--sl-font`カスタムプロパティを設定します。
+設定したフォントをサイトに適用するには、選択したフォントの名前を[カスタムCSSファイル](/ja/guides/css-and-tailwind/#カスタムcssスタイル)で指定します。たとえば、Starstruckのデフォルトフォントをすべての場所で上書きするには、`--sl-font`カスタムプロパティを設定します。
 
 ```css
 /* src/styles/custom.css */

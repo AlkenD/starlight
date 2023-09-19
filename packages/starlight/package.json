@@ -1,7 +1,7 @@
 {
   "name": "@awe-player/starstruck",
   "version": "0.0.1",
-  "description": "A fork of Astro's Starlight documentation framework.",
+  "description": "A fork of Astro's Starstruck documentation framework.",
   "scripts": {
     "test": "vitest",
     "test:coverage": "vitest run --coverage"

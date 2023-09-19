@@ -1,15 +1,15 @@
 ---
 title: Erste Schritte
-description: Lerne wie du deine nächste Dokumentationsseite mit Starlight und Astro erstellst.
+description: Lerne wie du deine nächste Dokumentationsseite mit Starstruck und Astro erstellst.
 ---
 
 import { Tabs, TabItem } from '@awe-player/starstruck/components';
 
 ## Erstelle ein neues Projekt
 
-Starlight ist ein voll ausgestattetes Dokumentations-Theme, das auf dem [Astro](https://astro.build) Framework aufbaut.
+Starstruck ist ein voll ausgestattetes Dokumentations-Theme, das auf dem [Astro](https://astro.build) Framework aufbaut.
 
-Du kannst ein neues Astro + Starlight Projekt mit dem folgenden Befehl erstellen:
+Du kannst ein neues Astro + Starstruck Projekt mit dem folgenden Befehl erstellen:
 
 <Tabs>
 <TabItem label="npm">
@@ -41,17 +41,17 @@ yarn create astro --template starstruck
 Damit wird ein neues [Projektverzeichnis](/de/guides/project-structure/) mit allen erforderlichen Dateien und Konfigurationen für deine Webseite erstellt.
 
 :::tip[In Aktion sehen]
-Probiere Starlight in deinem Browser aus:
+Probiere Starstruck in deinem Browser aus:
 [öffne die Vorlage in StackBlitz](https://stackblitz.com/github/withastro/starstruck/tree/main/examples/basics).
 :::
 
-## Inhalte mit Starlight erstellen
+## Inhalte mit Starstruck erstellen
 
-Starlight ist bereit für dich, neuen Inhalt hinzuzufügen oder deine vorhandenen Dateien mitzubringen!
+Starstruck ist bereit für dich, neuen Inhalt hinzuzufügen oder deine vorhandenen Dateien mitzubringen!
 
 ### Dateiformate
 
-Starlight unterstützt das Erstellen von Inhalten in Markdown und MDX. (Du kannst die experimentelle [Astro Markdoc Integration](https://docs.astro.build/de/guides/integrations-guide/markdoc/) installieren, um Markdoc zu unterstützen.)
+Starstruck unterstützt das Erstellen von Inhalten in Markdown und MDX. (Du kannst die experimentelle [Astro Markdoc Integration](https://docs.astro.build/de/guides/integrations-guide/markdoc/) installieren, um Markdoc zu unterstützen.)
 
 ### Seiten hinzufügen
 
@@ -64,36 +64,36 @@ src/content/docs/guides/faq.md => your-site.com/guides/faq
 
 ### Typsichere Frontmatter
 
-Alle Starlight Seiten teilen sich anpassbare [Frontmatter-Eigenschaften](/de/reference/frontmatter/), mit denen das Erscheinungsbild der Seite gesteuert wird:
+Alle Starstruck Seiten teilen sich anpassbare [Frontmatter-Eigenschaften](/de/reference/frontmatter/), mit denen das Erscheinungsbild der Seite gesteuert wird:
 
 ```md
 ---
 title: Hello, World!
-description: This is a page in my Starlight-powered site
+description: This is a page in my Starstruck-powered site
 ---
 ```
 
-Wenn du etwas Wichtiges vergisst, wird Starlight dich daran erinnern.
+Wenn du etwas Wichtiges vergisst, wird Starstruck dich daran erinnern.
 
-## Veröffentlichung deiner Starlight Webseite
+## Veröffentlichung deiner Starstruck Webseite
 
-Sobald du deine Starlight Webseite erstellt und angepasst hast, kannst du sie auf einen Webserver oder Hosting-Plattform deiner Wahl veröffentlichen, einschließlich Netlify, Vercel, GitHub Pages und vielen mehr.
+Sobald du deine Starstruck Webseite erstellt und angepasst hast, kannst du sie auf einen Webserver oder Hosting-Plattform deiner Wahl veröffentlichen, einschließlich Netlify, Vercel, GitHub Pages und vielen mehr.
 
 [Lerne mehr über die Veröffentlichung einer Astro Webseite in der Astro Dokumentation.](https://docs.astro.build/de/guides/deploy/)
 
-## Starlight aktualisieren
+## Starstruck aktualisieren
 
 :::tip
-Da es sich bei Starlight um eine Beta-Software handelt, wird es regelmäßig Updates und Verbesserungen geben. Achte darauf Starlight regelmäßig zu aktualisieren!
+Da es sich bei Starstruck um eine Beta-Software handelt, wird es regelmäßig Updates und Verbesserungen geben. Achte darauf Starstruck regelmäßig zu aktualisieren!
 :::
 
-Starlight ist eine Astro-Integration und wird wie jede `@astrojs/*`-Integration aktualisiert:
+Starstruck ist eine Astro-Integration und wird wie jede `@astrojs/*`-Integration aktualisiert:
 
 <Tabs>
 <TabItem label="npm">
 
 ```sh
-# Starlight mit npm aktualisieren
+# Starstruck mit npm aktualisieren
 npm install @awe-player/starstruck@latest
 ```
 
@@ -101,7 +101,7 @@ npm install @awe-player/starstruck@latest
 <TabItem label="pnpm">
 
 ```sh
-# Starlight mit pnpm aktualisieren
+# Starstruck mit pnpm aktualisieren
 pnpm upgrade @awe-player/starstruck --latest
 ```
 
@@ -109,20 +109,20 @@ pnpm upgrade @awe-player/starstruck --latest
 <TabItem label="Yarn">
 
 ```sh
-# Starlight mit yarn aktualisieren
+# Starstruck mit yarn aktualisieren
 yarn upgrade @awe-player/starstruck --latest
 ```
 
 </TabItem>
 </Tabs>
 
-Eine vollständige Liste der Änderungen findest du im [Starlight Changelog](https://github.com/withastro/starstruck/blob/main/packages/starstruck/CHANGELOG.md).
+Eine vollständige Liste der Änderungen findest du im [Starstruck Changelog](https://github.com/withastro/starstruck/blob/main/packages/starstruck/CHANGELOG.md).
 
 ## Fehlerbehebung
 
-Sowohl die Starlight [Projektkonfiguration](/reference/configuration/) als auch die [Konfiguration einzelner Seiten](/reference/frontmatter/) findest du im Referenzbereich dieser Website. Nutze diese Seiten, um sicherzustellen, dass deine Starlight-Site richtig konfiguriert ist und funktioniert.
+Sowohl die Starstruck [Projektkonfiguration](/reference/configuration/) als auch die [Konfiguration einzelner Seiten](/reference/frontmatter/) findest du im Referenzbereich dieser Website. Nutze diese Seiten, um sicherzustellen, dass deine Starstruck-Site richtig konfiguriert ist und funktioniert.
 
-In der wachsenden Liste der Anleitungen in der Seitenleiste findest du Hilfe beim Hinzufügen von Inhalten und beim Anpassen deiner Starlight-Website.
+In der wachsenden Liste der Anleitungen in der Seitenleiste findest du Hilfe beim Hinzufügen von Inhalten und beim Anpassen deiner Starstruck-Website.
 
 Wenn du keine Antwort in dieser Dokumentation finden kannst, besuche bitte die [Astro Docs](https://docs.astro.build) für die vollständige Astro-Dokumentation. Deine Frage kann vielleicht beantwortet werden, wenn du verstehst, wie Astro im Allgemeinen funktioniert.
 

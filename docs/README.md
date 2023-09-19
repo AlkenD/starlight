@@ -1,6 +1,6 @@
-# Starlight Docs
+# Starstruck Docs
 
-This directory contains the Starlight documentation website (built with Starlight!)
+This directory contains the Starstruck documentation website (built with Starstruck!)
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starstruck/tree/main/docs)
 [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starstruck/tree/main/docs)
