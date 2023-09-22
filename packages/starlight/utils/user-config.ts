@@ -5,6 +5,7 @@ import { LogoConfigSchema } from '../schemas/logo';
 import { TableOfContentsSchema } from '../schemas/tableOfContents';
 import { FaviconSchema } from '../schemas/favicon';
 import { BadgeConfigSchema } from '../schemas/badge';
+import { BackgroundConfigSchema } from '../schemas/background';
 
 const LocaleSchema = z.object({
 	/** The label for this language to show in UI, e.g. `"English"`, `"العربية"`, or `"简体中文"`. */
@@ -115,6 +116,9 @@ const UserConfigSchema = z.object({
 
 	/** Set a logo image to show in the navigation bar alongside or instead of the site title. */
 	logo: LogoConfigSchema(),
+
+	/** Set a background image for home page, docs page or both. */
+	background: BackgroundConfigSchema(),
 
 	/**
 	 * Optional details about the social media accounts for this site.

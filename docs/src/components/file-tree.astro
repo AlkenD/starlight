@@ -17,7 +17,7 @@ const processedContent = await fileTreeProcessor.process({
 });
 ---
 
-<file-tree set:html={processedContent} class="not-content" data-pagefind-ignore />
+<file-tree set:html={processedContent} class="not-prose" data-pagefind-ignore />
 
 <style is:global>
 	file-tree {
@@ -61,7 +61,7 @@ const processedContent = await fileTreeProcessor.process({
 	file-tree .directory > details > summary:hover {
 		cursor: pointer;
 		color: var(--sl-color-text-accent);
-		fill: var(--sl-color-text-accent);
+		@apply fill-indigo-500;
 	}
 
 	file-tree ul,
@@ -128,19 +128,18 @@ const processedContent = await fileTreeProcessor.process({
 		display: inline-block;
 		border-radius: 0.25rem;
 		padding-inline-end: 0.5rem;
-		color: var(--sl-color-text-invert);
-		background-color: var(--sl-color-text-accent);
+		@apply bg-zinc-500/50 text-white;
 	}
 
 	file-tree svg.tree-icon {
 		display: inline;
-		fill: var(--sl-color-gray-3);
+		fill: white;
 		vertical-align: middle;
 		margin-inline: 0.125rem;
 		width: 1.25rem;
 		height: 1.25rem;
 	}
 	file-tree .highlight svg.tree-icon {
-		fill: var(--sl-color-text-invert);
+		@apply fill-white;
 	}
 </style>

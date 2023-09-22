@@ -3,18 +3,23 @@ import type { MarkdownHeading } from 'astro';
 import TableOfContents from './TableOfContents.astro';
 import { generateToC } from './TableOfContents/generateToC';
 import { useTranslations } from '../utils/translations';
+import type { StarstruckDocsEntry } from '../utils/routing';
 
 interface Props {
 	headings: MarkdownHeading[];
 	locale: string | undefined;
 	tocConfig: { maxHeadingLevel: number; minHeadingLevel: number } | false;
+	entry: StarstruckDocsEntry;
+	lang: string;
 }
 
-const { headings, locale, tocConfig } = Astro.props;
+const { headings, lang, entry, locale, tocConfig } = Astro.props;
 const t = useTranslations(locale);
 const tocProps = tocConfig && {
 	...tocConfig,
 	locale,
+	entry,
+	lang,
 	toc: generateToC(headings, {
 		...tocConfig,
 		title: t('tableOfContents.overview'),

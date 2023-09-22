@@ -60,20 +60,6 @@ export function docsSchema() {
 			 */
 			template: z.enum(['doc', 'splash']).default('doc'),
 
-			/**
-			 * Set a custom background image for this page.
-			 */
-			background: z
-				.object({
-					/** Alt text for screenreaders and other assistive technologies describing your hero image. */
-					alt: z.string().default(''),
-					/** Relative path to an image file in your repo, e.g. `../../assets/hero.png`. */
-					file: image().optional(),
-					/** Raw HTML string instead of an image file. Useful for inline SVGs or more complex hero content. */
-					html: z.string().optional(),
-				})
-				.optional(),
-
 			/** Display a hero section on this page. */
 			hero: z
 				.object({

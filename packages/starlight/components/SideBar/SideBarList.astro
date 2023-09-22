@@ -8,54 +8,60 @@ interface Props {
 	nested?: boolean;
 }
 
-const { sublist } = Astro.props;
+const { sublist, nested = false } = Astro.props;
 ---
 
-<ul class="space-y-4">
+<ul
+	class:list={[nested && 'border-l border-zinc-500/50 space-y-2']}
+	class="text-zinc-600 dark:text-zinc-400 font-light text-sm"
+>
 	{
 		sublist.map((item) => (
-			<li class="text-zinc-600 dark:text-zinc-400 font-light text-sm">
+			<>
 				{item.type === 'link' ? (
-					<a
-						aria-current={item.isCurrent && 'page'}
-						class:list={[
-							item.isCurrent
-								? 'font-semibold border-black text-black dark:border-white dark:text-white'
-								: 'border-zinc-200 dark:border-zinc-800 hover:border-black hover:text-black dark:hover:border-white dark:hover:text-white',
-						]}
-						class="pl-4 -ml-[1px] border-l py-1"
-						href={item.href}
-					>
-						{item.label}
-						{item.badge && (
-							<>
-								{' '}
-								<Badge
-									text={item.badge.text}
-									variant={item.isCurrent ? 'outline' : item.badge.variant}
-								/>
-							</>
-						)}
-					</a>
-				) : (
-					<details
-						class="space-y-2"
-						open={flattenSidebar(item.entries).some((i) => i.isCurrent) || !item.collapsed}
-					>
-						<summary class="flex items-center justify-between text-black dark:text-white font-semibold">
-							<span>{item.label}</span>
-							<Icon
-								name="right-caret"
-								class="caret hover:cursor-pointer rounded-full p-1 hover:bg-zinc-400/20 transition-transform ease-out"
-								size="1.5rem"
-							/>
-						</summary>
-						<div class="border-l border-zinc-200 dark:border-zinc-800">
-							<Astro.self sublist={item.entries} nested />
+					<li>
+						<div
+							class="px-4 w-full py-1 border-l border-transparent -ml-[1px] hover:border-white hover:text-black dark:hover:text-white"
+							class:list={[
+								item.isCurrent &&
+									'border-white dark:border-white font-semibold text-black dark:text-white',
+							]}
+						>
+							<a aria-current={item.isCurrent && 'page'} href={item.href}>
+								{item.label}
+								{item.badge && (
+									<>
+										{' '}
+										<Badge
+											text={item.badge.text}
+											variant={item.isCurrent ? 'outline' : item.badge.variant}
+										/>
+									</>
+								)}
+							</a>
 						</div>
-					</details>
+					</li>
+				) : (
+					<li>
+						<details
+							class="space-y-2 mb-4"
+							open={flattenSidebar(item.entries).some((i) => i.isCurrent) || !item.collapsed}
+						>
+							<summary class="flex items-center justify-between text-black dark:text-white font-semibold">
+								<span>{item.label}</span>
+								<Icon
+									name="right-caret"
+									class="caret hover:cursor-pointer rounded-full p-1 hover:bg-zinc-400/20 transition-transform ease-out"
+									size="1.5rem"
+								/>
+							</summary>
+							<div>
+								<Astro.self sublist={item.entries} nested />
+							</div>
+						</details>
+					</li>
 				)}
-			</li>
+			</>
 		))
 	}
 </ul>

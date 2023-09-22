@@ -16,7 +16,7 @@ export default function StarstruckIntegration(opts: StarstruckUserConfig): Astro
 	if (!parsedConfig.success) {
 		throw new Error(
 			'Invalid config passed to starstruck integration\n' +
-				parsedConfig.error.issues.map((i) => i.message).join('\n')
+				parsedConfig.error.issues.map((i: { message: any; }) => i.message).join('\n')
 		);
 	}
 

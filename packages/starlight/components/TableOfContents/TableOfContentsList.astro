@@ -17,7 +17,7 @@ const { toc, isMobile = false, depth = 0 } = Astro.props;
 			<li class:list={[heading.children.length > 0 ? 'pt-1' : 'py-1']}>
 				<span class="flex items-center">
 					{depth !== 0 && <Icon name="right-caret" class="p-1" size="1.5rem" />}
-					<a href={'#' + heading.slug}>
+					<a id="toc-link" href={'#' + heading.slug}>
 						<span>{heading.text}</span>
 					</a>
 				</span>
@@ -28,3 +28,30 @@ const { toc, isMobile = false, depth = 0 } = Astro.props;
 		))
 	}
 </ul>
+
+<script>
+	// Add a click event listener to each 'toc-link' element
+	document.querySelectorAll('#toc-link').forEach(function (link) {
+		link.addEventListener('click', function (event) {
+			event.preventDefault();
+			const desiredOffset = 80;
+
+			// Get the target section's ID from the link's href
+			const targetId = link.getAttribute('href').substring(1);
+
+			// Get the target section element
+			const targetSection = document.getElementById(targetId);
+
+			if (targetSection) {
+				// Calculate the target offset position
+				const targetOffset = targetSection.getBoundingClientRect().top + window.scrollY;
+
+				// Scroll to the target position smoothly
+				window.scrollTo({
+					top: targetOffset - desiredOffset,
+					behavior: 'smooth',
+				});
+			}
+		});
+	});
+</script>

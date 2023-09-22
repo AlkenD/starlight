@@ -2,29 +2,47 @@
 import { useTranslations } from '../utils/translations';
 import TableOfContentsList from './TableOfContents/TableOfContentsList.astro';
 import type { TocItem } from './TableOfContents/generateToC';
+import type { StarstruckDocsEntry } from '../utils/routing';
+import config from 'virtual:starstruck/user-config';
+import LastUpdated from './LastUpdated.astro';
+import EditLink from './EditLink.astro';
 
 interface Props {
 	toc: TocItem[];
 	locale: string | undefined;
 	maxHeadingLevel: number;
 	minHeadingLevel: number;
+	entry: StarstruckDocsEntry;
+	lang: string;
 }
 
-const { locale, toc, maxHeadingLevel, minHeadingLevel } = Astro.props;
+const { entry, locale, toc, lang } = Astro.props;
 const t = useTranslations(locale);
 ---
 
-<starstruck-toc
-	class="w-60 sticky top-14 h-fit py-4 text-sm border-b border-zinc-200 dark:border-zinc-800 pl-4"
-	data-min-h={minHeadingLevel}
-	data-max-h={maxHeadingLevel}
+<nav
+	class="w-60 sticky top-28 h-[calc(100vh-112px)] text-sm space-y-4"
+	aria-labelledby="starstruck__on-this-page"
 >
-	<nav aria-labelledby="starstruck__on-this-page">
+	<div class="h-fit border-b border-zinc-500/50 pb-4">
 		<h2 class="text-black dark:text-white font-semibold mb-4" id="starstruck__on-this-page">
 			{t('tableOfContents.onThisPage')}
 		</h2>
 		<TableOfContentsList {toc} />
-	</nav>
-</starstruck-toc>
-
-<script src="./TableOfContents/starstruck-toc"></script>
+	</div>
+	<div class="space-y-2 pt-1">
+		{
+			(entry.data.lastUpdated ?? config.lastUpdated) && (
+				<LastUpdated
+					id={entry.id}
+					{lang}
+					lastUpdated={
+						typeof entry.data.lastUpdated !== 'boolean' ? entry.data.lastUpdated : undefined
+					}
+					{locale}
+				/>
+			)
+		}
+		{config.editLink.baseUrl && <EditLink data={entry.data} id={entry.id} {locale} />}
+	</div>
+</nav>

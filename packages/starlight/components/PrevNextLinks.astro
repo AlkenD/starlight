@@ -15,66 +15,51 @@ const isRtl = dir === 'rtl';
 const t = useTranslations(locale);
 ---
 
-<div class="pagination-links sl-flex" dir={dir}>
+<div class="flex space-x-4" dir={dir}>
 	{
 		prev && (
-			<a href={prev.href} rel="prev">
-				<Icon name={isRtl ? 'right-arrow' : 'left-arrow'} size="1.5rem" />
+			<a
+				class:list={[prev && next ? 'w-1/2' : 'w-full']}
+				class="flex space-x-4 items-center justify-start p-4 group/pnlink"
+				href={prev.href}
+				rel="prev"
+			>
+				<Icon
+					class="opacity-50 group-hover/pnlink:opacity-100 transition-opacity ease-out"
+					name={isRtl ? 'right-caret' : 'left-caret'}
+					size="1.5rem"
+				/>
 				<span>
-					{t('page.previousLink')}
+					<span class="text-sm opacity-50 group-hover/pnlink:opacity-100 transition-opacity ease-out">
+						{t('page.previousLink')}
+					</span>
 					<br />
-					<span class="link-title">{prev.label}</span>
+					<span class="text-lg">{prev.label}</span>
 				</span>
 			</a>
 		)
 	}
 	{
 		next && (
-			<a href={next.href} rel="next">
-				<Icon name={isRtl ? 'left-arrow' : 'right-arrow'} size="1.5rem" />
+			<a
+				class:list={[prev && next ? 'w-1/2' : 'w-full']}
+				class="flex space-x-4 items-center justify-end p-4 group/pnlink text-right"
+				href={next.href}
+				rel="next"
+			>
 				<span>
-					{t('page.nextLink')}
+					<span class="text-sm opacity-50 group-hover/pnlink:opacity-100 transition-opacity ease-out">
+						{t('page.nextLink')}
+					</span>
 					<br />
-					<span class="link-title">{next.label}</span>
+					<span class="text-lg">{next.label}</span>
 				</span>
+				<Icon
+					class="opacity-50 group-hover/pnlink:opacity-100 transition-opacity ease-out"
+					name={isRtl ? 'left-caret' : 'right-caret'}
+					size="1.5rem"
+				/>
 			</a>
 		)
 	}
 </div>
-
-<style>
-	.pagination-links {
-		flex-wrap: wrap;
-		gap: 1rem;
-	}
-
-	a {
-		display: flex;
-		align-items: center;
-		justify-content: flex-start;
-		gap: 0.5rem;
-		width: 100%;
-		flex-basis: calc(50% - 0.5rem);
-		flex-grow: 1;
-		border: 1px solid var(--sl-color-gray-5);
-		border-radius: 0.5rem;
-		padding: 1rem;
-		text-decoration: none;
-		color: var(--sl-color-gray-2);
-		box-shadow: var(--sl-shadow-md);
-	}
-	[rel='next'] {
-		justify-content: end;
-		text-align: end;
-		flex-direction: row-reverse;
-	}
-	a:hover {
-		border-color: var(--sl-color-gray-2);
-	}
-
-	.link-title {
-		color: var(--sl-color-white);
-		font-size: var(--sl-text-2xl);
-		line-height: var(--sl-line-height-headings);
-	}
-</style>

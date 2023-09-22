@@ -57,6 +57,11 @@ export default defineConfig({
 				dark: '/src/assets/logo-dark.svg',
 				replacesTitle: true,
 			},
+			background: {
+				src: '/src/assets/background.png',
+				alt: 'Background Image',
+				onlyHome: false,
+			},
 			editLink: {
 				baseUrl: 'https://github.com/withastro/starstruck/edit/main/docs/',
 			},

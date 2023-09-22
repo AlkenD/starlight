@@ -11,9 +11,9 @@ const { icon, title } = Astro.props;
 ---
 
 <article
-	class="px-4 dark:border-white/20 dark:hover:border-white group border-black/20 hover:border-black transition-all ease-out rounded-xl border"
+	class="p-4 space-y-2 dark:border-white/20 dark:hover:border-white group border-black/20 hover:border-black transition-all ease-out rounded-xl border"
 >
-	<p class="text-xl flex items-center space-x-2">
+	<p class="text-lg flex items-center space-x-2">
 		{icon && <Icon name={icon} class="icon" size="1.333em" />}
 		<span set:html={title} />
 	</p>
@@ -21,5 +21,5 @@ const { icon, title } = Astro.props;
 		class="h-[1px] w-full dark:bg-white/20 dark:group-hover:bg-white bg-black/20 group-hover:bg-black transition-all ease-out"
 	>
 	</div>
-	<div class="text-zinc-800 dark:text-zinc-400"><slot /></div>
+	<div class="text-zinc-800 dark:text-zinc-400 text-sm"><slot /></div>
 </article>

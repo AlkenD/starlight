@@ -14,6 +14,7 @@ import { getSidebar } from '../utils/navigation';
 import 'virtual:starstruck/user-css';
 import RightSidebar from '../components/RightSidebar.astro';
 import FallbackContentNotice from '../components/FallbackContentNotice.astro';
+import Footer from '../components/Footer.astro';
 
 type Props = Route & { headings: MarkdownHeading[] };
 
@@ -43,36 +44,53 @@ const pagefindEnabled =
 	<head>
 		<HeadSEO data={entry.data} lang={lang} />
 	</head>
-	<body
-		class="bg-no-repeat bg-cover bg-white dark:bg-black dark:text-white bg-opacity-0"
-		style=`background-image: url(${entry.data.background?.file?.src})`
-	>
+	<body class="dark:text-white dark:bg-black relative">
 		<ThemeProvider />
+		<div
+			class:list={[hasSidebar ? 'opacity-40' : 'opacity-100']}
+			class="fixed top-0 left-0 right-0 w-full h-full z-0 pointer-events-none"
+		>
+			<img class="w-full h-auto opacity-100" src={config.background?.src} alt="" />
+		</div>
 		<!-- <SkipLink {locale} /> -->
 		<div class="h-full">
 			<Header {locale} {hasSidebar} />
-			<div class:list={[entry.data.hero ? 'w-full' : 'flex w-full']}>
+			<main
+				class="container mx-auto mt-14 space-x-6"
+				class:list={[entry.data.hero ? 'w-full' : 'flex w-full']}
+				data-pagefind-body={pagefindEnabled}
+				lang={entryMeta.lang}
+				dir={entryMeta.dir}
+			>
 				{hasSidebar && <SideBar {sidebar} {locale} />}
 				{
 					entry.data.hero ? (
-						<>
+						<div>
 							<Hero hero={entry.data.hero} fallbackTitle={entry.data.title} />
 							<slot />
-						</>
+						</div>
 					) : (
-						<div class="flex-1 p-6 prose prose-zinc dark:prose-invert max-w-none prose-headings:before:content-['#_'] h-full overflow-scroll">
-							<div class="border-b py-4 border-zinc-200 dark:border-zinc-800">
-								<h1 class="text-4xl m-0" class="border-b" id="_top" data-page-title>
-									{entry.data.title}
-								</h1>
-								{isFallback && <FallbackContentNotice {locale} />}
+						<div class="flex-1 h-fit min-w-0 z-40">
+							<div class="prose prose-zinc dark:prose-invert max-w-none prose-headings:pt-4 prose-h2:border-t prose-headings:border-zinc-500/50  prose-headings:before:text-underline-animation h-full">
+								<div>
+									<h1 class="text-4xl m-0" id="_top" data-page-title>
+										{entry.data.title}
+									</h1>
+									{isFallback && <FallbackContentNotice {locale} />}
+								</div>
+								<slot />
 							</div>
-							<slot />
+							<Footer {...{ entry, dir, locale, sidebar }} />
 						</div>
 					)
 				}
-				{hasSidebar && <RightSidebar {headings} {locale} {tocConfig} />}
-			</div>
+				{hasSidebar && <RightSidebar {lang} {entry} {headings} {locale} {tocConfig} />}
+			</main>
 		</div>
+		<style>
+			.text-underline-animation {
+				@apply content-[""] absolute block w-full h-0.5 bg-black origin-top-left transition-transform duration-[0.3s] ease-[ease] scale-x-0 left-0 bottom-0;
+			}
+		</style>
 	</body>
 </html>

@@ -4,7 +4,7 @@ export interface LocaleData {
 	/** Writing direction. */
 	dir: 'ltr' | 'rtl';
 	/** BCP-47 language tag. */
-	lang: string;
+	lang?: string;
 	/** The base path at which a language is served. `undefined` for root locale slugs. */
 	locale: string | undefined;
 }
