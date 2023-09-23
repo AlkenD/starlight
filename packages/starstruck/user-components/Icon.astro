@@ -7,19 +7,17 @@ interface Props {
 	color?: string;
 	size?: string;
 	class?: string;
+	fillNone?: boolean;
 }
 
-const { name, label, size = '1em', color } = Astro.props;
+const { name, label, size = '1em', color, fillNone } = Astro.props;
 const a11yAttrs = label ? ({ 'aria-label': label } as const) : ({ 'aria-hidden': 'true' } as const);
 ---
 
 <svg
 	{...a11yAttrs}
-	class={Astro.props.class}
-	width="16"
-	height="16"
+	class:list={[fillNone ? 'fill-none' : 'fill-current', Astro.props.class]}
 	viewBox="0 0 24 24"
-	fill="currentColor"
 	set:html={Icons[name]}
 />
 

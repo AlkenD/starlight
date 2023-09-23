@@ -1,0 +1,28 @@
+---
+import Icon from './Icon.astro';
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends Omit<HTMLAttributes<'a'>, 'title'> {
+	title: string;
+	description?: string;
+}
+
+const { title, description, ...attributes } = Astro.props;
+---
+
+<a
+	class="px-4 py-2 bg-zinc-500/20 hover:bg-zinc-500/50 rounded-xl cursor-pointer group/linkcard not-prose transition-all ease-out"
+	{...attributes}
+>
+	<span class="flex flex-col space-y-2">
+		<div class="text-xl flex items-center justify-between">
+			<span class="underline" set:html={title} />
+			<Icon
+				name="right-arrow"
+				size="1.333em"
+				class="group-hover/linkcard:translate-x-2 transition-transform ease-out"
+			/>
+		</div>
+		{description && <span class="text-sm no-underline" set:html={description} />}
+	</span>
+</a>

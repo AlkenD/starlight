@@ -11,7 +11,7 @@ interface Props {
 const { toc, isMobile = false, depth = 0 } = Astro.props;
 ---
 
-<ul class="text-zinc-400" class:list={[depth !== 0 && 'pt-1']}>
+<ul class="text-zinc-400 font-light text-sm" class:list={[depth !== 0 && 'pt-1']}>
 	{
 		toc.map((heading) => (
 			<li class:list={[heading.children.length > 0 ? 'pt-1' : 'py-1']}>

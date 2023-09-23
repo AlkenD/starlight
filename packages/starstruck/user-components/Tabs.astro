@@ -1,4 +1,5 @@
 ---
+import Icon from './Icon.astro';
 import { processPanels } from './rehype-tabs';
 
 const panelHtml = await Astro.slots.render('default');
@@ -10,7 +11,7 @@ const { html, panels } = processPanels(panelHtml);
 >
 	{
 		panels && (
-			<div class="p-4">
+			<div class="p-4 flex justify-between items-center">
 				<ul class="flex space-x-2" role="tablist">
 					{panels.map(({ label, panelId, tabId }, idx) => (
 						<li role="presentation">
@@ -27,10 +28,16 @@ const { html, panels } = processPanels(panelHtml);
 						</li>
 					))}
 				</ul>
+				<button
+					id="copy-button"
+					class="hover:bg-zinc-500/50 active:bg-zinc-500/40 p-1 rounded-md transition-all ease-out"
+				>
+					<Icon fillNone size="1.5rem" name="copy" />
+				</button>
 			</div>
 		)
 	}
-	<div class="h-[1px] w-full bg-zinc-200 dark:bg-zinc-800"></div>
+	<div class="h-[1px] w-full bg-zinc-500/50"></div>
 	<Fragment set:html={html} />
 </starstruck-tabs>
 
@@ -41,6 +48,20 @@ const { html, panels } = processPanels(panelHtml);
 </style>
 
 <script>
+	const tabContent = document.getElementById('tab-content');
+	const copyButton = document.getElementById('copy-button')!;
+
+	copyButton.addEventListener('click', function () {
+		const contentToCopy = tabContent?.textContent || '';
+
+		navigator.clipboard
+			.writeText(contentToCopy)
+			.then(() => {})
+			.catch((error) => {
+				console.error('Copy failed: ', error);
+			});
+	});
+
 	class StarstruckTabs extends HTMLElement {
 		tabs: HTMLAnchorElement[];
 		panels: HTMLElement[];

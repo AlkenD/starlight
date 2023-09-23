@@ -12,7 +12,7 @@ const { sublist, nested = false } = Astro.props;
 ---
 
 <ul
-	class:list={[nested && 'border-l border-zinc-500/50 space-y-2']}
+	class:list={[nested && 'border-l border-zinc-500/20 dark:border-zinc-500/50 space-y-2.5']}
 	class="text-zinc-600 dark:text-zinc-400 font-light text-sm"
 >
 	{
@@ -21,10 +21,10 @@ const { sublist, nested = false } = Astro.props;
 				{item.type === 'link' ? (
 					<li>
 						<div
-							class="px-4 w-full py-1 border-l border-transparent -ml-[1px] hover:border-white hover:text-black dark:hover:text-white"
+							class="px-4 w-full border-l border-transparent -ml-[1px] hover:border-black dark:hover:border-white hover:text-black dark:hover:text-white"
 							class:list={[
 								item.isCurrent &&
-									'border-white dark:border-white font-semibold text-black dark:text-white',
+									'border-black dark:border-white font-semibold text-black dark:text-white',
 							]}
 						>
 							<a aria-current={item.isCurrent && 'page'} href={item.href}>

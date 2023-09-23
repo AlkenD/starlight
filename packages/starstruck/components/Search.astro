@@ -45,13 +45,19 @@ const pagefindTranslations = {
 					</div>
 				) : (
 					<div class="search-container">
-						<div id="starstruck__search" />
+						<div id="starlight__search" />
 					</div>
 				)
 			}
 		</div>
 	</dialog>
 </site-search>
+
+<style is:global>
+	[data-search-modal-open] {
+		overflow: hidden;
+	}
+</style>
 
 <script>
 	class SiteSearch extends HTMLElement {
@@ -62,30 +68,36 @@ const pagefindTranslations = {
 			const dialog = this.querySelector('dialog')!;
 			const dialogFrame = this.querySelector('.dialog-frame')!;
 
-			/** Close the modal if a user clicks outside of the modal. */
-			const onWindowClick = (event: MouseEvent) => {
+			/** Close the modal if a user clicks on a link or outside of the modal. */
+			const onClick = (event: MouseEvent) => {
+				const isLink = 'href' in (event.target || {});
 				if (
-					document.body.contains(event.target as Node) &&
-					!dialogFrame.contains(event.target as Node)
-				)
+					isLink ||
+					(document.body.contains(event.target as Node) &&
+						!dialogFrame.contains(event.target as Node))
+				) {
 					closeModal();
+				}
 			};
 
 			const openModal = (event?: MouseEvent) => {
 				dialog.showModal();
+				document.body.toggleAttribute('data-search-modal-open', true);
 				this.querySelector('input')?.focus();
 				event?.stopPropagation();
-				window.addEventListener('click', onWindowClick);
+				window.addEventListener('click', onClick);
 			};
 
-			const closeModal = () => {
-				dialog.close();
-				window.removeEventListener('click', onWindowClick);
-			};
+			const closeModal = () => dialog.close();
 
 			openBtn.addEventListener('click', openModal);
 			openBtn.disabled = false;
 			closeBtn.addEventListener('click', closeModal);
+
+			dialog.addEventListener('close', () => {
+				document.body.toggleAttribute('data-search-modal-open', false);
+				window.removeEventListener('click', onClick);
+			});
 
 			// Listen for `/` and `cmd + k` keyboard shortcuts.
 			window.addEventListener('keydown', (e) => {
@@ -112,11 +124,12 @@ const pagefindTranslations = {
 				onIdle(async () => {
 					const { PagefindUI } = await import('@pagefind/default-ui');
 					new PagefindUI({
-						element: '#starstruck__search',
+						element: '#starlight__search',
 						baseUrl: import.meta.env.BASE_URL,
 						bundlePath: import.meta.env.BASE_URL.replace(/\/$/, '') + '/pagefind/',
 						showImages: false,
 						translations,
+						showSubResults: true,
 					});
 				});
 			});
