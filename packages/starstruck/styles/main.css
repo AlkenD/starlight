@@ -1,0 +1,29 @@
+.text-underline-animation {
+	@apply content-[""] absolute block w-full h-0.5 bg-black origin-top-left transition-transform duration-[0.3s] ease-[ease] scale-x-0 left-0 bottom-0;
+}
+.gradiant-background:before {
+	content: ' ';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	background-size: cover;
+	pointer-events: none;
+}
+:root {
+	--astro-code-color-text: #eeeeee;
+	--astro-code-token-constant: #2793ff;
+	--astro-code-token-string: #ff45c4;
+	--astro-code-token-comment: #ffffff80;
+	--astro-code-token-keyword: #cb3bff;
+	--astro-code-token-parameter: #aa0000;
+	--astro-code-token-function: #7c9bff;
+	--astro-code-token-string-expression: #ffc0c0;
+	--astro-code-token-punctuation: #3dff77;
+	--astro-code-token-link: #ee0000;
+}

@@ -9,6 +9,7 @@ import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import SideBar from '../components/SideBar/SideBar.astro';
 import { getSidebar } from '../utils/navigation';
+import '../styles/main.css';
 
 import 'virtual:starstruck/user-css';
 import RightSidebar from '../components/RightSidebar.astro';
@@ -45,7 +46,7 @@ const pagefindEnabled =
 	</head>
 	<body class="dark:text-white dark:bg-black">
 		<div
-			class="fixed top-0 w-full h-full bg-no-repeat bg-cover"
+			class:list={['top-0 w-full h-full bg-no-repeat bg-cover', hasSidebar ? 'fixed' : 'absolute']}
 			style={`background-image: url('${config.background?.src}'); opacity: ${
 				hasSidebar ? '0.5' : '1'
 			}`}
@@ -87,24 +88,5 @@ const pagefindEnabled =
 				{hasSidebar && <RightSidebar {lang} {entry} {headings} {locale} {tocConfig} />}
 			</main>
 		</div>
-		<style>
-			.text-underline-animation {
-				@apply content-[""] absolute block w-full h-0.5 bg-black origin-top-left transition-transform duration-[0.3s] ease-[ease] scale-x-0 left-0 bottom-0;
-			}
-			.gradiant-background:before {
-				content: ' ';
-				display: block;
-				position: absolute;
-				left: 0;
-				top: 0;
-				width: 100%;
-				height: 100%;
-				opacity: 0.2;
-				background-repeat: no-repeat;
-				background-position: 50% 0;
-				background-size: cover;
-				pointer-events: none;
-			}
-		</style>
 	</body>
 </html>

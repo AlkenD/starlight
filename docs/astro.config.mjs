@@ -44,11 +44,6 @@ const site = 'https://starstruck.astro.build/';
 // https://astro.build/config
 export default defineConfig({
 	site,
-	markdown: {
-		shikiConfig: {
-			theme: 'github-dark',
-		},
-	},
 	integrations: [
 		starstruck({
 			title: 'Starstruck',
